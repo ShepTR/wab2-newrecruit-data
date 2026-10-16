@@ -71,7 +71,10 @@ Notes:
 ## Army compositions belong to their faction
 Each army's force entries (composition percentages and variants such as the Hannibal wars) live inside that army's own catalogue, not in the game system. The game system has one neutral root force, "Army", with no limits, like the example repo's "Standard" force. Pick the faction (catalogue) and you only see that faction's compositions. This catalogue-level layout is not yet tested in New Recruit; if the compositions do not show up, report what you see.
 
-Build order: `build_wab2.py`, `rb_build.py`, `hb_build.py`, then `relocate_forces.py` (last).
+Build order: `build_wab2.py`, `rb_build.py`, `hb_build.py`, then `relocate_forces.py` and `add_unit_upgrades.py` (last).
+
+## Leader, standard bearer and musician
+Every non-character troop unit has Leader, Standard bearer and Musician as options (max one each per unit, +5 pts each, as in the rulebook and Hannibal; Roman Legionaries use a Centurion at +10). They are free for the Republican Roman Hastati, Principes and Triarii (Hannibal p.55). Added by `tools/add_unit_upgrades.py`; not added to war machines and crews, elephants or war-hound packs. If the source book prices them differently for a unit, tell me which.
 
 ## Disclaimer
 Unofficial fan project, not affiliated with or endorsed by Games Workshop or Warhammer Historical Wargames. Stats, points and rules text are hand-transcribed from the books named above for use in the New Recruit army builder, and remain the property of their respective owners. You need the books to play.
