@@ -68,5 +68,10 @@ Notes:
 - Not built: the Alexander the Great, Fall of the West, Byzantium and Siege & Conquest supplements, and the 97 unbuilt AoA2 lists.
 - Tools: `tools/hb_build.py` (run after `build_wab2.py` and `rb_build.py`).
 
+## Army compositions belong to their faction
+Each army's force entries (composition percentages and variants such as the Hannibal wars) live inside that army's own catalogue, not in the game system. The game system has one neutral root force, "Army", with no limits, like the example repo's "Standard" force. Pick the faction (catalogue) and you only see that faction's compositions. This catalogue-level layout is not yet tested in New Recruit; if the compositions do not show up, report what you see.
+
+Build order: `build_wab2.py`, `rb_build.py`, `hb_build.py`, then `relocate_forces.py` (last).
+
 ## Disclaimer
 Unofficial fan project, not affiliated with or endorsed by Games Workshop or Warhammer Historical Wargames. Stats, points and rules text are hand-transcribed from the books named above for use in the New Recruit army builder, and remain the property of their respective owners. You need the books to play.
