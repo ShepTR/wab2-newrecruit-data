@@ -1,0 +1,87 @@
+# Hand-transcribed from Warhammer Ancient Battles 2nd Edition rulebook, Reference section (book pp.205-212).
+# Rule texts are the rulebook's own numbered summaries.
+
+MISSILE = [  # name, range, strength, save modifier, notes
+ ("Sling", '18"', "3 (rapid fire: short range only, Strength 2)", "-", "Slings can shoot twice at short range (rapid fire) but cannot shoot twice against chargers as a stand & shoot or fire & flee response."),
+ ("Staff Sling", '24"', "4 at short range / 3 at long range", "-1 at short range", "Staff slings cannot move and shoot in the same turn."),
+ ("Javelin", '8"', "3", "-", "The to hit penalties for shooting at over half range and for shooting whilst moving do not apply to javelins."),
+ ("Dart", '12"', "2", "-", "The to hit penalties for shooting at over half range and for shooting whilst moving do not apply to darts. Darts can shoot massed missiles."),
+ ("Stones", '4"', "3", "-", "The to hit penalties for shooting at over half range do not apply to stones."),
+ ("Short Bow", '18"', "3", "-", "Units armed with short bows can use massed missiles."),
+ ("Bow", '24"', "3", "-", "Units armed with bows can use massed missiles. (Composite bows are Bows.)"),
+ ("Long Bow", '30"', "3", "-1 at short range", "Units armed with long bows can use massed missiles."),
+ ("Light Crossbow", '18"', "3", "-", ""),
+ ("Crossbow", '30"', "4 at short range / 3 at long range", "-1 at short range", "Crossbows cannot move and shoot in the same turn."),
+ ("Handgun", '18"', "4 at short range / 3 at long range", "-2 at short range / -1 at long range", "Handguns cannot move and shoot in the same turn."),
+]
+MISSILE_PAGE = "88 (summary p.209)"
+
+HAND = [  # name, effects
+ ("Hand Weapon", "1. Troops armed with a hand weapon in each hand get +1 extra attack."),
+ ("Dagger", "1. +1 armour save modifier."),
+ ("Improvised Weapon", "1. Enemy wounded by daggers or improvised weapons receive a +1 armour save modifier (if they otherwise have no save they save on a 6).\n2. Troops so armed are at a disadvantage compared to those properly prepared for combat. (Rulebook: Dagger and Improvised Weapon.)"),
+ ("Double-handed Weapon", "1. Shields cannot be used in hand-to-hand combat.\n2. Always strike last in hand-to-hand combat. If both so armed normal priorities apply.\n3. +2 Strength."),
+ ("Halberd", "1. Shields cannot be used in hand-to-hand combat.\n2. +1 Strength."),
+ ("Thrusting Spear", "1. Stationary infantry fight in two ranks to their front.\n2. Cavalry +1 strength bonus when they charge or countercharge over open ground."),
+ ("Throwing Spear", "1. Infantry fight in two ranks in the first round of combat.\n2. Cavalry can re-roll misses in the first round of combat unless charging/countercharging over difficult terrain.\n3. Skirmishers can re-roll misses in the first round of combat."),
+ ("Heavy Throwing Spear", "1. Infantry fight in two ranks in the first round of combat.\n2. +1 Strength in the first round of combat.\n3. Skirmishers can re-roll misses in the first round of combat."),
+ ("Pike", "1. Fight in two ranks in all rounds of combat.\n2. Always strike first if fighting exclusively to their front. Where both so armed normal initiatives apply."),
+ ("Kontos", "1. Cavalry +1 strength bonus when they charge or countercharge over open ground.\n2. Always strike first if fighting exclusively to their front except against pikes. Where both kontos armed, normal initiatives apply."),
+ ("Lance", "1. Cavalry +2 strength bonus when they charge or countercharge over open ground."),
+]
+HAND_PAGE = "91 (summary p.210)"
+
+ARMOUR = [  # name, infantry save, cavalry save
+ ("No Armour", "None", "6"),
+ ("Light Armour", "6", "5 or 6"),
+ ("Heavy Armour", "5 or 6", "4, 5 or 6"),
+ ("Cataphract Armour", "-", "3, 4, 5 or 6*"),
+ ("Partial Plate Armour", "4, 5 or 6", "3, 4, 5 or 6*"),
+ ("Full Plate Armour", "3, 4, 5 or 6*", "3, 4, 5 or 6*"),
+]
+ARMOUR_NOTE = "* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+."
+ARMOUR_PAGE = "49 (summary p.205)"
+
+SHIELDS = [  # name, bonus, note
+ ("Shield", "+1", ""),
+ ("Large Shield", "+2", ""),
+ ("Pavise", "+2", "When hit to the front by shooting only"),
+ ("Buckler", "+1", "Hand-to-hand only unless skirmishers"),
+ ("Full Metal Barding", "+1", ""),
+ ("Half Metal Barding", "+1", "When hit to the front"),
+ ("Full Cloth Barding", "+1", "Hand-to-hand only"),
+ ("Half Cloth Barding", "+1", "When hit to the front in hand-to-hand only"),
+]
+
+# name -> (page, text)
+RULES = {
+"Fear": ("100", "1. Test fear against Ld (2D6) - score equal to or less than Ld to pass.\n2. Test if charged by a feared enemy within range. If failed, flee if outnumbered. If not outnumbered, 6s are needed to hit in the first round/any shots from a stand & shoot or fire & flee response.\n3. Test if attempting to charge a feared enemy as soon as the charge is declared before the enemy responds. If failed the unit may not charge and must remain stationary without shooting.\n4. A unit engaged in hand-to-hand combat is automatically broken if outnumbered by a feared enemy."),
+"Terror": ("100", "1. Test terror against Ld (2D6) - score equal to or less than Ld to pass.\n2. Test at the start of turn if there is an enemy which causes terror within 8\". If failed the unit flees. This test is only taken once.\n3. Test if charged by, or wishing to charge a terrifying enemy. If failed the unit flees. This test is only taken once if infantry."),
+"Hatred": ("100", "1. Take Break tests at Leadership (Ld) value 10, applying the usual modifiers.\n2. In the first round of combat re-roll misses.\n3. Must pursue unless fighting from defended positions."),
+"Frenzy": ("100", "1. Must charge if there are enemy within charge reach when charges are declared.\n2. Cannot respond to a charge by either fleeing, or by firing and fleeing.\n3. Fight with +1 extra attack.\n4. Must pursue.\n5. Must follow-up enemy that gives ground.\n6. Do not take Panic tests - immune to panic.\n7. Immune to other psychology.\n8. If broken in combat their frenzy is ended."),
+"Stubborn": ("100", "1. Do not test for panic for fleeing friends within 4\" at the start of the turn.\n2. If they fail their Break test they will give ground once where they would otherwise flee.\n3. If defeated by enemies who automatically break them, roll a D6. 1-3 the stubborn troops are broken. 4-6 the stubborn troops must take a Break test and can override a failed result by giving ground."),
+"Ambush": ("104", "1. The unit can be deployed on the battlefield in a concealed position and its location indicated on a map. It can be secretly deployed anywhere out of sight of enemy but not within the opposing deployment zone.\n2. Alternatively they can deploy on the battlefield once the enemy force has taken up its position.\n3. Concealed units must be placed as soon as enemy can either see them or approach within 8\".\n4. Concealed units ignore any tests or obligatory reactions that would otherwise result from any psychology rules.\n5. Concealed units do have to take account of special rules applying from formations."),
+"Cataphracts": ("104", "1. Cataphracts are close order cavalry.\n2. Cataphracts charging or marching reduce their entire movement to half speed if they wheel.\n3. Cataphracts are not permitted to countercharge as a response to an enemy charge.\n4. Cataphracts armed with kontos can fight with a second rank. This bonus does not apply if Cataphracts have charged that turn.\n5. Cataphracts may count a rank bonus of up to +2 when calculating combat results if they have charged into that round of combat."),
+"Chariot Runners": ("105", "1. Chariot Runners can make formations with chariots.\n2. Chariots are allowed to charge through a unit of Chariot Runners."),
+"Combined Formations": ("105", "1. Formations that include close and open order troops count as close order.\n2. Leadership (Ld) counts as that of the majority type or the higher value where numbers are equal.\n3. The whole unit is affected by the psychology and formation rules that apply to the majority type in the unit.\n4. Archers in rearward ranks may use massed missiles. The rank of archers closest to the front shoots in its entirety, with subsequent ranks shooting at half-effect.\n5. Archers in rearward ranks can respond to a charge by standing & shooting using massed missiles.\n6. When working out hits by shooting, the saving throw of the majority is used to resolve all saves. Casualties are removed alternately from the differently armoured models, starting with the mostly poorly armed.\n7. Hand-to-hand combat casualties fall amongst the type struck by the enemy.\n8. Leaders, standard bearers and musicians must be removed as casualties if they are the last models of their type."),
+"Drilled": ("106", "1. Drilled troops can turn to face their left or right. It takes a quarter move to make a turn to the left or right.\n2. At the beginning of their move, drilled troops can make one change formation or about face manoeuvre without penalty.\n3. Drilled troops can both march and change formation in the same Movement phase.\n4. Drilled troops can change formation at the start of a charge move if they wish.\n5. Drilled troops can make a reform manoeuvre without taking a Leadership (Ld) test so long as there are no enemy within 8\".\n6. Drilled troops can choose not to pursue an enemy that breaks and flees in combat, or follow-up defeated enemy who give ground.\n7. Drilled troops can disengage from combat without taking a Leadership (Ld) test so long as the enemy they are fighting do not have a faster move rate than they do.\n8. Drilled units can give ground voluntarily where they pass their Break test.\n9. Drilled troops are allowed to open their ranks to avoid charging scythed chariots."),
+"Expert Horsemen": ("107", "1. Expert Horsemen do not suffer the -1 to hit penalty when moving and shooting."),
+"Feigned Flight": ("107", "1. Can respond to an enemy charging to their front with feigned flight.\n2. The unit moves directly away from the enemy exactly as if it had fled or fired & fled.\n3. If the unit is contacted by the charging enemy it immediately turns to fight as if it had declared a 'hold' response to the charge.\n4. If the unit outdistances the charging enemy, it turns to face them at the end of its move.\n5. If charged by an enemy it fears, or which terrifies it, the unit can only make a feigned flight if it first passes its Fear test."),
+"Finest Horses": ("107", "1. +1\" basic Movement rate."),
+"Ferocious Charge / First Charge": ("108", "1. Enemy will automatically break without taking a Break test if the ferocious chargers win the combat round following their first charge/countercharge in the game.\n2. Skirmishing enemy will automatically break without taking a Break test if the ferocious chargers win the combat round following a charge/countercharge.\n3. If the unit's first charge or countercharge is against skirmishing enemy, this doesn't negate the 'first charge'.\n4. If the unit's first charge or countercharge breaks the enemy automatically for some other reason, this doesn't negate the 'first charge'.\n5. Roll off for automatically breaks versus automatically passes rules (eg, Stubborn)."),
+"Levies": ("108", "1. Levies fear enemy they do not outnumber by 2:1, ignoring skirmishers/fleeing troops.\n2. Levies cannot make any manoeuvre other than to wheel and if they wheel their entire movement is halved.\n3. Close order Levy infantry do not receive +1 combat result bonus for close order ranks.\n4. Levies cannot make use of the General's leadership (Ld) value where he is within 12\" of the unit.\n5. Non-levy units can always re-roll a failed Panic test taken as a result of breaking levies."),
+"Light Troops": ("108", "1. Light infantry or light cavalry can fight either as skirmishers or as open order formed units."),
+"Massed Cavalry": ("109", "1. Massed cavalry are close order cavalry.\n2. Massed cavalry charging or marching reduce their entire movement to half speed if they wheel.\n3. Massed cavalry count a rank bonus of up to +2 when calculating combat results if they have charged or countercharged into that round of combat."),
+"Parthian Shot": ("109", "1. Only skirmishing cavalry units armed with bows, short bows or javelins can employ the Parthian Shot.\n2. Troops can move up to their basic Movement rate in the Shooting phase immediately after they have shot."),
+"Phalanx": ("110", "1. Units must contain at least 12 models arranged at least two ranks deep and at least four wide. Frontage must exceed depth by at least one model.\n2. The only manoeuvres allowed are reform and wheel.\n3. Reforming is at -1 Leadership (Ld) penalty regardless of whether enemy are within 8\".\n4. A phalanx charging/marching reduces its entire movement to half speed if it wheels.\n5. All enemy shooting against the phalanx's front suffer a -1 to hit penalty.\n6. A spear-armed phalanx fights with two ranks to its front in the first round of combat if it charges.\n7. Enemy cavalry or light chariots suffer -2 to hit in combat against the phalanx front, foot troops or elephants suffer -1.\n8. Enemy charging the front lose any strength bonus associated with their weapons as a result of charging.\n9. Enemy charging the front lose any bonuses or benefits for formation rules that apply specifically when they charge.\n10. If the unit is a trained phalanx then it is allowed to make about face manoeuvres in the usual way.\n11. If the unit is a Macedonian phalanx it is allowed to make about face or change formation manoeuvres in the usual way.\n12. If the unit is a drilled phalanx then it combines the rules for drilled troops. A drilled phalanx can adopt any formation, can manoeuvre like any non-phalanx unit, and suffers no move penalties for wheeling whilst charging/marching.\n13. If the unit is a Medieval phalanx it must have at least three ranks depth. It is allowed to make about face and change formation manoeuvres. It does not benefit from the -1 to hit from enemy missiles rule. It may reform into a stationary square, counting a maximum +1 combat result bonus for ranks."),
+"Shieldwall": ("112", "1. It takes a unit's entire move to form shieldwall.\n2. A shieldwall lasts until the unit moves, or is beaten in a round of hand-to-hand combat.\n3. Enemy shots/attacks to the front are at -1 to hit.\n4. A unit forming shieldwall has moved for the purposes of missile fire."),
+"Veteran": ("112", "1. Once in the battle, the unit can re-roll all of its 'to hit' dice for either shooting or hand-to-hand combat."),
+"Warband": ("113", "1. D6 test at start of turn: 2-6 - pass, 1 - surge forward towards nearest visible enemy by at least basic move and charge if within range.\n2. If unit charges and defeats enemy in the first round of combat, enemy units are automatically broken and will flee without taking a Break test if the warband outnumbers the enemy.\n3. If unit charges or countercharges an enemy unit and breaks it in the first round of combat, then the warband must pursue.\n4. Warbands in close order formation making any move other than straight forward have their movement reduced to half speed. Doesn't apply when surging forward.\n5. Formed warbands 4+ models wide add +1 to their Leadership (Ld) value for each rank of at least four models behind the first. Max +3 to a maximum value of 10 for close order infantry, +2 up to a maximum of 10 for cavalry and open order infantry.\n6. Character's and General's Leadership (Ld) can be combined with the Warband Ld bonus only if the Character/General is Warband."),
+"Chariots": ("114", "1. 'Number' of models = number of crew.\n2. Cause fear in enemy infantry.\n3. Are arranged into formed units of three or more models, scythed chariots always fight as one model, light chariots can be formed into dispersed groups similar to skirmishers.\n4. Chariots are unable to move over obstacles or through difficult terrain. If forced into difficult terrain, roll a D6 per chariot: heavy/scythed chariots are destroyed on 1, 2 or 3, light chariots on a 1.\n5. Scythed chariots march at basic rate +D6\".\n6. Scythed chariot's movement is reduced to half speed if the model moves in any fashion other than directly forward in a straight line.\n7. Each missile armed chariot crewman shoots twice.\n8. In combat chariot crews fight as cavalry riders in respect of weaponry.\n9. Heavy and scythed chariots cause impact hits when they charge. Heavy chariots score D3 hits. Scythed chariots score D6+2 hits. If a scythed chariot rolls a 1 for its impact hits then it survives, if it rolls 2 or more it is wrecked.\n10. If chariots are destroyed by pikemen before striking, they will lose the chance to fight and do not inflict impact hits either.\n11. Drilled troops charged to their front can attempt to open their ranks and allow a scythed chariot to pass through. The unit must 'hold' and pass a Leadership (Ld) test. The chariot is moved through the unit."),
+}
+# alias text -> canonical rule name
+ALIASES = {
+ "Expert Horseman": "Expert Horsemen", "First Charge": "Ferocious Charge / First Charge",
+ "Ferocious Charge": "Ferocious Charge / First Charge", "Light Chariots": "Chariots",
+ "Nomad Horsemen": "Nomad Cavalry",
+}

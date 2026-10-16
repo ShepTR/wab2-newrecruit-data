@@ -1,0 +1,72 @@
+# WAB 2.0 data set for New Recruit — pilot (4 armies)
+
+Built from your **Armies of Antiquity v2.0 .docx** (army lists) and the **WAB 2nd Edition rulebook PDF** (weapons, armour, psychology and formation rules). Layout follows the example Warhammer Armies Project repo: one game system (`.gst`) plus one catalogue (`.cat`) per army.
+
+## Files
+| File | Contents |
+|---|---|
+| `Warhammer_Ancient_Battles_2.gst` | Game system: profile types, 11 missile weapons, 11 hand-to-hand weapons, 6 armour types, 8 shield/barding entries, 43 special rules, categories, and one force entry per army (variant) carrying the AoA2 composition percentages |
+| `Early_Imperial_Roman.cat` | AoA2 list 44 (21 units). Early and Later Army are separate force entries |
+| `Gallic.cat` | AoA2 list 12 (8 units) |
+| `Parthian.cat` | AoA2 list 32 (7 units) |
+| `Medieval_English.cat` | AoA2 list 92 (14 units, includes Gascon allies and the Cannon) |
+| `extraction_review.txt` | For every unit: the rules, weapons and "+N pts" options the script detected. **Review this.** |
+| `tools/` | The build and lint scripts, so the remaining 97 lists can be generated the same way |
+
+## How to use
+1. Choose the force entry matching the army (e.g. "Gallic", or "Early Imperial Roman - Later Army 110 AD to 193 AD"). Its percentages are enforced against the roster points limit.
+2. Add units from the matching catalogue.
+
+## Checks done
+- All files are well-formed XML, 1,142 ids unique, all 346 links resolve (run `python3 tools/lint_wab2.py .`).
+- Stats and points were parsed straight from the .docx tables.
+- Rulebook reference data (weapons, armour, 23 rules) was transcribed from the printed Reference pages (book pp.205-212), not from OCR.
+
+## Not yet verified
+- **Not loaded in New Recruit yet.** The structure copies the example repo, but I couldn't test it here. If anything fails to load, send me the error.
+- **Equipment options are auto-extracted** from the printed "(+N)" text. Labels can read oddly, and options that exclude each other (e.g. horse vs warhorse vs chariot) are not enforced. Notes as printed are on every unit under "Equipment and options (as printed in AoA2)".
+- **Unit sizes are not enforced.** AoA2 gives no minimum, so troop units have min 1 model.
+- **Not enforced:** "one machine per 800/1200 points" artillery limits, "0-1" limits across different units (the King and General can both be taken), and allied contingents from other lists. Allies are described in each list's "List Notes" rule only.
+- **Troop-type rules are not defined as rules:** Light Infantry, Light Cavalry, Skirmishers, Open Order, Camelry, Riding Horses. Their text is still shown in the notes. AoA2's War wagons and Wagon tabor are not included.
+
+## Source quirks to check against the book
+- Gallic Standard Bearer is printed at 103 pts against the Chieftain's 90. Copied as printed.
+- Parthian Horse Archers are "Nomad Horsemen"; AoA2 defines "Nomad Cavalry". Linked to Nomad Cavalry on the assumption it's a typo.
+- Parthian standard bearer text reads "as a hand weapon" (likely "has").
+- Medieval English "Hobilars" and similar entries' options were detected from sentence text; check the Irish Horse upgrade.
+
+## Added: rulebook army lists (book pp.172-189)
+| File | Contents |
+|---|---|
+| `Roman_Army_List.cat` | 15 units: Army General, Army Standard Bearer, Legate, Tribune, 3 Legionary types, 3 Auxiliary types, Scorpio, Ballista, Tormenta, Marines, Camelry. Force entry "Roman Army List": Characters max 25%, Legionaries min 25%, Auxiliaries max 75%, Special Units max 25% |
+| `Barbarian_Army_List.cat` | 12 units: Warlord, Battle Standard, Shaman, Chieftain, Warriors, Fanatic Warriors, Chariots, Noble Cavalry, Light Cavalry, Skirmishers, Mountain Tribesmen, Warhounds. Force entry "Barbarian Army List": Characters max 33%, Warriors min 33%, Cavalry and Chariots max 33%, Supporting Infantry max 33% |
+
+Troop stats and points were transcribed by hand from the page images. Warhorse stats, the tribal variants (Gauls, Germans, Dacians, Ancient Britons, p.189) and the Roman allies rule are text only in each list's "List Notes" and are not enforced. Troop units have a 5-model minimum. Options are not mutually exclusive. Re-run with `python3 tools/rb_build.py .` after build_wab2.py.
+
+## Source status
+- **Official:** `Roman_Army_List.cat`, `Barbarian_Army_List.cat` (WAB 2nd Edition rulebook) and all rulebook reference data in the .gst.
+- **Unofficial (AoA2 .docx, fan-made):** `Early_Imperial_Roman.cat`, `Gallic.cat`, `Parthian.cat`, `Medieval_English.cat`. Kept as a pilot, to be replaced by official lists. The other 97 AoA2 lists are deliberately not built.
+
+## Added: Hannibal & the Punic Wars (Warhammer Historical, 2005)
+Official supplement, written for the earlier WAB rules (before the 2010 2nd Edition rulebook). Lists, stats and points were transcribed by hand from page images (book pp.20-27, 51-62, 70-81, 106-109).
+
+| File | Contents | Force entries (percentages enforced) |
+|---|---|---|
+| `Carthaginian_Hannibal.cat` | 37 units | First Punic War; 2nd Punic War in Spain, in Italy, in Africa; Third Punic War |
+| `Republican_Roman_Hannibal.cat` | 34 units | First Punic War; 2nd Punic War in Spain, Italy; 2nd and 3rd Punic Wars in Africa; Campaigns in the West; Campaigns in the East |
+| `Spanish_Hannibal.cat` | 13 units | Iberians, Celtiberians, Lusitanians |
+| `Numidian_Hannibal.cat` | 10 units | Numidian |
+| `Ligurian_Hannibal.cat` | 9 units | Ligurian |
+| `Gallic_Hannibal.cat` | 8 units | Gallic |
+
+All force entries are named "Hannibal: ...". The .gst also gained a Hannibal publication, Phalanx / Levies / Stealth / Mixed Weapons / Mixed Armour / Manipular Unit / Unbridled Charge rules (Hannibal versions, named "(Hannibal)" where they differ from the rulebook), and "Hannibal Rules Clarifications" (summary of pp.106-109).
+
+Notes:
+- **Common / Uncommon Troops** are categories. Which units are Common or Uncommon in each war, and the "R:" restrictions, are in each catalogue's "List Notes" and are not enforced. Only the percentage limits are. Punic Heavy Cavalry has two entries (Uncommon, and "Common - Africa").
+- Not enforced: "R:" restrictions, "may not outnumber" limits, 0-1 limits across units, allies, the optional rules (Pikes, Mercenaries, Fortified Camp, Penal Legions, Amphibious Caetrati beyond a +1 option).
+- The Spanish and Roman lists use Infantry/Cavalry/Special categories exactly as printed; "Celtiberian Warriors" has a second Special Units entry for Iberian armies.
+- Not built: the Alexander the Great, Fall of the West, Byzantium and Siege & Conquest supplements, and the 97 unbuilt AoA2 lists.
+- Tools: `tools/hb_build.py` (run after `build_wab2.py` and `rb_build.py`).
+
+## Disclaimer
+Unofficial fan project, not affiliated with or endorsed by Games Workshop or Warhammer Historical Wargames. Stats, points and rules text are hand-transcribed from the books named above for use in the New Recruit army builder, and remain the property of their respective owners. You need the books to play.
