@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2d05-8c94-0564-9abf" name="Gallic" revision="6" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2d05-8c94-0564-9abf" name="Gallic" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic: units and points from Armies of Antiquity v2.0 (list no. 12).</readme>
   <selectionEntries>
     <selectionEntry id="2de3-ceee-7ee9-923a" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -28,6 +28,27 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">3</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="40d4-6deb-feef-1192" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c5c-2e0f-8073-610c" type="atLeast"/>
+                <condition field="selections" scope="40d4-6deb-feef-1192" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e17d-e5b7-1d1f-b806" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="40d4-6deb-feef-1192" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c5c-2e0f-8073-610c" type="lessThan"/>
+                <condition field="selections" scope="40d4-6deb-feef-1192" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e17d-e5b7-1d1f-b806" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="40d4-6deb-feef-1192" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c5c-2e0f-8073-610c" type="atLeast"/>
+                <condition field="selections" scope="40d4-6deb-feef-1192" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e17d-e5b7-1d1f-b806" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="b836-b4a9-1401-c264" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -92,7 +113,23 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce92-0ab4-27d2-34ba" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fa57-8557-6312-259a" type="min"/>
               </constraints>
-              <!-- def-link -->
+              <!-- mount-profile -->
+          <profiles>
+            <profile id="9de2-004f-f6b6-32ad" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">0</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <!-- def-link -->
           <infoLinks>
             <infoLink id="217d-582e-02e2-150e" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
           </infoLinks>
@@ -145,6 +182,27 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="7255-c7d4-f228-70cf" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7e5a-dd93-550d-7140" type="atLeast"/>
+                <condition field="selections" scope="7255-c7d4-f228-70cf" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b88c-6d2b-846b-f211" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="7255-c7d4-f228-70cf" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7e5a-dd93-550d-7140" type="lessThan"/>
+                <condition field="selections" scope="7255-c7d4-f228-70cf" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b88c-6d2b-846b-f211" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="7255-c7d4-f228-70cf" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7e5a-dd93-550d-7140" type="atLeast"/>
+                <condition field="selections" scope="7255-c7d4-f228-70cf" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b88c-6d2b-846b-f211" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="a86f-f7f9-f2c0-1382" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -211,7 +269,23 @@ A standard bearer has a hand weapon, light armour and shield. Army Standard Bear
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dddc-68f6-3166-6701" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b3d-9ca0-7aee-8087" type="min"/>
               </constraints>
-              <!-- def-link -->
+              <!-- mount-profile -->
+          <profiles>
+            <profile id="fe74-60de-9c61-ed2f" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">0</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <!-- def-link -->
           <infoLinks>
             <infoLink id="30c1-0924-b6f6-a1ed" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
           </infoLinks>
@@ -264,6 +338,27 @@ A standard bearer has a hand weapon, light armour and shield. Army Standard Bear
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="5e9b-4180-1216-2ad6" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3396-57ca-a1be-5c9e" type="atLeast"/>
+                <condition field="selections" scope="5e9b-4180-1216-2ad6" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d4-dafd-92b3-a8cf" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="5e9b-4180-1216-2ad6" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3396-57ca-a1be-5c9e" type="lessThan"/>
+                <condition field="selections" scope="5e9b-4180-1216-2ad6" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d4-dafd-92b3-a8cf" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="5e9b-4180-1216-2ad6" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3396-57ca-a1be-5c9e" type="atLeast"/>
+                <condition field="selections" scope="5e9b-4180-1216-2ad6" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0d4-dafd-92b3-a8cf" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="045e-4ecf-7cab-8e48" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -327,7 +422,23 @@ A standard bearer has a hand weapon, light armour and shield. Army Standard Bear
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbfa-8826-940e-dfac" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="832b-ba1a-ea65-f8fb" type="min"/>
               </constraints>
-              <!-- def-link -->
+              <!-- mount-profile -->
+          <profiles>
+            <profile id="fa7c-814a-51b9-098d" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">0</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <!-- def-link -->
           <infoLinks>
             <infoLink id="6586-1b0f-a01e-2708" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
           </infoLinks>

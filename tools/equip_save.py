@@ -109,7 +109,7 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
             R = []
             for oid, oname, ob in opts:
                 a, r, h = effect(oname)
-                if a or r or (h and ischar): R.append((oid, oname, a, r, h))
+                if a or r or h: R.append((oid, oname, a, r, h))
             if not ischar and any(a_ and any(x in BARD for x in a_) for _, _, a_, _, _ in R): basecav = True
             if len(R) > 6: capped += 1; R = R[:6]
             if not R and armour == 'None' and not shields and not bard and not ischar: continue
@@ -128,13 +128,13 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
                             elif x in BARD: bd.add(x)
                         if h: cv = True
                     gen, best, nt, pen = calc(cv, ar, sh, bd, skirm)
-                    states[sub] = (gen, best, nt, pen)
+                    states[sub] = (gen, best, nt, pen, any(R[i][4] for i in sub))
             base = states[()]
             if basecav: cavlist.append(f'{os.path.basename(path)}: {uname}/{mname}')
             def conds(sub):
                 return ''.join(f'                {cond(scope, R[i][0], i in sub, incl)}\n' for i in range(len(R)))
             def cond_text(st):
-                gen, best, nt, pen = st
+                gen, best, nt, pen, hz = st
                 return (f'{fmt(best)} with ' + '; '.join(dict.fromkeys(nt))) if best != gen else '-'
             mods = ''
             for sub, st in states.items():
@@ -154,9 +154,11 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
             if mm_ and re.fullmatch(r'\d+', mm_.group(1).strip()):
                 m0 = int(mm_.group(1).strip())
                 for sub, st in states.items():
-                    if st[3]:
-                        mmods += f'              <modifier type="set" field="{M_CT}" value="{max(0, m0 - st[3])}">\n                <conditions>\n{conds(sub)}                </conditions>\n              </modifier>\n'
-                        if not R: mmods = mmods.replace('                <conditions>\n                </conditions>\n', '')
+                    # a horse or warhorse raises Movement to 8" (Hannibal p.7); encumbrance is then taken off that
+                    val = max(0, (8 if st[4] else m0) - st[3])
+                    if val != m0:
+                        mmods += f'              <modifier type="set" field="{M_CT}" value="{val}">\n                <conditions>\n{conds(sub)}                </conditions>\n              </modifier>\n'
+            if not R: mmods = mmods.replace('                <conditions>\n                </conditions>\n', '')
             m2 = mblk
             pm = re.search(r'(            <profile id="[^"]*" name="[^"]*"[^>]*typeId="a802-40b5-d980-cabc"[^>]*>.*?)(            </profile>\n)', m2, re.S)
             if pm and mmods:
