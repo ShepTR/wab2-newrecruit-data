@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="77be-8814-23e3-4ce5" name="Early Imperial Roman" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="77be-8814-23e3-4ce5" name="Early Imperial Roman" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Early Imperial Roman: units and points from Armies of Antiquity v2.0 (list no. 44).</readme>
   <selectionEntries>
     <selectionEntry id="a993-8888-8be6-096b" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -176,6 +176,38 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
         <categoryLink id="f8f3-c0b9-aac2-1038" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="3d3b-40fd-0158-dcfc" name="Drilled" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="214f-1a14-7c80-26b5" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b60-e882-0fcc-83cf" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0643-ef25-234e-0a00" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="99fa-05ae-0e1f-c51d" name="Upgraded to Guards (WS4, BS4)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7621-9b56-1b1f-060d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3958-011b-97f3-69c0" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="4">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0643-ef25-234e-0a00" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="241c-2e40-6e9e-085b" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c3ad-bf9a-c69e-ac0b" type="max"/>
@@ -246,26 +278,6 @@ Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned 
             <infoLink id="b3c5-3a3a-0cc6-9880" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="a1ff-849d-355e-e9b2" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="3d3b-40fd-0158-dcfc" name="Drilled" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="214f-1a14-7c80-26b5" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b60-e882-0fcc-83cf" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="99fa-05ae-0e1f-c51d" name="Upgraded to Guards (WS4, BS4)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7621-9b56-1b1f-060d" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3958-011b-97f3-69c0" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -357,6 +369,38 @@ Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned 
         <categoryLink id="1447-29b5-34e1-41ca" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="4c50-e017-02c1-cfe8" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ddc3-98c3-58a7-a883" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2399-0e41-68e8-bfa6" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7426-bea7-d198-811d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f638-274d-15bd-eaea" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c3a-8e69-4b44-c8f4" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da68-7da6-4965-670a" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7426-bea7-d198-811d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="a2bc-ab11-6cb1-8b16" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30bb-6f33-6be1-c98a" type="max"/>
@@ -424,26 +468,6 @@ Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned 
             <infoLink id="eb1e-7a9d-6f53-af1d" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="6fbf-cbe2-c1f7-1bd6" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="4c50-e017-02c1-cfe8" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ddc3-98c3-58a7-a883" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2399-0e41-68e8-bfa6" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f638-274d-15bd-eaea" name="Shield" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c3a-8e69-4b44-c8f4" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da68-7da6-4965-670a" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="19"/>
           </costs>
@@ -772,6 +796,22 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
         <categoryLink id="5fab-d0f1-029f-e5a9" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="0ec8-67e8-0d40-33b8" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c459-f23f-6727-706d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9df-1958-47e8-e36d" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3511-6217-351c-7ac2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="9c68-117a-f25e-7635" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7668-fab9-8230-4e6a" type="max"/>
@@ -839,17 +879,6 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
             <infoLink id="993c-82e5-d730-fe02" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="25d1-904b-ea07-f491" name="Large Shield" hidden="false" targetId="8367-11b2-7778-977f" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="0ec8-67e8-0d40-33b8" name="Veteran" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c459-f23f-6727-706d" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9df-1958-47e8-e36d" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="17"/>
           </costs>
@@ -861,6 +890,22 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
         <categoryLink id="cb56-a509-484d-a28d" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="000c-4c17-6cfa-aeef" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d06c-9702-3628-fcbb" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9e4-73ec-2bbb-699e" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="07b6-949f-f228-d9c1" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="1a23-9d70-0c11-10af" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0ecb-3867-0324-fdba" type="max"/>
@@ -929,17 +974,6 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
             <infoLink id="1978-9692-c2ee-05a8" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="67bc-0f7a-958f-a2d1" name="Large Shield" hidden="false" targetId="8367-11b2-7778-977f" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="000c-4c17-6cfa-aeef" name="Veteran" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d06c-9702-3628-fcbb" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9e4-73ec-2bbb-699e" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="24"/>
           </costs>
@@ -951,6 +985,22 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
         <categoryLink id="61ac-d3b7-3569-da7e" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="32e5-b053-497f-18db" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1817-15b0-591a-81e3" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5581-7470-63fb-27eb" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="104f-27a9-09d8-c3a9" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="e286-c149-e7f9-0c48" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4977-cfe9-7f3f-40a9" type="max"/>
@@ -1017,17 +1067,6 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
             <infoLink id="7561-6229-2233-6c29" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="0b6a-72e2-3db9-d754" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="32e5-b053-497f-18db" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1817-15b0-591a-81e3" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5581-7470-63fb-27eb" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="7"/>
           </costs>
@@ -1039,6 +1078,22 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
         <categoryLink id="bcb7-430c-c0f8-6227" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="a3ea-010f-df15-a7ea" name="Throwing spear" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="41d5-d57e-653a-f11e" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40cb-b44d-aba3-7a21" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="3">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63c1-07af-c01d-9170" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="64b7-3489-b9ac-82f1" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b6ca-4e78-5002-3bcf" type="max"/>
@@ -1105,17 +1160,6 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
             <infoLink id="83c5-80fa-6d63-d483" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="fc38-6fce-7666-5f4d" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="a3ea-010f-df15-a7ea" name="Throwing spear" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="41d5-d57e-653a-f11e" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40cb-b44d-aba3-7a21" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="9"/>
           </costs>
@@ -1127,6 +1171,31 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
         <categoryLink id="529f-9371-1766-62fb" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="6331-8a96-6c64-11c2" name="Exchange javelins for sling" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a66c-b108-1b88-0d15" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51fa-6f8a-39fb-2a79" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e4d3-92a7-5776-c63a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0e51-19e3-52eb-f8f6" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="704c-d106-69fb-6e9e" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0faf-44f6-660d-2e45" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="a938-b16b-1f82-d29b" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b1f6-1d0b-e0aa-25b5" type="max"/>
@@ -1194,26 +1263,6 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
             <infoLink id="268f-b918-ae36-0ce7" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
             <infoLink id="be42-6003-ab70-432e" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="6331-8a96-6c64-11c2" name="Exchange javelins for sling" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a66c-b108-1b88-0d15" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51fa-6f8a-39fb-2a79" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="-1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0e51-19e3-52eb-f8f6" name="Bow" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="704c-d106-69fb-6e9e" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0faf-44f6-660d-2e45" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
           </costs>
@@ -1225,6 +1274,70 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
         <categoryLink id="74be-ab50-2a5c-c607" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="74c6-24b1-a666-dc67" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="932f-cf93-a0a8-69b1" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e259-32cb-427e-e6d1" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5905-2066-1e7e-fde2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0209-fbcf-7252-3375" name="Drilled" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="adfa-f1ad-4b2f-0bcf" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="177a-0432-8858-a54c" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5905-2066-1e7e-fde2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fef7-457e-b113-5068" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="97e1-24f2-dcc9-9368" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7660-875f-6912-4369" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5905-2066-1e7e-fde2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b51a-26d6-37ad-b506" name="Upgraded to Elite (Ld 8)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c20a-0b99-5587-a2f9" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1195-825e-25d2-6355" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5905-2066-1e7e-fde2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="f46f-b48d-9c31-e72b" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a0c-2242-f178-1299" type="max"/>
@@ -1287,44 +1400,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="107f-b469-8575-4b69" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
             <infoLink id="a466-5d62-09dd-a497" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="74c6-24b1-a666-dc67" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="932f-cf93-a0a8-69b1" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e259-32cb-427e-e6d1" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0209-fbcf-7252-3375" name="Drilled" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="adfa-f1ad-4b2f-0bcf" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="177a-0432-8858-a54c" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fef7-457e-b113-5068" name="Veteran" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="97e1-24f2-dcc9-9368" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7660-875f-6912-4369" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b51a-26d6-37ad-b506" name="Upgraded to Elite (Ld 8)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c20a-0b99-5587-a2f9" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1195-825e-25d2-6355" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="11"/>
           </costs>
@@ -1336,6 +1411,54 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
         <categoryLink id="72ad-dca4-916a-3354" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="4b3a-98af-e2f6-2728" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="302e-a304-dd8f-57a5" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d900-7e03-8379-26b2" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7e0-0988-5f17-2bd5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b49e-1ec3-d4aa-4c8d" name="Drilled" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed85-f989-3a7c-929a" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5860-c772-cfd5-7197" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7e0-0988-5f17-2bd5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d14c-fcad-0db8-6714" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d74d-d713-3d9e-9255" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8503-7e4f-838b-f21e" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7e0-0988-5f17-2bd5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="723f-7caf-2157-7c60" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="160f-94f4-ac2c-1c93" type="max"/>
@@ -1398,35 +1521,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="9486-f69f-4b78-75ea" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
             <infoLink id="18c3-43c7-0b3a-a30d" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="4b3a-98af-e2f6-2728" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="302e-a304-dd8f-57a5" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d900-7e03-8379-26b2" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b49e-1ec3-d4aa-4c8d" name="Drilled" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed85-f989-3a7c-929a" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5860-c772-cfd5-7197" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d14c-fcad-0db8-6714" name="Veteran" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d74d-d713-3d9e-9255" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8503-7e4f-838b-f21e" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="11"/>
           </costs>
@@ -1438,6 +1532,70 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
         <categoryLink id="d2c7-76ec-1526-8f26" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="0b0d-bdde-ad90-f9bf" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd58-e6a7-2176-f254" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75de-cf2f-1290-3f28" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e834-8583-090c-86a2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1fd0-f19c-28d2-f183" name="Drilled" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="42d9-b911-3787-4cd1" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3f6f-9a02-f5cd-56ad" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e834-8583-090c-86a2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8c4a-6d93-2cbf-4c89" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09d4-8ec2-ffd8-0be6" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e6b9-5f32-01c5-6b01" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e834-8583-090c-86a2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7519-8957-e310-8d33" name="Upgraded to Elite (Ld8)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="749b-055a-4ec6-b5c9" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3da5-7701-19bf-6172" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e834-8583-090c-86a2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="1e92-a62e-4ed1-6c67" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6389-f4de-6e3b-a191" type="max"/>
@@ -1499,44 +1657,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="6212-40f4-9600-28ff" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
             <infoLink id="d282-dc81-9a90-df6a" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="0b0d-bdde-ad90-f9bf" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd58-e6a7-2176-f254" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75de-cf2f-1290-3f28" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1fd0-f19c-28d2-f183" name="Drilled" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="42d9-b911-3787-4cd1" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3f6f-9a02-f5cd-56ad" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8c4a-6d93-2cbf-4c89" name="Veteran" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09d4-8ec2-ffd8-0be6" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e6b9-5f32-01c5-6b01" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7519-8957-e310-8d33" name="Upgraded to Elite (Ld8)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="749b-055a-4ec6-b5c9" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3da5-7701-19bf-6172" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -1548,6 +1668,38 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
         <categoryLink id="133a-a7bc-07c9-5326" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="2eb4-6928-dcdb-c1ba" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af08-5c48-b449-cddf" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a264-a740-a86d-e3bc" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b42b-2ddd-47d8-9a67" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b188-e130-662f-aa34" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75ed-a986-4316-9eab" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d439-cfab-5712-15b4" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efde-18ac-dc2c-cd27" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="e67c-6951-3826-40ea" name="Light Bolt Thrower" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43f2-ce9e-ccc3-2143" type="min"/>
@@ -1601,17 +1753,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="bb91-db2a-c172-37f0" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="e9fb-a8df-afd2-8405" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="2eb4-6928-dcdb-c1ba" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af08-5c48-b449-cddf" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a264-a740-a86d-e3bc" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1640,17 +1781,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="522e-84c8-54b8-9e13" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="6107-39b5-79aa-4bfc" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="b188-e130-662f-aa34" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75ed-a986-4316-9eab" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d439-cfab-5712-15b4" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -1662,6 +1792,38 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
         <categoryLink id="33a5-342f-3f08-bee9" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="01ea-6f83-7826-83d6" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8453-ddfd-5fbe-ce0a" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02dc-4dfd-5f9d-7e31" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b7f-276b-d8c0-0211" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b85c-e8fc-e2a5-6b92" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7fda-c4e6-326c-5395" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b5e-3a08-f761-561e" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="790f-996a-eaa1-0090" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="b8e9-5e63-e748-7228" name="Heavy Bolt Thrower" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="334d-4d2a-35ee-fea0" type="min"/>
@@ -1715,17 +1877,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="b205-92b2-d2b4-2f26" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="7519-0ec7-ce70-b51b" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="01ea-6f83-7826-83d6" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8453-ddfd-5fbe-ce0a" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02dc-4dfd-5f9d-7e31" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1754,17 +1905,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="e071-8ede-b6c0-f2e4" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="4f50-7db2-0352-db58" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="b85c-e8fc-e2a5-6b92" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7fda-c4e6-326c-5395" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b5e-3a08-f761-561e" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -1779,6 +1919,38 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
         <categoryLink id="e32f-8982-6511-dfdc" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="c4fb-3285-bd43-c206" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b86-dba5-7314-68b7" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e21-4b07-7911-9326" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="979b-c029-d43c-96ab" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ae43-5640-407f-82e2" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f33-48c1-3d9c-2b59" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="376c-e5ca-f29b-e68d" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f39d-1aba-f7ef-57f9" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="10db-605e-fdb5-a65a" name="Stone Thrower" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b201-2103-076e-9b32" type="min"/>
@@ -1832,17 +2004,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="a2ad-9fd1-842c-1f80" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="9f0d-993c-c92d-a8c0" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="c4fb-3285-bd43-c206" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b86-dba5-7314-68b7" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e21-4b07-7911-9326" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1871,17 +2032,6 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
             <infoLink id="22c0-aed2-9400-ad2c" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="cfc3-6ea8-a5a3-82ec" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="ae43-5640-407f-82e2" name="Light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f33-48c1-3d9c-2b59" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="376c-e5ca-f29b-e68d" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>

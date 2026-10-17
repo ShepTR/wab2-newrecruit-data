@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="25b3-496d-3222-47d5" name="Parthian" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="25b3-496d-3222-47d5" name="Parthian" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Parthian: units and points from Armies of Antiquity v2.0 (list no. 32).</readme>
   <selectionEntries>
     <selectionEntry id="a366-c927-a402-93cc" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -170,6 +170,38 @@ A standard bearer as a hand weapon and Cataphract armour. Rides a horse which ma
         <categoryLink id="517d-1172-c328-92eb" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="b731-0af8-9be0-409b" name="Cataphract armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e070-a5dd-29f4-58a0" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5e2d-6b77-0c01-231b" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28a5-1425-b2ca-bedb" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e0de-029c-8163-0696" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a49-7dcf-0eb4-f24e" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4bae-a044-f119-e071" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="4">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28a5-1425-b2ca-bedb" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="b1f3-3128-50c8-f6df" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d8d-b402-f9a0-90f4" type="max"/>
@@ -232,26 +264,6 @@ There must be at least three times as many horse archer figures as Cataphract fi
             <infoLink id="259c-a2fb-2fb8-0b6f" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
             <infoLink id="b156-6910-1d72-7f9b" name="Cataphract Armour" hidden="false" targetId="aa63-8f92-57ef-91e7" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="b731-0af8-9be0-409b" name="Cataphract armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e070-a5dd-29f4-58a0" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5e2d-6b77-0c01-231b" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e0de-029c-8163-0696" name="Barding" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a49-7dcf-0eb4-f24e" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4bae-a044-f119-e071" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="33"/>
           </costs>
@@ -403,6 +415,22 @@ Skirmishers have hand weapon, javelins and buckler. Skirmishers. May exchange ja
         <categoryLink id="b74d-6b32-af48-4086" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="5b57-3254-2b19-2891" name="Exchange javelins for composite bow" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce68-2eac-64fb-9c19" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e186-7cc7-9eb8-f1c6" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3b70-e6ad-a83a-c82c" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="9ff3-7bda-b814-70e4" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2bd1-fab4-2d3e-6d30" type="max"/>
@@ -462,17 +490,6 @@ Skirmishers have hand weapon, javelins and buckler. Skirmishers. May exchange ja
             <infoLink id="8156-ea51-e789-eec1" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
             <infoLink id="714f-d2d3-091a-ad8a" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="5b57-3254-2b19-2891" name="Exchange javelins for composite bow" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce68-2eac-64fb-9c19" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e186-7cc7-9eb8-f1c6" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
           </costs>

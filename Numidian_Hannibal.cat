@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Numidian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="f601-58b1-fe66-91b3" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -681,6 +681,22 @@
         <categoryLink id="01be-9843-1a17-211f" name="Special Units" hidden="false" targetId="099a-3435-f35a-fee2" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="6059-a156-45f4-0555" name="Shields on tower (+1 save for crew)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a88f-ebb2-5e1f-0bd7" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="72d0-68a2-f454-2204" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="4">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="16ef-4d40-6572-6c7e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="fb73-077e-c858-86af" name="Bow (replaces javelins)" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33ee-0057-6cfa-f152" type="max"/>
@@ -738,17 +754,6 @@
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntries>
-            <selectionEntry id="6059-a156-45f4-0555" name="Shields on tower (+1 save for crew)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a88f-ebb2-5e1f-0bd7" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="72d0-68a2-f454-2204" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="114"/>
           </costs>

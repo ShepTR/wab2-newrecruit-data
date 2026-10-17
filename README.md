@@ -87,6 +87,6 @@ Unofficial fan project, not affiliated with or endorsed by Games Workshop or War
 
 These options sit on the unit entry, so the +5 (Centurion +10; free for Hastati, Raw Hastati, Principes and Triarii) is charged once per unit, not per model. `tools/move_upgrades_to_unit.py` migrated the earlier model-level versions.
 
-## "Replaces" options are all-or-nothing
+## Equipment options are all-or-nothing
 
-Options that replace equipment (e.g. "Shield (replaces buckler)", "Thrusting spear (replaces javelins)") apply to every model in the unit. They are unit-level checkboxes whose cost is the per-model cost multiplied by the number of models (`tools/replace_options_to_unit.py`). Plain additive options (light armour, shield, and so on) are still per model, because WAB allows mixed armour.
+Every equipment option on a non-character unit ("replaces x", "may have x", armour, shields, Drilled and so on) applies to every model in the unit. They are unit-level checkboxes whose cost is the per-model cost multiplied by the number of models (`tools/replace_options_to_unit.py`). Characters keep their own per-model options. This is deliberately strict (all models armed alike); relax it for any list that allows mixed equipment.

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""'(replaces x)' equipment options must apply to EVERY model in the unit, so they become all-or-nothing unit-level checkboxes.
+"""Equipment options ("replaces x", "may have x") must apply to EVERY model in the unit (all-or-nothing), so they become unit-level checkboxes.
+Character units are left alone (single models).
 The points cost is the per-model cost x the number of models (cost modifier repeated once per model selection).
 Usage: python3 replace_options_to_unit.py <outdir>   (idempotent)."""
 import sys, os, re, glob
@@ -11,6 +12,7 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
     def do_unit(m):
         global moved
         blk = m.group(0)
+        if 'name="Characters"' in blk.split('<selectionEntries>')[0]: return blk
         new = ''
         def do_model(mm):
             global moved
@@ -21,7 +23,6 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
                 global moved
                 nonlocal new
                 name = o.group(2)
-                if not re.search(r'replace', name, re.I): return o.group(0)
                 ent = o.group(1)
                 cost = re.search(r'<cost name="pts" typeId="points" value="(-?[0-9.]+)"', ent).group(1)
                 cons = re.search(r'<constraints>.*?</constraints>\n', ent, flags=re.S).group(0)

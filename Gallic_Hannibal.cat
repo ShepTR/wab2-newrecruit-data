@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="21ce-00fc-6575-f75d" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -356,6 +356,38 @@
         <categoryLink id="e195-989d-fbf9-e99f" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="198d-883e-5068-c337" name="Light armour (up to a quarter of figures)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ab4-c280-37d2-f1a3" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35bd-a9ce-c682-1cd6" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f256-e512-9add-810f" name="Stubborn (one unit, per figure)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0271-7778-acba-52ba" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d23c-1aa8-3d36-d96c" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="3">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="b232-e368-3912-0e4d" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9276-21f2-d432-a396" type="max"/>
@@ -415,26 +447,6 @@
             <infoLink id="2f1f-1e2a-5306-a0c6" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="6805-ee33-7fd0-66cf" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="198d-883e-5068-c337" name="Light armour (up to a quarter of figures)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ab4-c280-37d2-f1a3" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35bd-a9ce-c682-1cd6" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f256-e512-9add-810f" name="Stubborn (one unit, per figure)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0271-7778-acba-52ba" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d23c-1aa8-3d36-d96c" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
           </costs>
@@ -656,6 +668,70 @@
         <categoryLink id="3e42-6cae-756e-a979" name="Supporting Infantry" hidden="false" targetId="3eca-1d1c-122a-3bef" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="5852-d703-3c2a-b437" name="Buckler" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b48-17d6-75de-86b0" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da41-b1e5-2bc3-28a8" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f088-7600-3666-d23e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="acdf-849f-bd8c-bb42" name="Javelins" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a081-9268-e3cb-a353" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="45f9-de0d-689e-c435" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f088-7600-3666-d23e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2c28-e0e7-35a4-d181" name="Sling" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a54b-c6dd-7dc5-638e" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1967-a645-d1dd-640c" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f088-7600-3666-d23e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a50f-5248-0112-61a8" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a08b-63d5-34c2-fd84" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32d2-4815-b009-38bd" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="3">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f088-7600-3666-d23e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="003e-f59a-624a-51c0" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="77e4-ffce-b43a-59fc" type="max"/>
@@ -710,44 +786,6 @@
           <infoLinks>
             <infoLink id="a4d0-009b-e052-7c6b" name="Dagger" hidden="false" targetId="a767-c23a-5b8e-1596" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="5852-d703-3c2a-b437" name="Buckler" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b48-17d6-75de-86b0" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da41-b1e5-2bc3-28a8" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="acdf-849f-bd8c-bb42" name="Javelins" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a081-9268-e3cb-a353" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="45f9-de0d-689e-c435" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2c28-e0e7-35a4-d181" name="Sling" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a54b-c6dd-7dc5-638e" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1967-a645-d1dd-640c" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a50f-5248-0112-61a8" name="Bow" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a08b-63d5-34c2-fd84" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32d2-4815-b009-38bd" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="3"/>
           </costs>

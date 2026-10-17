@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2d05-8c94-0564-9abf" name="Gallic" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2d05-8c94-0564-9abf" name="Gallic" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic: units and points from Armies of Antiquity v2.0 (list no. 12).</readme>
   <selectionEntries>
     <selectionEntry id="2de3-ceee-7ee9-923a" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -376,6 +376,22 @@ Chariots have an unarmed driver and one warrior crewman with hand weapon, javeli
         <categoryLink id="34b6-c1e6-d0c2-2aa0" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="15bd-6434-0ceb-65ed" name="Mixed Armour with up to 33% of figures having light armour" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b1a-a444-8a7e-0258" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a90c-e354-b771-20ad" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="425a-c27c-6a13-c4af" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="d810-a03f-cbfa-2b78" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7f8c-7219-5382-681f" type="max"/>
@@ -436,17 +452,6 @@ Chariots have an unarmed driver and one warrior crewman with hand weapon, javeli
             <infoLink id="bbad-63a8-fac2-4b1b" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
             <infoLink id="2e5f-3ed2-f6d8-af2b" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="15bd-6434-0ceb-65ed" name="Mixed Armour with up to 33% of figures having light armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b1a-a444-8a7e-0258" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a90c-e354-b771-20ad" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
           </costs>
@@ -526,6 +531,40 @@ Chariots have an unarmed driver and one warrior crewman with hand weapon, javeli
         <categoryLink id="2e04-79da-2af1-8c8f" name="Skirmishers" hidden="false" targetId="8c10-93c8-bc16-a231" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="c61f-ac8e-32d9-779c" name="Buckler" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cac4-74e9-49f3-3435" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="723c-ee66-6d39-3fe1" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7cb2-3829-fc85-e103" name="Exchange javelins for sling" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d63-4bd9-c064-7c8f" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0de1-0ae1-f73c-b3b4" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="90db-6d24-5514-b2b1" name="Composite bow" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="29db-b1c2-f115-4880" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d59d-d518-37d8-efb3" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0f0a-4597-cf36-ba34" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="1cf0-d811-861a-d906" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8685-799b-d096-01be" type="max"/>
@@ -584,35 +623,6 @@ Chariots have an unarmed driver and one warrior crewman with hand weapon, javeli
             <infoLink id="08af-e704-f616-f2a8" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
             <infoLink id="5f54-288c-c3c8-dfac" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="c61f-ac8e-32d9-779c" name="Buckler" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cac4-74e9-49f3-3435" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="723c-ee66-6d39-3fe1" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7cb2-3829-fc85-e103" name="Exchange javelins for sling" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d63-4bd9-c064-7c8f" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0de1-0ae1-f73c-b3b4" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="90db-6d24-5514-b2b1" name="Composite bow" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="29db-b1c2-f115-4880" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d59d-d518-37d8-efb3" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
           </costs>
