@@ -82,3 +82,7 @@ Unofficial fan project, not affiliated with or endorsed by Games Workshop or War
 ## Carthaginian per-war restrictions (Hannibal pp.20-21)
 
 `tools/carth_restrictions.py` encodes the five Carthaginian armies' unit lists. Units stay selectable but **fail validation** when they are not on the chosen war's list (an availability `max 0` constraint on each unit, relaxed by modifiers for the wars it is listed in), or when an "R:" prerequisite is missing (at least one unit of a listed type must already be in the army). Common/Uncommon tier is switched per war with category add/remove modifiers (e.g. Punic Heavy Cavalry is Uncommon in the First and Third wars, Common in Africa; the old duplicate "Common - Africa" entry is gone). Mercenary General is only valid in the First Punic War; Elephants are limited to one in Italy. Not encoded: skirmisher minimum, "may not be the largest skirmisher unit", "may not outnumber" and one-per-unit rules (see List Notes). Other armies have their own restrictions and are not covered yet. Untested in New Recruit.
+
+## Leader / Standard bearer / Musician
+
+These options sit on the unit entry, so the +5 (Centurion +10; free for Hastati, Raw Hastati, Principes and Triarii) is charged once per unit, not per model. `tools/move_upgrades_to_unit.py` migrated the earlier model-level versions.
