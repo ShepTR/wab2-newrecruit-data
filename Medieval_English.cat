@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9640-4e8c-c5b2-04ae" name="Medieval English" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9640-4e8c-c5b2-04ae" name="Medieval English" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Medieval English: units and points from Armies of Antiquity v2.0 (list no. 92).</readme>
   <selectionEntries>
     <selectionEntry id="b8eb-fcb9-0022-6c24" name="King of England" hidden="false" collective="false" import="true" type="unit">
@@ -898,7 +898,16 @@ Foot soldiers have a hand weapon and thrusting spear. May have shield (+1) and l
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="1d2c-68c5-8fb5-b2fd" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
+            <infoLink id="1d2c-68c5-8fb5-b2fd" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="22d4-3c8d-3b6f-42a5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="decc-a3fa-ce8c-59aa" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="4f2a-1160-1c91-703f" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="bab9-43b9-033f-7124" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="a727-cb8a-bc3a-052c" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
@@ -1743,7 +1752,16 @@ If no Gascons or False French has been taken, the English may take allies from t
             <infoLink id="f2d0-bfc6-89c3-5371" name="Allies and Mercenaries (Unreliable)" hidden="false" targetId="6e8f-14cf-a018-5d1c" type="rule"/>
             <infoLink id="860f-ec85-fe16-4b77" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="821d-a7a5-7a77-bf11" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-            <infoLink id="fc60-ab3d-e19c-ce2c" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="fc60-ab3d-e19c-ce2c" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="693c-31b5-5921-dff1" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="092a-7ea5-24ba-885b" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="303d-8446-ce1e-40b2" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="7f9c-a5d1-5009-699c" name="Halberd" hidden="false" targetId="635a-1d79-5976-954c" type="profile"/>
             <infoLink id="f01c-8f0b-5eb3-1a5d" name="Light Crossbow" hidden="false" targetId="019d-351d-ecdc-c800" type="profile"/>

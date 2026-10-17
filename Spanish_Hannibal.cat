@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="5" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Spanish (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="6e39-390c-320e-ff3c" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -372,8 +372,47 @@
           </profiles>
           <infoLinks>
             <infoLink id="f78d-f474-857b-cb47" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="a368-7205-63c4-e4fc" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+            <infoLink id="a368-7205-63c4-e4fc" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="034d-9325-e431-ef5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b82e-dbb0-2729-1e08" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="ba09-2a27-da3b-4e7a" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="e371-9d57-634f-d6a8" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="034d-9325-e431-ef5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aadd-5f92-7d5a-f599" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="dd71-7e78-0a34-d80a" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="034d-9325-e431-ef5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1eaf-064c-ce04-a008" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="9998-1fb9-722d-8d41" name="Thrusting Spear" hidden="true" targetId="5a59-1efb-14ef-017a" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="034d-9325-e431-ef5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b82e-dbb0-2729-1e08" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="23"/>
@@ -473,6 +512,26 @@
             <infoLink id="f514-5c64-deb1-ce28" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="5ed6-39d7-f42e-0db2" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
             <infoLink id="aafd-428c-2841-92d1" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="dfe2-f85f-3d54-244e" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="54b1-39c5-5a47-a385" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ad8e-9513-91c5-b727" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="707f-119a-669d-44b2" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="54b1-39c5-5a47-a385" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bcd-1c1d-d8e0-a7f6" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="17"/>
@@ -588,8 +647,37 @@
             <infoLink id="bb45-e0e2-6523-c4de" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
             <infoLink id="2756-1d4d-0f39-2322" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
             <infoLink id="e73f-1a33-b193-8816" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="9dda-c04b-3b40-d246" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+            <infoLink id="9dda-c04b-3b40-d246" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="822d-5da5-2af3-3a4a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f91a-050d-f577-0f08" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="0c16-b7c2-5dae-9001" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="a3f8-6e4c-cadf-4c20" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="822d-5da5-2af3-3a4a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8136-9f4b-a7ea-5809" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="07bf-7828-a1dd-8d98" name="Heavy Throwing Spear" hidden="true" targetId="26ae-ef02-1f24-a490" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="822d-5da5-2af3-3a4a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f91a-050d-f577-0f08" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="9"/>
@@ -675,6 +763,16 @@
             <infoLink id="9cb8-ed95-3afb-e044" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="8766-7a9f-5aba-917c" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
             <infoLink id="2876-d6f7-4ad6-ecea" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="2541-d900-047b-0a6a" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="75e0-7df5-03ea-767c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bd4-e192-0a08-1aa9" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
@@ -859,8 +957,37 @@
             <infoLink id="5e2f-1fb4-0aa6-0573" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
             <infoLink id="6b8f-7871-170c-9bea" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
             <infoLink id="3049-fecb-0d95-4d92" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="8287-7785-34a8-bee5" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+            <infoLink id="8287-7785-34a8-bee5" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="0414-a903-9407-0b9d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c120-ebbe-5d84-0f46" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="1bea-c71a-bd75-b6e5" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="1d26-0610-4ed3-2c8a" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="0414-a903-9407-0b9d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c37c-a892-1b7b-831c" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="6022-f278-1af2-3528" name="Heavy Throwing Spear" hidden="true" targetId="26ae-ef02-1f24-a490" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="0414-a903-9407-0b9d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c120-ebbe-5d84-0f46" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
@@ -976,9 +1103,57 @@
             <infoLink id="46f5-390e-7a0c-aa56" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
             <infoLink id="c459-1166-de11-a266" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
             <infoLink id="d5b4-c938-4d1a-eb32" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="0a67-efab-c946-a7d6" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+            <infoLink id="0a67-efab-c946-a7d6" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c35-f806-2e74-f402" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="d4e0-fb67-de98-c95a" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-            <infoLink id="5cb4-389a-f200-60aa" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="5cb4-389a-f200-60aa" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c0a-3969-39c1-96ee" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="3776-6d6b-4a0a-fe33" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a25d-094f-fbef-2d0f" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="5a06-f66f-0b6d-6dd5" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c0a-3969-39c1-96ee" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="de65-374e-4aa9-ddde" name="Heavy Throwing Spear" hidden="true" targetId="26ae-ef02-1f24-a490" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c35-f806-2e74-f402" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="9"/>
@@ -1061,6 +1236,16 @@
           <infoLinks>
             <infoLink id="97ef-fdad-c35d-5460" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="94f2-fec2-d913-52a3" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>
+            <infoLink id="3a92-3601-6dd0-ae6a" name="Buckler" hidden="true" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="3cad-e7c6-177c-2a94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b14e-5d17-9f8d-8508" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="4"/>
@@ -1144,6 +1329,16 @@
             <infoLink id="e9a2-274b-9cb2-e630" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
             <infoLink id="8350-5f74-8ac5-f41a" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="2a97-f3de-432e-0323" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>
+            <infoLink id="e153-1e38-590a-4d92" name="Buckler" hidden="true" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="e816-0950-99eb-cd4a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c845-03ca-a1b4-b1f3" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -1244,8 +1439,37 @@
             <infoLink id="634f-5c1a-3d32-3248" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
             <infoLink id="fc59-8de6-d450-803b" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
             <infoLink id="966f-75dd-9d2b-7514" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="3adf-2836-6a15-6ad4" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+            <infoLink id="3adf-2836-6a15-6ad4" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="a4d2-a6fa-788e-154f" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e326-3b63-b9ec-c776" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="6273-65e1-5d3e-794a" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="0f00-e562-b78b-f610" name="Javelin" hidden="true" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="a4d2-a6fa-788e-154f" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c0ea-e370-becd-079e" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="2fbe-98b2-396a-4a36" name="Heavy Throwing Spear" hidden="true" targetId="26ae-ef02-1f24-a490" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="a4d2-a6fa-788e-154f" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e326-3b63-b9ec-c776" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="8"/>

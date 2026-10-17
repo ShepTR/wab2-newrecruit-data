@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="5" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Numidian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="f601-58b1-fe66-91b3" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -399,7 +399,26 @@
             <infoLink id="583b-b289-b668-de70" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
             <infoLink id="ce18-7eae-f0aa-515d" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
             <infoLink id="2e29-4e3a-42ae-0312" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
-            <infoLink id="70f2-ec4b-d41d-a2f0" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="70f2-ec4b-d41d-a2f0" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="4b51-db55-dbda-e66d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e751-150f-754c-ecd2" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="58a5-8233-10e4-46e0" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="4b51-db55-dbda-e66d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e751-150f-754c-ecd2" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
@@ -499,8 +518,56 @@
           </profiles>
           <infoLinks>
             <infoLink id="5386-167b-146c-1076" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
-            <infoLink id="01a1-5c8e-e04e-f0a7" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
-            <infoLink id="0254-d3d5-c078-3776" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="01a1-5c8e-e04e-f0a7" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="4a2c-22f8-44a9-d7bc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf54-f871-9f9d-b60b" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="0254-d3d5-c078-3776" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="4a2c-22f8-44a9-d7bc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af2-6ac7-ebd9-7fbb" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="4c30-d4aa-6d77-4cea" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="4a2c-22f8-44a9-d7bc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8af2-6ac7-ebd9-7fbb" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="7760-9462-d43b-0d23" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="4a2c-22f8-44a9-d7bc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf54-f871-9f9d-b60b" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="761d-f1b7-80af-1058" name="Sling" hidden="true" targetId="7ff2-453d-751e-5f78" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="4a2c-22f8-44a9-d7bc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="468e-ff7e-e6ea-7d02" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
@@ -585,7 +652,26 @@
             <infoLink id="54eb-2109-2f63-d5e1" name="Parthian Shot" hidden="false" targetId="78a9-d49d-4efd-85c1" type="rule"/>
             <infoLink id="fc38-62ca-559e-3c78" name="Dagger" hidden="false" targetId="a767-c23a-5b8e-1596" type="profile"/>
             <infoLink id="a337-1e22-1600-7846" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
-            <infoLink id="0c3f-c6b8-f0fd-9815" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="0c3f-c6b8-f0fd-9815" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="e751-3b0f-05d7-a105" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c08d-475a-d46e-9ba1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="885a-a3d1-8d61-b68d" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="e751-3b0f-05d7-a105" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c08d-475a-d46e-9ba1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="21"/>
@@ -668,7 +754,26 @@
           <infoLinks>
             <infoLink id="9605-3715-d5ed-199e" name="Levies (Hannibal)" hidden="false" targetId="a23a-d972-dddf-752d" type="rule"/>
             <infoLink id="6ebf-b1d1-bfb9-0578" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
-            <infoLink id="8bfe-8e3a-68c6-ac29" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="8bfe-8e3a-68c6-ac29" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="bacf-cd10-5410-aede" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8254-6fef-e473-2893" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="be9b-500a-62a0-448a" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="bacf-cd10-5410-aede" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8254-6fef-e473-2893" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -803,7 +908,26 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="29f5-f44a-bfc8-c45f" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+            <infoLink id="29f5-f44a-bfc8-c45f" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ccc8-aecc-add1-d09e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb73-077e-c858-86af" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="3ffd-0754-b1c7-2819" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ccc8-aecc-add1-d09e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb73-077e-c858-86af" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -830,7 +954,26 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="b6a7-9ab2-7e9f-d013" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+            <infoLink id="b6a7-9ab2-7e9f-d013" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ccc8-aecc-add1-d09e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3b-73a8-c0dc-cdf1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="518a-3729-ea58-30a9" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ccc8-aecc-add1-d09e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3b-73a8-c0dc-cdf1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="7"/>
