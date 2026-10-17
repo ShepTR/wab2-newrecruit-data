@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e317-4c41-6256-6973" name="Ligurian (Hannibal)" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="e317-4c41-6256-6973" name="Ligurian (Hannibal)" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ligurian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="dc96-3be9-e763-8e8c" name="Prince" hidden="false" collective="false" import="true" type="unit">
@@ -383,6 +383,22 @@
         <categoryLink id="9285-2a5e-ca3d-6421" name="Warriors" hidden="false" targetId="ce31-a2e9-3e20-4277" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="3901-d42e-9bd7-9dfc" name="Throwing spear (replaces mixed weapons)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3502-9b1e-7496-4d72" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cfb-2e42-35d1-588e" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="68aa-8fb4-e36d-fe6e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="1d49-2254-105e-0074" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="66ff-3857-ca85-36d5" type="max"/>
@@ -452,15 +468,6 @@
                 <cost name="pts" typeId="points" value="1"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3901-d42e-9bd7-9dfc" name="Throwing spear (replaces mixed weapons)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3502-9b1e-7496-4d72" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cfb-2e42-35d1-588e" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
           </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="7"/>
@@ -476,6 +483,15 @@
         <categoryLink id="f6d9-c708-3c39-28ca" name="Warriors" hidden="false" targetId="ce31-a2e9-3e20-4277" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="0312-5dc3-6705-4554" name="Thrusting spear (replaces throwing spear)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="06cd-13ae-6e63-479d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9ee-b09d-20ba-66d7" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="958d-786b-309b-390d" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a057-331c-c3f8-e1f9" type="max"/>
@@ -534,17 +550,6 @@
             <infoLink id="b1c5-a6d1-f8fc-f332" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="f204-b78f-cc65-db62" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="0312-5dc3-6705-4554" name="Thrusting spear (replaces throwing spear)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="06cd-13ae-6e63-479d" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9ee-b09d-20ba-66d7" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="11"/>
           </costs>

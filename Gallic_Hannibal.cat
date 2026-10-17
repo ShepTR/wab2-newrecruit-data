@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="21ce-00fc-6575-f75d" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -10,6 +10,22 @@
         <categoryLink id="37c2-0703-078d-87b4" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="e3c6-624c-5003-41ae" name="Warhorse (replaces horse)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb18-a28b-8250-6eda" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="abaa-a61e-4edc-adf0" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="4">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a7f7-e35c-8f08-3221" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="a7f7-e35c-8f08-3221" name="High Chieftain" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be49-93b0-d57e-c09b" type="min"/>
@@ -102,15 +118,6 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e3c6-624c-5003-41ae" name="Warhorse (replaces horse)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb18-a28b-8250-6eda" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="abaa-a61e-4edc-adf0" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
               </costs>
             </selectionEntry>
           </selectionEntries>

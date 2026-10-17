@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Republican Roman (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="ea5b-ece5-bf3a-0ea7" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -174,6 +174,15 @@
         <categoryLink id="4ac0-8a65-73d5-bb82" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="795a-abc0-addd-fc6f" name="Warhorse (replaces horse)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0448-2b95-f451-33fd" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1644-043b-ea48-77eb" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="78a6-54d8-658c-14b1" name="Military Man" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32dc-a1c5-a225-b111" type="min"/>
@@ -236,15 +245,6 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a259-eea2-0de0-8034" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e44c-df3a-40df-1882" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="795a-abc0-addd-fc6f" name="Warhorse (replaces horse)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0448-2b95-f451-33fd" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1644-043b-ea48-77eb" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -866,6 +866,22 @@
         <categoryLink id="bd1b-a320-5726-61cb" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="a02c-392b-bdf5-40de" name="Pilum (replaces thrusting spear)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e1c0-3bab-4679-bde3" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7af8-bad7-f53f-f73b" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe6a-2972-a6a3-69fc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="4710-e660-9f2a-6066" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46f9-14cc-ebed-7f0e" type="max"/>
@@ -931,15 +947,6 @@
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a02c-392b-bdf5-40de" name="Pilum (replaces thrusting spear)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e1c0-3bab-4679-bde3" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7af8-bad7-f53f-f73b" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d663-5d2a-7193-1ad9" name="Drilled" hidden="false" collective="true" import="true" type="upgrade">
@@ -1624,6 +1631,22 @@
         <categoryLink id="b598-0e1d-5b41-8d08" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="252d-1a5c-cab3-6f1c" name="Shield (replaces buckler)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="add0-8ef7-9d83-0dfe" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="029a-b05c-6e8a-e428" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5433-d90c-dd7b-94b9" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="781f-d818-f278-33c0" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="370d-beff-38f9-4e47" type="max"/>
@@ -1680,17 +1703,6 @@
             <infoLink id="4b8f-25a9-4ca9-0f6d" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="4539-f400-0a6f-aced" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="252d-1a5c-cab3-6f1c" name="Shield (replaces buckler)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="add0-8ef7-9d83-0dfe" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="029a-b05c-6e8a-e428" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
@@ -2003,6 +2015,22 @@
         <categoryLink id="abb4-22af-3794-b87a" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="8991-75fb-8b8e-099c" name="Shield (replaces buckler)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b0aa-b175-85e8-da27" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="abf3-6157-4ded-8843" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eaa8-3f13-f3cd-7bd8" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="74c2-fae9-50a4-7aeb" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ca94-18b2-fa5c-67a9" type="max"/>
@@ -2061,17 +2089,6 @@
             <infoLink id="f485-a509-3345-4158" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="fda3-0e79-6bc7-522f" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="8991-75fb-8b8e-099c" name="Shield (replaces buckler)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b0aa-b175-85e8-da27" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="abf3-6157-4ded-8843" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="21"/>
           </costs>
@@ -2083,6 +2100,22 @@
         <categoryLink id="c064-f6ad-13e5-94bb" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="d82e-d253-a353-49b6" name="Heavy throwing spear (replaces throwing spear)" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="194e-cabb-88a1-9450" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="806d-3b12-42e5-03fb" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="53a4-560a-ad76-f67c" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
         <selectionEntry id="3657-ec78-c6f4-2ec9" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ddcc-cdd3-3445-72f1" type="max"/>
@@ -2141,15 +2174,6 @@
             <infoLink id="6c4f-d913-c741-1ddf" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry id="d82e-d253-a353-49b6" name="Heavy throwing spear (replaces throwing spear)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="194e-cabb-88a1-9450" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="806d-3b12-42e5-03fb" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="9d70-6de8-31dd-7056" name="Javelins" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="010d-7f57-74b8-513b" type="max"/>
