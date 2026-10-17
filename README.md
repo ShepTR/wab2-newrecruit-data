@@ -71,10 +71,14 @@ Notes:
 ## Army compositions belong to their faction
 The game system has ONE neutral force, "Army" (like the example repo's "Standard"). The faction is the catalogue you pick. Composition percentages are modifiers on that force's category links: they test the primary catalogue (lists with one composition) or the required "Army composition" picker (lists with several wars/campaigns: Early Imperial Roman, Carthaginian, Republican Roman, Spanish). The picker only shows the wars of the chosen catalogue. This follows the Badab War / 40k 3rd Edition pattern and is not yet tested in New Recruit; report what you see.
 
-Build order: `build_wab2.py`, `rb_build.py`, `hb_build.py`, then `add_unit_upgrades.py` and `collapse_forces.py` (last; replaces the obsolete `relocate_forces.py`, which put forces in the catalogues and did not scope in New Recruit).
+Build order: `build_wab2.py`, `rb_build.py`, `hb_build.py`, then `add_unit_upgrades.py`, `collapse_forces.py` and `carth_restrictions.py` (last; replaces the obsolete `relocate_forces.py`, which put forces in the catalogues and did not scope in New Recruit).
 
 ## Leader, standard bearer and musician
 Every non-character troop unit has Leader, Standard bearer and Musician as options (max one each per unit, +5 pts each, as in the rulebook and Hannibal; Roman Legionaries use a Centurion at +10). They are free for the Republican Roman Hastati, Principes and Triarii (Hannibal p.55). Added by `tools/add_unit_upgrades.py`; not added to war machines and crews, elephants or war-hound packs. If the source book prices them differently for a unit, tell me which.
 
 ## Disclaimer
 Unofficial fan project, not affiliated with or endorsed by Games Workshop or Warhammer Historical Wargames. Stats, points and rules text are hand-transcribed from the books named above for use in the New Recruit army builder, and remain the property of their respective owners. You need the books to play.
+
+## Carthaginian per-war restrictions (Hannibal pp.20-21)
+
+`tools/carth_restrictions.py` encodes the five Carthaginian armies' unit lists. Units stay selectable but **fail validation** when they are not on the chosen war's list (an availability `max 0` constraint on each unit, relaxed by modifiers for the wars it is listed in), or when an "R:" prerequisite is missing (at least one unit of a listed type must already be in the army). Common/Uncommon tier is switched per war with category add/remove modifiers (e.g. Punic Heavy Cavalry is Uncommon in the First and Third wars, Common in Africa; the old duplicate "Common - Africa" entry is gone). Mercenary General is only valid in the First Punic War; Elephants are limited to one in Italy. Not encoded: skirmisher minimum, "may not be the largest skirmisher unit", "may not outnumber" and one-per-unit rules (see List Notes). Other armies have their own restrictions and are not covered yet. Untested in New Recruit.

@@ -49,9 +49,7 @@ C.append(U('Common Troops', 'Spanish Caetrati', [M('Caetratus', '5 3 3 3 3 1 3 1
 C.append(U('Common Troops', 'Skirmishers', [M('Skirmisher', '5 2 3 3 3 1 3 1 5', 4, mn=5, weapons=['Dagger', 'Javelin', 'Buckler'])],
     'Knife, javelins, buckler. Skirmishers. There must be at least one unit of these skirmishers for every other skirmisher unit in the army.', page='24'))
 C.append(U('Uncommon Troops', 'Punic Heavy Cavalry', [M('Punic Cavalryman', '8 3 3 3 3 1 3 1 7', 21, mn=5, weapons=['Hand Weapon', 'Throwing Spear', 'Light Armour', 'Shield'])],
-    'Sword, throwing spear, light armour, shield. Uncommon in the First and Third Punic Wars.', page='24'))
-C.append(U('Common Troops', 'Punic Heavy Cavalry (Common - Africa)', [M('Punic Cavalryman', '8 3 3 3 3 1 3 1 7', 21, mn=5, weapons=['Hand Weapon', 'Throwing Spear', 'Light Armour', 'Shield'])],
-    'As Punic Heavy Cavalry. This entry is a Common Troop; it is used only in The Second Punic War in Africa.', page='24'))
+    'Sword, throwing spear, light armour, shield. Uncommon in the First and Third Punic Wars, Common in the Second Punic War in Africa.', page='24'))
 C.append(U('Uncommon Troops', 'Campanian Cavalry', [M('Campanian Cavalryman', '8 4 3 3 3 1 4 1 7', 20, mn=5, weapons=['Hand Weapon', 'Javelin'],
     options=[('Light armour', 2), ('Shield', 1), ('Thrusting spear (replaces javelins)', 0)])],
     'Sword and javelins. Light Cavalry. May not outnumber any other unit of cavalry in the army.', page='24'))
@@ -113,7 +111,7 @@ VARIANTS = [
   'Uncommon: Campanian Cavalry (R: Oscan Infantry, Italian Infantry); Spanish Cavalry; Gallic Cavalry; Elephants (R: only one, and only with Trained Africans, Veterans); Balearic Slingers; Celtiberian Scutarii (R: Trained Africans, Veterans); Roman Deserters; Ligurian Infantry; Artillery.'),
  ('Carthaginian - Second Punic War in Africa', {'Characters': ('max', 25), 'Common Troops': ('min', 50), 'Uncommon Troops': ('max', 33)},
   'The Army General may not be a Mercenary General.\n'
-  'Common: Citizens; Trained Africans; Levy Africans (R: Citizens); Veterans; Oscan Infantry; Bruttian Veterans (R: Veterans); Skirmishers; Numidian Cavalry (R: Trained Africans, Levy Africans, Veterans); Punic Heavy Cavalry (use the "Common - Africa" entry).\n'
+  'Common: Citizens; Trained Africans; Levy Africans (R: Citizens); Veterans; Oscan Infantry; Bruttian Veterans (R: Veterans); Skirmishers; Numidian Cavalry (R: Trained Africans, Levy Africans, Veterans); Punic Heavy Cavalry.\n'
   'Uncommon: Spanish Cavalry (R: Trained Africans, Veterans); Gallic Cavalry (R: Trained Africans, Veterans); Elephants; Balearic Slingers; Celtiberian Scutarii (R: Trained Africans, Veterans); Ligurian Infantry; Moorish Archers; Artillery.'),
  ('Carthaginian - Third Punic War in Africa', {'Characters': ('max', 25), 'Common Troops': ('min', 75), 'Uncommon Troops': ('max', 25)},
   'The Army General may not be a Mercenary General.\n'
