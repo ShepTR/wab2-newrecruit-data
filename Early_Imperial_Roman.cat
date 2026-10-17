@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="77be-8814-23e3-4ce5" name="Early Imperial Roman" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="77be-8814-23e3-4ce5" name="Early Imperial Roman" revision="6" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Early Imperial Roman: units and points from Armies of Antiquity v2.0 (list no. 44).</readme>
   <selectionEntries>
     <selectionEntry id="a993-8888-8be6-096b" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -28,11 +28,39 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">3</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="ca95-5dcd-c3a1-99e2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="395e-00d8-0345-5ca8" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="ca95-5dcd-c3a1-99e2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="395e-00d8-0345-5ca8" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="2a8e-fd58-1059-a4c5" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour and large shield. May ride a horse (+11) in which case exchanges large shield for throwing spear and shield. Army General.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="bff2-2535-61d0-ae18" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="3+">
+                <conditions>
+                <condition field="selections" scope="ca95-5dcd-c3a1-99e2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="395e-00d8-0345-5ca8" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -49,7 +77,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5f7-3fc0-9125-b848" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8306-a5bd-95c7-d091" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="1add-fb19-b13d-54e9" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="11"/>
               </costs>
             </selectionEntry>
@@ -83,6 +115,19 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="765d-f950-9dd4-378f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69f5-0dc9-a836-e739" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="765d-f950-9dd4-378f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69f5-0dc9-a836-e739" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="25c9-254c-20f9-78c1" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -90,6 +135,21 @@
 
 Standard bearer has hand weapon, light armour and large shield. May ride a horse (+8) in which case exchanges large shield for shield. Army Standard Bearer.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="1d4e-9e52-d61e-b0d8" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="3+">
+                <conditions>
+                <condition field="selections" scope="765d-f950-9dd4-378f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="69f5-0dc9-a836-e739" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -105,7 +165,11 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f6b9-6dcc-a1b8-042e" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b43-e9d6-2ac0-66dc" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="1e93-1811-c61e-48ab" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="11"/>
               </costs>
             </selectionEntry>
@@ -139,6 +203,19 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="179e-937e-12c5-0031" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffb2-0afa-0b91-1ccf" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="179e-937e-12c5-0031" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffb2-0afa-0b91-1ccf" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="9cfc-2ed6-679a-4f30" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -146,6 +223,21 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
 
 Standard bearer has hand weapon, light armour and large shield. May ride a horse (+8) in which case exchanges large shield for shield. Army Standard Bearer.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="92fe-5c66-2f8e-3cde" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="3+">
+                <conditions>
+                <condition field="selections" scope="179e-937e-12c5-0031" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffb2-0afa-0b91-1ccf" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -160,7 +252,11 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="595a-03db-15cd-2ed6" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bdb8-3ffb-140a-206f" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="bd5e-aa69-6139-caed" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="8"/>
               </costs>
             </selectionEntry>
@@ -188,6 +284,10 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="dc16-dcf8-6965-64e0" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -204,6 +304,12 @@ Standard bearer has hand weapon, light armour and large shield. May ride a horse
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="ff3b-cabb-1d62-bb30" name="Upgraded to Guards (WS4, BS4)" hidden="false">
+              <description>One unit of Drilled cavalry may be upgraded to Guards (WS4, BS4, +4).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -267,6 +373,14 @@ Camelry have a hand weapon, light armour, javelins, throwing spear and shield. C
 
 Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned Flight. Parthian Shot.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="0bcc-c1d9-2c33-f18b" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -349,6 +463,14 @@ Camelry have a hand weapon, light armour, javelins, throwing spear and shield. C
 Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned Flight. Parthian Shot.</characteristic>
               </characteristics>
             </profile>
+            <profile id="48cb-19c0-d8a9-0183" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="533f-d281-b2f0-34af" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
@@ -381,6 +503,10 @@ Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="3f36-7788-bea8-e16e" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -397,6 +523,10 @@ Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="0831-f505-99f4-1836" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -460,6 +590,14 @@ Camelry have a hand weapon, light armour, javelins, throwing spear and shield. C
 
 Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned Flight. Parthian Shot.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="0454-8684-1a0e-f9aa" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -538,6 +676,14 @@ Camelry have a hand weapon, light armour, javelins, throwing spear and shield. C
 
 Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned Flight. Parthian Shot.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="bd91-d1c9-64d7-8d80" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -618,6 +764,14 @@ Camelry have a hand weapon, light armour, javelins, throwing spear and shield. C
 
 Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned Flight. Parthian Shot.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="d1b5-24e5-00ee-a914" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -701,6 +855,14 @@ Camelry have a hand weapon, light armour, javelins, throwing spear and shield. C
 Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned Flight. Parthian Shot.</characteristic>
               </characteristics>
             </profile>
+            <profile id="c890-e408-7484-f031" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="918c-4034-9a99-23b3" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
@@ -764,6 +926,11 @@ Numidians/Moors have a hand weapon, javelins and shield. Light Cavalry. Feigned 
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="7a43-32af-2e02-f4f2" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -777,6 +944,14 @@ Light Infantry have hand weapons, javelins, shield, light infantry, warband, and
 
 Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exchange javelins for sling (-1) or bow (free).</characteristic>
               </characteristics>
+            </profile>
+            <profile id="dbce-da3f-9302-6f8e" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -808,6 +983,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="4565-62cc-6ac6-bac6" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -856,6 +1035,11 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="9e04-946a-7fb8-ffc5" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -869,6 +1053,14 @@ Light Infantry have hand weapons, javelins, shield, light infantry, warband, and
 
 Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exchange javelins for sling (-1) or bow (free).</characteristic>
               </characteristics>
+            </profile>
+            <profile id="7285-c110-c52f-c8f6" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -902,6 +1094,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="5c97-c121-f280-31fe" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -950,6 +1146,11 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="ea72-0586-23de-c3e6" name="Equipment and options (as printed in AoA2)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -963,6 +1164,14 @@ Light Infantry have hand weapons, javelins, shield, light infantry, warband, and
 
 Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exchange javelins for sling (-1) or bow (free).</characteristic>
               </characteristics>
+            </profile>
+            <profile id="690d-d7d0-637e-0813" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">4+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -997,6 +1206,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="ed0d-46cb-ba3b-d96f" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1059,6 +1272,14 @@ Light Infantry have hand weapons, javelins, shield, light infantry, warband, and
 Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exchange javelins for sling (-1) or bow (free).</characteristic>
               </characteristics>
             </profile>
+            <profile id="9cf3-41f2-0d73-b84a" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="a571-301a-e3f7-ad38" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
@@ -1090,6 +1311,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="b897-2474-1a72-a0e7" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1152,6 +1377,14 @@ Light Infantry have hand weapons, javelins, shield, light infantry, warband, and
 Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exchange javelins for sling (-1) or bow (free).</characteristic>
               </characteristics>
             </profile>
+            <profile id="84b2-99f8-b1b2-3a26" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="b288-982f-32f2-9a7d" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
@@ -1183,6 +1416,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="dc83-e46a-008a-e81f" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1192,6 +1429,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="704c-d106-69fb-6e9e" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0faf-44f6-660d-2e45" type="min"/>
           </constraints>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="388e-2fb3-0bfb-ea62" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1254,6 +1495,14 @@ Light Infantry have hand weapons, javelins, shield, light infantry, warband, and
 Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exchange javelins for sling (-1) or bow (free).</characteristic>
               </characteristics>
             </profile>
+            <profile id="1b6c-6d93-63a4-ed6d" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="8eb6-3035-a7d9-5062" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
@@ -1295,6 +1544,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="41e4-5358-0994-7849" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1311,6 +1564,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="683b-0faf-9418-cc6c" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1327,6 +1584,10 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="a111-a995-bdc3-b2d8" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1343,6 +1604,12 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="b3f4-8f99-5b69-ef9a" name="Upgraded to Elite (Ld 8)" hidden="false">
+              <description>One unit of auxiliaries may be upgraded to Elite (Ld 8, +1). One unit may be upgraded to Elite (Ld8, +1).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1399,6 +1666,14 @@ Skirmishers have hand weapons, javelins, buckler, skirmish, warband, and may exc
 Archers have a hand weapon, composite bow and buckler. Light Infantry. May have light armour (+2) and be Drilled (+2) and Veteran (+1). One unit may be upgraded to Elite (Ld8, +1).</characteristic>
               </characteristics>
             </profile>
+            <profile id="b804-b62d-520c-a446" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="8c48-f1c8-3513-78e6" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
@@ -1432,6 +1707,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="4490-dd73-9cb8-ebae" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1448,6 +1727,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="c645-808b-848d-830c" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1464,6 +1747,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="60f6-f2ec-adf9-47c0" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1520,6 +1807,14 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
 Archers have a hand weapon, composite bow and buckler. Light Infantry. May have light armour (+2) and be Drilled (+2) and Veteran (+1). One unit may be upgraded to Elite (Ld8, +1).</characteristic>
               </characteristics>
             </profile>
+            <profile id="7a98-0fad-78ef-d0cb" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="fa8c-3493-b62c-44d3" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
@@ -1553,6 +1848,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="619b-a20b-5c07-4edb" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1569,6 +1868,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="46c3-d924-75fa-ecdb" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1585,6 +1888,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="5326-0666-2878-c83a" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1601,6 +1908,12 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="47f9-0200-7e9a-98a5" name="Upgraded to Elite (Ld8)" hidden="false">
+              <description>One unit of auxiliaries may be upgraded to Elite (Ld 8, +1). One unit may be upgraded to Elite (Ld8, +1).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1657,6 +1970,14 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
 Archers have a hand weapon, composite bow and buckler. Light Infantry. May have light armour (+2) and be Drilled (+2) and Veteran (+1). One unit may be upgraded to Elite (Ld8, +1).</characteristic>
               </characteristics>
             </profile>
+            <profile id="9099-2cfd-9330-4e3c" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">5+ with Buckler +1 in hand-to-hand only</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="5208-cae6-9f88-ae45" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
@@ -1689,6 +2010,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="7ad6-7f23-c73a-56e9" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1705,6 +2030,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="7249-dabf-b8f1-7bf3" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1813,6 +2142,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="0999-6852-50a6-9abd" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1829,6 +2162,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="d6bd-868c-f586-e0b6" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1940,6 +2277,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="1243-3477-8b0c-2038" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1956,6 +2297,10 @@ Archers have a hand weapon, composite bow and buckler. Light Infantry. May have 
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="ecd8-1d22-3984-35fb" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>

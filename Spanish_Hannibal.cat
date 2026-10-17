@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="5" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Spanish (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="6e39-390c-320e-ff3c" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -33,6 +33,28 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword and shield. Javelins or throwing spear +2; if on foot heavy throwing spear +3; light armour +3. May ride a horse (free). Army General, Stubborn. If no Army General is taken the commander must be a Heroic Leader. (Hannibal p.71)</characteristic>
               </characteristics>
             </profile>
+            <profile id="b1d4-094b-b14e-5953" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="c0e7-eead-1dea-6377" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c11-1871-d3dc-dc6a" type="lessThan"/>
+                <condition field="selections" scope="c0e7-eead-1dea-6377" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df39-81a8-33dd-71a6" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="c0e7-eead-1dea-6377" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c11-1871-d3dc-dc6a" type="atLeast"/>
+                <condition field="selections" scope="c0e7-eead-1dea-6377" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df39-81a8-33dd-71a6" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="48ee-bc79-8ac2-205f" name="Stubborn" hidden="false" targetId="ce73-f053-8ef6-626c" type="rule"/>
@@ -46,7 +68,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a4f-0ca0-0488-465d" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7348-d6dc-4c7e-6697" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="47ba-2b68-a287-4135" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </selectionEntry>
@@ -55,7 +81,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d710-be1c-8342-ae0f" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b420-0785-0d7e-8e62" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="e4ec-2639-2414-6070" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
@@ -64,7 +94,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bb1e-8caa-ff45-17bb" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="26c3-9338-6806-a65f" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="54c8-31bc-e363-9ecc" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
@@ -73,7 +107,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c74e-006c-8b46-40ad" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e059-60c5-f2a8-a5ea" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="f8e4-ac91-92e0-ae7e" name="Heavy Throwing Spear" hidden="false" targetId="26ae-ef02-1f24-a490" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </selectionEntry>
@@ -82,7 +120,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="704d-6c9c-5817-cbfb" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cba-49ec-8464-05b0" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="a8d6-7f8e-04ad-1db9" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
@@ -124,6 +166,28 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword and shield. Light armour +3. May ride a horse (free). Army Standard Bearer, Stubborn. (Hannibal p.71)</characteristic>
               </characteristics>
             </profile>
+            <profile id="91ad-bc8a-8b4e-4579" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="1c70-c121-dcfa-d5bb" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b12-392d-0181-ed6e" type="lessThan"/>
+                <condition field="selections" scope="1c70-c121-dcfa-d5bb" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4937-a047-03ec-c64a" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="1c70-c121-dcfa-d5bb" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b12-392d-0181-ed6e" type="atLeast"/>
+                <condition field="selections" scope="1c70-c121-dcfa-d5bb" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4937-a047-03ec-c64a" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="bacc-a199-769f-ed65" name="Stubborn" hidden="false" targetId="ce73-f053-8ef6-626c" type="rule"/>
@@ -137,7 +201,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33d1-7b80-ec11-d5e8" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4268-be8a-fae7-3500" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="141f-5012-d3d1-dcb7" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </selectionEntry>
@@ -146,7 +214,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1639-4ee3-12ec-518b" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f5e-8c04-76b7-f113" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="2919-cbea-79b9-7829" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
@@ -185,6 +257,28 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword and shield. Javelins or throwing spear +2; if on foot heavy throwing spear +3; light armour +3. May ride a horse (free). May be Army General (+25 pts). Stubborn. (Hannibal p.71)</characteristic>
               </characteristics>
             </profile>
+            <profile id="95ed-c044-c2e0-e81d" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="b8c9-82dd-3fff-c11c" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8005-4be6-cc00-e550" type="lessThan"/>
+                <condition field="selections" scope="b8c9-82dd-3fff-c11c" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e72-47b8-4b61-dd64" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="b8c9-82dd-3fff-c11c" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8005-4be6-cc00-e550" type="atLeast"/>
+                <condition field="selections" scope="b8c9-82dd-3fff-c11c" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e72-47b8-4b61-dd64" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="ee40-428e-cac7-b9d0" name="Stubborn" hidden="false" targetId="ce73-f053-8ef6-626c" type="rule"/>
@@ -198,7 +292,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3488-9a85-a899-c64f" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc72-db58-deab-d97d" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="e7c4-5886-246f-f256" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </selectionEntry>
@@ -207,7 +305,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c895-5077-6156-90e0" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fecd-2dfb-6972-f5a0" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="81fd-4980-3740-c632" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
@@ -216,7 +318,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c096-bbe9-86fe-1de8" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b70d-f4d5-a635-bb31" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="0563-1554-80b3-dbc7" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
@@ -225,7 +331,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a99b-a866-4117-de8c" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5760-d135-9acf-de5b" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="05f8-adca-a634-42e6" name="Heavy Throwing Spear" hidden="false" targetId="26ae-ef02-1f24-a490" type="profile"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </selectionEntry>
@@ -234,7 +344,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7bb4-2208-9456-d228" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="efd3-3a5a-f360-5816" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="d094-095f-9d89-ead1" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
@@ -243,7 +357,13 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="717b-04fc-68f1-eb3a" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7130-4fe0-8fd1-2d9c" type="min"/>
               </constraints>
-              <costs>
+              <!-- def-link -->
+          <rules>
+            <rule id="d932-d462-3398-232f" name="May be Army General" hidden="false">
+              <description>May be Army General (+25 pts).</description>
+            </rule>
+          </rules>
+          <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
@@ -274,6 +394,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="52ce-80a1-b932-a4a3" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -290,6 +414,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="ada7-956d-bb55-94c0" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -306,6 +434,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="d6ff-b038-7083-9ea6" name="Stubborn" hidden="false" targetId="ce73-f053-8ef6-626c" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -315,6 +447,10 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbc0-cd3e-e537-65a7" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad6b-4d84-bd6c-af66" type="min"/>
           </constraints>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="cd5a-71bd-880b-18b9" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -368,6 +504,21 @@
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, throwing spear, shield. May be designated Stubborn (+3 pts per figure). 0-1 unit. (Hannibal p.71)</characteristic>
               </characteristics>
+            </profile>
+            <profile id="e4f7-d50d-5e42-cd70" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="034d-9325-e431-ef5c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1eaf-064c-ce04-a008" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -437,6 +588,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="260e-eedb-75cd-e261" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -453,6 +608,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="6741-4a72-6e9f-2daf" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -507,6 +666,26 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, throwing spear, buckler. Light Cavalry. (Hannibal p.71)</characteristic>
               </characteristics>
             </profile>
+            <profile id="b83f-07e3-f624-f0b7" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">5+ with Buckler +1 in hand-to-hand only</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="54b1-39c5-5a47-a385" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bcd-1c1d-d8e0-a7f6" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="4+ with Buckler +1 in hand-to-hand only">
+                <conditions>
+                <condition field="selections" scope="54b1-39c5-5a47-a385" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2bcd-1c1d-d8e0-a7f6" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="f514-5c64-deb1-ce28" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
@@ -556,6 +735,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="5830-3d54-c4ea-494b" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -572,6 +755,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="9f54-de49-a6f5-7310" name="Stubborn" hidden="false" targetId="ce73-f053-8ef6-626c" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -588,6 +775,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="5f36-c025-6cae-c0fc" name="Heavy Throwing Spear" hidden="false" targetId="26ae-ef02-1f24-a490" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -641,6 +832,14 @@
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, throwing spear, shield. Feigned Flight (lost if armed with heavy throwing spears), Stealth. One unit may be Stubborn (+3 per figure). (Hannibal p.71)</characteristic>
               </characteristics>
+            </profile>
+            <profile id="b060-ca8a-b009-32a0" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -702,6 +901,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="0214-273f-fb4d-9aab" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -756,6 +959,14 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, throwing spear, shield. Warband, Stealth. Hastily raised, less-experienced tribesmen. (Hannibal p.71)</characteristic>
               </characteristics>
             </profile>
+            <profile id="2ae6-8500-7b08-e20c" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="bda9-3cc5-a7f9-a665" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
@@ -797,6 +1008,12 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="645d-e3d4-60ae-c002" name="Bladders (optional rule, p.73)" hidden="false">
+              <description>Bladders (optional rule, p.73) (see the unit's Equipment and options text).</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -851,6 +1068,14 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, javelins, buckler. Skirmishers, Feigned Flight. An Iberian army may not have more than one unit of Caetrati per two units of Scutarii (unless none are used) and no Caetrati unit may outnumber the smallest Scutarii unit. In Celtiberian armies no Caetrati unit may outnumber the smallest Celtiberian unit; in Lusitanian armies one Lusitanian unit per two Caetrati units. (Hannibal p.72)</characteristic>
               </characteristics>
             </profile>
+            <profile id="8ebf-13af-2770-0ca9" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="5992-7014-2427-b7b3" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
@@ -881,6 +1106,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="dccf-b9a1-be05-1ace" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -897,6 +1126,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="f297-ed6d-c3a9-2136" name="Heavy Throwing Spear" hidden="false" targetId="26ae-ef02-1f24-a490" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -950,6 +1183,14 @@
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, throwing spear, shield. Warband, Feigned Flight, Stealth. (Hannibal p.72)</characteristic>
               </characteristics>
+            </profile>
+            <profile id="fb2b-84b4-351f-61f9" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>
@@ -1012,6 +1253,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="4a81-822e-f2ce-39ac" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1028,6 +1273,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="bceb-8bb0-e677-01c7" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1044,6 +1293,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="bcac-c8e8-f408-ab5d" name="Heavy Throwing Spear" hidden="false" targetId="26ae-ef02-1f24-a490" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1097,6 +1350,26 @@
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword, throwing spear, light armour, buckler. Feigned Flight (lost if armed with heavy throwing spears), Stealth. (Hannibal p.72)</characteristic>
               </characteristics>
+            </profile>
+            <profile id="dd4a-df11-6799-4f49" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">5+ with Buckler +1 in hand-to-hand only</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c0a-3969-39c1-96ee" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="-">
+                <conditions>
+                <condition field="selections" scope="ab63-e704-3fb0-144e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0c0a-3969-39c1-96ee" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -1178,6 +1451,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="c0d6-6520-5cf3-69ac" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1232,6 +1509,21 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword and sling. Skirmishers. (Hannibal p.72)</characteristic>
               </characteristics>
             </profile>
+            <profile id="2a72-3bc7-7e1d-b327" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="3cad-e7c6-177c-2a94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b14e-5d17-9f8d-8508" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="97ef-fdad-c35d-5460" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
@@ -1270,6 +1562,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="b13a-3273-0e85-02f5" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1324,6 +1620,21 @@
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Sword and sling. Skirmishers, Warband. May not outnumber any other skirmishing infantry unit in the army. Every other unit may be Balearic Slingers. (Hannibal p.72)</characteristic>
               </characteristics>
             </profile>
+            <profile id="f8a3-e174-12a1-bc85" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="e816-0950-99eb-cd4a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c845-03ca-a1b4-b1f3" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
           </profiles>
           <infoLinks>
             <infoLink id="e9a2-274b-9cb2-e630" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
@@ -1363,6 +1674,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="f8a7-e5b8-f343-9fe2" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1379,6 +1694,10 @@
               </repeats>
             </modifier>
           </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="c25b-f471-31dc-d1ef" name="Heavy Throwing Spear" hidden="false" targetId="26ae-ef02-1f24-a490" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1432,6 +1751,14 @@
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">As Celtiberian Warriors; counts as a Special Unit in Iberian armies only. (Hannibal p.72)</characteristic>
               </characteristics>
+            </profile>
+            <profile id="48b8-e26b-d69f-3373" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
             </profile>
           </profiles>
           <infoLinks>

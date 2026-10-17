@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -52,6 +52,13 @@
     <profileType id="b19e-ee0c-17d1-6e33" name="Equipment and Notes">
       <characteristicTypes>
         <characteristicType id="63ac-8f60-d28a-2232" name="Text"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="0dbe-f4ed-ef08-8e86" name="Armour Save">
+      <characteristicTypes>
+        <characteristicType id="603e-2898-6af9-6cf1" name="Save"/>
+        <characteristicType id="5882-dd5a-bc28-4024" name="With conditional bonuses"/>
+        <characteristicType id="d5e4-804e-6192-0114" name="Notes"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -1564,6 +1571,15 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     <rule id="d0cc-9e48-7270-4af6" name="Unbridled Charge" publicationId="fc9f-8438-629b-e92d" hidden="false">
       <description>A Roman or Italian cavalry unit may declare an unbridled charge in lieu of an ordinary charge, only against non-cataphract enemy cavalry (not infantry, cataphracts, camels, chariots or elephants). If it wins a round of combat the charged unit breaks automatically with no Leadership test (units that ignore Break tests roll a D6: 1-3 broken, 4-6 hold). After the charge and combat the Roman cavalry must spend one turn reforming before pursuing or moving, other than fleeing. If charged while reforming it may not fall back in good order.</description>
     </rule>
+    <rule id="aceb-51bd-e1cd-6b4d" name="Horse" hidden="false">
+      <description>Mounted models ride a horse (Movement 8" before armour and barding penalties). A cavalry model's armour save is one pip better than the infantry equivalent (p.95). (Rulebook p.95-96; Hannibal p.7)</description>
+    </rule>
+    <rule id="48fa-efd4-2ade-8c63" name="Warhorse" hidden="false">
+      <description>A warhorse is a heavier mount: M8 WS3 BS0 S3 I3 A1, in place of the ordinary horse. As for a horse, the rider's armour save is one pip better than the infantry equivalent (p.95). (Hannibal p.7)</description>
+    </rule>
+    <rule id="79c0-ca85-a46c-5e3e" name="Encumbrance" hidden="false">
+      <description>Movement values printed in army lists are unencumbered. Infantry with an armour save of at least 4+ lose 1"; cavalry with a save of 3+ (ignoring barding) lose 1"; cavalry with metal barding lose a further 1" regardless of save. The M value shown on the model already includes this and updates as you choose equipment. (Rulebook p.96)</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="7ff2-453d-751e-5f78" name="Sling" publicationId="556c-7119-7234-b625" page="88 (summary p.209)" hidden="false" typeId="5de1-764d-a40b-f6b5" typeName="Missile Weapon">
@@ -1656,158 +1672,147 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </profile>
     <profile id="a423-b782-e1ce-43e2" name="Hand Weapon" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Troops armed with a hand weapon in each hand get +1 extra attack.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">Swords, axes, clubs, hammers and all similar weapons wielded in one hand are comparable in effect: a hand weapon is the basic weapon and no special rules apply. Troops with a weapon in each hand (two swords, or a sword and long dagger) have +1 extra attack in hand-to-hand combat, whatever their Attacks value (p.91). No warrior may ever have a Strength above 5 (p.91).</characteristic>
       </characteristics>
     </profile>
     <profile id="a767-c23a-5b8e-1596" name="Dagger" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. +1 armour save modifier.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">All troops carry daggers or knives as a last resort. Enemy wounded by daggers receive a +1 armour save modifier (one pip better); if they otherwise have no save they save on a 6. E.g. a 5 or 6 save becomes 4, 5 or 6 (p.91). Troops so armed are at a disadvantage compared to those properly prepared for combat.</characteristic>
       </characteristics>
     </profile>
     <profile id="026a-8df7-0a12-0a18" name="Improvised Weapon" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Enemy wounded by daggers or improvised weapons receive a +1 armour save modifier (if they otherwise have no save they save on a 6).
-2. Troops so armed are at a disadvantage compared to those properly prepared for combat. (Rulebook: Dagger and Improvised Weapon.)</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">Bow staves, crossbow butts, javelins, weapons wrested from the enemy, or rocks and rough clubs. Enemy wounded by improvised weapons receive a +1 armour save modifier; if they otherwise have no save they save on a 6 (p.91). Troops so armed are at a disadvantage compared to those properly prepared for combat.</characteristic>
       </characteristics>
     </profile>
     <profile id="bebe-c4da-722c-c475" name="Double-handed Weapon" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Shields cannot be used in hand-to-hand combat.
-2. Always strike last in hand-to-hand combat. If both so armed normal priorities apply.
-3. +2 Strength.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">Large axes, swords, hammers and clubs needing two hands. Troops that carry shields cannot use them in hand-to-hand combat (shields are assumed slung or abandoned). Always strike last in hand-to-hand combat regardless of Initiative or charging; if both sides have double-handed weapons normal priorities apply (charger first, otherwise higher Initiative). +2 Strength on all hits (maximum Strength 5); the enemy armour save is reduced by the higher Strength as normal (p.92).</characteristic>
       </characteristics>
     </profile>
     <profile id="635a-1d79-5976-954c" name="Halberd" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Shields cannot be used in hand-to-hand combat.
-2. +1 Strength.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">A heavy-bladed weapon on a sturdy shaft. Two hands are needed: troops that carry shields cannot use them in hand-to-hand combat. +1 Strength on all hits (maximum Strength 5); the enemy armour save is reduced by the higher Strength as normal (p.92).</characteristic>
       </characteristics>
     </profile>
     <profile id="5a59-1efb-14ef-017a" name="Thrusting Spear" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Stationary infantry fight in two ranks to their front.
-2. Cavalry +1 strength bonus when they charge or countercharge over open ground.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">A spear about ten feet long retained and thrust. Infantry fight in two ranks to their front if the unit did not move and the second-rank model's front-rank comrade is fighting exclusively to the front; a unit that charges cannot fight in two ranks. Cavalry add +1 Strength when they charge or countercharge over open ground, in that turn's hand-to-hand combat only (p.93).</characteristic>
       </characteristics>
     </profile>
     <profile id="cc82-90f9-0ade-c0e7" name="Throwing Spear" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Infantry fight in two ranks in the first round of combat.
-2. Cavalry can re-roll misses in the first round of combat unless charging/countercharging over difficult terrain.
-3. Skirmishers can re-roll misses in the first round of combat.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">Hand-to-hand weapon, thrown just before combat and used again as a hand weapon. Infantry fight in two ranks in the first round of each combat engagement, both when they charge and when charged; a second-rank model may fight only if the model in front is fighting to its front. Cavalry may re-roll misses in the first round of each combat unless they charged or countercharged through or into difficult terrain. Skirmishing infantry may re-roll misses in the first round (p.92).</characteristic>
       </characteristics>
     </profile>
     <profile id="26ae-ef02-1f24-a490" name="Heavy Throwing Spear" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Infantry fight in two ranks in the first round of combat.
-2. +1 Strength in the first round of combat.
-3. Skirmishers can re-roll misses in the first round of combat.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">A heavier throwing spear (e.g. pilum, saunion, angon, throwing axe) that penetrates shields and armour. Infantry fight in two ranks in the first round of each combat engagement (as throwing spears) and add +1 Strength in the first round. Skirmishing infantry may re-roll misses in the first round (p.93).</characteristic>
       </characteristics>
     </profile>
     <profile id="8acf-e438-93ac-347e" name="Pike" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Fight in two ranks in all rounds of combat.
-2. Always strike first if fighting exclusively to their front. Where both so armed normal initiatives apply.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">An extremely long spear (16 ft or more); two hands are needed but shields or bucklers strapped to the forearm are allowed. Infantry fight in two ranks irrespective of movement and, if fighting exclusively to their front, always strike first regardless of Initiative or charging; if both sides are pike-armed normal priorities apply (p.94).</characteristic>
       </characteristics>
     </profile>
     <profile id="f901-2529-d411-6ed0" name="Kontos" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Cavalry +1 strength bonus when they charge or countercharge over open ground.
-2. Always strike first if fighting exclusively to their front except against pikes. Where both kontos armed, normal initiatives apply.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">A very long cavalry spear needing two hands; riders cannot carry a full-sized shield but may have small shields or bucklers. Cavalry add +1 Strength when they charge or countercharge over open ground (that turn only) and always strike first against troops with shorter weapons if fighting exclusively to their front (not versus pikes; if both have kontos normal priorities apply). Neither bonus applies if charging through or into difficult terrain (p.94).</characteristic>
       </characteristics>
     </profile>
     <profile id="a4b8-1d78-eb6b-c4f2" name="Lance" publicationId="556c-7119-7234-b625" page="91 (summary p.210)" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
       <characteristics>
-        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">1. Cavalry +2 strength bonus when they charge or countercharge over open ground.</characteristic>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">The couched lance is the weapon of the charging cavalryman. Cavalry add +2 Strength when they charge or countercharge over open ground (that turn only; maximum Strength 5). Not if charging through or into difficult terrain. After the first charge the rider fights with a hand weapon (p.94).</characteristic>
       </characteristics>
     </profile>
     <profile id="b36d-1525-b0bc-5c0f" name="No Armour" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
       <characteristics>
         <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">None</characteristic>
         <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">6</characteristic>
-        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+.</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">No armour, only a helmet or minimal clothing. Infantry have no save, but a shield turns this into a 6 (it still adds a pip); cavalry save on a 6 for the advantage of riding a horse (p.96). Saves never improve beyond 3+ for infantry and for cavalry without barded mounts, or 2+ for cavalry riding barded mounts, whatever the modifiers (rulebook p.96). Encumbrance: infantry with a save of 4+ or better -1" movement; cavalry with a save of 3+ (ignoring barding) -1"; cavalry with metal barding another -1" (p.96).</characteristic>
       </characteristics>
     </profile>
     <profile id="e1d7-1cd3-1431-4862" name="Light Armour" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
       <characteristics>
         <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">6</characteristic>
         <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">5 or 6</characteristic>
-        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+.</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">Breastplate or cuirass of metal, cloth or leather reinforced with metal, bone or horn plates, scales or lamellar (p.96). Infantry in light armour alone save on 6, cavalry on 5 or 6. Saves never improve beyond 3+ for infantry and for cavalry without barded mounts, or 2+ for cavalry riding barded mounts, whatever the modifiers (rulebook p.96). Encumbrance: infantry with a save of 4+ or better -1" movement; cavalry with a save of 3+ (ignoring barding) -1"; cavalry with metal barding another -1" (p.96).</characteristic>
       </characteristics>
     </profile>
     <profile id="16c5-d2b2-fa96-9cd2" name="Heavy Armour" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
       <characteristics>
         <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">5 or 6</characteristic>
         <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">4, 5 or 6</characteristic>
-        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+.</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">Light armour plus helmet, greaves, manica and further reinforcement (p.96). Infantry in heavy armour alone save on 5 or 6; cavalry on 4, 5 or 6, which becomes 3, 4, 5 or 6 with a shield (a large shield adds nothing more). Saves never improve beyond 3+ for infantry and for cavalry without barded mounts, or 2+ for cavalry riding barded mounts, whatever the modifiers (rulebook p.96). Encumbrance: infantry with a save of 4+ or better -1" movement; cavalry with a save of 3+ (ignoring barding) -1"; cavalry with metal barding another -1" (p.96).</characteristic>
       </characteristics>
     </profile>
     <profile id="aa63-8f92-57ef-91e7" name="Cataphract Armour" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
       <characteristics>
         <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">-</characteristic>
         <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">3, 4, 5 or 6*</characteristic>
-        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+.</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">Armour covering the rider from head to foot (horn, lamellar or overlapping scales); cataphracts have no need of shields (p.96). Cavalry save on 3, 4, 5 or 6 with or without a shield. * Either with or without shield: a shield adds no bonus (p.97). Troops so equipped are also affected by the Cataphracts special rule (p.104). Saves never improve beyond 3+ for infantry and for cavalry without barded mounts, or 2+ for cavalry riding barded mounts, whatever the modifiers (rulebook p.96). Encumbrance: infantry with a save of 4+ or better -1" movement; cavalry with a save of 3+ (ignoring barding) -1"; cavalry with metal barding another -1" (p.96).</characteristic>
       </characteristics>
     </profile>
     <profile id="8430-72da-5ac5-d33f" name="Partial Plate Armour" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
       <characteristics>
         <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">4, 5 or 6</characteristic>
         <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">3, 4, 5 or 6*</characteristic>
-        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+.</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">Mail with plates extending over it (p.97). Infantry save on 4, 5 or 6, or 3, 4, 5 or 6 with a shield (a large shield adds nothing more). Cavalry as cataphract armour: 3, 4, 5 or 6 with or without shield. * Either with or without shield: a shield adds no bonus (p.97). Saves never improve beyond 3+ for infantry and for cavalry without barded mounts, or 2+ for cavalry riding barded mounts, whatever the modifiers (rulebook p.96). Encumbrance: infantry with a save of 4+ or better -1" movement; cavalry with a save of 3+ (ignoring barding) -1"; cavalry with metal barding another -1" (p.96).</characteristic>
       </characteristics>
     </profile>
     <profile id="70a8-fcb7-f10e-4737" name="Full Plate Armour" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
       <characteristics>
         <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">3, 4, 5 or 6*</characteristic>
         <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">3, 4, 5 or 6*</characteristic>
-        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">* Either with or without shield - carrying a shield adds no bonus to the warrior's armour saving throw. Maximum infantry save is 3+ and cavalry is 2+.</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">Articulated metal plates enclosing the wearer from head to foot (p.97). Infantry and cavalry both save on 3, 4, 5 or 6 with or without a shield, so no shield bonus is applied. * Either with or without shield: a shield adds no bonus (p.97). Saves never improve beyond 3+ for infantry and for cavalry without barded mounts, or 2+ for cavalry riding barded mounts, whatever the modifiers (rulebook p.96). Encumbrance: infantry with a save of 4+ or better -1" movement; cavalry with a save of 3+ (ignoring barding) -1"; cavalry with metal barding another -1" (p.96).</characteristic>
       </characteristics>
     </profile>
     <profile id="b513-5c2a-34df-6a1d" name="Shield" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70"></characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1 pip to the armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Close-combat troops carry shields. Troops with double-handed weapons or halberds cannot use their shields in hand-to-hand combat. No benefit where the armour already gives the maximum save or where marked * (p.97).</characteristic>
       </characteristics>
     </profile>
     <profile id="8367-11b2-7778-977f" name="Large Shield" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+2</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70"></characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+2 pips to the armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">A shield covering a substantial part of the bearer's body, overlapping those of neighbours. Cannot bring a save above the maximums, so there is no benefit over a normal shield in some cases (p.97).</characteristic>
       </characteristics>
     </profile>
     <profile id="f587-5eb5-fc55-6409" name="Pavise" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+2</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70">When hit to the front by shooting only</characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+2 pips to the armour saving throw (when shot at from the front only)</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">A very large shield for missile troops, hung on the back or propped up. No bonus in other circumstances or in hand-to-hand combat; cannot bring a save above the maximums (p.98).</characteristic>
       </characteristics>
     </profile>
     <profile id="aa05-2e85-a1d8-8d69" name="Buckler" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Hand-to-hand only unless skirmishers</characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1 pip to the armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">A very small shield favoured by lightly equipped troops. Infantry and cavalry in skirmish formation add the pip against all wounds; other troops add it in hand-to-hand combat only, not against shooting (p.98).</characteristic>
       </characteristics>
     </profile>
     <profile id="e556-cf0c-4c05-4d8b" name="Full Metal Barding" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70"></characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1 pip to the cavalry armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Metal barding (often just "barding" in army lists) covers the whole mount. Cavalry with metal barding lose a further 1" movement (p.96, 98).</characteristic>
       </characteristics>
     </profile>
     <profile id="b16b-db14-3dfe-1470" name="Half Metal Barding" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70">When hit to the front</characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1 pip to the cavalry armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Metal barding covering the front half of the mount: +1 pip only when hit from the front or fighting hand-to-hand to the front, not from the side or rear. Cavalry with metal barding lose a further 1" movement (p.96, 98).</characteristic>
       </characteristics>
     </profile>
     <profile id="967d-06de-de04-9660" name="Full Cloth Barding" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Hand-to-hand only</characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1 pip to the cavalry armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Padded cloth or felt barding covering the whole mount: +1 pip in hand-to-hand combat only, not against shooting. "Barding" alone in an army list means metal barding (p.98).</characteristic>
       </characteristics>
     </profile>
     <profile id="3902-d49b-5509-fb74" name="Half Cloth Barding" publicationId="556c-7119-7234-b625" page="49 (summary p.205)" hidden="false" typeId="37e2-4bc8-b9e2-0e43" typeName="Shield or Barding">
       <characteristics>
-        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1</characteristic>
-        <characteristic name="Note" typeId="86a0-abae-4649-7d70">When hit to the front in hand-to-hand only</characteristic>
+        <characteristic name="Bonus" typeId="8e05-e350-dc3c-2a49">+1 pip to the cavalry armour saving throw</characteristic>
+        <characteristic name="Note" typeId="86a0-abae-4649-7d70">Padded cloth barding covering the front half of the mount: +1 pip in hand-to-hand combat when fighting to the front only, not from the side or rear, not against shooting (p.98).</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

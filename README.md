@@ -90,3 +90,10 @@ These options sit on the unit entry, so the +5 (Centurion +10; free for Hastati,
 ## Equipment options are all-or-nothing
 
 Every equipment option on a non-character unit ("replaces x", "may have x", armour, shields, Drilled and so on) applies to every model in the unit. They are unit-level checkboxes whose cost is the per-model cost multiplied by the number of models (`tools/replace_options_to_unit.py`). Characters keep their own per-model options. This is deliberately strict (all models armed alike); relax it for any list that allows mixed equipment.
+
+## Equipment definitions, Armour Save and encumbrance (rulebook pp.91-98)
+
+- `tools/equip_defs.py` rewrites the shared weapon, armour, shield and barding definitions with the rulebook wording (Shield +1 pip to the armour save, Large Shield +2, Buckler and Pavise conditions, maximum save 3+ or 2+ for barded cavalry), adds Horse, Warhorse and Encumbrance rules, and links a definition to every equipment option.
+- `tools/equip_save.py` gives each model an **Armour Save** line (with a "with conditional bonuses" column for buckler, pavise, half barding and cloth barding) and reduces **M** for encumbrance (infantry with a 4+ or better save -1", cavalry with a 3+ save -1", metal barding another -1"). Both update as options are ticked. Printed M values in the lists are unencumbered, so the shown M can be lower than the printed one.
+- Which models count as cavalry (extra pip) is decided by the unit or model name; see `tools/cavalry_units.txt`. Models that are skirmishers get the buckler pip against all attacks.
+- Build order: ... `add_unit_upgrades.py`, `replace_options_to_unit.py`, `profile_swaps.py`, `equip_defs.py`, `equip_save.py`, `collapse_forces.py`, `carth_restrictions.py`.
