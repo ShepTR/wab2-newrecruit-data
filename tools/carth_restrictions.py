@@ -136,3 +136,22 @@ def do_unit(m):
 s = re.sub(r'    <selectionEntry id="[^"]*" name="[^"]*"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', do_unit, s, flags=re.S)
 open(PATH, 'w', encoding='utf8').write(s)
 print('restricted', done, 'units')
+
+# ---- second pass: hide units that are not on the chosen war's list (they also still fail validation if already added) ----
+s = open(PATH, encoding='utf8').read()
+hid_done = 0
+def do_hide(m):
+    global hid_done
+    blk = m.group(0)
+    name = re.match(r'    <selectionEntry id="[^"]*" name="([^"]*)"', blk).group(1).replace('&amp;', '&')
+    if name in ALWAYS or name not in rules or 'carth-hide' in blk: return blk
+    absent = [w for w in war_names if w not in rules[name]]
+    if not absent: return blk
+    conds = ''.join(f'                  {cond_war(w)}\n' for w in absent)
+    mod = ('        <!-- carth-hide -->\n          <modifier type="set" field="hidden" value="true">\n            <conditionGroups>\n              <conditionGroup type="or">\n'
+           f'                <conditions>\n{conds}                </conditions>\n              </conditionGroup>\n            </conditionGroups>\n          </modifier>\n')
+    hid_done += 1
+    return blk.replace('      </modifiers>\n', mod + '      </modifiers>\n', 1)
+s = re.sub(r'    <selectionEntry id="[^"]*" name="[^"]*"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', do_hide, s, flags=re.S)
+open(PATH, 'w', encoding='utf8').write(s)
+print('hide modifiers added to', hid_done, 'units')
