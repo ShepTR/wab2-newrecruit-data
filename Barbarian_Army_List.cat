@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6d4b-7fde-55a6-b187" name="Barbarian Army List" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6d4b-7fde-55a6-b187" name="Barbarian Army List" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Barbarian Army List: units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="eec0-c7ca-cf1a-0734" name="Warlord" hidden="false" collective="false" import="true" type="unit">
@@ -66,27 +66,48 @@
             </profile>
             <profile id="5942-9b0a-d27e-06c4" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b09c-aea3-fcd2-4c68" type="atLeast"/>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c6d-13c5-606a-a5b5" type="lessThan"/>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7acf-be85-950a-273e" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b09c-aea3-fcd2-4c68" type="lessThan"/>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c6d-13c5-606a-a5b5" type="atLeast"/>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7acf-be85-950a-273e" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
                 <conditions>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b09c-aea3-fcd2-4c68" type="lessThan"/>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c6d-13c5-606a-a5b5" type="lessThan"/>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7acf-be85-950a-273e" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b09c-aea3-fcd2-4c68" type="atLeast"/>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c6d-13c5-606a-a5b5" type="atLeast"/>
+                <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7acf-be85-950a-273e" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b09c-aea3-fcd2-4c68" type="atLeast"/>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c6d-13c5-606a-a5b5" type="lessThan"/>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7acf-be85-950a-273e" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b09c-aea3-fcd2-4c68" type="lessThan"/>
                 <condition field="selections" scope="5a93-3217-f3e3-4e85" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c6d-13c5-606a-a5b5" type="atLeast"/>
@@ -274,27 +295,48 @@
             </profile>
             <profile id="aa58-7e78-f3f9-5d83" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c45-ce56-47ab-6674" type="atLeast"/>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8bd0-12bd-a892-9a05" type="lessThan"/>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="79f5-1326-8ad2-7f89" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c45-ce56-47ab-6674" type="lessThan"/>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8bd0-12bd-a892-9a05" type="atLeast"/>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="79f5-1326-8ad2-7f89" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
                 <conditions>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c45-ce56-47ab-6674" type="lessThan"/>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8bd0-12bd-a892-9a05" type="lessThan"/>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="79f5-1326-8ad2-7f89" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c45-ce56-47ab-6674" type="atLeast"/>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8bd0-12bd-a892-9a05" type="atLeast"/>
+                <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="79f5-1326-8ad2-7f89" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c45-ce56-47ab-6674" type="atLeast"/>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8bd0-12bd-a892-9a05" type="lessThan"/>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="79f5-1326-8ad2-7f89" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c45-ce56-47ab-6674" type="lessThan"/>
                 <condition field="selections" scope="cdec-6486-73a1-ba78" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8bd0-12bd-a892-9a05" type="atLeast"/>
@@ -532,27 +574,48 @@
             </profile>
             <profile id="120b-d4b2-754e-1758" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bb3-5052-a84f-8a00" type="atLeast"/>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9842-73ec-339c-2ccb" type="lessThan"/>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b96-4d8b-73f5-0059" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bb3-5052-a84f-8a00" type="lessThan"/>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9842-73ec-339c-2ccb" type="atLeast"/>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b96-4d8b-73f5-0059" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
                 <conditions>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bb3-5052-a84f-8a00" type="lessThan"/>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9842-73ec-339c-2ccb" type="lessThan"/>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b96-4d8b-73f5-0059" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bb3-5052-a84f-8a00" type="atLeast"/>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9842-73ec-339c-2ccb" type="atLeast"/>
+                <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b96-4d8b-73f5-0059" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bb3-5052-a84f-8a00" type="atLeast"/>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9842-73ec-339c-2ccb" type="lessThan"/>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b96-4d8b-73f5-0059" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bb3-5052-a84f-8a00" type="lessThan"/>
                 <condition field="selections" scope="12ee-e4ee-e16e-716f" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9842-73ec-339c-2ccb" type="atLeast"/>

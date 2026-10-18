@@ -94,7 +94,8 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
         for mm in re.finditer(r'        <selectionEntry id="([^"]*)" name="([^"]*)"[^>]*type="model">\n.*?\n        </selectionEntry>\n', blk, flags=re.S):
             mblk = mm.group(0); mid = mm.group(1); mname = html.unescape(mm.group(2))
             if re.search(r'elephant|mahout|crew|chariot', mname, re.I): continue
-            links = re.findall(r'<infoLink id="[^"]*" name="([^"]*)" hidden="false"[^>]*type="profile"', mblk)
+            base_blk = re.sub(r'<selectionEntries>.*</selectionEntries>\n', '', mblk, flags=re.S)   # equipment options' definition links are not base equipment
+            links = re.findall(r'<infoLink id="[^"]*" name="([^"]*)" hidden="false"[^>]*type="profile"', base_blk)
             armour = next((a for a in ARMOUR if a in links), 'None')
             shields = {x for x in SHIELDS if x in links}; bard = {x for x in BARD if x in links}
             basecav = bool(CAVRX.search(uname + ' ' + mname))
