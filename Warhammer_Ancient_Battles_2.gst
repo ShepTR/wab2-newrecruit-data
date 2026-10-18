@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -963,7 +963,7 @@ Eastern Shock Cavalry that take barding of any sort revert to Shock Cavalry.</de
       <description>1. Test fear against Ld (2D6) - score equal to or less than Ld to pass.
 2. Test if charged by a feared enemy within range. If failed, flee if outnumbered. If not outnumbered, 6s are needed to hit in the first round/any shots from a stand &amp; shoot or fire &amp; flee response.
 3. Test if attempting to charge a feared enemy as soon as the charge is declared before the enemy responds. If failed the unit may not charge and must remain stationary without shooting.
-4. A unit engaged in hand-to-hand combat is automatically broken if outnumbered by a feared enemy.</description>
+4. A unit defeated in hand-to-hand combat is automatically broken if outnumbered by a feared enemy. No Break test is taken, so Break test modifiers and special rules do not apply.</description>
     </rule>
     <rule id="23ce-0721-aa10-1f4d" name="Feigned Flight" publicationId="556c-7119-7234-b625" page="107" hidden="false">
       <description>1. Can respond to an enemy charging to their front with feigned flight.
@@ -1005,7 +1005,7 @@ Eastern Shock Cavalry that take barding of any sort revert to Shock Cavalry.</de
 5. Non-levy units can always re-roll a failed Panic test taken as a result of breaking levies.</description>
     </rule>
     <rule id="5be5-5832-c8fb-3a19" name="Light Troops" publicationId="556c-7119-7234-b625" page="108" hidden="false">
-      <description>1. Light infantry or light cavalry can fight either as skirmishers or as open order formed units.</description>
+      <description>1. Light infantry or light cavalry can fight either as skirmishers or as open order formed units. They must fight as one or the other for the whole battle: if deployed as skirmishers they must fight as skirmishers, if deployed as an open order formed unit they must fight as one.</description>
     </rule>
     <rule id="8593-b58d-8b0f-4b05" name="Massed Cavalry" publicationId="556c-7119-7234-b625" page="109" hidden="false">
       <description>1. Massed cavalry are close order cavalry.

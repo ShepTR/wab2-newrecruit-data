@@ -106,3 +106,6 @@ Every equipment option on a non-character unit ("replaces x", "may have x", armo
 
 ## Light Troops rule on units
 `tools/light_troops.py` links the "Light Troops" rule (rulebook p.108) to every unit of the official lists whose text says Light Infantry or Light Cavalry (31 units), plus the units named Light Cavalry. The Numidian Elephant is skipped (its escorts are the light infantry). The unofficial AoA2 pilot catalogues are not covered.
+
+## Rulebook check against the clean scans (WAB2 Edit_1/Edit_2)
+The two 85-page scans in the Dropbox folder (rules chapters, special rules, reference pages and templates; no army lists) were OCRed and compared with the game system: all 22 rulebook special rules, the missile weapon table, the weapon and armour text, the armour save and encumbrance logic. One difference was found and fixed: Fear point 4 reads "a unit DEFEATED in hand-to-hand combat is automatically broken if outnumbered by a feared enemy" (it said "engaged"). Light Troops now carries the book's "must fight as one or the other for the whole battle" sentence.
