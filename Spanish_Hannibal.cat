@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="11" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Spanish (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="6e39-390c-320e-ff3c" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -1268,7 +1268,47 @@
         <selectionEntry id="b6a0-9528-c9d3-6da6" name="Caetratus" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8c6f-d28a-3019-f213" type="min"/>
+                      <constraint field="selections" scope="parent" value="1000" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1dd4-bd75-586b-14aa" type="max"/>
           </constraints>
+          <modifiers>
+        <!-- spanish-outnumber -->
+          <modifier type="set" field="1dd4-bd75-586b-14aa" value="0">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="903f-cf5e-5a96-3642" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0414-a903-9407-0b9d" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="increment" field="1dd4-bd75-586b-14aa" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8939-f4f0-2a25-53db" repeats="1" roundUp="false"/>
+            </repeats>
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="903f-cf5e-5a96-3642" type="atLeast"/>
+            </conditions>
+          </modifier>
+          <modifier type="set" field="1dd4-bd75-586b-14aa" value="0">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a32d-ef40-094e-5557" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ab63-e704-3fb0-144e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="increment" field="1dd4-bd75-586b-14aa" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c88a-9e53-4fd7-e9ef" repeats="1" roundUp="false"/>
+            </repeats>
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a32d-ef40-094e-5557" type="atLeast"/>
+            </conditions>
+          </modifier>
+          </modifiers>
           <profiles>
             <profile id="72cd-2d6e-ffaf-d8a8" name="Caetratus" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
