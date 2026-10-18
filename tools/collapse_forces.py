@@ -86,6 +86,7 @@ for fn in multi:
                     f'    </selectionEntry>\n')
 
 root = f'    <forceEntry id="{rid}" name="Army" hidden="false">\n      <categoryLinks>\n'
+PICK_FIRST = ''   # the Army composition picker link is placed first so it shows at the top of the list
 for cid, cn in cats:
     kinds = {}      # kind -> default
     for fn, vs in variants.items():
@@ -117,6 +118,9 @@ if multi:
              f'          </constraints>\n          <modifiers>\n            <modifier type="set" field="{hid("pick", "min")}" value="1">\n'
              f'              <conditionGroups>\n                <conditionGroup type="or">\n                  <conditions>\n{conds}                  </conditions>\n                </conditionGroup>\n              </conditionGroups>\n'
              f'            </modifier>\n          </modifiers>\n        </categoryLink>\n')
+if multi and PICK_FIRST == '':
+    m_ = re.search(r'        <categoryLink id="[^"]*" name="Army composition".*?        </categoryLink>\n', root, re.S)
+    root = root.replace(m_.group(0), '', 1).replace('      <categoryLinks>\n', '      <categoryLinks>\n' + m_.group(0), 1)
 root += '      </categoryLinks>\n    </forceEntry>\n'
 s = s.replace('  <sharedRules>', f'  <forceEntries>\n{root}  </forceEntries>\n' + (f'  <selectionEntries>\n{pickers}  </selectionEntries>\n' if pickers else '') + '  <sharedRules>', 1)
 open(GST, 'w', encoding='utf8').write(s)

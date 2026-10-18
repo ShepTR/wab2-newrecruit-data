@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="2" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="3" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -63,6 +63,7 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
+    <categoryEntry id="fb15-1790-2ccc-50c8" name="Army composition" hidden="false"/>
     <categoryEntry id="44b5-a917-2fd7-20ca" name="Allies and Mercenaries" hidden="false"/>
     <categoryEntry id="5292-e765-10c8-f6e8" name="Archers" hidden="false"/>
     <categoryEntry id="3a7c-df52-a77b-1017" name="Artillery" hidden="false"/>
@@ -79,11 +80,30 @@
     <categoryEntry id="ce31-a2e9-3e20-4277" name="Warriors" hidden="false"/>
     <categoryEntry id="cdbb-fd56-92b1-73b7" name="Common Troops" hidden="false"/>
     <categoryEntry id="d68a-ed84-1d75-2f64" name="Uncommon Troops" hidden="false"/>
-    <categoryEntry id="fb15-1790-2ccc-50c8" name="Army composition" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
       <categoryLinks>
+        <categoryLink id="ba32-164b-3eb5-3a3c" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="false">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7131-83f0-eac6-ea76" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec67-0ca5-e0c4-a5d8" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="ec67-0ca5-e0c4-a5d8" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="30b1-e14e-f544-81c3" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77be-8814-23e3-4ce5" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9c9b-cdcf-a528-ea88" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="178c-ffbc-b301-16ba" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </categoryLink>
         <categoryLink id="0c16-a38c-825b-8ad7" name="Allies and Mercenaries" hidden="false" targetId="44b5-a917-2fd7-20ca" primary="false">
           <constraints>
             <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="f74a-7438-43a8-644d" type="max"/>
@@ -625,26 +645,6 @@
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
               </conditions>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink id="ba32-164b-3eb5-3a3c" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7131-83f0-eac6-ea76" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec67-0ca5-e0c4-a5d8" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" field="ec67-0ca5-e0c4-a5d8" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="30b1-e14e-f544-81c3" type="instanceOf"/>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77be-8814-23e3-4ce5" type="instanceOf"/>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9c9b-cdcf-a528-ea88" type="instanceOf"/>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="178c-ffbc-b301-16ba" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </modifier>
           </modifiers>
         </categoryLink>
