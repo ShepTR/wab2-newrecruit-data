@@ -56,6 +56,13 @@ def label(fn, vname):
 
 s = open(GST, encoding='utf8').read()
 
+# optional extra rule: a category limit changes when a given unit is in the army (tools/cond_limits.json: [{file, category, kind, value, unit}])
+CONDF = os.path.join(OUT, 'tools', 'cond_limits.json')
+CONDS = json.load(open(CONDF, encoding='utf8')) if os.path.exists(CONDF) else []
+def unit_id(fn, name):
+    c = open(os.path.join(OUT, fn), encoding='utf8').read()
+    return re.search(r'<selectionEntry id="([^"]*)" name="%s"[^>]*type="unit"' % re.escape(name.replace('&', '&amp;')), c).group(1)
+
 # 3. remove every existing force and rebuild one
 s = re.sub(r'  <forceEntries>\n.*?  </forceEntries>\n', '', s, flags=re.S)
 s = re.sub(r'  <selectionEntries>\n.*?  </selectionEntries>\n', '', s, flags=re.S)   # old pickers, if re-run
@@ -107,6 +114,11 @@ for cid, cn in cats:
                 if val is None: continue
                 c = cond_cat(fn) if single else cond_pick(vid_of[(fn, v['name'])])
                 mods += (f'            <modifier type="set" field="{conid}" value="{val}">\n              <conditions>\n                {c}\n              </conditions>\n            </modifier>\n')
+        for ce in CONDS:
+            if ce['category'] != cn or ce['kind'] != k: continue
+            uc = (f'<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" '
+                  f'includeChildForces="false" childId="{unit_id(ce["file"], ce["unit"])}" type="atLeast"/>')
+            mods += (f'            <modifier type="set" field="{conid}" value="{ce["value"]}">\n              <conditions>\n                {cond_cat(ce["file"])}\n                {uc}\n              </conditions>\n            </modifier>\n')
     root += link + f'>\n          <constraints>\n{cons}          </constraints>\n          <modifiers>\n{mods}          </modifiers>\n        </categoryLink>\n'
 # picker link: at most one choice; one is required for lists that have several compositions
 if multi:

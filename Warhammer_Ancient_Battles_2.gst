@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -8,6 +8,7 @@
     <publication id="513c-2d0a-024a-da5a" name="Chariot Wars" shortName="CW" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
     <publication id="37b4-aae5-6830-d590" name="Fall of the West" shortName="FotW" publisher="Warhammer Historical Wargames" publicationDate="2002"/>
     <publication id="aab0-aa1e-0319-4ffe" name="Armies of Antiquity" shortName="AoA" publisher="Warhammer Historical Wargames" publicationDate="1999"/>
+    <publication id="af20-e256-4a51-93aa" name="Shieldwall" shortName="SW" publisher="Warhammer Historical Wargames" publicationDate="2002"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -104,6 +105,30 @@
     <categoryEntry id="3124-ccb8-55cc-4fb3" name="Special Troops &amp; Mercenaries" hidden="false"/>
     <categoryEntry id="2040-2309-97cc-fd89" name="Special Troops, Allies &amp; Mercenaries" hidden="false"/>
     <categoryEntry id="0654-a713-ca15-c866" name="War Machines" hidden="false"/>
+    <categoryEntry id="6eb7-9942-f37d-32df" name="Common Warriors: Milites and Liberi" hidden="false"/>
+    <categoryEntry id="59cd-febb-ea2a-b90a" name="Common Warriors: Milites and Pueri" hidden="false"/>
+    <categoryEntry id="b2e8-8a8b-a1b9-30a4" name="Common Warriors: Toisech and Soer-chele" hidden="false"/>
+    <categoryEntry id="0f53-e23c-3ec0-9fe3" name="Common Warriors: Toisech, Eachraidh, Soer-chele and Doer-chele" hidden="false"/>
+    <categoryEntry id="a6c2-7b01-428a-5002" name="Common Warriors: Toisech, Soer-chele and Doer-chele" hidden="false"/>
+    <categoryEntry id="c9c8-3285-67ba-9053" name="Uncommon Warriors: Coloni and Dogs of War" hidden="false"/>
+    <categoryEntry id="3b71-8f3d-d210-a108" name="Uncommon Warriors: Doer-chele, Eachraidh and Dogs of War" hidden="false"/>
+    <categoryEntry id="5603-085f-62f4-c42f" name="Uncommon Warriors: Eachraidh and Dogs of War" hidden="false"/>
+    <categoryEntry id="fcf2-d68f-f22f-4460" name="Uncommon Warriors: Liberi, Coloni and Dogs of War" hidden="false"/>
+    <categoryEntry id="491c-de44-9505-3e4b" name="Uncommon Warriors: Pueri, Coloni and Dogs of War" hidden="false"/>
+    <categoryEntry id="ad27-4da1-3028-5533" name="Uncommon Warriors: Pueri, Liberi, Coloni and Dogs of War" hidden="false"/>
+    <categoryEntry id="2bde-edde-d265-2a6a" name="Coloni" hidden="false"/>
+    <categoryEntry id="bb52-a098-8217-fad7" name="Common Warriors" hidden="false"/>
+    <categoryEntry id="9568-2556-e209-055d" name="Doer-chele" hidden="false"/>
+    <categoryEntry id="a57d-15cd-e77c-b15b" name="Dogs of War" hidden="false"/>
+    <categoryEntry id="1cc6-442e-e168-ff3b" name="Eachraidh" hidden="false"/>
+    <categoryEntry id="f27b-2cf4-9b3d-b4e8" name="Fianna" hidden="false"/>
+    <categoryEntry id="b697-d3d4-1f93-7bb9" name="Liberi" hidden="false"/>
+    <categoryEntry id="4695-1bd4-a060-f529" name="Milites" hidden="false"/>
+    <categoryEntry id="c5fb-f798-53f2-3293" name="Pueri" hidden="false"/>
+    <categoryEntry id="045c-f9f8-81f6-9a17" name="Soer-chele" hidden="false"/>
+    <categoryEntry id="0c80-93da-4649-b3ed" name="Teulu" hidden="false"/>
+    <categoryEntry id="5ad7-c087-1636-0808" name="Toisech" hidden="false"/>
+    <categoryEntry id="b2c1-cc28-9aef-021d" name="Uncommon Warriors" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -125,6 +150,12 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eb28-6ed4-bf69-dbe1" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="50be-dbef-ae9e-f1d0" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2544-bf63-92be-1e97" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b97e-a61f-c356-33c6" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b904-05df-7dcd-cae7" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b90f-6192-92f7-0af0" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -520,6 +551,147 @@
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bfb9-d9ae-bab5-e025" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d265-0a84-8b65-6ff7" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c1-ac13-d737-e9a7" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6391-39aa-7a7c-838f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0e3-1e52-8d8c-bc44" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b68c-1a9f-6ab8-aeb4" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad2-fb2e-4857-a0eb" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f3e-ee53-0849-f772" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6cdb-0884-d537-7b7b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="677a-dd5f-38aa-b0b9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d328-acd5-abe6-f9f8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c0d-204f-6a50-9878" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca2f-c852-f793-2c5b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8911-38f7-f066-9682" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb0e-4009-8866-37d5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82e2-17f3-9229-da71" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b25c-d287-98e6-0348" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bbb-4938-22b7-f448" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e001-92db-8133-4ba9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb97-f0e3-0c62-fe56" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2501-daac-06e2-9700" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bd7-798e-a0b7-097b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="700e-e22c-373d-9eb5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="67e2-c8d5-1d5a-828f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="060c-b6b4-1093-2f6e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2de-f5e9-c065-f082" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d447-6b15-fb75-1c8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d28f-0a2b-884a-cebb" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1439,6 +1611,391 @@
           </modifiers>
         </categoryLink>
         <categoryLink id="c622-07a6-fa90-1e87" name="War Machines" hidden="false" targetId="0654-a713-ca15-c866" primary="false"/>
+        <categoryLink id="c488-466e-a240-ce17" name="Common Warriors: Milites and Liberi" hidden="false" targetId="6eb7-9942-f37d-32df" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="0521-be64-6f01-d145" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="0521-be64-6f01-d145" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="67e2-c8d5-1d5a-828f" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="fbb5-5f98-93bd-ab98" name="Common Warriors: Milites and Pueri" hidden="false" targetId="59cd-febb-ea2a-b90a" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="d73f-1d76-8093-ba5e" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="d73f-1d76-8093-ba5e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="060c-b6b4-1093-2f6e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d73f-1d76-8093-ba5e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2de-f5e9-c065-f082" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="b199-ceb8-fa78-28a0" name="Common Warriors: Toisech and Soer-chele" hidden="false" targetId="b2e8-8a8b-a1b9-30a4" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="4ccf-f005-1c1f-dfd1" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="4ccf-f005-1c1f-dfd1" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca2f-c852-f793-2c5b" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="86af-2c73-8c86-e5a5" name="Common Warriors: Toisech, Eachraidh, Soer-chele and Doer-chele" hidden="false" targetId="0f53-e23c-3ec0-9fe3" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="3270-7bb8-c987-a613" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="3270-7bb8-c987-a613" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8911-38f7-f066-9682" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="6db6-6553-9e74-244c" name="Common Warriors: Toisech, Soer-chele and Doer-chele" hidden="false" targetId="a6c2-7b01-428a-5002" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="2313-7f11-82b4-ecad" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="2313-7f11-82b4-ecad" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="677a-dd5f-38aa-b0b9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="2313-7f11-82b4-ecad" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d328-acd5-abe6-f9f8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="2313-7f11-82b4-ecad" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c0d-204f-6a50-9878" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="6651-5818-08fe-0044" name="Uncommon Warriors: Coloni and Dogs of War" hidden="false" targetId="c9c8-3285-67ba-9053" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="d5a7-a4a3-053c-a6e2" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="d5a7-a4a3-053c-a6e2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2de-f5e9-c065-f082" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="6c2f-7fad-eab6-f035" name="Uncommon Warriors: Doer-chele, Eachraidh and Dogs of War" hidden="false" targetId="3b71-8f3d-d210-a108" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="3ef0-4470-e9fe-b352" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="3ef0-4470-e9fe-b352" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca2f-c852-f793-2c5b" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="b812-7770-e185-0e2e" name="Uncommon Warriors: Eachraidh and Dogs of War" hidden="false" targetId="5603-085f-62f4-c42f" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="73a0-0096-537d-224b" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="73a0-0096-537d-224b" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="677a-dd5f-38aa-b0b9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="73a0-0096-537d-224b" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d328-acd5-abe6-f9f8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="73a0-0096-537d-224b" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0c0d-204f-6a50-9878" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="36ab-710b-0581-1d1c" name="Uncommon Warriors: Liberi, Coloni and Dogs of War" hidden="false" targetId="fcf2-d68f-f22f-4460" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="2381-1253-1f72-a915" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="2381-1253-1f72-a915" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="060c-b6b4-1093-2f6e" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="c907-3d5d-9a0e-7134" name="Uncommon Warriors: Pueri, Coloni and Dogs of War" hidden="false" targetId="491c-de44-9505-3e4b" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="e526-193c-058e-02c9" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="e526-193c-058e-02c9" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="67e2-c8d5-1d5a-828f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e526-193c-058e-02c9" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d447-6b15-fb75-1c8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="0ef8-6a9f-c830-5d22" name="Uncommon Warriors: Pueri, Liberi, Coloni and Dogs of War" hidden="false" targetId="ad27-4da1-3028-5533" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="a0e2-e5e1-4ad8-c4d1" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="a0e2-e5e1-4ad8-c4d1" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="700e-e22c-373d-9eb5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="bd98-3948-a66f-55fb" name="Coloni" hidden="false" targetId="2bde-edde-d265-2a6a" primary="false"/>
+        <categoryLink id="44fd-f1b3-146a-af1c" name="Common Warriors" hidden="false" targetId="bb52-a098-8217-fad7" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="e0cc-b055-706c-9741" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="bd2c-3f66-10f6-3862" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="e0cc-b055-706c-9741" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad2-fb2e-4857-a0eb" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e0cc-b055-706c-9741" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f3e-ee53-0849-f772" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e0cc-b055-706c-9741" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb97-f0e3-0c62-fe56" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e0cc-b055-706c-9741" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bd7-798e-a0b7-097b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d265-0a84-8b65-6ff7" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c1-ac13-d737-e9a7" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6391-39aa-7a7c-838f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0e3-1e52-8d8c-bc44" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b68c-1a9f-6ab8-aeb4" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6cdb-0884-d537-7b7b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb0e-4009-8866-37d5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82e2-17f3-9229-da71" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b25c-d287-98e6-0348" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bbb-4938-22b7-f448" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e001-92db-8133-4ba9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2501-daac-06e2-9700" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="b15f-d321-d2c6-05e4" name="Doer-chele" hidden="false" targetId="9568-2556-e209-055d" primary="false"/>
+        <categoryLink id="96d3-3948-d9bc-fd52" name="Dogs of War" hidden="false" targetId="a57d-15cd-e77c-b15b" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="c81f-d959-5a72-c54f" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="c81f-d959-5a72-c54f" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8911-38f7-f066-9682" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="466f-84c2-cb10-1ca8" name="Eachraidh" hidden="false" targetId="1cc6-442e-e168-ff3b" primary="false"/>
+        <categoryLink id="48b1-ead2-2757-808b" name="Fianna" hidden="false" targetId="f27b-2cf4-9b3d-b4e8" primary="false"/>
+        <categoryLink id="4d8e-aa31-05a6-1e34" name="Liberi" hidden="false" targetId="b697-d3d4-1f93-7bb9" primary="false"/>
+        <categoryLink id="5eb6-ae94-8951-3bc8" name="Milites" hidden="false" targetId="4695-1bd4-a060-f529" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="35c6-fd61-0a28-30b8" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="35c6-fd61-0a28-30b8" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="700e-e22c-373d-9eb5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="35c6-fd61-0a28-30b8" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d447-6b15-fb75-1c8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="db6c-c290-af63-4565" name="Pueri" hidden="false" targetId="c5fb-f798-53f2-3293" primary="false"/>
+        <categoryLink id="4f96-0524-ca26-f847" name="Soer-chele" hidden="false" targetId="045c-f9f8-81f6-9a17" primary="false"/>
+        <categoryLink id="611b-b30c-8eed-182f" name="Teulu" hidden="false" targetId="0c80-93da-4649-b3ed" primary="false"/>
+        <categoryLink id="da38-cc94-a682-09a3" name="Toisech" hidden="false" targetId="5ad7-c087-1636-0808" primary="false"/>
+        <categoryLink id="814a-654d-7408-69a4" name="Uncommon Warriors" hidden="false" targetId="b2c1-cc28-9aef-021d" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="9a05-798d-10bc-17d2" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d265-0a84-8b65-6ff7" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c1-ac13-d737-e9a7" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6391-39aa-7a7c-838f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0e3-1e52-8d8c-bc44" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b68c-1a9f-6ab8-aeb4" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad2-fb2e-4857-a0eb" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f3e-ee53-0849-f772" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6cdb-0884-d537-7b7b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb0e-4009-8866-37d5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="82e2-17f3-9229-da71" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b25c-d287-98e6-0348" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bbb-4938-22b7-f448" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e001-92db-8133-4ba9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb97-f0e3-0c62-fe56" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2501-daac-06e2-9700" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bd7-798e-a0b7-097b" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -1766,6 +2323,357 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="6f4e-45f0-1f96-e59e" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="da14-812b-9f0f-b0a6" name="Norwegians" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Northmen_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2544-bf63-92be-1e97" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="57b0-86c5-ec8a-8b9c" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="d265-0a84-8b65-6ff7" name="Hiberno-Norse" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Northmen_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2544-bf63-92be-1e97" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c9e8-db0d-c1e2-953b" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="e2c1-ac13-d737-e9a7" name="Orkneyinga" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Northmen_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2544-bf63-92be-1e97" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ec53-4cc3-32fd-3132" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="6391-39aa-7a7c-838f" name="Kingdom of the Isles" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Northmen_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2544-bf63-92be-1e97" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="be94-cddc-4581-e804" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="f0e3-1e52-8d8c-bc44" name="Wessex" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>English_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c3fb-f7a3-59a1-bb88" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b68c-1a9f-6ab8-aeb4" name="Mercia" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>English_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="cd13-02ce-a35c-346b" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="cad2-fb2e-4857-a0eb" name="Northumbria" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>English_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="626a-75f3-ede4-2565" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="1f3e-ee53-0849-f772" name="Anglia" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>English_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="11a0-dc2f-b570-00ca" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="6cdb-0884-d537-7b7b" name="Kent &amp; the Home Counties" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>English_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a694-f835-a22f-2bfc" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="677a-dd5f-38aa-b0b9" name="Dal Riata" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Caledonians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b97e-a61f-c356-33c6" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2a74-c135-9730-2b55" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="d328-acd5-abe6-f9f8" name="Alba" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Caledonians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b97e-a61f-c356-33c6" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="bf9d-f9b6-882f-1be4" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="0c0d-204f-6a50-9878" name="The Picts (the Cruithne)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Caledonians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b97e-a61f-c356-33c6" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a120-e56d-0b96-bb56" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="ca2f-c852-f793-2c5b" name="Scotland" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Caledonians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b97e-a61f-c356-33c6" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5bef-8f12-21fd-f44d" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="8911-38f7-f066-9682" name="Strathclyde" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Caledonians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b97e-a61f-c356-33c6" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="04cd-91f0-b77c-73c1" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="eb0e-4009-8866-37d5" name="Gwynedd" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Welsh_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b904-05df-7dcd-cae7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9fb7-c5b2-876e-00d7" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="82e2-17f3-9229-da71" name="Powys" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Welsh_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b904-05df-7dcd-cae7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="79cd-8000-94e5-4f6b" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b25c-d287-98e6-0348" name="Southern Kingdoms" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Welsh_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b904-05df-7dcd-cae7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="06ad-d008-015a-5001" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="4bbb-4938-22b7-f448" name="Dumnonia" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Welsh_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b904-05df-7dcd-cae7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="51fc-56f1-bf0b-f373" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="e001-92db-8133-4ba9" name="Munster" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Hibernians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b90f-6192-92f7-0af0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3b88-258d-af38-8269" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="bb97-f0e3-0c62-fe56" name="Leinster" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Hibernians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b90f-6192-92f7-0af0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0019-bfe2-2f7b-e9b7" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="2501-daac-06e2-9700" name="Connacht" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Hibernians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b90f-6192-92f7-0af0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="fa9b-56ba-27c5-91cb" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="4bd7-798e-a0b7-097b" name="Ulster" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Hibernians_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b90f-6192-92f7-0af0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7fae-add6-49b2-a05a" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="700e-e22c-373d-9eb5" name="Carolingian French" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Western_Franks_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b59c-4bd8-02c0-4981" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="67e2-c8d5-1d5a-828f" name="County of Flanders" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Western_Franks_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a614-f068-9d83-90d6" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="060c-b6b4-1093-2f6e" name="Duchy of Normandy" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Western_Franks_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="afda-111c-e47f-d481" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="c2de-f5e9-c065-f082" name="The Bretons" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Western_Franks_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="df65-fbb0-5f8f-c036" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="d447-6b15-fb75-1c8b" name="Capetian French" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Western_Franks_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="86b6-8686-c15b-fcd9" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
@@ -2667,6 +3575,63 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </rule>
     <rule id="d638-2367-3540-5a2f" name="Peasants (Samurai)" publicationId="aab0-aa1e-0319-4ffe" hidden="false">
       <description>May only declare a charge if led by a Samurai Hero.</description>
+    </rule>
+    <rule id="5b7f-5d28-c1dc-0d4e" name="Shieldwall Common Rules" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>The army lists in Shieldwall are used in the same way as the Roman &amp; Barbarian lists in Warhammer Ancient Battles; each has its own force composition and additional rules. UNIT SIZES: the minimum size for a regiment is five infantry or cavalry models; there is no upper limit. One model per unit may be upgraded to a leader (+5 pts), one to a standard bearer (+5 pts) and one to a musician (+5 pts) unless stated otherwise. WHAT YOU SEE IS WHAT YOU GET: unless your opponent agrees otherwise, the models you use must show the options you take. SHIELDWALL: units may form a shieldwall instead of moving. As long as the unit is in a shieldwall, all enemy attacks from the front of the unit (shooting and hand-to-hand) suffer a -1 to hit modifier. The unit benefits from the shieldwall as long as it does not move or lose a round of close combat. Characters on foot in a unit with Shieldwall gain the benefits as well. CAVALRY COUNTER CHARGES: a new charge reaction that may only be taken by cavalry units that are charged to the front by enemy cavalry. The unit counts as charging for the purposes of using its weapons (e.g. +1 S with thrusting spears). Cavalry with a move of less than 6" may not counter-charge. The unit does not move, and does not count as charging for deciding who strikes first. Cavalry may not counter-charge infantry. RANK BONUSES &amp; DIFFICULT TERRAIN: units may only count their rank bonus in close combat if both they and their opponent are in clear, open terrain and neither is behind an obstacle (hills and fords count as clear terrain and do not negate a rank bonus). REFORMING IN COMBAT: a unit fighting to the flank or rear may reform at the end of the Close Combat phase as long as it did not break and is not also engaged on another facing. It must reform so that it faces the unit engaging it, with its centre in base contact with the centre of the enemy unit. A reformed unit still loses its rank bonus for the duration of the combat if it was charged by an enemy unit containing five or more models. SKIRMISHERS AND RANK BONUSES: formed units do not lose their rank bonus if charged by a unit of five or more models in skirmish formation (also to cavalry in skirmish formation, but not to chariots). FALL BACK IN GOOD ORDER: a side that outnumbers the other by over two to one (overwhelming odds) and loses a combat and fails its Break test falls back in good order instead of fleeing; drilled troops, units in skirmish formation and cavalry that lose a combat but pass their Break test may fall back in good order if they wish. The fall back move is made as for a flee move, except: friends within 12" do not take a Panic test; the unit rallies automatically at the end of the move and may immediately reform; it may be pursued but if caught is not wiped out (the pursuer counts as having charged in the next Close Combat phase); it may not declare a charge in its next turn but may otherwise move and shoot normally; a unit that falls back off the table is lost; units can fall back in good order from a Ferocious Charge. MOUNTED MODELS (models chosen from the Shieldwall lists): a model may be mounted on a horse (M8 prior to armour penalties) or on a warhorse (M8 WS3 BS0 S3 I3 A1); mounted models may not use a double-handed weapon. ARMY STANDARD BEARER: may not take double-handed weapons or additional hand weapons as options. LEADERSHIP &amp; WARBAND PSYCHOLOGY: if a unit with Warband psychology is joined by a character who does not have Warband psychology, the unit must use either its own Ld or the character's; it cannot use the character's Ld and add on the Warband rank bonus.</description>
+    </rule>
+    <rule id="50ff-a1ae-ebe2-ce60" name="Fury of the Norsemen" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Such units cause fear in any unit that has a Ld value, before modification, of 7 or less. The affected unit may use its modified Leadership value when taking the test.</description>
+    </rule>
+    <rule id="3f29-4904-5cf6-b01c" name="Werod" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>If the general is killed whilst with such a unit roll a D6. On a 4+ the unit immediately tries to charge the nearest enemy unit in sight, if not engaged. The unit is immune to psychology and Break tests. If its opponent is eliminated, the unit charges the next nearest enemy unit, etc.</description>
+    </rule>
+    <rule id="ff60-649f-f2b4-afff" name="Warband Psychology (rule 2)" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Subject to Warband psychology rule 2: if the unit charges and defeats the enemy in the first round of combat, the enemy are automatically broken and flee without a Break test if the warband outnumbers the enemy.</description>
+    </rule>
+    <rule id="d9ef-387b-7921-7ad7" name="Berserkers (Shieldwall)" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>A unit of Hirdmen can contain up to three Berserkers. They must be placed with a unit at the beginning of the battle, do not count as hidden, and must be represented by a suitably ferocious model in the front rank of the unit. You may choose to remove a Berserker model as a casualty if the unit suffers missile or close combat casualties, but do not have to unless the Berserker(s) is the only model(s) left in the unit or it was targeted in close combat. Berserkers may not leave their unit, other than when they berserk. If there is an enemy unit visible within the charge arc of the unit containing the Berserkers at the start of a Viking turn and within 12" then there is a chance the Berserkers will go berserk: roll 2D6 for each model; if the number rolled is equal to or greater than the distance to the nearest enemy the Berserker charges immediately (move the Berserker into contact with the enemy as he charges). If the unit is engaged in close combat at the start of its turn the Berserker automatically goes berserk at the start of the Viking player's turn. Berserkers always charge the closest enemy (randomly determined if two enemy units are equally close). The Berserker automatically causes D6 Strength 5 hits on the enemy unit which he attacks and is then removed from play. If the enemy unit suffers 25% casualties from the attacks, it must take an immediate Panic test.</description>
+    </rule>
+    <rule id="ba81-d615-6a3f-6e6f" name="Godi" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>The Godi and any unit he is with is immune to psychology and Break tests. As soon as the Godi is killed the unit tests as normal.</description>
+    </rule>
+    <rule id="cb54-b0ce-0f8d-0360" name="Army General (English)" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Army General. Any friendly English unit within 12" of the Army General ignores Warband Psychology rule 2.</description>
+    </rule>
+    <rule id="9aa9-17bb-cd04-d691" name="Abbod" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>A unit that the Abbod accompanies re-rolls any misses in the first round of any combat.</description>
+    </rule>
+    <rule id="42a5-442a-0bfc-beac" name="Combined Units (English)" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Prior to deployment, the English army may split up the single unit of Huscarls, and any units of Thegns, and combine them with units of Ceorls such that no more than 25% of the unit are Huscarls, or 50% are Thegns. Thegns and Huscarls may not be mixed. Huscarls and Thegns must be positioned in the front ranks. If the unit then contains more than one leader, musician or standard, the excess models are replaced by rank &amp; file figures. As long as half or more of the front rank are Huscarls or Thegns, the unit uses the Leadership and Psychology rules of these figures rather than the Leadership and Psychology rules of the Ceorls. Half of all missile hits inflicted on a combined unit count as being inflicted on the Huscarls or Thegns. In close combat, enemy models in base combat with a Huscarl or Thegn must fight against them, with the exception of challenges. If excess casualties are inflicted, these carry over to lesser troops. The last Huscarls/Thegns removed are the leader, musician and standard; this occurs even if there are other models remaining in the unit. The armies of Anglia and Northumbria may combine spear and shield-armed Gebur with Thegns and Huscarls in the same way as Ceorls.</description>
+    </rule>
+    <rule id="bbb7-1d61-ce60-ce1b" name="Huscarl Hatred" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>If the Army General dies, then Huscarls become subject to Hatred for the rest of the battle as described in the Warhammer Ancient Battles rules.</description>
+    </rule>
+    <rule id="81ca-cd37-1415-3d03" name="Veterans (Wessex)" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>All units of Thegns may, once per battle, choose to re-roll all their to hit dice for close combat or for shooting. However, the unit must re-roll all of its dice (not just the failures) and must abide by the result.</description>
+    </rule>
+    <rule id="b82d-b3f0-21e3-a3bb" name="Offeiriad" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>You may re-roll rally attempts of any unit the Priest is accompanying.</description>
+    </rule>
+    <rule id="09b9-3a2a-db1c-7c94" name="Bishop" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Any unit the Bishop is with may re-roll failed Panic tests.</description>
+    </rule>
+    <rule id="d1cb-5db0-db8d-c679" name="Jomsviking Bribe" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Each turn roll a dice. On a 1 the Jomsvikings or Adventurers have accepted a bribe from the enemy and may not move that turn.</description>
+    </rule>
+    <rule id="b84a-af9a-c600-836a" name="Unreliable Mercenaries" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Although in the main loyal and obedient, sometimes mercenaries would think they knew better than their employer! Roll a dice the first time a player wishes to move, charge, or shoot with each unit. If a 1 is rolled the unit remains stationary and may not shoot, but may defend itself if attacked in close combat, including shooting against a charging unit. On a 2-6, the unit may act as the player wishes. Once a unit has successfully moved or shot, it no longer needs to take this test and may be moved normally.</description>
+    </rule>
+    <rule id="3fe9-fce0-4973-895a" name="Mercenary Rally" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Any unit that chooses to flee or fire &amp; flee as a charge reaction rallies automatically at the end of its move and may reform facing in any direction. This means that should the charging enemy encounter them, the unit is not destroyed, and may instead fight in the Close Combat phase. Their opponents still count as charging.</description>
+    </rule>
+    <rule id="5cea-a513-0909-077b" name="Raiders" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>Although strategically the Caledonians were more often than not on the defensive, tactically they were frequently the attackers. The commander of a Caledonian army may always choose whether he moves first or second.</description>
+    </rule>
+    <rule id="3966-f0f3-411e-050f" name="Choice of Terrain (Welsh)" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>If players agree to randomly choose the terrain, the player commanding a Welsh army may always select one additional item of terrain which he may place anywhere other than the opponent's deployment zone.</description>
+    </rule>
+    <rule id="8faa-d305-c4fb-a0dd" name="Hibernian Ambush" publicationId="af20-e256-4a51-93aa" hidden="false">
+      <description>At the beginning of the battle, before units are placed, a commander of an Hibernian army may keep one unit off the battlefield. The commander writes down where the unit is hidden: either a village, wood, etc, or an area of ground hidden by a hill or similar. Once all units have been deployed the commander of the Hibernian army may either place the unit in his own deployment area or keep it in ambush. As soon as an enemy unit is within 8" he must deploy the unit, although he may deploy the unit earlier if he wishes. If the unit is deployed in the Hibernian player's turn it may charge, move, fire and attack normally in that turn. Whilst hidden a unit is immune to all psychology tests.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
