@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="4" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="5" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
     <publication id="fcb9-17be-94c2-bcfc" name="Armies of Antiquity v2.0" shortName="AoA2" publisher="Warhammer Historical Wargames" publicationDate="2011"/>
     <publication id="fc9f-8438-629b-e92d" name="Hannibal and the Punic Wars" shortName="HPW" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
+    <publication id="513c-2d0a-024a-da5a" name="Chariot Wars" shortName="CW" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -80,6 +81,9 @@
     <categoryEntry id="ce31-a2e9-3e20-4277" name="Warriors" hidden="false"/>
     <categoryEntry id="cdbb-fd56-92b1-73b7" name="Common Troops" hidden="false"/>
     <categoryEntry id="d68a-ed84-1d75-2f64" name="Uncommon Troops" hidden="false"/>
+    <categoryEntry id="38c4-e0a7-a7f3-dc77" name="Allies &amp; Mercenaries" hidden="false"/>
+    <categoryEntry id="a178-280d-202c-b3d0" name="Chariotry" hidden="false"/>
+    <categoryEntry id="e85f-5baa-0bfe-26d6" name="Chariotry &amp; Cavalry" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -98,6 +102,7 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77be-8814-23e3-4ce5" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9c9b-cdcf-a528-ea88" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="178c-ffbc-b301-16ba" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eb28-6ed4-bf69-dbe1" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -350,6 +355,46 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a32d-ef40-094e-5557" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="33a4-8318-706d-35c0" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c6e-ae33-4b0c-cc05" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3cbd-723c-2d07-a742" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="088f-a5dc-272e-eb17" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="24a5-de3b-051c-598f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1fec-1a3c-8f39-9165" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfe2-fbc9-d618-9b51" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f937-8a87-b29a-7dbe" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink id="a7c2-1554-89f9-dd13" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="false">
@@ -401,6 +446,46 @@
             <modifier type="set" field="9f0e-4146-4168-a5b3" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a32d-ef40-094e-5557" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="33a4-8318-706d-35c0" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c6e-ae33-4b0c-cc05" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3cbd-723c-2d07-a742" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="088f-a5dc-272e-eb17" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="24a5-de3b-051c-598f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1fec-1a3c-8f39-9165" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfe2-fbc9-d618-9b51" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f937-8a87-b29a-7dbe" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -648,6 +733,108 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink id="dd90-6b31-9267-af1f" name="Allies &amp; Mercenaries" hidden="false" targetId="38c4-e0a7-a7f3-dc77" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="3e5e-a95c-b649-aedb" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="33a4-8318-706d-35c0" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c6e-ae33-4b0c-cc05" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3cbd-723c-2d07-a742" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="088f-a5dc-272e-eb17" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="24a5-de3b-051c-598f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1fec-1a3c-8f39-9165" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfe2-fbc9-d618-9b51" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3e5e-a95c-b649-aedb" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f937-8a87-b29a-7dbe" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="a387-9976-014e-3da4" name="Chariotry" hidden="false" targetId="a178-280d-202c-b3d0" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="4118-2620-90e6-848e" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="39a2-1292-00da-7f3b" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="4118-2620-90e6-848e" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="33a4-8318-706d-35c0" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4118-2620-90e6-848e" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3cbd-723c-2d07-a742" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4118-2620-90e6-848e" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="24a5-de3b-051c-598f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="39a2-1292-00da-7f3b" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="088f-a5dc-272e-eb17" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="ccb7-f528-5524-db2a" name="Chariotry &amp; Cavalry" hidden="false" targetId="e85f-5baa-0bfe-26d6" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="c584-4303-6f82-8dc3" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="c584-4303-6f82-8dc3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c6e-ae33-4b0c-cc05" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c584-4303-6f82-8dc3" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1fec-1a3c-8f39-9165" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c584-4303-6f82-8dc3" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfe2-fbc9-d618-9b51" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c584-4303-6f82-8dc3" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f937-8a87-b29a-7dbe" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -858,6 +1045,32 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="b359-82fc-1669-3cd9" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="cfe2-fbc9-d618-9b51" name="Assyrian" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Assyrian_Chariot_Wars.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eb28-6ed4-bf69-dbe1" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e45e-9371-31e4-d58d" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="f937-8a87-b29a-7dbe" name="Babylonian" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Assyrian_Chariot_Wars.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eb28-6ed4-bf69-dbe1" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2c97-1f55-aed9-39f0" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
@@ -1579,6 +1792,66 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </rule>
     <rule id="79c0-ca85-a46c-5e3e" name="Encumbrance" hidden="false">
       <description>Movement values printed in army lists are unencumbered. Infantry with an armour save of at least 4+ lose 1"; cavalry with a save of 3+ (ignoring barding) lose 1"; cavalry with metal barding lose a further 1" regardless of save. The M value shown on the model already includes this and updates as you choose equipment. (Rulebook p.96)</description>
+    </rule>
+    <rule id="8947-c655-aa5c-cc07" name="Chariot Wars Common Rules" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Multiple troop types: when you pick a unit all models must be of the same type unless the list allows mixed units. What You See is What You Get: models must show the options taken unless the opponent agrees otherwise. Unit sizes: minimum five infantry or five cavalry models, or three chariot models; no upper limit; one model may be a Leader, one a Standard Bearer and another a Musician (+5 pts each). Throw sticks have the same effect as a javelin. Characters in chariots: the cost of the chariot is not included in the character's entry but is bought from a later entry in the same list; the points spent count against the points that may be spent on characters. The character replaces one crew member; characteristics of character and chariot remain unchanged and each is attacked separately. Roll to hit as normal for missile fire, then roll again for each hit scored; on a 1-4 the chariot is hit, on a 5-6 the character is hit. In hand-to-hand an enemy model in base contact can choose to attack the chariot or the character. A character mounted in a chariot with a shield bearer may add +2 to his armour save; in any other circumstances +1. A character in a chariot has the chariot's armour save if it is better than his own. Wounds are tracked separately. The character may dismount and fight on foot if the chariot is destroyed, but only if a suitable model is available; if no model is available the character is lost with the chariot. If the character is killed the chariot may move and fight on its own.</description>
+    </rule>
+    <rule id="592c-3ef3-9392-535a" name="Army General (Chariot Wars)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Friendly units within 12" may use the Army General's Leadership.</description>
+    </rule>
+    <rule id="e5a3-e042-9a2a-f11f" name="Chariot Runners (Chariot Wars)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Runners in skirmish formation may move into gaps between a unit of chariots and still count as being in unit coherency as long as they are within 2" of a chariot model in the unit or within 2" of another model in the unit. Chariot runners can use this tactic to charge an enemy that is already engaged by the chariots, by charging into the gaps between chariot models. Chariots can charge through a unit of chariot runners that is in skirmish formation, even if the gaps between the runners are not wide enough to let them through; simply push the runners aside until there is a wide enough gap for the chariot to fit through. These rules replace the Armies of Antiquity rules which allow chariot runners that are touching a chariot model to fight.</description>
+    </rule>
+    <rule id="931b-4f0e-3aed-df29" name="Mixed Weapons (Chariot Wars)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Tribal contingents were rarely uniformly equipped; players may mix warriors in the unit so some are armed with different weapons. Whatever the models are carrying, a unit armed with mixed weapons counts as having hand weapons, javelins and bucklers.</description>
+    </rule>
+    <rule id="2370-1c8e-57c4-1fdf" name="Warband Psychology (rules 1 &amp; 2)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>"Subject to Warband psychology rules 1 &amp; 2": 1. D6 test at start of turn: 2-6 pass, 1 surge forward towards nearest visible enemy by at least basic move and charge if within range. 2. If the unit charges and defeats the enemy in the first round of combat, the enemy are automatically broken and flee without a Break test if the warband outnumbers the enemy.</description>
+    </rule>
+    <rule id="6ba3-a540-14db-0a9b" name="Onager Chariots" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Sumerian chariots were pulled by onagers (wild asses). At the start of the Sumerian player's turn roll a dice for each chariot unit. On a 1 the onagers are giving their drivers trouble and a further D6 is rolled: 1-3 "Giddy-up damn you!" the onagers refuse to move at all this turn and remain stationary; 4-6 "Whooa boy, whooooooa!" the onagers set off at a fair old clip: the unit must advance D6" straight ahead. The crew may turn this move into a charge if they wish, in which case the D6 roll is doubled; the unit must charge straight ahead and cannot wheel.</description>
+    </rule>
+    <rule id="6b39-e5a3-cab0-28f7" name="Egyptian Charioteers" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Egyptian charioteers do not suffer -1 to hit for shooting on the move and are able to shoot as they charge. This attack is made after any enemy charge reactions (any enemy that fire as a charge reaction do so before the charioteers). The attack counts as having taken place at short range. Enemy units that take 25% casualties must pass a Panic test or flee.</description>
+    </rule>
+    <rule id="83ab-9c36-3a60-49fd" name="Chariot Archers (Assyrian)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Chariot archers do not suffer the -1 to hit for shooting on the move. Automatic hits inflicted by a charging heavy chariot are added to the hits scored by the crew and happen at the same time.</description>
+    </rule>
+    <rule id="e590-c292-dd09-5f64" name="Mounted Archers (second rank)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Mounted archers in the second rank of the unit may shoot over the first rank.</description>
+    </rule>
+    <rule id="2a25-789d-aa6c-b353" name="Amorite Chief" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>The Amorite Chief may only lead Amorites. Any Amorite unit within 12" of the Chief may use his Leadership when it takes a Leadership test.</description>
+    </rule>
+    <rule id="5557-b840-a37f-3fe7" name="Vassal King" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Any units within 12" of the Vassal King who are of the same nationality as him may use his Leadership when taking a Leadership test.</description>
+    </rule>
+    <rule id="8b88-2e3d-2a93-1269" name="Legendary Warriors" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Heroes were mighty warriors of near legendary ability. They may re-roll one failed to hit and one failed to wound roll each combat phase. In addition they may re-roll a failed armour save if the wound suffered is their last one remaining (they can re-roll their last armour save). The General is the foremost hero in the army and benefits from this rule.</description>
+    </rule>
+    <rule id="b26f-4ed9-3173-6c4c" name="Sacred Ark" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>The Sacred Ark may be chosen instead of an army standard bearer, only if the army does not include any chariots. The Ark and the Priests form a single unit and may not join other units. They should be placed on a single base and move and manoeuvre in the same manner as a heavy chariot. They may not charge. Any unit within 6" of the Ark may automatically rally. Any unit within sight of the Ark may re-roll any Break or Rally tests. If the Ark flees or is captured or destroyed, all units within sight must take an immediate Panic test. The Priests are treated as stubborn.</description>
+    </rule>
+    <rule id="61e0-6659-ac78-a422" name="Camels" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Each camel carries two riders. Camels cause fear in cavalry and chariots.</description>
+    </rule>
+    <rule id="70b4-7598-a2ca-a328" name="Elamite Chariots" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Elamite chariots are four-horse heavy chariots, crewed by a driver armed with a sword. Elamite chariots may transport up to three infantry models per chariot. Only Babylonian armies may include Elamite Chariots or Cavalry.</description>
+    </rule>
+    <rule id="eb7b-7b63-2ee3-f972" name="Heavy Slingers" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>Models in a unit can have different weapon combinations. Armoured slingers in the second rank may shoot at full effect as long as the unit does not move. Slingers may shoot even if not in skirmish formation. Enemy units may not use shields against sling shot hits. A unit of heavy slingers contains archers and slingers in equal proportions.</description>
+    </rule>
+    <rule id="bcac-aba6-f4aa-7196" name="Mule Carts" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>The entire unit must be equipped with the required number of cart models (each cart carries up to five soldiers). The infantry automatically dismount from the carts to fight or shoot, even if charged. The carts are non-combatant and always placed directly behind dismounted infantry; they do not count as chariots. When mounted on carts the unit may march move but may not charge. Dismounted infantry must remount to be able to flee. If the unit pursues they do so as infantry and the carts follow up behind.</description>
+    </rule>
+    <rule id="196f-b39b-7a43-d796" name="Phalanx (Chariot Wars)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>As long as the unit has at least sixteen models and a rank bonus of at least +1: cavalry may not charge the front of the phalanx; phalanx models may charge and still fight in two ranks; all enemy attacks (shooting and hand-to-hand combat) at the front of the phalanx suffer -1 to hit. The only formation change allowed is an about face (180 degree turn). Phalanxes may wheel but cannot march or charge if they do so; they may drift 1" to the right when they march or charge. As soon as the unit is reduced to fewer than sixteen models or loses its rank bonus these rules no longer apply.</description>
+    </rule>
+    <rule id="878c-407a-114d-66ce" name="Terror (Assyrian)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>The Assyrians cause fear in all units in an enemy army that have a Leadership value of 7 or less, after any modifications have been applied. This rule no longer applies once an Assyrian chariot, cavalry or infantry unit has been broken in combat. Does not apply to Babylonian armies, or any army that includes Elamites or Hoplites.</description>
+    </rule>
+    <rule id="b2d7-83e6-e431-118f" name="Highly Professional (Assyrian)" publicationId="513c-2d0a-024a-da5a" hidden="false">
+      <description>The Assyrians may always choose who moves first or second in a battle if this would normally be decided randomly. In battles where who moves first is not determined by a dice roll, the Assyrians follow the normal rules. Does not apply to Babylonian armies.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
