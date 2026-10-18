@@ -72,6 +72,15 @@ SP = []
 SP.append(U('Special Units', 'Currus Drepanus', [M('Currus Drepanus', '6 3 3 4 4 2 3 4 6', 80, weapons=['Hand Weapon', 'Kontos', 'Heavy Armour', 'Buckler'], rules=['Currus Drepanus'])],
     'Shock chariot with hinged scythes drawn by cataphract horses. Hand weapons, kontos, heavy armour, bucklers and barding (statistics already include bonuses for equipment). No options. D3+2 automatic hits when charging in addition to normal attacks. Destroyed if it breaks from close combat (it is not destroyed after charging). Move as a chariot. 0-2. Roman artillery is otherwise as in the rulebook (p.124).', mx=2, page='48'))
 
+# Roman artillery "is otherwise as in the rulebook (p.124)" (Fall of the West p.48): Scorpio, Ballista and Tormenta from rulebook pp.179-181.
+import copy as _copy
+from rb_data import ROMAN as _RB
+for _n in ('Light Bolt Thrower (Scorpio)', 'Bolt Thrower (Ballista)', 'Small Stone Thrower (Tormenta)'):
+    _u = _copy.deepcopy(next(u for u in _RB if u['name'] == _n))
+    _u['notes'] = _u['notes'] + ' Roman artillery as in the rulebook Roman list (Fall of the West p.48; rulebook pp.179-181). Special Units: at most a quarter of the army\'s points.'
+    _u['page'] = '179-181 (rulebook)'
+    SP.append(_u)
+
 RULES = {
  'Army General (Fall of the West)': ('Fall of the West p.44-45', 'Any unit within 12" of the General may use his Leadership value when it takes a Leadership test.'),
  'Comitatus Oath': ('Fall of the West p.45', 'Must be led by the army general. Barbarian bodyguards took oaths of allegiance extremely seriously. If the General is killed roll a D6: on a 4+ they immediately attack the nearest enemy and are immune to Psychology and Break tests. If they eliminate their opponent they attack the next nearest enemy unit and so on.'),

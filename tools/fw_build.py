@@ -32,7 +32,7 @@ ROMAN_V = [
 BARB_V = [
  ('Barbarian Army - Sea Raiders', {'Characters': {'max': 33}, 'Barbarian Cavalry': {'max': 0}}, 'Sea Raiders (including Saxon armies in Britain): characters up to 33%, Barbarian infantry the rest; no cavalry.'),
  ('Barbarian Army - Western Barbarians', {'Characters': {'max': 33}, 'Barbarian Infantry': {'min': 50}, 'Barbarian Cavalry': {'max': 20}}, 'Western Barbarians: characters up to 33%, Barbarian infantry at least 50%, Barbarian cavalry up to 20% (not steppe cavalry).'),
- ('Barbarian Army - Central Barbarians', {'Characters': {'max': 33}, 'Barbarian Infantry': {'min': 25}, 'Barbarian Cavalry': {'max': 40}}, 'Central Barbarians: characters up to 33%, Barbarian infantry at least 25%, Barbarian cavalry up to 40% (half may be steppe cavalry; not enforced).'),
+ ('Barbarian Army - Central Barbarians', {'Characters': {'max': 33}, 'Barbarian Infantry': {'min': 25}, 'Barbarian Cavalry': {'max': 40}, 'Steppe Cavalry': {'max': 20}}, 'Central Barbarians: characters up to 33%, Barbarian infantry at least 25%, Barbarian cavalry up to 40% (half may be steppe cavalry: Steppe and Noble Steppe Cavalry together up to 20% of the army, i.e. half of the 40% cavalry allowance).'),
  ('Barbarian Army - Eastern Barbarians', {'Characters': {'max': 33}, 'Barbarian Infantry': {'max': 25}, 'Barbarian Cavalry': {'max': 100}}, 'Eastern Barbarians: characters up to 33%, Barbarian infantry up to 25%, Barbarian cavalry up to 100% (all may be steppe cavalry).'),
  ('Barbarian Army - North African', {'Characters': {'max': 33}, 'Barbarian Infantry': {'max': 25}, 'Barbarian Cavalry': {'max': 100}}, 'North African: characters up to 33%, Barbarian infantry up to 25%, Barbarian cavalry up to 100%.'),
 ]
@@ -44,6 +44,12 @@ NOTES_WARL = 'WARLORD ARMY LIST (Fall of the West, pp.44-48). Any Roman or Barba
 LISTS = [('Late Roman (Fall of the West)', ROMAN, ROMAN_V, NOTES_ROMAN, 'Late_Roman_Fall_of_the_West.cat'),
          ('Late Barbarian (Fall of the West)', BARB, BARB_V, NOTES_BARB, 'Late_Barbarian_Fall_of_the_West.cat'),
          ('Warlord (Fall of the West)', WARL, WARL_V, NOTES_WARL, 'Warlord_Fall_of_the_West.cat')]
+
+def hid2(*parts):
+    import hashlib
+    h = hashlib.md5('|'.join(str(p) for p in parts).encode('utf8')).hexdigest()
+    return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
+STEPPE_CAT = hid2('cat', 'Steppe Cavalry')
 
 def comp_text(variants):
     out = ['ARMY COMPOSITIONS:']
@@ -61,12 +67,19 @@ def main():
     if f'id="{FPUB}"' not in s:
         s = s.replace('  </publications>', f'    <publication id="{FPUB}" name="Fall of the West" shortName="FotW" publisher="Warhammer Historical Wargames" publicationDate="2002"/>\n  </publications>', 1)
         open(gst, 'w', encoding='utf8').write(s)
+    if STEPPE_CAT not in s:
+        s = s.replace('  </categoryEntries>', f'    <categoryEntry id="{STEPPE_CAT}" name="Steppe Cavalry" hidden="false"/>\n  </categoryEntries>', 1)
+        open(gst, 'w', encoding='utf8').write(s)
     cache = os.path.join(OUT, 'tools', 'variants.json')
     variants = json.load(open(cache, encoding='utf8')) if os.path.exists(cache) else {}
     CW.clean([u for _, us, _, _, _ in LISTS for u in us])
     for name, units, vars_, notes, fn in LISTS:
         x = RB.build_cat(name, units, notes + '\n\n' + comp_text(vars_), None)
-        x = x.replace('gameSystemRevision="1"', 'gameSystemRevision="6"').replace('from the Warhammer Ancient Battles 2nd Edition rulebook army list.', 'from the Fall of the West army list book (Warhammer Historical).')
+        if fn.startswith('Late_Barbarian'):
+            for un in ('Steppe Cavalry', 'Noble Steppe Cavalry'):
+                m = re.search(r'(    <selectionEntry id="([^"]*)" name="%s"[^>]*type="unit">\n.*?<categoryLinks>\n)' % un, x, re.S)
+                x = x.replace(m.group(1), m.group(1) + f'        <categoryLink id="{hid2(m.group(2), "steppe")}" name="Steppe Cavalry" hidden="false" targetId="{STEPPE_CAT}" primary="false"/>\n', 1)
+        x = x.replace('gameSystemRevision="1"', 'gameSystemRevision="7"').replace('from the Warhammer Ancient Battles 2nd Edition rulebook army list.', 'from the Fall of the West army list book (Warhammer Historical).')
         open(os.path.join(OUT, fn), 'w', encoding='utf8').write(x)
         variants[fn] = [{'name': f'Fall of the West: {vn}', 'limits': lim} for vn, lim, txt in vars_]
         print('wrote', fn, len(units), 'units,', len(vars_), 'compositions')

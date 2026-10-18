@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="35a7-4fe9-8ce7-4dc8" name="Late Barbarian (Fall of the West)" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="35a7-4fe9-8ce7-4dc8" name="Late Barbarian (Fall of the West)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Late Barbarian (Fall of the West): units and points from the Fall of the West army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="15c5-1ad0-e784-7fde" name="Barbarian Warlord" hidden="false" collective="false" import="true" type="unit">
@@ -1713,12 +1713,37 @@
         <categoryLink id="bd8c-4110-d2c3-416b" name="Barbarian Infantry" hidden="false" targetId="773a-1fbb-6862-e9c1" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="d5b2-43c0-ad0d-dfc0" name="Skirmish formation (free; Light Infantry)" hidden="false" collective="false" import="true" type="upgrade">
+          <comment>Skirmishers replace their equipment with shield, hand weapon, javelins and darts and may take no other options (Fall of the West p.46, p.48); no extra cost.</comment>
+          <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b3e-55bb-dacc-9258" type="max"/>
+        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c43c-110b-7540-1032" type="min"/>
+        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce3f-c71b-1d03-db00" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8abc-f4f8-6025-3f6b" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <!-- skirmish -->
         <selectionEntry id="bb53-a65d-f419-31c8" name="Heavy throwing spear (replaces mixed weapons)" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b65f-ec3d-c6c8-7450" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34b7-b692-f0d1-a46f" type="min"/>
           </constraints>
           <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="de1a-baab-8cf4-7174" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5b2-43c0-ad0d-dfc0" type="atLeast"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="b65f-ec3d-c6c8-7450" value="0">
+                  <conditions>
+                    <condition field="selections" scope="de1a-baab-8cf4-7174" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5b2-43c0-ad0d-dfc0" type="atLeast"/>
+                  </conditions>
+                </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="35eb-fd35-9d72-3625" repeats="1" roundUp="false"/>
@@ -2018,6 +2043,7 @@
 
       </modifiers>
       <categoryLinks>
+        <categoryLink id="d5a0-5c78-5c1a-5ff0" name="Steppe Cavalry" hidden="false" targetId="0c18-c369-b2f7-93f2" primary="false"/>
         <categoryLink id="2fed-17f8-eabb-b330" name="Barbarian Cavalry" hidden="false" targetId="368d-33dc-12e4-8b16" primary="true"/>
       </categoryLinks>
       <selectionEntries>
@@ -2200,6 +2226,7 @@
 
       </modifiers>
       <categoryLinks>
+        <categoryLink id="2c17-570e-7c34-46f5" name="Steppe Cavalry" hidden="false" targetId="0c18-c369-b2f7-93f2" primary="false"/>
         <categoryLink id="a5e0-adb2-9b5c-0078" name="Barbarian Cavalry" hidden="false" targetId="368d-33dc-12e4-8b16" primary="true"/>
       </categoryLinks>
       <selectionEntries>
@@ -2521,7 +2548,8 @@ ARMY COMPOSITIONS:
   Characters: up to 33%
   Barbarian Infantry: at least 25%
   Barbarian Cavalry: up to 40%
-  Central Barbarians: characters up to 33%, Barbarian infantry at least 25%, Barbarian cavalry up to 40% (half may be steppe cavalry; not enforced).
+  Steppe Cavalry: up to 20%
+  Central Barbarians: characters up to 33%, Barbarian infantry at least 25%, Barbarian cavalry up to 40% (half may be steppe cavalry: Steppe and Noble Steppe Cavalry together up to 20% of the army, i.e. half of the 40% cavalry allowance).
 [Barbarian Army - Eastern Barbarians]
   Characters: up to 33%
   Barbarian Infantry: up to 25%

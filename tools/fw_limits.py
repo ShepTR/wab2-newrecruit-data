@@ -103,9 +103,140 @@ def pair(cat, names, tag):
 
 
 FW = '_Fall_of_the_West.cat'
+
+# ---------------------------------------------------------------------------------------------------------------------------
+# Tormenta: one stone thrower per two bolt shooters (rulebook p.181): T <= (Scorpio units + Ballista units) - T  <=>  2T <= S+B
+def tormenta(cat):
+    t = cat.unit('Small Stone Thrower (Tormenta)')[0]; a = cat.unit('Light Bolt Thrower (Scorpio)')[0]; b = cat.unit('Bolt Thrower (Ballista)')[0]
+    cat.add_unit_limit('Small Stone Thrower (Tormenta)', 'tormenta-per-two-bolt-shooters', 'max', 0, lambda cid: [
+        mod('increment', cid, 1, repeat=(a, 1, 'false')), mod('increment', cid, 1, repeat=(b, 1, 'false')), mod('increment', cid, -1, repeat=(t, 1, 'false'))])
+
+# Skirmish formation (free) and "one soldier in four may take a bow" (Fall of the West p.46, p.48)
+LT = '5be5-5832-c8fb-3a19'     # Light Troops rule
+SHIELD = 'b513-5c2a-34df-6a1d'; BOW = '5d29-ba1e-8299-8085'
+def ent(blk, name, indent):
+    m = re.search(r'^%s<selectionEntry id="([^"]*)" name="%s"[^>]*type="(?:upgrade|model)">\n.*?\n^%s</selectionEntry>\n' % (indent, re.escape(name), indent), blk, re.S | re.M)
+    return m
+def cond_sel(scope, child):
+    return (f'<condition field="selections" scope="{scope}" value="1" percentValue="false" shared="true" includeChildSelections="false" '
+            f'includeChildForces="false" childId="{child}" type="atLeast"/>')
+def add_mod(block, modxml, anchor_re):
+    """insert a modifier into the first <modifiers> of `block` (or create one before the anchor)"""
+    if '<modifiers>\n' in block:
+        return block.replace('<modifiers>\n', '<modifiers>\n' + modxml, 1)
+    return re.sub(anchor_re, lambda m: '<modifiers>\n' + modxml + '</modifiers>\n' + m.group(0), block, count=1)
+
+def skirmish(cat, unit, archer=None, force_limit=False, block=(), shield_swap=False):
+    """block: option names hidden/disabled in skirmish formation; archer: (model name, archer model name)"""
+    uid, mid, m = cat.unit(unit)
+    blk = m.group(0)
+    if '<!-- skirmish -->' in blk: return
+    T = hid(uid, 'skirmish')
+    on = lambda: cond_sel(uid, T)
+    # --- options disabled in skirmish formation
+    for n in block:
+        em = ent(blk, n, '        ')
+        if not em: raise SystemExit(f'{cat.fn}: {unit}: no option {n}')
+        e = em.group(0)
+        mx = re.search(r'<constraint [^>]*id="([^"]*)" type="max"/>', e).group(1)
+        mm = (f'                <modifier type="set" field="hidden" value="true">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n'
+              f'                <modifier type="set" field="{mx}" value="0">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n')
+        e2 = add_mod(e, mm, r'          <!-- def-link -->|          <infoLinks>|          <costs>')
+        blk = blk.replace(e, e2, 1)
+    # --- archer model
+    if archer:
+        base, arch = archer
+        bm = ent(blk, base, '        ')
+        b = bm.group(0)
+        A = hid(mid, 'archer')
+        c = re.sub(r'(?<=\s)id="([^"]*)"', lambda k: 'id="%s"' % hid(k.group(1), 'archer'), b)
+        c = c.replace(f'name="{base}"', f'name="{arch}"')
+        c = re.sub(r'<cost name="pts" typeId="points" value="([0-9.]+)"/>', lambda k: '<cost name="pts" typeId="points" value="%g"/>' % (float(k.group(1)) + 1), c)
+        for ln in ('Throwing Spear', 'Large Shield', 'Javelin', 'Heavy Throwing Spear', 'Shield Wall (Fall of the West)'):
+            c = re.sub(r'            <infoLink [^>]*name="%s"[^>]*?(?:/>|>\n.*?\n            </infoLink>)\n' % re.escape(ln), '', c, flags=re.S)
+        c = c.replace('          <infoLinks>\n', f'          <infoLinks>\n            <infoLink id="{hid(A, "bow")}" name="Bow" hidden="false" targetId="{BOW}" type="profile"/>\n', 1)
+        c = re.sub(r'            <profile id="[^"]*" name="Equipment and options[^"]*".*?</profile>\n', '', c, flags=re.S)
+        c = re.sub(r'<!-- encumbrance -->.*?</modifier>\n', '', c, count=1, flags=re.S)       # no armour/shield -> no encumbrance
+        c = re.sub(r'              <modifiers>\n                \n?\s*</modifiers>\n', '', c)
+        # armour save: light armour only -> 6+
+        c = re.sub(r'(name="Armour Save"[^>]*>\n.*?<characteristic name="Save" typeId="[^"]*">)[^<]*(</characteristic>)', r'\1None\2', c, count=1, flags=re.S)
+        c = re.sub(r'<!-- armour-save -->.*?(?=              </modifiers>\n            </profile>)', '', c, count=1, flags=re.S)
+        la = ent(blk, 'Light armour', '        ').group(1)
+        sv = re.search(r'name="Armour Save".*?<characteristic name="Save" typeId="([^"]*)"', c, re.S).group(1)
+        c = re.sub(r'(name="Armour Save"[^>]*>.*?</characteristics>\n)(?:              <modifiers>\n.*?              </modifiers>\n)?',
+                   lambda k: k.group(1) + f'              <modifiers>\n                <modifier type="set" field="{sv}" value="6+">\n                  <conditions>\n                    {cond_sel(uid, la)}\n                  </conditions>\n                </modifier>\n              </modifiers>\n', c, count=1, flags=re.S)
+        # constraints: min 0, max = one per three base models (a <= (base+a)/4), none in skirmish formation
+        c = re.sub(r'(<constraint [^>]*value=")[0-9]+("[^>]*type="min"/>)', r'\g<1>0\2', c, count=1)
+        mxid = hid(A, 'max')
+        c = c.replace('          </constraints>\n', f'            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="{mxid}" type="max"/>\n          </constraints>\n', 1)
+        rep = (f'                <modifier type="increment" field="{mxid}" value="1">\n                  <repeats>\n                    <repeat field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="{mid}" repeats="1" roundUp="false"/>\n                  </repeats>\n                </modifier>\n'
+               f'                <modifier type="set" field="{mxid}" value="0">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n')
+        c = re.sub(r'(          </infoLinks>\n)', lambda k: k.group(1) + f'          <modifiers>\n{rep}          </modifiers>\n', c, count=1)
+        blk = blk.replace(b, b + c, 1)
+        # unit-level per-model options also apply to the archers (light armour, drilled)
+        for n in ('Light armour', 'Drilled'):
+            em = ent(blk, n, '        ')
+            if not em: continue
+            e = em.group(0)
+            mo = re.search(r'                <modifier type="increment" field="points" value="[^"]*">\n.*?\n                </modifier>\n|            <modifier type="increment" field="points" value="[^"]*">\n.*?\n            </modifier>\n', e, re.S)
+            if mo:
+                dup = mo.group(0).replace(f'childId="{mid}"', f'childId="{A}"')
+                e2 = e.replace(mo.group(0), mo.group(0) + dup, 1)
+                blk = blk.replace(e, e2, 1)
+    # --- toggle entry
+    cons = (f'        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="{hid(T, "max")}" type="max"/>\n'
+            f'        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="{hid(T, "min")}" type="min"/>\n')
+    if force_limit:
+        cons += f'        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="{hid(T, "fmax")}" type="max"/>\n'
+    tog = (f'        <selectionEntry id="{T}" name="Skirmish formation (free; Light Infantry)" hidden="false" collective="false" import="true" type="upgrade">\n'
+           f'          <comment>Skirmishers replace their equipment with shield, hand weapon, javelins and darts and may take no other options (Fall of the West p.46, p.48); no extra cost.</comment>\n'
+           f'          <constraints>\n{cons}          </constraints>\n'
+           f'          <infoLinks>\n            <infoLink id="{hid(T, "lt")}" name="Light Troops" hidden="false" targetId="{LT}" type="rule"/>\n          </infoLinks>\n'
+           f'          <costs>\n            <cost name="pts" typeId="points" value="0"/>\n          </costs>\n        </selectionEntry>\n        <!-- skirmish -->\n')
+    blk = blk.replace('      <selectionEntries>\n', '      <selectionEntries>\n' + tog, 1)
+    if shield_swap:   # Roman infantry: shield and hand weapon, javelins and darts; armour save 6+
+        # hide large shield / throwing spear, show shield / javelin on every model of the unit
+        def swap(mb):
+            def hide(n):
+                return re.sub(r'(            <infoLink id="[^"]*" name="%s"[^>]*type="profile")/>\n' % n,
+                              lambda k: k.group(1) + f'>\n              <modifiers>\n                <modifier type="set" field="hidden" value="true">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n              </modifiers>\n            </infoLink>\n', mb)
+            def hide2(n):
+                nonlocal mb
+                m_ = re.search(r'(            <infoLink id="[^"]*" name="%s"[^>]*type="profile">\n              <modifiers>\n)' % n, mb)
+                if m_:
+                    mb = mb.replace(m_.group(1), m_.group(1) + f'                <modifier type="set" field="hidden" value="true">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n', 1)
+                else:
+                    mb = hide(n)
+            def show(n):
+                nonlocal mb
+                m_ = re.search(r'(            <infoLink id="[^"]*" name="%s"[^>]*type="profile">\n              <modifiers>\n)' % n, mb)
+                if m_:
+                    mb = mb.replace(m_.group(1), m_.group(1) + f'                <modifier type="set" field="hidden" value="false">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n', 1)
+            hide2('Large Shield'); hide2('Throwing Spear'); show('Javelin')
+            mb = mb.replace('          </infoLinks>\n', f'            <infoLink id="{hid(T, "shield", len(mb))}" name="Shield" hidden="true" targetId="{SHIELD}" type="profile">\n              <modifiers>\n                <modifier type="set" field="hidden" value="false">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n              </modifiers>\n            </infoLink>\n          </infoLinks>\n', 1)
+            sv = re.search(r'name="Armour Save"[^>]*>.*?<characteristic name="Save" typeId="([^"]*)"', mb, re.S).group(1)
+            mb = re.sub(r'(name="Armour Save".*?<modifiers>\n(?:.*?\n)?)(              </modifiers>\n            </profile>)',
+                        lambda k: k.group(1) + f'                <modifier type="set" field="{sv}" value="6+">\n                  <conditions>\n                    {on()}\n                  </conditions>\n                </modifier>\n' + k.group(2), mb, count=1, flags=re.S)
+            return mb
+        base = ent(blk, mname[unit], '        ')
+        b0 = base.group(0)
+        blk = blk.replace(b0, swap(b0), 1)
+    cat.s = cat.s.replace(m.group(0), blk, 1); cat.changed = True
+
+mname = {'Pedes': 'Pedes', 'Palantina': 'Palantine', 'Veterans': 'Veteran'}
+
 R = Cat('Late_Roman' + FW)
 lim = R.vid('Fall of the West: Roman Army - Limitanei')
 R.add_unit_limit('Palantina', 'no-palantina-limitanei', 'max', BIG, lambda cid: [mod('set', cid, 0, conds=[cond(lim, 'atLeast')])])
+# Militia or Bacaudae: no standards or musicians (book p.46) -> remove those options from the unit (idempotent)
+uid, mid, m = R.unit('Militia or Bacaudae')
+blk = m.group(0)
+nb = re.sub(r'            <selectionEntry id="[^"]*" name="(?:Standard bearer|Musician)"[^>]*type="upgrade">\n.*?\n            </selectionEntry>\n', '', blk, flags=re.S)
+if nb != blk: R.s = R.s.replace(blk, nb, 1); R.changed = True
+for u, force in (('Pedes', True), ('Palantina', False), ('Veterans', False)):
+    skirmish(R, u, archer=(mname[u], mname[u] + ' Archer'), force_limit=force, shield_swap=True,
+             block=['Light armour', 'Javelins and darts', 'Heavy throwing spear (replaces throwing spear)', 'Drilled'])
+tormenta(R)
 R.save()
 Bb = Cat('Late_Barbarian' + FW)
 cen = Bb.vid('Fall of the West: Barbarian Army - Central Barbarians'); eas = Bb.vid('Fall of the West: Barbarian Army - Eastern Barbarians'); naf = Bb.vid('Fall of the West: Barbarian Army - North African')
@@ -114,10 +245,16 @@ for n in ('Steppe Cavalry', 'Noble Steppe Cavalry'):
 Bb.add_unit_limit('North African Camelry', 'north-african-only', 'max', 0, lambda cid: [mod('set', cid, BIG, conds=[cond(naf, 'atLeast')])])
 wl = Bb.unit('Barbarian Warlord')[0]
 Bb.add_unit_limit('Comitatus', 'needs-warlord', 'max', 0, lambda cid: [mod('set', cid, BIG, conds=[cond(wl, 'atLeast')])])
+skirmish(Bb, 'Warrior', force_limit=True, block=['Heavy throwing spear (replaces mixed weapons)'])
 Bb.save()
 W = Cat('Warlord' + FW)
 pair(W, ['Roman Army General', 'Barbarian Warlord'], 'one-general')
 wl = W.unit('Barbarian Warlord')[0]
 W.add_unit_limit('Comitatus', 'needs-warlord', 'max', 0, lambda cid: [mod('set', cid, BIG, conds=[cond(wl, 'atLeast')])])
+for u, force in (('Pedes', True), ('Palantina', False), ('Veterans', False)):
+    skirmish(W, u, archer=(mname[u], mname[u] + ' Archer'), force_limit=force, shield_swap=True,
+             block=['Light armour', 'Javelins and darts', 'Heavy throwing spear (replaces throwing spear)', 'Drilled'])
+skirmish(W, 'Warrior', force_limit=True, block=['Heavy throwing spear (replaces mixed weapons)'])
+tormenta(W)
 W.save()
 print('fall of the west limits added')

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="6" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -89,6 +89,7 @@
     <categoryEntry id="773a-1fbb-6862-e9c1" name="Barbarian Infantry" hidden="false"/>
     <categoryEntry id="3ae2-1ee1-7d21-6c5b" name="Roman Cavalry" hidden="false"/>
     <categoryEntry id="87bc-1d1e-35cf-c4e8" name="Roman Infantry" hidden="false"/>
+    <categoryEntry id="0c18-c369-b2f7-93f2" name="Steppe Cavalry" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -1003,6 +1004,18 @@
             <modifier type="set" field="09c9-d250-57fc-8b1e" value="25">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="806d-b96b-32c3-fefe" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="ec5f-cf1f-db9d-d6ad" name="Steppe Cavalry" hidden="false" targetId="0c18-c369-b2f7-93f2" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="c59c-b61d-f34c-81ed" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="c59c-b61d-f34c-81ed" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28dc-fd35-1d26-7e77" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
