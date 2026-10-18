@@ -116,3 +116,6 @@ Enforced as validation constraints (New Recruit shows a warning when broken):
 - Minimums: Triarii at least 1; Leves at least 1 in the First Punic War and Second Punic War in Spain/Italy unless Velites are taken.
 - Figure caps: Numidian Trained Infantry and Imitation Legionaries ≤ Warriors figures; Gallic Fanatics ≤ Warrior figures and need a Chariots unit; Italian Extraordinarii and Spanish Caetrati unit size ≤ Spearmen / Scutarii figures.
 Not enforceable in New Recruit (check by hand): "may not outnumber any other cavalry unit", "may not be the largest skirmisher unit", and "smallest unit" comparisons when several comparator units exist (the sum of their figures is used, so these are lenient).
+
+## Allies and optional rules (not built in)
+Allied contingents and the Hannibal optional rules (Pikes, Mercenaries, Fortified Camp, Penal Legions, Amphibious Caetrati, Sertorius revolts, Numidian Imitation Legionaries as an army-wide option) are not modelled as pick-lists. To field allies, build a separate small roster from the allied army's own catalogue and treat it as the allied contingent, applying the allies limits from the book by hand (Roman p.61, Carthaginian p.26). Imitation Legionaries are available as a normal Numidian unit.
