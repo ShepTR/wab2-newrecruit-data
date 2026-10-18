@@ -8,7 +8,8 @@ def hid(*p):
     return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
 RID = '5be5-5832-c8fb-3a19'
 OFFICIAL = ['Barbarian_Army_List', 'Roman_Army_List', 'Carthaginian_Hannibal', 'Republican_Roman_Hannibal', 'Spanish_Hannibal', 'Numidian_Hannibal', 'Ligurian_Hannibal', 'Gallic_Hannibal',
-            'Sumerian_Akkadian_Chariot_Wars', 'Egyptian_New_Kingdom_Chariot_Wars', 'Hammurabic_Babylonian_Chariot_Wars', 'Hittite_Chariot_Wars', 'Trojan_War_Chariot_Wars', 'Israelite_Chariot_Wars', 'Assyrian_Chariot_Wars']
+            'Sumerian_Akkadian_Chariot_Wars', 'Egyptian_New_Kingdom_Chariot_Wars', 'Hammurabic_Babylonian_Chariot_Wars', 'Hittite_Chariot_Wars', 'Trojan_War_Chariot_Wars', 'Israelite_Chariot_Wars', 'Assyrian_Chariot_Wars',
+            'Late_Roman_Fall_of_the_West', 'Late_Barbarian_Fall_of_the_West', 'Warlord_Fall_of_the_West']
 SKIP = {'Numidian Elephant'}        # "escorts (Light Infantry)" refers to the escorts, not the elephant
 total = 0
 for fn in OFFICIAL:

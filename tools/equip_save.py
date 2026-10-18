@@ -71,7 +71,7 @@ def calc(cav, armour, shields, bard, skirm):
     return gen, best, notes, pen
 def fmt(v): return 'None' if v >= 7 else f'{v}+'
 CAVRX = re.compile(r'cavalry|camel|cataphract|horsemen|horse archer|riders|equites|hobilar|lancer|praefectus equitum|tarentine', re.I)
-SKIPU = re.compile(r'elephant|chariot|warhound|ballista|scorpio|bolt thrower|machine|artillery|crew|catapult', re.I)
+SKIPU = re.compile(r'elephant|chariot|currus|warhound|ballista|scorpio|bolt thrower|machine|artillery|crew|catapult', re.I)
 NOTE = ('Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). '
         'M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.')
 cavlist = []; done = 0; capped = 0

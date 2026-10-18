@@ -83,7 +83,7 @@ def main():
         clean(units)
         full = notes + '\n\n' + comp_text(vars_)
         x = RB.build_cat(name, units, full, None)
-        x = x.replace('gameSystemRevision="1"', 'gameSystemRevision="4"').replace('from the Warhammer Ancient Battles 2nd Edition rulebook army list.', 'from the Chariot Wars army list book (Warhammer Historical).')
+        x = x.replace('gameSystemRevision="1"', 'gameSystemRevision="6"').replace('from the Warhammer Ancient Battles 2nd Edition rulebook army list.', 'from the Chariot Wars army list book (Warhammer Historical).')
         open(os.path.join(OUT, fn), 'w', encoding='utf8').write(x)
         for u in units: cats.add(u['cat'])
         variants[fn] = [{'name': f'Chariot Wars: {vn}', 'limits': {c: {k: v} for c, (k, v) in lim.items()}} for vn, lim, txt in vars_]

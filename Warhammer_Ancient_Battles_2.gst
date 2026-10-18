@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="5" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="6" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
     <publication id="fcb9-17be-94c2-bcfc" name="Armies of Antiquity v2.0" shortName="AoA2" publisher="Warhammer Historical Wargames" publicationDate="2011"/>
     <publication id="fc9f-8438-629b-e92d" name="Hannibal and the Punic Wars" shortName="HPW" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
     <publication id="513c-2d0a-024a-da5a" name="Chariot Wars" shortName="CW" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
+    <publication id="37b4-aae5-6830-d590" name="Fall of the West" shortName="FotW" publisher="Warhammer Historical Wargames" publicationDate="2002"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -84,6 +85,10 @@
     <categoryEntry id="38c4-e0a7-a7f3-dc77" name="Allies &amp; Mercenaries" hidden="false"/>
     <categoryEntry id="a178-280d-202c-b3d0" name="Chariotry" hidden="false"/>
     <categoryEntry id="e85f-5baa-0bfe-26d6" name="Chariotry &amp; Cavalry" hidden="false"/>
+    <categoryEntry id="368d-33dc-12e4-8b16" name="Barbarian Cavalry" hidden="false"/>
+    <categoryEntry id="773a-1fbb-6862-e9c1" name="Barbarian Infantry" hidden="false"/>
+    <categoryEntry id="3ae2-1ee1-7d21-6c5b" name="Roman Cavalry" hidden="false"/>
+    <categoryEntry id="87bc-1d1e-35cf-c4e8" name="Roman Infantry" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -103,6 +108,8 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9c9b-cdcf-a528-ea88" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="178c-ffbc-b301-16ba" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eb28-6ed4-bf69-dbe1" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="50be-dbef-ae9e-f1d0" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -194,6 +201,11 @@
             <modifier type="set" field="c498-30a0-abb8-9a0e" value="25">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a32d-ef40-094e-5557" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1ea2-ee62-2aab-f4b7" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
@@ -395,6 +407,46 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f937-8a87-b29a-7dbe" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3050-88a2-6512-4266" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="806d-b96b-32c3-fefe" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5302-8994-908a-5bf1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd81-de2d-3324-8ef5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28dc-fd35-1d26-7e77" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a8ef-819c-e704-677f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="328b-e11d-b8f6-018a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1ea2-ee62-2aab-f4b7" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink id="a7c2-1554-89f9-dd13" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="false">
@@ -488,6 +540,11 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f937-8a87-b29a-7dbe" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1ea2-ee62-2aab-f4b7" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink id="98ac-47a5-f36a-27ee" name="Men at Arms" hidden="false" targetId="db3d-508f-dcf6-1ae7" primary="false">
@@ -571,6 +628,16 @@
             <modifier type="set" field="7205-4ae8-6709-c2a3" value="10">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a32d-ef40-094e-5557" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3050-88a2-6512-4266" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="806d-b96b-32c3-fefe" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -835,6 +902,111 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink id="659c-9c69-5c97-667c" name="Barbarian Cavalry" hidden="false" targetId="368d-33dc-12e4-8b16" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="932a-c0fb-085d-7f11" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="932a-c0fb-085d-7f11" value="0">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5302-8994-908a-5bf1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932a-c0fb-085d-7f11" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd81-de2d-3324-8ef5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932a-c0fb-085d-7f11" value="40">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28dc-fd35-1d26-7e77" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932a-c0fb-085d-7f11" value="100">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a8ef-819c-e704-677f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="932a-c0fb-085d-7f11" value="100">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="328b-e11d-b8f6-018a" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="21a2-03af-8d6e-3ef0" name="Barbarian Infantry" hidden="false" targetId="773a-1fbb-6862-e9c1" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="4d62-832f-b418-eb23" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="450f-72ed-5cb8-487f" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="4d62-832f-b418-eb23" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a8ef-819c-e704-677f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4d62-832f-b418-eb23" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="328b-e11d-b8f6-018a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="450f-72ed-5cb8-487f" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cd81-de2d-3324-8ef5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="450f-72ed-5cb8-487f" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="28dc-fd35-1d26-7e77" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="af16-2e71-4dd2-f159" name="Roman Cavalry" hidden="false" targetId="3ae2-1ee1-7d21-6c5b" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="a668-c96b-2f24-6ae7" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="1cf1-4503-e254-13c7" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="a668-c96b-2f24-6ae7" value="60">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3050-88a2-6512-4266" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="a668-c96b-2f24-6ae7" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="806d-b96b-32c3-fefe" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1cf1-4503-e254-13c7" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3050-88a2-6512-4266" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1cf1-4503-e254-13c7" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="806d-b96b-32c3-fefe" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="767a-2c03-190f-bef3" name="Roman Infantry" hidden="false" targetId="87bc-1d1e-35cf-c4e8" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="09c9-d250-57fc-8b1e" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="09c9-d250-57fc-8b1e" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3050-88a2-6512-4266" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="09c9-d250-57fc-8b1e" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="806d-b96b-32c3-fefe" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -1071,6 +1243,97 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="2c97-1f55-aed9-39f0" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="3050-88a2-6512-4266" name="Limitanei" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Roman_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="50be-dbef-ae9e-f1d0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="404a-14f0-bfc3-9ac7" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="806d-b96b-32c3-fefe" name="Comitatenses" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Roman_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="50be-dbef-ae9e-f1d0" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f53b-f64f-1a69-6dc7" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="5302-8994-908a-5bf1" name="Sea Raiders" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Barbarian_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="05e7-ca12-2723-f6c2" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="cd81-de2d-3324-8ef5" name="Western Barbarians" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Barbarian_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4097-f6c0-1864-c7cd" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="28dc-fd35-1d26-7e77" name="Central Barbarians" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Barbarian_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3a93-0fd8-0892-c6e8" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="a8ef-819c-e704-677f" name="Eastern Barbarians" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Barbarian_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="41de-73b7-b3f3-c449" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="328b-e11d-b8f6-018a" name="North African" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Late_Barbarian_Fall_of_the_West.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="35a7-4fe9-8ce7-4dc8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="6f4e-45f0-1f96-e59e" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
@@ -1852,6 +2115,39 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </rule>
     <rule id="b2d7-83e6-e431-118f" name="Highly Professional (Assyrian)" publicationId="513c-2d0a-024a-da5a" hidden="false">
       <description>The Assyrians may always choose who moves first or second in a battle if this would normally be decided randomly. In battles where who moves first is not determined by a dice roll, the Assyrians follow the normal rules. Does not apply to Babylonian armies.</description>
+    </rule>
+    <rule id="8ccd-25c2-3a7e-7c24" name="Army General (Fall of the West)" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>Any unit within 12" of the General may use his Leadership value when it takes a Leadership test.</description>
+    </rule>
+    <rule id="bcc5-1eb9-ce57-964e" name="Comitatus Oath" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>Must be led by the army general. Barbarian bodyguards took oaths of allegiance extremely seriously. If the General is killed roll a D6: on a 4+ they immediately attack the nearest enemy and are immune to Psychology and Break tests. If they eliminate their opponent they attack the next nearest enemy unit and so on.</description>
+    </rule>
+    <rule id="2e5c-aa07-52a2-c8ca" name="Priest (Fall of the West)" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>Any unit that includes a pagan priest hates all its enemies. Any unit that includes a Catholic priest hates enemies who are pagans or Arian Christians. Any unit that includes an Arian priest hates enemies who are pagans or Catholic Christians. If an army includes a priest, his opponent must declare a religious alignment.</description>
+    </rule>
+    <rule id="f007-958e-9638-949c" name="Shield Wall (Fall of the West)" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>In the Army lists some units of Roman infantry can form a shield wall. They may do this instead of moving. As long as the unit is in a shield wall all enemy attacks from the front of the unit (shooting and hand-to-hand) suffer a -1 to hit modifier. The unit benefits from the shield wall as long as it does not move or lose a round of close combat.</description>
+    </rule>
+    <rule id="2a50-c575-d45e-dd54" name="Mixed Weapons (Fall of the West)" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>Whatever the models are actually carrying they count as being armed with javelins if they are in skirmish formation and throwing spears otherwise. This replaces the mixed weapons rule of the Barbarian Army list in the Warhammer Ancient Battles rulebook (which counted javelins in any formation); players using the rulebook Barbarian list may use this interpretation at +1 pt per model it applies to.</description>
+    </rule>
+    <rule id="6edd-d63a-1760-87a2" name="Nomad Cavalry (Fall of the West)" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>a) Nomad cavalry may make a free march move after both sides have deployed; they may not use it to charge and may not shoot after making it. b) They do not suffer the -1 to hit for shooting if they moved in the same turn, but this does not allow them to shoot if they charge or march. c) They make a normal move immediately after shooting (Shooting phase only, not a charge reaction, and the unit may not have marched). d) If they flee or fire and flee as a charge reaction they rally immediately at the end of their move and may reform facing any direction; the charging enemy still counts as charging and the Nomad cavalry may fight in the close combat phase if encountered.</description>
+    </rule>
+    <rule id="e2de-9291-819a-1494" name="Lassoes" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>Some steppe cavalry can use lassoes. A lasso attack is an additional special attack made by a successfully charging cavalryman before normal combat. Roll a D6: on a 6+ the lasso attack is successful and an enemy model in base contact with the attacker loses one attack for that round of combat. Lassoes cannot be used in subsequent rounds of combat or by a model that has been charged.</description>
+    </rule>
+    <rule id="aa30-06e2-0905-d2f4" name="Barbarian Cunning" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>The Barbarian player may hide a unit in a piece of suitable rough terrain on his half of the battlefield, noting its position on paper. The concealed unit is revealed and placed at the Barbarian General's choice or when a Roman comes within 6" of the concealing terrain. Warbands must still check for undisciplined movement but, provided they have a character leading them, may re-roll the dice once.</description>
+    </rule>
+    <rule id="2a7f-d713-cbde-4620" name="Heavy Shock Cavalry" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>Heavy shock cavalry fought in a dense formation and count their rank bonus as light infantry do (maximum +2). They lose half their movement if they wheel more than 1" in a move.</description>
+    </rule>
+    <rule id="f514-6383-2718-838a" name="Camelry Fear (Fall of the West)" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>North African camelry cause fear in enemy cavalry.</description>
+    </rule>
+    <rule id="d022-f542-22e9-c212" name="Currus Drepanus" publicationId="37b4-aae5-6830-d590" hidden="false">
+      <description>D3+2 automatic hits when charging in addition to normal attacks. Destroyed if it breaks from close combat (it is not automatically destroyed after charging). Moves as a chariot.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
