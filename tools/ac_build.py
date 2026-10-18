@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""Add the Armies of Chivalry (Warhammer Historical) army lists: Rise of Macedon, Alexandrian Imperial, Greek Mercenaries, Thracians, Illyrians,
-The End of Persia, The Frontier Horsemen and the Indian army (Classical/Mountain/Republican/Mauryan). Book page = printed page number.
-Usage: python3 ad_build.py <outdir>   (then sh tools/ac_all.sh <outdir>)."""
+"""Add the Armies of Chivalry (Warhammer Historical, 2004) army lists (19 lists, see ac_data.py). Book page = printed page number.
+Usage: python3 ac_build.py <outdir>   (then sh tools/ac_all.sh <outdir>)."""
 import sys, os, re, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rb_build as RB

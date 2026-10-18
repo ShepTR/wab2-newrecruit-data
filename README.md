@@ -178,3 +178,9 @@ Nineteen catalogues named "(Armies of Chivalry)": English Hundred Years War (Con
 - Rules defined from the book: common rules, Impetuous, First Charge, Allies & Mercenaries, Open Order, Skirmishers, Combined Formation, Mixed Order, Medieval Phalanx, Mounted Infantry, artillery, multi-barrelled artillery, war wagons, wagon tabor, Bishop, Oriflamme, Arrogant Pride, Plançon, Noble Commander, Cantonal Standards, Mehterhane, Ghazi and others.
 - Not built: allies (documented only), scenarios (Shrewsbury etc.), campaign material and optional rules.
 - Issues are listed in `issues/Armies_of_Chivalry.txt`.
+
+## Added: Spartacus (Warhammer Historical)
+Three catalogues named "(Spartacus)": Spartacus's Slave Revolt (Early Revolt / Germano-Gallic Slave Army / Late Revolt pickers), Late Republican Roman Consular Army and Sicilian Slave Revolt (First Sicilian / Titus Minutius / Second Sicilian pickers). Files `Slave_Revolt_Spartacus.cat`, `Late_Republican_Roman_Spartacus.cat`, `Sicilian_Slave_Revolt_Spartacus.cat`. Game system revision 13. Build with `sh tools/sp_all.sh <outdir>`.
+- Enforced: percentages by points per composition; per-composition availability; one General (Consul or Crassus; leader or Praetor as General options); Looted Light Bolt Thrower per army points; Gladiators and Bodyguard model limits per army points; once-per-army Fiery Rollers and Dogs.
+- Not built: allies (documented only), scenarios, campaign.
+- Issues are listed in `issues/Spartacus.txt`.
