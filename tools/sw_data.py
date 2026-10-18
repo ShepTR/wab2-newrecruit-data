@@ -88,25 +88,27 @@ NO.append(U('Common Warriors', 'Bondir', [M('Bondir', '4 3 3 3 3 1 3 1 6', 6, mn
 NO.append(U('Uncommon Warriors', 'Thralls', [M('Subject warrior', '4 2 3 3 3 1 3 1 5', 4, mn=5, weapons=['Javelin'], options=[('Buckler', 1), ('Exchange javelins and buckler for sling', 0), ('Exchange javelins for thrusting spear', 0)])],
     'Javelins. May have buckler (+1 pt). Light Infantry. Hiberno-Norse: may exchange javelins and bucklers for slings at no additional cost. Orkneyinga: may exchange javelins for thrusting spears at no additional cost.', page='14'))
 for n in ('Vikings', 'Jomsvikings', 'Gestir', 'Freebooters', 'Serjeants', 'Amsaigh', 'Gasraidh', 'Gall-Gaedhil'): NO.append(DOW(n))
-VAR['NO'] = {k: f'Shieldwall: Northmen - {k}' for k in ('Norwegians', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles')}
+VAR['NO'] = {k: f'Shieldwall: Northmen - {k}' for k in ('Norwegians', 'Danes', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles')}
 NO_V = [
  (VAR['NO']['Norwegians'], pct(33, {'min': 50}, 33), 'Norwegians (p.10). Characters up to 33%; Hirdmen and/or Bondir at least 50%; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Freebooters, Serjeants) up to 33%. All Hirdmen count as light infantry.'),
+ (VAR['NO']['Danes'], pct(33, {'min': 50}, 33), 'Denmark (p.9; the list could equally be used for a Swedish army). Characters up to 33%; Hirdmen and Bondir at least 50%; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Freebooters only) up to 33%. Bondir cost 7 pts each and have Leadership 7. Units of Hirdmen and Bondir may exchange throwing spear for thrusting spear (free).'),
  (VAR['NO']['Hiberno-Norse'], pct(33, {'min': 50}, 33), 'Hiberno-Norse (p.10). Characters up to 33%; the army may not include a Konnungr or Ulfhednar. Hirdmen and/or Bondir at least 50%; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Amsaigh) up to 33%. All Hirdmen and Bondir count as light infantry; Bondir may exchange throwing spear for thrusting spear (free); Thralls may exchange javelins and bucklers for slings at no cost.'),
  (VAR['NO']['Orkneyinga'], pct(33, {'min': 50}, 33), 'Orkneyinga (pp.10-11). Characters up to 33%; no Konnungr or Ulfhednar. Hirdmen and/or Bondir at least 50%, and the army must not have more units of Hirdmen than Bondir; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Gasraidh) up to 33%. Hirdmen count as light infantry and may be Stubborn (+3 pts per model); Thralls may exchange javelins for thrusting spears (free); Hirdmen and Bondir may exchange throwing spear for thrusting spear (free).'),
  (VAR['NO']['Kingdom of the Isles'], pct(33, {'min': 50}, 33), 'Kingdom of the Isles (p.11). Characters up to 33%; no Konnungr or Ulfhednar. Hirdmen and/or Bondir at least 50%, and the army must not have more units of Hirdmen than Bondir; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Gall-Gaedhil) up to 33%. Hirdmen count as light infantry and may be frenzied (+4 pts per model).'),
 ]
-NO_NOTES = ('NORTHMEN ARMY LISTS (Shieldwall, pp.6-16): Norwegians, Hiberno-Norse, Orkneyinga and Kingdom of the Isles. Percentages are by points. Special rules pp.4-5 and 12.\n'
-  'NOT BUILT: the Danes (Danish & Danelaw) army composition, which is on book pp.8-9 and is missing from the scan this data was built from. The Danish Hirdmen (with the option of thrusting spears) and Danish Bondir (Leadership 7) are described in the Wargaming Tactics text on pp.15-16.\n'
+NO_NOTES = ('NORTHMEN ARMY LISTS (Shieldwall, pp.6-16): Norwegians, Danes, Hiberno-Norse, Orkneyinga and Kingdom of the Isles. Percentages are by points. Special rules pp.4-5 and 12.\n'
   'Combined weapons within a Hirdmen unit (Different Weapons), the limit of bow-armed Bondir, and up to three Berserkers per unit of Hirdmen are tracked by the players, except that Berserker groups are limited to one per unit of Hirdmen.')
 LISTS.append(('NO', 'Northmen (Shieldwall)', 'Northmen_Shieldwall.cat', NO, NO_V, NO_NOTES))
 UNAV += [('NO', 'Konnungr', ['Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']), ('NO', 'Ulfhednar', ['Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles'])]
-AVAIL += [('NO', 'Vikings (Dogs of War)', ['Norwegians', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']), ('NO', 'Jomsvikings or Viking Adventurers (Dogs of War)', ['Norwegians', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']),
-          ('NO', 'Gestir (Dogs of War)', ['Norwegians', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']), ('NO', 'Freebooters (Dogs of War)', ['Norwegians']), ('NO', 'Serjeants (Dogs of War)', ['Norwegians']),
+AVAIL += [('NO', 'Vikings (Dogs of War)', ['Norwegians', 'Danes', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']), ('NO', 'Jomsvikings or Viking Adventurers (Dogs of War)', ['Norwegians', 'Danes', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']),
+          ('NO', 'Gestir (Dogs of War)', ['Norwegians', 'Danes', 'Hiberno-Norse', 'Orkneyinga', 'Kingdom of the Isles']), ('NO', 'Freebooters (Dogs of War)', ['Norwegians', 'Danes']), ('NO', 'Serjeants (Dogs of War)', ['Norwegians']),
           ('NO', 'Amsaigh (Dogs of War)', ['Hiberno-Norse']), ('NO', 'Gasraidh (Dogs of War)', ['Orkneyinga']), ('NO', 'Gall-Gaedhil (Dogs of War)', ['Kingdom of the Isles'])]
-OPTAV += [('NO', 'Hirdmen', 'Stubborn', ['Orkneyinga']), ('NO', 'Hirdmen', 'Frenzied', ['Kingdom of the Isles']), ('NO', 'Hirdmen', 'Exchange throwing spear for thrusting spear', ['Orkneyinga']),
-          ('NO', 'Bondir', 'Exchange throwing spear for thrusting spear', ['Hiberno-Norse', 'Orkneyinga']),
+OPTAV += [('NO', 'Hirdmen', 'Stubborn', ['Orkneyinga']), ('NO', 'Hirdmen', 'Frenzied', ['Kingdom of the Isles']), ('NO', 'Hirdmen', 'Exchange throwing spear for thrusting spear', ['Danes', 'Orkneyinga']),
+          ('NO', 'Bondir', 'Exchange throwing spear for thrusting spear', ['Danes', 'Hiberno-Norse', 'Orkneyinga']),
           ('NO', 'Thralls', 'Exchange javelins and buckler for sling', ['Hiberno-Norse']), ('NO', 'Thralls', 'Exchange javelins for thrusting spear', ['Orkneyinga'])]
 OPTRULE += [('NO', 'Hirdmen', 'Stubborn', 'Stubborn'), ('NO', 'Hirdmen', 'Frenzied', 'Frenzy')]
+COSTV += [('NO', 'Bondir', {'Danes': 7})]
+STATV += [('NO', 'Bondir', 'Ld', {'Danes': 7})]
 RATIOS += [('NO', 'Berserkers', ['Hirdmen'], 1)]
 HIRDMEN_LE_BONDIR += [('NO', 'Hirdmen', 'Bondir', ['Orkneyinga', 'Kingdom of the Isles'])]
 OPT_ONCE += [('NO', [('Hersir', 'Army Standard Bearer')])]

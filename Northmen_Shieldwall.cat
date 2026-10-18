@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2544-bf63-92be-1e97" name="Northmen (Shieldwall)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2544-bf63-92be-1e97" name="Northmen (Shieldwall)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Northmen (Shieldwall): units and points from the Shieldwall army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="a128-e623-18ae-8412" name="Konnungr" hidden="false" collective="false" import="true" type="unit">
@@ -1019,6 +1019,11 @@
 <!-- sw-avail -->
 <modifier type="set" field="hidden" value="false">
 <conditions>
+<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
+</conditions>
+</modifier>
+<modifier type="set" field="hidden" value="false">
+<conditions>
 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2c1-ac13-d737-e9a7" type="atLeast"/>
 </conditions>
 </modifier>
@@ -1218,6 +1223,11 @@
 <!-- sw-avail -->
 <modifier type="set" field="hidden" value="false">
 <conditions>
+<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
+</conditions>
+</modifier>
+<modifier type="set" field="hidden" value="false">
+<conditions>
 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d265-0a84-8b65-6ff7" type="atLeast"/>
 </conditions>
 </modifier>
@@ -1266,6 +1276,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a152-c624-1419-5fac" type="min"/>
           </constraints>
+          <modifiers>
+          <!-- swcost -->
+          <modifier type="set" field="points" value="7">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
+            </conditions>
+          </modifier>
+          </modifiers>
           <profiles>
             <profile id="bdf1-a2cb-0283-4589" name="Bondir" publicationId="af20-e256-4a51-93aa" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1279,6 +1297,14 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- swstat-Ld-Danes -->
+                <modifier type="set" field="b6d1-0987-3a4d-d6a9" value="7">
+                  <conditions>
+                    <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
             <profile id="ca39-883b-0da7-5795" name="Equipment and options (as printed in WAB2 army list)" publicationId="af20-e256-4a51-93aa" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -1547,6 +1573,11 @@
         <modifier type="set" field="64c8-4480-d140-2e93" value="1000">
           <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="64c8-4480-d140-2e93" value="1000">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="set" field="64c8-4480-d140-2e93" value="1000">
@@ -1836,6 +1867,11 @@
         <modifier type="set" field="de05-4cdb-b76a-b25f" value="1000">
           <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="de05-4cdb-b76a-b25f" value="1000">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
           </conditions>
         </modifier>
         <modifier type="set" field="de05-4cdb-b76a-b25f" value="1000">
@@ -2149,6 +2185,11 @@
         </modifier>
         <modifier type="set" field="f4b0-fd1a-98fd-3122" value="1000">
           <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f4b0-fd1a-98fd-3122" value="1000">
+          <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d265-0a84-8b65-6ff7" type="atLeast"/>
           </conditions>
         </modifier>
@@ -2387,6 +2428,11 @@
         <modifier type="set" field="9f14-3f35-4394-b66a" value="1000">
           <conditions>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9f14-3f35-4394-b66a" value="1000">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
           </conditions>
         </modifier>
 
@@ -3402,8 +3448,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="c055-0916-d6a2-97db" name="Northmen (Shieldwall) - List Notes" publicationId="af20-e256-4a51-93aa" hidden="false">
-      <description>NORTHMEN ARMY LISTS (Shieldwall, pp.6-16): Norwegians, Hiberno-Norse, Orkneyinga and Kingdom of the Isles. Percentages are by points. Special rules pp.4-5 and 12.
-NOT BUILT: the Danes (Danish &amp; Danelaw) army composition, which is on book pp.8-9 and is missing from the scan this data was built from. The Danish Hirdmen (with the option of thrusting spears) and Danish Bondir (Leadership 7) are described in the Wargaming Tactics text on pp.15-16.
+      <description>NORTHMEN ARMY LISTS (Shieldwall, pp.6-16): Norwegians, Danes, Hiberno-Norse, Orkneyinga and Kingdom of the Isles. Percentages are by points. Special rules pp.4-5 and 12.
 Combined weapons within a Hirdmen unit (Different Weapons), the limit of bow-armed Bondir, and up to three Berserkers per unit of Hirdmen are tracked by the players, except that Berserker groups are limited to one per unit of Hirdmen.
 
 ARMY COMPOSITIONS (pick one in the Army composition list):
@@ -3412,6 +3457,11 @@ ARMY COMPOSITIONS (pick one in the Army composition list):
   Common Warriors: at least 50%
   Uncommon Warriors: up to 33%
   Norwegians (p.10). Characters up to 33%; Hirdmen and/or Bondir at least 50%; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Freebooters, Serjeants) up to 33%. All Hirdmen count as light infantry.
+[Danes]
+  Characters: up to 33%
+  Common Warriors: at least 50%
+  Uncommon Warriors: up to 33%
+  Denmark (p.9; the list could equally be used for a Swedish army). Characters up to 33%; Hirdmen and Bondir at least 50%; Thralls and Dogs of War (Vikings, Jomsvikings, Gestir, Freebooters only) up to 33%. Bondir cost 7 pts each and have Leadership 7. Units of Hirdmen and Bondir may exchange throwing spear for thrusting spear (free).
 [Hiberno-Norse]
   Characters: up to 33%
   Common Warriors: at least 50%

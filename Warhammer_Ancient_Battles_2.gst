@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -556,6 +556,11 @@
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
@@ -1807,6 +1812,11 @@
             </modifier>
             <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
               <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d265-0a84-8b65-6ff7" type="atLeast"/>
               </conditions>
             </modifier>
@@ -1912,6 +1922,11 @@
             <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2d17-3611-d106-f4c6" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
@@ -2336,6 +2351,19 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="57b0-86c5-ec8a-8b9c" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="2d17-3611-d106-f4c6" name="Danes" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Northmen_Shieldwall.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2544-bf63-92be-1e97" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="341e-d743-301b-68ee" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry id="d265-0a84-8b65-6ff7" name="Hiberno-Norse" hidden="true" collective="false" import="true" type="upgrade">
