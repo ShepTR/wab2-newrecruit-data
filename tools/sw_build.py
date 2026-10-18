@@ -73,7 +73,7 @@ def main():
         first = next(u for u in units if u['name'] == FIRSTCHAR[key])
         first['models'][0]['rules'].append('Shieldwall Common Rules')
         x = RB.build_cat(name, units, notes + '\n\n' + comp_text(vs), None)
-        x = x.replace('gameSystemRevision="1"', 'gameSystemRevision="9"').replace('from the Warhammer Ancient Battles 2nd Edition rulebook army list.', 'from the Shieldwall army list book (Warhammer Historical).')
+        x = x.replace('gameSystemRevision="1"', 'gameSystemRevision="10"').replace('from the Warhammer Ancient Battles 2nd Edition rulebook army list.', 'from the Shieldwall army list book (Warhammer Historical).')
         # secondary pool categories
         for u in units:
             sec = D.SECOND.get((key, u['name']))

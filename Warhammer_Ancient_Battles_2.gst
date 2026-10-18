@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -9,6 +9,7 @@
     <publication id="37b4-aae5-6830-d590" name="Fall of the West" shortName="FotW" publisher="Warhammer Historical Wargames" publicationDate="2002"/>
     <publication id="aab0-aa1e-0319-4ffe" name="Armies of Antiquity" shortName="AoA" publisher="Warhammer Historical Wargames" publicationDate="1999"/>
     <publication id="af20-e256-4a51-93aa" name="Shieldwall" shortName="SW" publisher="Warhammer Historical Wargames" publicationDate="2002"/>
+    <publication id="2127-dab1-0af6-7421" name="El Cid" shortName="EC" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -129,6 +130,23 @@
     <categoryEntry id="0c80-93da-4649-b3ed" name="Teulu" hidden="false"/>
     <categoryEntry id="5ad7-c087-1636-0808" name="Toisech" hidden="false"/>
     <categoryEntry id="b2c1-cc28-9aef-021d" name="Uncommon Warriors" hidden="false"/>
+    <categoryEntry id="2cd3-c879-de42-09e1" name="Common Troops: Almohads" hidden="false"/>
+    <categoryEntry id="dbb8-9f3f-9f8f-11d4" name="Common Troops: Almoravids" hidden="false"/>
+    <categoryEntry id="a586-ba18-2b12-17d7" name="Common Troops: Asturias" hidden="false"/>
+    <categoryEntry id="7e2f-27c5-2dfa-e4c4" name="Common Troops: Caliphate" hidden="false"/>
+    <categoryEntry id="74ba-c414-a747-826c" name="Common Troops: El Cid" hidden="false"/>
+    <categoryEntry id="0f38-8e4a-4501-637d" name="Common Troops: Later Taifas" hidden="false"/>
+    <categoryEntry id="b872-0eb8-f3ff-3328" name="Common Troops: Reconquista" hidden="false"/>
+    <categoryEntry id="1934-e02e-865a-2b1c" name="Common Troops: Taifa Kings" hidden="false"/>
+    <categoryEntry id="0ac0-dae6-4188-ea2f" name="Uncommon Troops: Almohads" hidden="false"/>
+    <categoryEntry id="8b91-1442-3cda-0b13" name="Uncommon Troops: Almoravids" hidden="false"/>
+    <categoryEntry id="8407-d89b-e464-8d60" name="Uncommon Troops: Asturias" hidden="false"/>
+    <categoryEntry id="bba4-74e9-5777-576d" name="Uncommon Troops: Caliphate" hidden="false"/>
+    <categoryEntry id="3c53-38ef-b9fd-a47c" name="Uncommon Troops: El Cid" hidden="false"/>
+    <categoryEntry id="ca86-292e-7943-d805" name="Uncommon Troops: Later Taifas" hidden="false"/>
+    <categoryEntry id="6c2a-b2f2-0777-f4d5" name="Uncommon Troops: Reconquista" hidden="false"/>
+    <categoryEntry id="575e-eca8-12af-72bd" name="Uncommon Troops: Taifa Kings" hidden="false"/>
+    <categoryEntry id="0362-7f31-842f-ced0" name="Aliados y Mercenarios" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -156,6 +174,9 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b904-05df-7dcd-cae7" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b90f-6192-92f7-0af0" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="09db-2845-0f7d-ed78" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f89e-42a7-5272-fedd" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3f52-7e73-22e8-f61e" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f430-9d85-c97c-11e8" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -691,6 +712,46 @@
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d447-6b15-fb75-1c8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb5b-a35e-5109-e891" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8196-da29-92e0-00c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12b1-6fe7-9a7c-bd6a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8a97-4351-d097-a665" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1707-4e96-c7d2-2edc" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="741c-fd3d-4d6f-cb25" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="700f-ca38-3250-8b1c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0632-d00f-88f4-ca36" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
@@ -2011,6 +2072,199 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink id="8d83-86a9-1331-6caa" name="Common Troops: Almohads" hidden="false" targetId="2cd3-c879-de42-09e1" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="e167-f620-50a5-2865" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="e167-f620-50a5-2865" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0632-d00f-88f4-ca36" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="4883-0e15-b985-1c1c" name="Common Troops: Almoravids" hidden="false" targetId="dbb8-9f3f-9f8f-11d4" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="da8f-7092-2d54-57c4" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="da8f-7092-2d54-57c4" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="700f-ca38-3250-8b1c" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="68a4-cb5c-731e-9c6e" name="Common Troops: Asturias" hidden="false" targetId="a586-ba18-2b12-17d7" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="2887-cb62-6a39-4ddc" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="2887-cb62-6a39-4ddc" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb5b-a35e-5109-e891" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="5dd1-9da5-d04a-bfa0" name="Common Troops: Caliphate" hidden="false" targetId="7e2f-27c5-2dfa-e4c4" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="434e-5c93-0c4b-1f92" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="434e-5c93-0c4b-1f92" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8a97-4351-d097-a665" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="6831-c900-bcfe-fa41" name="Common Troops: El Cid" hidden="false" targetId="74ba-c414-a747-826c" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="c4d4-3f2c-3e02-a2b0" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="c4d4-3f2c-3e02-a2b0" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8196-da29-92e0-00c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="7109-0f06-183c-7ad8" name="Common Troops: Later Taifas" hidden="false" targetId="0f38-8e4a-4501-637d" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="fd59-34fb-af1c-a2b6" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="fd59-34fb-af1c-a2b6" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="741c-fd3d-4d6f-cb25" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="178a-411d-2084-13d2" name="Common Troops: Reconquista" hidden="false" targetId="b872-0eb8-f3ff-3328" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="cf25-9cfe-5046-1e43" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="cf25-9cfe-5046-1e43" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12b1-6fe7-9a7c-bd6a" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="577d-54a0-ad57-3a04" name="Common Troops: Taifa Kings" hidden="false" targetId="1934-e02e-865a-2b1c" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="a415-521e-501f-f00f" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="a415-521e-501f-f00f" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1707-4e96-c7d2-2edc" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="e0dc-75e5-3ff6-e5fd" name="Uncommon Troops: Almohads" hidden="false" targetId="0ac0-dae6-4188-ea2f" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="c040-cf52-d54d-7fca" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="c040-cf52-d54d-7fca" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0632-d00f-88f4-ca36" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="330c-b072-8f7d-072f" name="Uncommon Troops: Almoravids" hidden="false" targetId="8b91-1442-3cda-0b13" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="d232-8dc2-5612-9089" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="d232-8dc2-5612-9089" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="700f-ca38-3250-8b1c" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="0bb2-0b7b-2e63-261e" name="Uncommon Troops: Asturias" hidden="false" targetId="8407-d89b-e464-8d60" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="0a40-0b67-bb7b-1d34" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="0a40-0b67-bb7b-1d34" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb5b-a35e-5109-e891" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="884d-513a-f68a-950b" name="Uncommon Troops: Caliphate" hidden="false" targetId="bba4-74e9-5777-576d" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="abc7-6449-945c-5441" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="abc7-6449-945c-5441" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8a97-4351-d097-a665" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="4175-09d7-1636-99df" name="Uncommon Troops: El Cid" hidden="false" targetId="3c53-38ef-b9fd-a47c" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="9b8e-3d30-ffc9-4144" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="9b8e-3d30-ffc9-4144" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8196-da29-92e0-00c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="b7d5-4a4c-5387-f4d2" name="Uncommon Troops: Later Taifas" hidden="false" targetId="ca86-292e-7943-d805" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="1313-0427-1123-4176" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="1313-0427-1123-4176" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="741c-fd3d-4d6f-cb25" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="8744-51c4-a516-c28b" name="Uncommon Troops: Reconquista" hidden="false" targetId="6c2a-b2f2-0777-f4d5" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="50cb-9851-3a21-f1c9" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="50cb-9851-3a21-f1c9" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="12b1-6fe7-9a7c-bd6a" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="e854-ec39-d1cf-ce92" name="Uncommon Troops: Taifa Kings" hidden="false" targetId="575e-eca8-12af-72bd" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="4172-0d76-fe29-86c5" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="4172-0d76-fe29-86c5" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1707-4e96-c7d2-2edc" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="9669-9661-23fc-5b43" name="Aliados y Mercenarios" hidden="false" targetId="0362-7f31-842f-ced0" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -2702,6 +2956,110 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="86b6-8686-c15b-fcd9" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="eb5b-a35e-5109-e891" name="Asturias" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Christian_Spain_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f89e-42a7-5272-fedd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0cd4-764b-23ef-1e3d" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="8196-da29-92e0-00c6" name="El Cid" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Christian_Spain_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f89e-42a7-5272-fedd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4562-9eb6-c424-6040" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="12b1-6fe7-9a7c-bd6a" name="Reconquista" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Christian_Spain_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f89e-42a7-5272-fedd" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="8ed5-10d6-aa35-bdd9" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="8a97-4351-d097-a665" name="Caliphate" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Al_Andalus_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3f52-7e73-22e8-f61e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b41b-fc19-7a17-9bd9" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="1707-4e96-c7d2-2edc" name="Taifa Kings" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Al_Andalus_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3f52-7e73-22e8-f61e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="6ced-0076-91c2-faae" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="741c-fd3d-4d6f-cb25" name="Later Taifas" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Al_Andalus_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3f52-7e73-22e8-f61e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ceae-05cf-5c16-01ea" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="700f-ca38-3250-8b1c" name="Almoravids" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>African_Invaders_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f430-9d85-c97c-11e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="aeb5-d672-04d3-8843" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="0632-d00f-88f4-ca36" name="Almohads" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>African_Invaders_El_Cid.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f430-9d85-c97c-11e8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d66b-c691-6ad9-d167" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
@@ -3660,6 +4018,45 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </rule>
     <rule id="8faa-d305-c4fb-a0dd" name="Hibernian Ambush" publicationId="af20-e256-4a51-93aa" hidden="false">
       <description>At the beginning of the battle, before units are placed, a commander of an Hibernian army may keep one unit off the battlefield. The commander writes down where the unit is hidden: either a village, wood, etc, or an area of ground hidden by a hill or similar. Once all units have been deployed the commander of the Hibernian army may either place the unit in his own deployment area or keep it in ambush. As soon as an enemy unit is within 8" he must deploy the unit, although he may deploy the unit earlier if he wishes. If the unit is deployed in the Hibernian player's turn it may charge, move, fire and attack normally in that turn. Whilst hidden a unit is immune to all psychology tests.</description>
+    </rule>
+    <rule id="0322-f14d-c228-0f49" name="El Cid Common Rules" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>The army lists in El Cid are used in the same way as the Roman and Barbarian lists in Warhammer Ancient Battles; each has a number of army options for a period of history, each with its own force composition and additional rules. UNIT SIZES: minimum five infantry or cavalry models, no upper limit; one model per unit may be a Leader (+5 pts), one a Standard Bearer (+5 pts), one a Musician (+5 pts) unless stated otherwise. WYSIWYG: the models must show the options taken. CAVALRY COUNTER CHARGES: a cavalry unit charged to the front by enemy cavalry may counter charge: it counts as charging for its weapons (e.g. +1S for thrusting spears) but does not move and does not count as charging for deciding who strikes first; cavalry with a move of less than 6" may not counter charge, and cavalry may not counter charge infantry. RANK BONUSES &amp; DIFFICULT TERRAIN: a rank bonus counts only if both units are in clear, open terrain (hills and fords count as clear) and neither is behind an obstacle. REFORMING IN COMBAT: a unit fighting to the flank or rear may reform at the end of the Close Combat phase if it did not break and is not engaged on another facing, facing the unit engaging it with its centre in base contact with the enemy centre; it still loses its rank bonus if charged by an enemy unit of five or more models. SKIRMISHERS &amp; RANK BONUS: formed units do not lose their rank bonus if charged by a unit of five or more models in skirmish formation (including cavalry, but not chariots). FALL BACK IN GOOD ORDER: overwhelming odds (over 2:1 in models) - the side with overwhelming odds that loses and fails its Break test falls back in good order instead of fleeing; drilled troops, skirmishers and cavalry that lose a combat but pass their Break test may choose to fall back in good order; no Panic tests for friends within 12", automatic rally at the end of the move with an immediate reform, may be pursued but are not wiped out (the pursuer counts as having charged next turn), may not charge next turn, a unit falling off the table is lost, and units can fall back from a Ferocious Charge. Missile hits against mixed units use the saving throw of the majority of models (best save if equal) and casualties are removed in roughly equal proportions. MOUNTED MODELS: a horse raises Movement to 8" before armour penalties; a warhorse has the profile M8 WS3 BS0 S3 I3 A1. BOWS: all bows in the army lists are composite bows unless noted. COMBINED FORMATION: see the Combined Formation rule. Andalusian Allies: units from the Al-Andalus list that become subject to the Aliados y Mercenarios rules (documented only, not built).</description>
+    </rule>
+    <rule id="e569-be7e-a7ca-2582" name="Combined Formation (El Cid)" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Units that can do this are indicated in the army list; typically archers take up the rear ranks of the unit, shooting over the heads of the troops in front. The archers lose their Light Troop status if applicable and are treated as normal troops for movement and rank bonuses. The archers may shoot using the Massed Archery rules (rulebook p.23) as well as any special rules of the unit. A unit may stand &amp; shoot or fire &amp; flee using massed archery.</description>
+    </rule>
+    <rule id="fc2c-25be-aca9-5a52" name="Bloodthirsty" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Bloodthirsty troops and characters are fervent, religiously-motivated warriors. 1. At the start of each turn roll a D6 for each unit not bound by a compulsory movement rule: on 2-6 it moves normally; on a 1 it must surge forward: charge the nearest enemy if within reach, otherwise move towards the nearest enemy at least 4" if possible (faster if the player wishes); if blocked it moves as far as it can; if facing away it turns or wheels to face the nearest enemy and moves as far as it can towards them. 2. Bloodthirsty troops and characters must always pursue an enemy that flees or falls back in good order and may not hold back. 3. They may not disengage from combat or voluntarily fall back in good order. 4. In the Ransom scenario they must roll a 6 to capture an enemy character alive (on a 1-5 the enemy is killed instead).</description>
+    </rule>
+    <rule id="882d-f357-ae46-9d92" name="Cantador (El Cid)" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>The Cantador may lead a single formed unit (not skirmishers). After deployment, but before the first move, roll a D6: 1 - his voice is drowned out, no effect. 2-3 - the unit may add D3" to its movement for ONE move, march or charge during the battle (declared before the dice are thrown; doubled for charging or marching). 4-5 - the unit may re-roll failed Panic tests during the battle. 6 - the unit and any attached characters may re-roll any misses in the unit's first round of combat (warhorses may not).</description>
+    </rule>
+    <rule id="23dc-67a3-0cbf-922a" name="Bishop (El Cid)" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Any unit led by the Bishop may re-roll failed Panic tests.</description>
+    </rule>
+    <rule id="0609-a21f-82bb-7825" name="Crusading Bishop" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>The Bishop may be upgraded to a Crusading Bishop for +40 pts: Leadership 9, and subject to Hatred of the enemy (Hatred does not extend to warhorses); any unit he leads is also subject to Hatred of the enemy. Crusading Bishops are Bloodthirsty, as is the unit they lead. A Crusading Bishop cannot re-roll failed Panic tests.</description>
+    </rule>
+    <rule id="ba99-7c39-57da-7739" name="Andalusian Horsemen" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Cavalry noted as Andalusian Horsemen may reform their unit formation without penalty after movement, including after a march or double pace move but not charging. A unit reforming in skirmish formation must possess a Musician as normal (rulebook p.56). A reforming unit cannot fire in the Shooting phase. The unit reforms around its leader, musician or standard bearer, and no model may move more than its permitted distance. Mounted characters accompanying an Andalusian Horsemen unit do not impede the unit's ability to reform.</description>
+    </rule>
+    <rule id="91dc-bc7f-6e61-fce7" name="Qadi" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>The Qadi can lead a single formed unit (not skirmishers). This unit may re-roll failed Rally attempts during the battle, as long as the Qadi is still alive and leading. Later Taifas: if no other Army General is chosen the Qadi may be made Army General for +50 pts; any unit led by the Qadi-General may also re-roll failed Panic tests, but the Qadi-General loses the ability to re-roll failed Rally attempts.</description>
+    </rule>
+    <rule id="a61b-ef36-0ee7-03bd" name="Mounted Crossbow (El Cid)" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>The light crossbow used by Andalusian mounted crossbowmen has a range of 24", Strength 3 and a -1 save modifier. If they move in their Movement phase they are unable to fire that turn (they are assumed to have halted to reload).</description>
+    </rule>
+    <rule id="ec92-bdab-f6d9-5400" name="Imam" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>The Imam may lead a unit of either Black Guard or Berber Spearmen (with or without Berber Archers). He cannot lead any other unit. The Imam is subject to Hatred of the enemy as described in the psychology section of the game rules. Any unit led by the Imam also becomes subject to Hatred of the enemy.</description>
+    </rule>
+    <rule id="e40f-cfd7-e44a-a935" name="African Drummers" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Almoravid and Almohad armies included large numbers of Saharan drummers. Certain units may feature two Musician models (rather than one) for the normal cost of +5 pts per model. Any unit so equipped automatically wins a drawn combat by one point, rather than resorting to a musical roll-off. Only Hasham Guard Cavalry, Berber Cavalry, Camel Riders, Black Guard, Berber Spearmen and Berber Archers may take an additional drummer. A Berber Archer or combined Berber Archers/Spearmen unit with two drummers may use Massed Archery even if it has moved up to its normal movement in a turn; a -1 to hit penalty still applies to units that move &amp; shoot.</description>
+    </rule>
+    <rule id="af14-6533-0978-e4a9" name="Camel Riders (El Cid)" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Camels cause fear in all cavalry (and chariots, should they happen to meet one).</description>
+    </rule>
+    <rule id="b1ff-eb23-2666-9b4f" name="Aliados y Mercenarios" publicationId="2127-dab1-0af6-7421" hidden="false">
+      <description>Aliados y Mercenarios units may have a Leader, Standard &amp; Musician as normal. A single Aliados y Mercenarios unit may be personally led by the Army General and is then exempt from these special rules and treated like a regular unit from the General's army. Aliados y Mercenarios units may not benefit from the special abilities of the Army General or Army Battle Standard, although they may be led by any appropriate character and use his Leadership and any special abilities. Roll a dice the first time a player wishes to move, charge or shoot with each unit of Aliados y Mercenarios: on a 1 the unit remains stationary and may not shoot, but can defend itself if attacked in close combat, including shooting against a charging unit; on a 2-6 the unit can act as the player wishes. Once it has successfully moved or shot, it no longer has to take this test. Aliados y Mercenarios units are treated as part of their employer's army for taking and causing Panic tests.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
