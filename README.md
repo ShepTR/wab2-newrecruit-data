@@ -103,3 +103,6 @@ Every equipment option on a non-character unit ("replaces x", "may have x", armo
 
 ## Spanish sub-lists (Hannibal pp.70-71)
 `tools/spanish_restrictions.py` (run after `collapse_forces.py`): each sub-list (Iberians, Celtiberians, Lusitanians) may only use the units the book names for it; others fail validation and are hidden. Celtiberian Warriors are Infantry for the Celtiberians and Special Units for the Iberians (one entry; the old duplicate "Special - Iberians" entry was merged). Lusitanians are limited to one unit per two Caetrati units. "No Caetrati unit may outnumber the smallest Celtiberian/Lusitanian unit" is a validation constraint (`tools/spanish_outnumber.py`): the Caetrati unit size may not exceed the models in the Celtiberian/Lusitanian units taken (exact with one such unit, lenient with several).
+
+## Light Troops rule on units
+`tools/light_troops.py` links the "Light Troops" rule (rulebook p.108) to every unit of the official lists whose text says Light Infantry or Light Cavalry (31 units), plus the units named Light Cavalry. The Numidian Elephant is skipped (its escorts are the light infantry). The unofficial AoA2 pilot catalogues are not covered.
