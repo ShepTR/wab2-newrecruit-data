@@ -77,7 +77,7 @@ R.append(U('Uncommon Troops', 'Ligurian Infantry', [M('Ligurian Warrior', '5 3 3
 EL = '4 3 3 3 3 1 3 1 7'
 R.append(U('Uncommon Troops', 'Numidian Elephant', [
     M('African Elephant', '6 4 0 6 5 5 3 4 4', 116, mn=1, mx=1, key='el'),
-    M('Mahout', EL, 0, mn=1, mx=1, key='mahout'),
+    M('Mahout', '4 2 2 3 3 1 3 1 7', 0, mn=1, mx=1, key='mahout'),
     M('Crew', EL, 0, mn=2, mx=2, key='crew', weapons=['Hand Weapon', 'Javelin']),
     M('Escorts', '5 3 3 3 3 1 3 1 7', 10, mn=0, mx=10, key='esc', options=[('Sling and buckler (up to half)', 0), ('Javelin and buckler', 0)])],
     'No more than one elephant model regardless of army size. Unarmed mahout and two crew with javelins in a fighting tower (5+ save). Up to ten escorts (Light Infantry), up to half with sling and buckler, the rest javelin and buckler; escorts may not have leader, standard bearer or musician; escorts touching an enemy model may fight if they join the engaged elephant. Elephant: may stampede; causes fear in infantry and terror in cavalry.', mx=1, page='61'))
