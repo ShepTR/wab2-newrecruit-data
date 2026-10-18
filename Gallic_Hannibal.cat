@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="11" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="12" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="21ce-00fc-6575-f75d" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -873,6 +873,18 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="087c-d84f-eecc-209a" name="Fanatics" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e01-9f4d-bd26-b698" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- need-chariots -->
+        <modifier type="set" field="0e01-9f4d-bd26-b698" value="1000">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c888-00db-d43d-4333" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+      </modifiers>
       <categoryLinks>
         <categoryLink id="6baa-5f9a-6197-c1cf" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
@@ -907,7 +919,19 @@
         <selectionEntry id="d283-51aa-d82e-c3ab" name="Fanatic" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1469-e755-8183-fcc0" type="min"/>
+            <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d7-8d98-311a-f808" type="max"/>
           </constraints>
+          <modifiers>
+          <!-- limit-figures-vs-warriors -->
+          <modifier type="set" field="b7d7-8d98-311a-f808" value="0">
+          </modifier>
+          <modifier type="increment" field="b7d7-8d98-311a-f808" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
+            </repeats>
+          </modifier>
+
+          </modifiers>
           <profiles>
             <profile id="29cb-733a-d9ee-91b7" name="Fanatic" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>

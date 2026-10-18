@@ -109,3 +109,10 @@ Every equipment option on a non-character unit ("replaces x", "may have x", armo
 
 ## Rulebook check against the clean scans (WAB2 Edit_1/Edit_2)
 The two 85-page scans in the Dropbox folder (rules chapters, special rules, reference pages and templates; no army lists) were OCRed and compared with the game system: all 22 rulebook special rules, the missile weapon table, the weapon and armour text, the armour save and encumbrance logic. One difference was found and fixed: Fear point 4 reads "a unit DEFEATED in hand-to-hand combat is automatically broken if outnumbered by a feared enemy" (it said "engaged"). Light Troops now carries the book's "must fight as one or the other for the whole battle" sentence.
+
+## Cross-unit limits (Hannibal) — `tools/hannibal_limits.py`
+Enforced as validation constraints (New Recruit shows a warning when broken):
+- Unit ratios: Carthaginian Spanish Caetrati ≤ Spanish Scutarii units; Oscan Hoplites ≤ Oscan Warriors units; Ballista ≤ Citizen/Levy/Trained African units; Balearic/Ligurian/Sardinian/Moorish skirmishers ≤ Skirmisher units; Roman Principes ≤ Hastati (+Raw) units; Triarii ≤ Principes units (one per two Principes once Velites are present); Spanish Caetrati ≤ one per two Scutarii units.
+- Minimums: Triarii at least 1; Leves at least 1 in the First Punic War and Second Punic War in Spain/Italy unless Velites are taken.
+- Figure caps: Numidian Trained Infantry and Imitation Legionaries ≤ Warriors figures; Gallic Fanatics ≤ Warrior figures and need a Chariots unit; Italian Extraordinarii and Spanish Caetrati unit size ≤ Spearmen / Scutarii figures.
+Not enforceable in New Recruit (check by hand): "may not outnumber any other cavalry unit", "may not be the largest skirmisher unit", and "smallest unit" comparisons when several comparator units exist (the sum of their figures is used, so these are lenient).

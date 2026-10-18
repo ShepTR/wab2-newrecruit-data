@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="30b1-e14e-f544-81c3" name="Carthaginian (Hannibal)" revision="12" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="30b1-e14e-f544-81c3" name="Carthaginian (Hannibal)" revision="13" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Carthaginian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="4c65-c760-9110-46c2" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -2198,9 +2198,17 @@
     </selectionEntry>
     <selectionEntry id="777a-ed45-d533-7330" name="Oscan Hoplites" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cf4-8608-c649-6264" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8891-7a10-dc88-1bd4" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Oscan Hoplites-per-Oscan Warriors -->
+        <modifier type="increment" field="6cf4-8608-c649-6264" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cec4-c5bc-8c0e-a112" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="8891-7a10-dc88-1bd4" value="-1">
             <conditionGroups>
@@ -3308,9 +3316,17 @@
     </selectionEntry>
     <selectionEntry id="738c-72d0-fb71-06a2" name="Spanish Caetrati" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac6f-556f-13eb-e9d8" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be94-72c4-5dd1-92c3" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Spanish Caetrati-per-Spanish Scutarii -->
+        <modifier type="increment" field="ac6f-556f-13eb-e9d8" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d3f-94d0-48ff-a0ba" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="be94-72c4-5dd1-92c3" value="-1">
             <conditionGroups>
@@ -5069,9 +5085,17 @@
     </selectionEntry>
     <selectionEntry id="7363-be0f-b075-ae2e" name="Balearic Slingers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b29-edb0-1d37-6e05" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1f0-585f-99aa-d9cd" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Balearic Slingers-skirm -->
+        <modifier type="increment" field="0b29-edb0-1d37-6e05" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f78f-219c-7bdc-4800" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="c1f0-585f-99aa-d9cd" value="-1">
             <conditionGroups>
@@ -5672,9 +5696,17 @@
     </selectionEntry>
     <selectionEntry id="60a1-670e-a554-0e01" name="Ligurian Slingers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c21e-5692-a36c-986b" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d907-5114-8fc1-af13" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Ligurian Slingers-skirm -->
+        <modifier type="increment" field="c21e-5692-a36c-986b" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f78f-219c-7bdc-4800" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="d907-5114-8fc1-af13" value="-1">
             <conditionGroups>
@@ -5943,9 +5975,17 @@
     </selectionEntry>
     <selectionEntry id="c9f2-eda5-ea0e-4dc4" name="Sardinian Archers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7591-92d7-374c-f519" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d69c-3d41-7c30-01d0" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Sardinian Archers-skirm -->
+        <modifier type="increment" field="7591-92d7-374c-f519" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f78f-219c-7bdc-4800" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="d69c-3d41-7c30-01d0" value="-1">
             <conditionGroups>
@@ -6036,9 +6076,17 @@
     </selectionEntry>
     <selectionEntry id="bdc5-d72b-7ac5-2c0c" name="Moorish Archers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d91-82a2-153b-3573" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="408d-4710-1f8f-5740" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Moorish Archers-skirm -->
+        <modifier type="increment" field="9d91-82a2-153b-3573" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f78f-219c-7bdc-4800" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="408d-4710-1f8f-5740" value="-1">
             <conditionGroups>
@@ -6129,9 +6177,27 @@
     </selectionEntry>
     <selectionEntry id="1de6-9509-fa68-475c" name="Artillery (Heavy Bolt Ballista)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccc1-2f16-2d9a-c26c" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8580-2ec2-75e1-ea28" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Artillery (Heavy Bolt Ballista)-per-Citizen Infantry-Levy Africans-Trained Africans -->
+        <modifier type="increment" field="ccc1-2f16-2d9a-c26c" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cb2-de5e-8a2b-65fc" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="ccc1-2f16-2d9a-c26c" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5116-0bf8-7c12-0091" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="ccc1-2f16-2d9a-c26c" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="729f-fcaf-0531-7c0a" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- carth-restrictions -->
           <modifier type="set" field="8580-2ec2-75e1-ea28" value="-1">
             <conditionGroups>

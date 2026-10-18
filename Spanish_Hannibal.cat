@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="13" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="178c-ffbc-b301-16ba" name="Spanish (Hannibal)" revision="14" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Spanish (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="6e39-390c-320e-ff3c" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -1183,9 +1183,33 @@
     </selectionEntry>
     <selectionEntry id="1814-b276-0b42-64ac" name="Caetrati" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e7b-0c52-ae56-297b" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4186-2747-8bbd-6527" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-caetrati-per-scutarii -->
+        <modifier type="set" field="5e7b-0c52-ae56-297b" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ce-737d-155e-b5c0" type="atLeast"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="822d-5da5-2af3-3a4a" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="5e7b-0c52-ae56-297b" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="822d-5da5-2af3-3a4a" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ce-737d-155e-b5c0" type="atLeast"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="822d-5da5-2af3-3a4a" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="5e7b-0c52-ae56-297b" value="1000">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ce-737d-155e-b5c0" type="atLeast"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="822d-5da5-2af3-3a4a" type="lessThan"/>
+          </conditions>
+        </modifier>
+
         <!-- spanish-restrictions -->
           <modifier type="set" field="4186-2747-8bbd-6527" value="-1">
             <conditionGroups>
@@ -1272,8 +1296,26 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8c6f-d28a-3019-f213" type="min"/>
                       <constraint field="selections" scope="parent" value="1000" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1dd4-bd75-586b-14aa" type="max"/>
+            <constraint field="selections" scope="parent" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc3b-ea16-b95d-7ae0" type="max"/>
           </constraints>
           <modifiers>
+          <!-- limit-caetrati-vs-scutarii-size -->
+          <modifier type="set" field="bc3b-ea16-b95d-7ae0" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ce-737d-155e-b5c0" type="atLeast"/>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="822d-5da5-2af3-3a4a" type="atLeast"/>
+            </conditions>
+          </modifier>
+          <modifier type="increment" field="bc3b-ea16-b95d-7ae0" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43ac-c263-855f-8de1" repeats="1" roundUp="false"/>
+            </repeats>
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ce-737d-155e-b5c0" type="atLeast"/>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="822d-5da5-2af3-3a4a" type="atLeast"/>
+            </conditions>
+          </modifier>
+
         <!-- spanish-outnumber -->
           <modifier type="set" field="1dd4-bd75-586b-14aa" value="0">
             <conditionGroups>

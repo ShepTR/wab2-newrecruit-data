@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="14" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="15" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Republican Roman (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="ea5b-ece5-bf3a-0ea7" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -1912,9 +1912,30 @@
     </selectionEntry>
     <selectionEntry id="52a2-880b-8aa8-896c" name="Leves" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e47-0feb-0de1-725f" type="min"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cb1-9c53-8372-0aba" type="max"/>
       </constraints>
       <modifiers>
+        <!-- min-leves -->
+        <modifier type="set" field="3e47-0feb-0de1-725f" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3e47-0feb-0de1-725f" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="3e47-0feb-0de1-725f" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- roman-restrictions -->
           <modifier type="set" field="9cb1-9c53-8372-0aba" value="-1">
             <conditionGroups>
@@ -2494,9 +2515,22 @@
     </selectionEntry>
     <selectionEntry id="4d07-b6c0-74bc-fb66" name="Principes" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bbd-3683-b50e-c822" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7434-9b02-ed17-35a3" type="max"/>
       </constraints>
       <modifiers>
+        <!-- limit-Principes-per-Hastati-Raw Hastati -->
+        <modifier type="increment" field="2bbd-3683-b50e-c822" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7cb-3c3a-91fd-ac51" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="2bbd-3683-b50e-c822" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdbb-41c6-203c-b273" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- roman-restrictions -->
           <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
             <conditionGroups>
@@ -2754,9 +2788,32 @@
     </selectionEntry>
     <selectionEntry id="da24-e6f8-8487-086f" name="Triarii" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d38-e7ea-c9bd-018e" type="min"/>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72dd-abcf-a1bf-02c2" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92cb-8f41-bfa5-ebfe" type="max"/>
       </constraints>
       <modifiers>
+        <!-- min-triarii -->
+
+
+        <!-- limit-triarii-per-principes -->
+        <modifier type="increment" field="72dd-abcf-a1bf-02c2" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4d07-b6c0-74bc-fb66" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="72dd-abcf-a1bf-02c2" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4d07-b6c0-74bc-fb66" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- roman-restrictions -->
           <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
             <conditionGroups>
@@ -3906,7 +3963,25 @@
         <selectionEntry id="2f85-0af6-c0ce-fcb6" name="Extraordinarius" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8fc4-6ab8-66dd-e060" type="min"/>
+            <constraint field="selections" scope="parent" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3eb-921d-3f08-4e8a" type="max"/>
           </constraints>
+          <modifiers>
+          <!-- limit-extraordinarii-size -->
+          <modifier type="set" field="e3eb-921d-3f08-4e8a" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f148-a340-08a1-573e" type="atLeast"/>
+            </conditions>
+          </modifier>
+          <modifier type="increment" field="e3eb-921d-3f08-4e8a" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d2a7-8c7a-57d6-84a6" repeats="1" roundUp="false"/>
+            </repeats>
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f148-a340-08a1-573e" type="atLeast"/>
+            </conditions>
+          </modifier>
+
+          </modifiers>
           <profiles>
             <profile id="6593-d621-21e2-147d" name="Extraordinarius" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>

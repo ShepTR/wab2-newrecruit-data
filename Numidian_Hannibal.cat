@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="11" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="12" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Numidian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="f601-58b1-fe66-91b3" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -407,7 +407,19 @@
         <selectionEntry id="1d7c-24da-f523-5103" name="Trained Infantryman" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4188-3ca7-ed7c-5bd9" type="min"/>
+            <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70af-0cc9-173d-d3bc" type="max"/>
           </constraints>
+          <modifiers>
+          <!-- limit-figures-vs-warriors -->
+          <modifier type="set" field="70af-0cc9-173d-d3bc" value="0">
+          </modifier>
+          <modifier type="increment" field="70af-0cc9-173d-d3bc" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1591-ae7b-dc02-9714" repeats="1" roundUp="false"/>
+            </repeats>
+          </modifier>
+
+          </modifiers>
           <profiles>
             <profile id="6d8c-14ae-99aa-b4d8" name="Trained Infantryman" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1245,7 +1257,19 @@
         <selectionEntry id="e844-1eea-d1e0-ffea" name="Imitation Legionary" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cad5-7bfc-4a13-826a" type="min"/>
+            <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58d2-808a-daba-53bd" type="max"/>
           </constraints>
+          <modifiers>
+          <!-- limit-figures-vs-warriors -->
+          <modifier type="set" field="58d2-808a-daba-53bd" value="0">
+          </modifier>
+          <modifier type="increment" field="58d2-808a-daba-53bd" value="1">
+            <repeats>
+              <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1591-ae7b-dc02-9714" repeats="1" roundUp="false"/>
+            </repeats>
+          </modifier>
+
+          </modifiers>
           <profiles>
             <profile id="2236-4216-e9d3-a5b9" name="Imitation Legionary" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
