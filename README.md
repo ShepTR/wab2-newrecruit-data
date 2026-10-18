@@ -163,3 +163,10 @@ Three catalogues named "(El Cid)", each with an **Army composition** picker: Chr
 - Not built: Andalusian Allies (documented in the List Notes only), campaigns and scenarios.
 - Not enforced: at least half of cavalry models being Andalusian Jinetes, up to half the Jinete units with bows, up to half the Berber Spearmen units Stubborn (Almohads), mixed weapons, Aliados y Mercenarios unit led by the Army General.
 - Issues and printed oddities are listed in `issues/El_Cid.txt`.
+
+## Added: Alexander the Great (Warhammer Historical)
+Eight catalogues named "(Alexander the Great)": Rise of Macedon, Alexandrian Imperial, Greek Mercenaries, Thracians (Coalition / Getic / Highland pickers), Illyrians, The End of Persia, The Frontier Horsemen and the Indian army (Classical / Mountain / Republican / Mauryan pickers). Game system revision 11.
+- Enforced: percentages by points per list/composition; per-composition availability (Thracian King/Warlord, Noble/Getae cavalry, wagons, Mountain tribes; Indian chariot types, War Wagons, King/Senapati/Warlord, Bodyguards, elephants, Brahman Priests, laager wagons); 0-1 units; one General; Hypaspist/Thessalian/Prodromoi/Agrianian/Getae/Slave/escort ratios; once-per-army upgrades (Agema, Pharsalian squadron, Army Battle Standard); Mauryan Hereditary cost and stat changes.
+- Rules defined from the book: common rules, Macedonian & Trained Phalanx, Alexander's Eagle, Polemarch, Rhomphaia, Rolling Wagons, The Great King, Half-Barded Armour, End of Persia scythed chariots, Indian elephants, Brahman Priest, Rathamasaula, War Wagons, wagon laager, Large Chariots and escorts.
+- Not built: allies (documented only), historical characters, campaigns, scenarios and optional rules.
+- Issues are listed in `issues/Alexander_the_Great.txt`.
