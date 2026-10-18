@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="11" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Republican Roman (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="ea5b-ece5-bf3a-0ea7" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -1911,6 +1911,53 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="52a2-880b-8aa8-896c" name="Leves" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cb1-9c53-8372-0aba" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="9cb1-9c53-8372-0aba" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="9cb1-9c53-8372-0aba" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="9cb1-9c53-8372-0aba" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="e910-6482-9a72-803c" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2044,6 +2091,66 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="c7cb-3c3a-91fd-ac51" name="Hastati" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d28d-ea89-d884-a71c" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="ac81-d772-3464-ddd2" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2185,6 +2292,66 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="bdbb-41c6-203c-b273" name="Raw Hastati" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43a6-261e-16e9-02b4" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="43a6-261e-16e9-02b4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="43a6-261e-16e9-02b4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="43a6-261e-16e9-02b4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="43a6-261e-16e9-02b4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="43a6-261e-16e9-02b4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="43a6-261e-16e9-02b4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="dec8-b02a-ae15-8463" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2326,6 +2493,66 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4d07-b6c0-74bc-fb66" name="Principes" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7434-9b02-ed17-35a3" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="bd1b-a320-5726-61cb" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2526,6 +2753,66 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="da24-e6f8-8487-086f" name="Triarii" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92cb-8f41-bfa5-ebfe" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="a8a7-2271-2261-604c" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2649,6 +2936,35 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="2212-96b5-7b1c-b003" name="Rorarii (use Leves profile)" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8914-7239-366d-9404" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="8914-7239-366d-9404" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="df4c-b6e0-fbbd-6d5d" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -2782,6 +3098,35 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="8436-371d-cfea-42e8" name="Accensi" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="084d-78f2-ec1a-aed4" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="084d-78f2-ec1a-aed4" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="eded-6c42-33f7-c340" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -2856,6 +3201,69 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="62b8-1114-5c31-f3e2" name="Velites" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0278-8777-0e91-a938" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="0278-8777-0e91-a938" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52a2-880b-8aa8-896c" type="lessThan"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="0278-8777-0e91-a938" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52a2-880b-8aa8-896c" type="lessThan"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="0278-8777-0e91-a938" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="0278-8777-0e91-a938" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="0278-8777-0e91-a938" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="7b71-9864-d029-71f3" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2961,6 +3369,66 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="76ed-cd82-b621-76ab" name="Roman and Italian Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee3f-1c49-3367-6012" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="ee3f-1c49-3367-6012" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="ee3f-1c49-3367-6012" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="ee3f-1c49-3367-6012" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="ee3f-1c49-3367-6012" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="ee3f-1c49-3367-6012" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="ee3f-1c49-3367-6012" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="5d6a-8d2f-f1fb-644e" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -3103,6 +3571,51 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="f148-a340-08a1-573e" name="Italian Spearmen" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c16e-be8f-e4f0-26a3" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="c16e-be8f-e4f0-26a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="c16e-be8f-e4f0-26a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="c16e-be8f-e4f0-26a3" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="325a-2602-928c-527b" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -3268,8 +3781,51 @@
     </selectionEntry>
     <selectionEntry id="cfaf-bd7a-d2f7-af65" name="Italian Extraordinarii" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1949-54fa-d626-1bbe" type="max"/>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9676-c857-3888-dba4" type="max"/>
       </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="1949-54fa-d626-1bbe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="1949-54fa-d626-1bbe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="1949-54fa-d626-1bbe" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f4d3-9347-6a97-dff2" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -3434,6 +3990,35 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="c336-a762-8f63-c816" name="Thureophoroi" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0e1-0202-6a55-cb3b" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="b0e1-0202-6a55-cb3b" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="7a2e-a23f-f3d8-b636" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -3539,6 +4124,35 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4616-57d1-6c63-a78b" name="Peltasts" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4b4-6186-861e-7906" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="f4b4-6186-861e-7906" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="b598-0e1d-5b41-8d08" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -3665,6 +4279,43 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="564e-45c0-9f1e-5641" name="Cretan Archers" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d47-af04-53e3-824e" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="8d47-af04-53e3-824e" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="8d47-af04-53e3-824e" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="295e-2bf2-c706-cbda" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -3740,6 +4391,43 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="5309-8925-5170-fe5c" name="Syracusan Skirmishers" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e67-2867-721c-30a1" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="7e67-2867-721c-30a1" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="7e67-2867-721c-30a1" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="058c-748b-5a2a-dffe" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -3962,6 +4650,72 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="27bf-8d46-e55d-2fb2" name="Tarentine Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3540-7b1c-6b6a-2a9e" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="3540-7b1c-6b6a-2a9e" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="3540-7b1c-6b6a-2a9e" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="3540-7b1c-6b6a-2a9e" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="ce97-6cb6-b09f-1934" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4076,6 +4830,57 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="86d1-1a0a-5e1a-6672" name="Numidian Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3be1-1887-a966-4534" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="3be1-1887-a966-4534" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="3be1-1887-a966-4534" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="abb4-22af-3794-b87a" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4204,6 +5009,43 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="92cf-ee3b-7e41-d2c8" name="Spanish Infantry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f626-2b1e-5035-fe8f" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="f626-2b1e-5035-fe8f" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="f626-2b1e-5035-fe8f" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="c064-f6ad-13e5-94bb" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4369,6 +5211,72 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="3132-26c7-51d6-281a" name="Spanish Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b6c-a5cf-2ac5-e2ee" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="6b6c-a5cf-2ac5-e2ee" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="6b6c-a5cf-2ac5-e2ee" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76ed-cd82-b621-76ab" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="6b6c-a5cf-2ac5-e2ee" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="92cf-ee3b-7e41-d2c8" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="bfc2-e1c6-c818-2c56" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4474,6 +5382,43 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="45b3-06ae-0f1e-ee4d" name="Gallic Infantry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4444-d040-271e-39fb" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="4444-d040-271e-39fb" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="4444-d040-271e-39fb" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="7070-8ca7-8abb-0261" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4552,6 +5497,57 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="3ba0-8ef6-7d94-1972" name="Gallic Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37a9-8039-dcea-768b" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="37a9-8039-dcea-768b" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45b3-06ae-0f1e-ee4d" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+          <modifier type="set" field="37a9-8039-dcea-768b" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="45b3-06ae-0f1e-ee4d" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="8fb6-4bbe-d164-7a75" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4666,6 +5662,35 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="b77b-dd72-ecec-810d" name="Illyrian Infantry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64dc-7643-d90d-32f7" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="64dc-7643-d90d-32f7" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3d25-430f-35b4-9f19" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4744,6 +5769,42 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="ae74-8b5d-4bc8-c6fd" name="Illyrian Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ba7-b563-b1f2-58c7" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="6ba7-b563-b1f2-58c7" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+                <conditionGroups>
+                  <conditionGroup type="or">
+                    <conditions>
+                      <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b77b-dd72-ecec-810d" type="atLeast"/>
+                    </conditions>
+                  </conditionGroup>
+                </conditionGroups>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="2a5c-43e8-c4fa-25ed" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4820,6 +5881,35 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="0966-72de-edb0-89a4" name="Ligurian Infantry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d76-7ee7-6e09-bbdd" type="max"/>
+      </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="3d76-7ee7-6e09-bbdd" value="-1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3946-2c41-0a44-4399" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
@@ -4899,8 +5989,35 @@
     </selectionEntry>
     <selectionEntry id="a867-9c74-9b0c-bb4b" name="Numidian Elephant" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6c6-8486-db73-5d2c" type="max"/>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c709-c95f-445c-2de9" type="max"/>
       </constraints>
+      <modifiers>
+        <!-- roman-restrictions -->
+          <modifier type="set" field="e6c6-8486-db73-5d2c" value="1">
+            <conditionGroups>
+              <conditionGroup type="and">
+                <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c4b2-abeb-f8cf-0988" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+        <!-- roman-hide -->
+          <modifier type="set" field="hidden" value="true">
+            <conditionGroups>
+              <conditionGroup type="or">
+                <conditions>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7337-545b-6742-671e" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8dc-445d-2169-6605" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6af-de44-a4b3-e983" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="259a-a6ef-99fa-f122" type="atLeast"/>
+                  <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3657-6674-fa87-e835" type="atLeast"/>
+                </conditions>
+              </conditionGroup>
+            </conditionGroups>
+          </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="683a-d7e4-b6c2-c7ff" name="Uncommon Troops" hidden="false" targetId="d68a-ed84-1d75-2f64" primary="true"/>
       </categoryLinks>
