@@ -298,7 +298,7 @@ def build_army(idx, a):
             else: units_raw.append({'heading': heading, 'sub': sub, 'allies': in_allies, 'rows': [], 'text': [t], 'orphan': True})
         else:
             if cur_tbl: units_raw.append(cur_tbl)
-            cur_tbl = {'heading': heading, 'sub': sub, 'allies': in_allies, 'rows': b['rows'][1:], 'text': [], 'max1': pend_max1}
+            cur_tbl = {'heading': heading, 'sub': sub, 'allies': in_allies, 'rows': b['rows'][1:], 'text': [], 'max1': pend_max1, 'hdr': b['rows'][0][0]}
             pend_max1 = False
     if cur_tbl: units_raw.append(cur_tbl)
     # attach orphan texts (e.g. text following a heading with no table) to the army notes
@@ -366,6 +366,8 @@ def build_army(idx, a):
             if m: mx = int(m.group(1)); raw = m.group(2)
             if not raw: raw = tb['sub'] or tb['heading']
             if tb.get('max1') and mx is None: mx = 1
+            mh = re.match(r'(?i)^0?-?(\d+)\s*units?\b', tb.get('hdr') or '')
+            if mh and mx is None: mx = int(mh.group(1))
             chunk = per_texts[gi] or ''
             k = 'ally' if tb['allies'] else kind_of_section(tb['heading'])
             ksub = kind_of_section(tb['sub']) if tb['sub'] else None
@@ -414,6 +416,16 @@ def build_army(idx, a):
         if 'Army General' in u['models'][0]['rules'] or 'Army Standard' in u['models'][0]['rules']:
             if u['mx'] is None and u['cat'] == 'Characters': u['mx'] = 1
     ucats = {u['cat'] for u in units}
+    limcats = {ck for lim, txt in comp_out.values() for ck in lim}
+    for ck in sorted(limcats - ucats):
+        ks = set(kinds(ck))
+        if not ks: continue
+        cands = [c for c in ucats if c not in limcats and kind_of_section(c) in ks and kind_of_section(c) != 'char']
+        if cands:
+            for u in units:
+                if u['cat'] in cands: u['cat'] = ck
+            issue(a['title'], f'regrouped {cands} into {ck} to match the composition limit')
+            ucats = {u['cat'] for u in units}
     for cn, (lim, txt) in comp_out.items():
         for ck in list(lim):
             if ck not in ucats:
@@ -452,6 +464,7 @@ for idx, a in enumerate(ex['armies'], 1):
     intro_t = ' '.join(intro)[:900]
     out.append(f"LISTS.append(({key!r}, {atitle + ' (AoA2)'!r}, {fn!r}, U_{key}, {key}V,\n    {('ARMIES OF ANTIQUITY v2 #' + str(idx) + ' (unofficial, Martin Gibbins). ' + intro_t + ' ' + ' '.join(anotes))[:1800]!r}))")
     out.append('')
+out += ['import aoa2_fixes', 'aoa2_fixes.apply(LISTS)']
 open(os.path.join(HERE, 'aoa2_data.py'), 'w', encoding='utf8').write('\n'.join(out) + '\n')
 json.dump(NEWRULES, open('/tmp/aoa2/newrules.json', 'w'), indent=1)
 os.makedirs(os.path.join(ROOT, 'issues'), exist_ok=True)

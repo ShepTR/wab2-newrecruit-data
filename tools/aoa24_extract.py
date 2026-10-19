@@ -8,12 +8,12 @@ pages = src.split('\f')
 lines = []
 for p in pages:
     for ln in p.split('\n'):
-        if re.match(r'^\s*Updated 01 January 2024\s+\d*\s*$', ln): continue
+        if re.match(r'^\s*Updated 01 January 2024', ln): continue
         if re.match(r'^\s*\d{1,3}\s*$', ln): continue
         ln = re.sub(r'\b0\s*[\u2013\-]\s*(\d)\b', r'0-\1', ln.rstrip())
         ln = ln.replace('BERBER S', 'BERBERS')
         lines.append(ln)
-HDR = re.compile(r'^\s*M\s+WS\s+BS\s+S\s+T\s+W\s+I\s+A\s+Ld(?:\s+Pts)?\s*$')
+HDR = re.compile(r'^\s*(.*?)\s*\bM\s+WS\s+BS\s+S\s+T\s+W\s+I\s+A\s+Ld(?:\s+Pts)?\s*$')
 TITLE = re.compile(r'^\s*(?:(\d{1,3})\.\s+)?(\S.*?)\s+(\d{2,4}\s*(?:BC|AD)\b.*|\d{2,4}\s*A\b.*)$')
 def is_title(ln):
     m = TITLE.match(ln)
@@ -57,7 +57,8 @@ rules = {k: ' '.join(v) for k, v in rules.items()}
 # ---- armies
 armies = []; cur = None; i = body + 1
 def cols_of(h):
-    return [(m.start() + m.end()) / 2 for m in re.finditer(r'\S+', h)]
+    m = HDR.match(h); st = m.end(1) if m else 0
+    return [(x.start() + x.end()) / 2 for x in re.finditer(r'\S+', h) if x.start() >= st][-10:] if len(re.findall(r'\S+', h[st:])) >= 10 else [(x.start() + x.end()) / 2 for x in re.finditer(r'\S+', h) if x.start() >= st]
 pending = []   # raw lines of current army
 def flush_army():
     global cur
@@ -94,11 +95,11 @@ def build_blocks(ls):
             blocks.append({'t': 'p', 'style': 'Normal', 'text': txt, 'ital': [], 'runs': []}); para = []
     for ln in ls:
         if HDR.match(ln):
-            endpara(); hc = cols_of(ln); tbl = {'t': 'tbl', 'rows': [['', 'M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld', 'Pts']]}
+            endpara(); hc = cols_of(ln); hm = HDR.match(ln).group(1).strip(); tbl = {'t': 'tbl', 'rows': [[hm, 'M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld', 'Pts']]}
             blocks.append(tbl); lastrow_or_cont = False; prev = ''; continue
         s = ln.strip()
         if tbl is not None:
-            if not s: tbl = None; prev = ''; continue
+            if not s: lastrow_or_cont = False; prev = ''; continue
             toks = [(m.start(), m.end(), m.group()) for m in re.finditer(r'\S+', ln)]
             isnum = lambda t: re.fullmatch(r"[-\u2013\u2014*]|\d+(?:/\d+)?\*?|\d+\+?|[A-Za-z]?\d+", t)
             k0 = None
