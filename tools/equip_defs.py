@@ -88,7 +88,7 @@ open(GST, 'w', encoding='utf8').write(g)
 PROFILES = set(re.findall(r'<profile id="[^"]*" name="([^"]*)"', re.search(r'<sharedProfiles>(.*?)</sharedProfiles>', g, re.S).group(1)))
 SRULES = set(re.findall(r'<rule id="[^"]*" name="([^"]*)"', re.search(r'<sharedRules>(.*?)</sharedRules>', g, re.S).group(1)))
 
-MAP = {'javelins': 'Javelin', 'javelin': 'Javelin', 'light armour': 'Light Armour', 'light': 'Light Armour', 'heavy armour': 'Heavy Armour',
+MAP = {'lamellar armour': 'Lamellar Armour', 'noble sword': 'Noble Sword', 'repeating crossbow': 'Repeating Crossbow', 'javelins': 'Javelin', 'javelin': 'Javelin', 'light armour': 'Light Armour', 'light': 'Light Armour', 'heavy armour': 'Heavy Armour',
        'shield': 'Shield', 'large shield': 'Large Shield', 'buckler': 'Buckler', 'thrusting spear': 'Thrusting Spear',
        'throwing spear': 'Throwing Spear', 'heavy throwing spear': 'Heavy Throwing Spear', 'pilum': 'Heavy Throwing Spear',
        'sling': 'Sling', 'composite bow': 'Bow', 'bow': 'Bow', 'cataphract armour': 'Cataphract Armour', 'partial plate armour': 'Partial Plate Armour',

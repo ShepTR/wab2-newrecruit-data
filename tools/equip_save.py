@@ -21,11 +21,11 @@ if f'id="{PT}"' not in g:
 PROFILES = set(re.findall(r'<profile id="[^"]*" name="([^"]*)"', re.search(r'<sharedProfiles>(.*?)</sharedProfiles>', g, re.S).group(1)))
 M_CT = '35a2-714d-db3e-3738'
 
-ARMOUR = ['Light Armour', 'Heavy Armour', 'Cataphract Armour', 'Partial Plate Armour', 'Full Plate Armour']
+ARMOUR = ['Light Armour', 'Heavy Armour', 'Lamellar Armour', 'Cataphract Armour', 'Partial Plate Armour', 'Full Plate Armour']
 SHIELDS = ['Shield', 'Large Shield', 'Buckler', 'Pavise']
 BARD = ['Full Metal Barding', 'Half Metal Barding', 'Full Cloth Barding', 'Half Cloth Barding']
 EQ = set(ARMOUR + SHIELDS + BARD)
-MAP = {'light armour': 'Light Armour', 'light': 'Light Armour', 'heavy armour': 'Heavy Armour', 'shield': 'Shield', 'large shield': 'Large Shield',
+MAP = {'lamellar armour': 'Lamellar Armour', 'light armour': 'Light Armour', 'light': 'Light Armour', 'heavy armour': 'Heavy Armour', 'shield': 'Shield', 'large shield': 'Large Shield',
        'buckler': 'Buckler', 'cataphract armour': 'Cataphract Armour', 'partial plate armour': 'Partial Plate Armour', 'full plate armour': 'Full Plate Armour',
        'pavise': 'Pavise', 'barding': 'Full Metal Barding', 'cloth barding': 'Full Cloth Barding', 'cloth barded': 'Full Cloth Barding'}
 HORSE = re.compile(r'^(horse|ride a horse|riding horses|mounted on horses|warhorse|ride a warhorse|mounted on a warhorse)', re.I)
@@ -41,8 +41,8 @@ def effect(label):
         for t in re.split(r' and ', re.sub(r'\s*\(.*', '', l)): add.append(MAP.get(t.strip()))
     return [a for a in add if a in EQ], [x for x in rem if x in EQ], False
 
-INF = {'None': 7, 'Light Armour': 6, 'Heavy Armour': 5, 'Cataphract Armour': 4, 'Partial Plate Armour': 4, 'Full Plate Armour': 3}
-CAV = {'None': 6, 'Light Armour': 5, 'Heavy Armour': 4, 'Cataphract Armour': 3, 'Partial Plate Armour': 3, 'Full Plate Armour': 3}
+INF = {'None': 7, 'Light Armour': 6, 'Heavy Armour': 5, 'Lamellar Armour': 5, 'Cataphract Armour': 4, 'Partial Plate Armour': 4, 'Full Plate Armour': 3}
+CAV = {'None': 6, 'Light Armour': 5, 'Heavy Armour': 4, 'Lamellar Armour': 4, 'Cataphract Armour': 3, 'Partial Plate Armour': 3, 'Full Plate Armour': 3}
 def calc(cav, armour, shields, bard, skirm):
     base = (CAV if cav else INF)[armour]
     nobonus = armour in ('Cataphract Armour', 'Full Plate Armour') or (cav and armour == 'Partial Plate Armour')
@@ -65,8 +65,9 @@ def calc(cav, armour, shields, bard, skirm):
     best = max(cap, base - max(unc, cnd) - max(cu, cc))
     metal = cav and any(b in bard for b in ('Full Metal Barding', 'Half Metal Barding'))
     pen = 0
-    if not cav and gen <= 4: pen += 1
-    if cav and max(3, base - unc) <= 3: pen += 1       # save of 3+ ignoring barding
+    pb = (CAV if cav else INF)['Light Armour'] if armour == 'Lamellar Armour' else base      # lamellar counts as light armour for movement
+    if not cav and max(cap, pb - unc - cu) <= 4: pen += 1
+    if cav and max(3, pb - unc) <= 3: pen += 1       # save of 3+ ignoring barding
     if metal: pen += 1
     return gen, best, notes, pen
 def fmt(v): return 'None' if v >= 7 else f'{v}+'

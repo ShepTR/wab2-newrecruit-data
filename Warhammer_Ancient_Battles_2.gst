@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="16" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="17" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -16,6 +16,7 @@
     <publication id="15ea-5299-d0f5-5dbb" name="Byzantium: Beyond the Golden Gate" shortName="BZ" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
     <publication id="dab5-785d-be28-f228" name="Vlad the Impaler" shortName="VL" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
     <publication id="28aa-c13e-b61d-4f3e" name="The Age of Arthur" shortName="AA" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
+    <publication id="b792-78e1-7b03-d4d6" name="The Art of War" shortName="AW" publisher="Warhammer Historical Wargames" publicationDate="2006"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -181,6 +182,8 @@
     <categoryEntry id="147e-b6fe-a941-e104" name="Great Host" hidden="false"/>
     <categoryEntry id="0f1f-77c2-d12a-13a3" name="Kapikulu &amp; Special Troops" hidden="false"/>
     <categoryEntry id="da7f-5ad4-d244-41f1" name="Small Host" hidden="false"/>
+    <categoryEntry id="6f88-eb87-0bc8-c94b" name="Mobs" hidden="false"/>
+    <categoryEntry id="11b8-cdb2-5e94-2106" name="Tribal Warriors" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -241,6 +244,11 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="323e-ba28-936c-b234" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d1f-0527-c7dd-ef2e" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e02-66f7-1168-d4b5" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a891-bf53-2551-dc32" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f709-7688-44d7-9a58" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c682-56e4-39ed-139b" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="19b0-ba01-384b-4b0d" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -871,6 +879,26 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e9d5-bbcf-c187-c692" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="100">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bb2e-e36f-389d-3c20" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="100">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e60-6823-a7de-3b78" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="100">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c638-ec97-e345-c948" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="563b-400b-59e4-fb06" type="instanceOf"/>
@@ -1099,6 +1127,21 @@
             <modifier type="set" field="0b6e-4b03-466f-bf4f" value="33">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b7a7-ed1f-bcd7-557c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="343b-7eb3-30dc-d8a8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a2e-1d14-8015-a26f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="97aa-bd71-d0b2-f501" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2162,6 +2205,161 @@
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
               <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a83-db87-3878-e8cd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3af5-2593-5b45-78dc" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97c5-82fb-ec13-f626" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9ff-e56a-bab0-bdb9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b518-2394-689e-2723" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68e3-93a2-e851-5c39" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9014-9884-e8a4-1769" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ad1-d3d9-7664-6019" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dc02-1790-9a25-8605" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e9d5-bbcf-c187-c692" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa2e-579e-1908-0b5e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3fed-592f-551e-ef1e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1aef-db9b-cd59-2f5d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2ee-e57f-f0ed-419f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b856-5e6a-f175-e49b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b386-af0b-d38b-0a38" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0ec-ea2e-5d7a-d9be" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="343b-7eb3-30dc-d8a8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b95-ea3d-74da-921c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e84-f1a7-377c-1f9a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="143a-0ded-a196-1e67" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6669-74dd-684b-84b8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7244-efc9-c1d8-6fe9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c6f-f169-74c7-9706" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dfb7-86b6-3fac-32c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3f0-a001-182b-d54a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a2e-1d14-8015-a26f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bb2e-e36f-389d-3c20" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e60-6823-a7de-3b78" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c638-ec97-e345-c948" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="97aa-bd71-d0b2-f501" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d28f-0a2b-884a-cebb" type="atLeast"/>
               </conditions>
@@ -2569,6 +2767,61 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9ff-e56a-bab0-bdb9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b518-2394-689e-2723" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68e3-93a2-e851-5c39" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9014-9884-e8a4-1769" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ad1-d3d9-7664-6019" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="343b-7eb3-30dc-d8a8" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a2e-1d14-8015-a26f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bb2e-e36f-389d-3c20" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e60-6823-a7de-3b78" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c638-ec97-e345-c948" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="97aa-bd71-d0b2-f501" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="9f0e-4146-4168-a5b3" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9ef-b43e-36be-5a69" type="atLeast"/>
@@ -2889,6 +3142,106 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a83-db87-3878-e8cd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3af5-2593-5b45-78dc" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97c5-82fb-ec13-f626" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dc02-1790-9a25-8605" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e9d5-bbcf-c187-c692" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa2e-579e-1908-0b5e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3fed-592f-551e-ef1e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1aef-db9b-cd59-2f5d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2ee-e57f-f0ed-419f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b856-5e6a-f175-e49b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b386-af0b-d38b-0a38" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0ec-ea2e-5d7a-d9be" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b95-ea3d-74da-921c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e84-f1a7-377c-1f9a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="143a-0ded-a196-1e67" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6669-74dd-684b-84b8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7244-efc9-c1d8-6fe9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c6f-f169-74c7-9706" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dfb7-86b6-3fac-32c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3f0-a001-182b-d54a" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink id="98ac-47a5-f36a-27ee" name="Men at Arms" hidden="false" targetId="db3d-508f-dcf6-1ae7" primary="false">
@@ -3148,6 +3501,131 @@
             <modifier type="set" field="7205-4ae8-6709-c2a3" value="10">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a83-db87-3878-e8cd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3af5-2593-5b45-78dc" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97c5-82fb-ec13-f626" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dc02-1790-9a25-8605" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e9d5-bbcf-c187-c692" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa2e-579e-1908-0b5e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3fed-592f-551e-ef1e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1aef-db9b-cd59-2f5d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2ee-e57f-f0ed-419f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b856-5e6a-f175-e49b" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b386-af0b-d38b-0a38" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0ec-ea2e-5d7a-d9be" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b95-ea3d-74da-921c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0e84-f1a7-377c-1f9a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="143a-0ded-a196-1e67" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6669-74dd-684b-84b8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7244-efc9-c1d8-6fe9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c6f-f169-74c7-9706" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dfb7-86b6-3fac-32c6" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f3f0-a001-182b-d54a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9a2e-1d14-8015-a26f" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bb2e-e36f-389d-3c20" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1e60-6823-a7de-3b78" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c638-ec97-e345-c948" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="97aa-bd71-d0b2-f501" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="abf8-3982-14a4-3dcc" value="25">
@@ -3492,6 +3970,26 @@
             <modifier type="set" field="4118-2620-90e6-848e" value="50">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f311-3602-fff3-d7eb" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4118-2620-90e6-848e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3af5-2593-5b45-78dc" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4118-2620-90e6-848e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97c5-82fb-ec13-f626" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4118-2620-90e6-848e" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b386-af0b-d38b-0a38" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4118-2620-90e6-848e" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0ec-ea2e-5d7a-d9be" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="39a2-1292-00da-7f3b" value="25">
@@ -5215,6 +5713,50 @@
             <modifier type="set" field="2197-485c-351c-89d8" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81db-e1d3-3470-087f" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="99a8-31d5-b396-446d" name="Mobs" hidden="false" targetId="6f88-eb87-0bc8-c94b" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="bf84-d276-4711-edc1" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="bf84-d276-4711-edc1" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dc02-1790-9a25-8605" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="36d8-c7c8-2b7c-f29c" name="Tribal Warriors" hidden="false" targetId="11b8-cdb2-5e94-2106" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="1afa-f699-e587-7389" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="1afa-f699-e587-7389" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e9ff-e56a-bab0-bdb9" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1afa-f699-e587-7389" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b518-2394-689e-2723" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1afa-f699-e587-7389" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="68e3-93a2-e851-5c39" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1afa-f699-e587-7389" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9014-9884-e8a4-1769" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="1afa-f699-e587-7389" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ad1-d3d9-7664-6019" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -7355,6 +7897,292 @@
         <categoryLink id="532e-1c30-ad19-d331" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry id="2a83-db87-3878-e8cd" name="Pre-Shang and Early Shang" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Chinese_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a891-bf53-2551-dc32" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f52c-3060-6415-d275" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="3af5-2593-5b45-78dc" name="Later Shang" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Chinese_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a891-bf53-2551-dc32" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4964-2a95-ac91-6d3b" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="97c5-82fb-ec13-f626" name="Army of Sanxingdui" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Chinese_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a891-bf53-2551-dc32" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d0b3-8f82-6a72-88f6" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="e9ff-e56a-bab0-bdb9" name="Basic Tribe" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Eastern_Tribes_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f709-7688-44d7-9a58" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e6b1-edbf-ea53-f252" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b518-2394-689e-2723" name="Tribes of the East (Dong Yi)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Eastern_Tribes_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f709-7688-44d7-9a58" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="287e-d7d2-65c5-2130" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="68e3-93a2-e851-5c39" name="Tribes of the South (Man Yi)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Eastern_Tribes_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f709-7688-44d7-9a58" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="91f9-44ae-2ce9-99c6" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="9014-9884-e8a4-1769" name="Tribes of the West (Rong Yi)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Eastern_Tribes_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f709-7688-44d7-9a58" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b99c-5bbe-1bcf-16a8" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="6ad1-d3d9-7664-6019" name="Tribes of the North (Di Yi)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Early_Eastern_Tribes_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f709-7688-44d7-9a58" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="de31-0517-1c08-c6d5" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="aa2e-579e-1908-0b5e" name="Western Han - Army of Internal Suppression" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Han_Dynasty_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c682-56e4-39ed-139b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e918-cc20-90d5-5534" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="3fed-592f-551e-ef1e" name="Western Han - Expeditionary or Route Army" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Han_Dynasty_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c682-56e4-39ed-139b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="103c-eaf8-5638-a178" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="1aef-db9b-cd59-2f5d" name="Western Han - Army of the Western District (Xi Yu)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Han_Dynasty_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c682-56e4-39ed-139b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="746d-2cd3-2101-4376" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="e2ee-e57f-f0ed-419f" name="Eastern Han - Army of Internal Suppression" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Han_Dynasty_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c682-56e4-39ed-139b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f8b1-bc6a-ee5b-155c" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b386-af0b-d38b-0a38" name="Western Zhou period" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Zhou_Dynasty_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="19b0-ba01-384b-4b0d" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="acc7-0e78-370b-f590" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="c0ec-ea2e-5d7a-d9be" name="Spring and Autumn period" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Zhou_Dynasty_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="19b0-ba01-384b-4b0d" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="1b1d-771f-559d-721f" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="5b95-ea3d-74da-921c" name="Generic state" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5781-dc65-5c19-b346" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="0e84-f1a7-377c-1f9a" name="Army of Zhao" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="cbde-c751-20b8-653c" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="143a-0ded-a196-1e67" name="Army of Qin" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="45b9-8390-87ad-4c78" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="6669-74dd-684b-84b8" name="Army of Yan" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="1c3b-4a3a-8d48-6e5f" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="7244-efc9-c1d8-6fe9" name="Army of Chu" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="aa03-ee5e-8d11-a780" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="5c6f-f169-74c7-9706" name="Army of Qi" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d2f5-7181-4992-4ccd" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="dfb7-86b6-3fac-32c6" name="Army of Hann" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="319b-caa1-6a76-d8cc" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="f3f0-a001-182b-d54a" name="Army of Wei" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Warring_States_Art_of_War.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="172b-fa87-19e4-b76e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0019-1896-7594-9681" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <sharedRules>
     <rule id="6e8f-14cf-a018-5d1c" name="Allies and Mercenaries (Unreliable)" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
@@ -8846,6 +9674,156 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     <rule id="ff1b-4cde-5894-ede9" name="Veteran (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
       <description>Character Advantage (10 pts): Once per game the character may re-roll all his To Hit dice, either for combat or for shooting. He must re-roll all his dice (not just the misses) and must abide by the re-roll.</description>
     </rule>
+    <rule id="aad5-990e-7c1b-b81a" name="Army Musician (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Far Eastern armies used large drums and gongs to signal attacks and retreats, raise the spirits of the troops and rally them. The Army Musician allows units within 18" to re-roll any rally attempts, Flee dice results and Panic tests. It can only be used for one turn and is then removed from play (the owning player does not lose Victory points). The owning player states at the start of his turn when he will use the Army Musician. The Army Musician may not move or flee once placed and is immune to all leadership tests.</description>
+    </rule>
+    <rule id="4aaa-c1a6-1a31-9315" name="Long Handled Weapons (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Long handled thrusting spears function like pikes in the game (although it is not thought likely that the Chinese employed phalanx-like formations). Long handled halberds allow the owning player to strike first in the first round even if charged; their extreme length makes them difficult to use so they strike last in subsequent rounds.</description>
+    </rule>
+    <rule id="89da-4b0d-893d-9db0" name="Volley Firing (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The Mass Archery rule applies to crossbows where Volley Firing is noted as a special rule. It only applies to a maximum of three ranks, including the front rank.</description>
+    </rule>
+    <rule id="f958-5c96-d5cf-3b22" name="Repeating Crossbow (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>A crossbow with a feed magazine located on the top for the bolts. Range 24"; it fires twice per turn with a -1 To Hit roll. It may be used as a Last Ditch Weapon.</description>
+    </rule>
+    <rule id="7004-d97d-e681-bb85" name="Combined Formation (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Some units may mix troop types with different weapons and armour combinations; typically archers in the rear ranks shooting over the heads of troops in front. Archers/crossbowmen in a combined formation may shoot using the Mass Archery rules and any special rules that apply to the unit, but may only fire from the front rank and may not use volley fire or massed archery in this formation. A unit may stand &amp; shoot or fire &amp; flee using massed archery. All missile hits taken by the unit use the saving throw of the majority of models in the unit; casualties are removed in roughly equal proportions. Close combat hits are taken by whichever models are in contact; if models have more than one close combat weapon type the player must say which is used before any To Hit dice are rolled.</description>
+    </rule>
+    <rule id="879e-372e-52e3-5bfb" name="Warrior of Legend" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Generals, Heroes and certain characters are mighty warriors of near legendary prowess: they may re-roll one failed To Hit roll and one failed To Wound roll in each Close Combat phase. In addition, they may re-roll a failed armour save if the wound suffered is their last one remaining (ie, they can re-roll their last armour save).</description>
+    </rule>
+    <rule id="86dc-8389-1539-5560" name="Levies (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>All Levies fear enemy units they do not outnumber by at least 2:1, reflecting their general lack of motivation. Levies do not fear other levies, fleeing troops or skirmishers.</description>
+    </rule>
+    <rule id="baf3-38e1-7d41-c324" name="Fearsome (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Troops specially noted for their ferocity are labelled Fearsome: all enemy units with a base Leadership value of 7 or less fear troops who are Fearsome. If a character or model with a higher Leadership is leading the unit, they still fear them but benefit from using the leader's higher Leadership value when taking the Fear test. The same principles apply to warbands.</description>
+    </rule>
+    <rule id="8eaa-6e1e-9cc2-a368" name="Massed Cavalry (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Some armies fielded large deep formations to maximise the shock effect of a charge. Units with this ability: 1. may count a combat rank bonus of up to +2 but only if they charge or counter charge. 2. lose half their movement allowance if they wheel while marching or charging.</description>
+    </rule>
+    <rule id="c408-e9ce-57b8-9334" name="Eastern Shock Cavalry (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>1. Eastern shock cavalry were experienced at charging and withdrawing repeatedly: such units may Fall Back in Good Order if they win a round of close combat but fail to either break the enemy or force it to fall back. The withdrawal must be declared immediately after the enemy has passed its Break test and is made just like a normal fall back move. 2. They may re-roll any To Hit dice that miss when they charge or counter-charge (only when the unit charges or counter-charges and only for that turn). 3. They may count their rank bonus up to a maximum of +1.</description>
+    </rule>
+    <rule id="9731-bc1a-9ba6-d70c" name="Rank Bonus Cavalry (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>May count rank bonus of up to +1 even though cavalry.</description>
+    </rule>
+    <rule id="5c5e-9491-3100-c162" name="Skirmishers (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Skirmishers fight in skirmish formation (WAB rulebook).</description>
+    </rule>
+    <rule id="ff88-50ae-4b8d-bcd7" name="Eagleshooters (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Eagleshooters: much feared by their Chinese enemies, they appear to have acted as sharpshooters with a particular skill in long distance shooting. They ignore the -1 modifier for shooting at long range.</description>
+    </rule>
+    <rule id="d440-686c-1888-77e2" name="Eastern Shaman (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Eastern Shaman: shamen in the Far East spent most of their time healing the sick, communing with the spirits and raising the morale of warriors prior to the battle with their predictions. The Shaman causes fear.</description>
+    </rule>
+    <rule id="758d-4810-be44-a26d" name="Shaman (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Shaman: the Shaman causes fear in the enemy.</description>
+    </rule>
+    <rule id="a993-3dd8-9fb1-6761" name="Military Strategist (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Ruses may only be used if an Army General character has the option of Military Strategist or if a Military Strategist independent character is taken. The player may then take ruses as part of their army list at the stated costs. The points cost of the ruse is allocated against the Special Units allowance, not the Character allowance. They are used in the game sequence as noted and when used the cost counts against the owning player's Victory points total (it does not count for Victory points purposes). Ruses are not built in this data set.</description>
+    </rule>
+    <rule id="31d0-26b7-5526-b650" name="Drilled (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Drilled (WAB rulebook p.120).</description>
+    </rule>
+    <rule id="f116-0b2e-16ce-f7cc" name="Stubborn (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Stubborn (WAB rulebook p.53).</description>
+    </rule>
+    <rule id="7f29-58d4-d4ce-942f" name="Straw Dogs (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Straw Dogs: if the unit flees or is destroyed, it does not cause panic to any other unit. It is made up of worthless expendable curs so the rest don't really care.</description>
+    </rule>
+    <rule id="348a-833d-46cc-9155" name="Rightful Conduct (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Rightful Conduct (Spring and Autumn period only). Members of the Zhou nobility were expected to act in accord with rightful conduct or Li. Any character noted as such must accept any Challenge or Heroic Combat challenge offered to them (if several characters are eligible, the owning player chooses). It was also bad form to take advantage of an opponent's misfortune: a character with Rightful Conduct must attempt to restrain from pursuing an enemy character or unit containing an enemy character which flees after a close combat, by taking a Leadership test in the normal way. If they destroy the character or unit they lose the following bonus Victory points for the unit and character; if they restrain, the bonus points are added to their Victory points total: character/unit with character with 3 Wounds 150 VPs, 2 Wounds 100 VPs, 1 Wound 50 VPs.</description>
+    </rule>
+    <rule id="7bfc-309f-697a-5f28" name="Heroic Combat (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Nobles in the Zhou period tried to conform with the ideals of Li (correct behaviour). In combat they would choose to seek out a worthy opponent, leading to a stylised opening ritual where groups of nobles would seek out and duel with each other.</description>
+    </rule>
+    <rule id="4c03-4086-03bc-230d" name="Meddlesome (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Before any unit may Charge they must test on the Duke of Song's Leadership. If failed, they may not charge. If the Duke is fleeing at any time or is slain, he is not an influence and they may charge as normal.</description>
+    </rule>
+    <rule id="5f0c-fa3d-8e2c-a7d5" name="Chariot Runners (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Runners in skirmish formation may move into gaps between a unit of chariots and still count as being in unit coherency as long as they are within 2" of a chariot model that is itself within 2" of another model in the unit. Chariot runners can use this tactic to charge an enemy already engaged by the chariots, by charging into the gaps between chariot models. Chariots can charge through a unit of chariot runners in skirmish formation, even if the gaps between the runners are not wide enough to let them through. They can even do this if the runners are engaged by the enemy; simply push the runners aside until there is a wide enough gap for the chariot to fit through.</description>
+    </rule>
+    <rule id="e48d-8d74-5ba8-fbe0" name="Mobs (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Mobs and any Magistrates with their unit are subject to Warband Psychology Rule 1. Mobs cannot Fall Back in Good Order unless they outnumber the enemy by more than 3 to 1. They cannot benefit from the Leadership value of characters (other than Magistrates with the mob itself), nor use the re-roll benefit of the Army Standard. Mob Deployment: deployed last before characters, on the player's table edge or the furthest possible distance from the enemy.</description>
+    </rule>
+    <rule id="4344-920e-fc47-4855" name="Looting (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>A unit with this ability can take the shields and weapons of a better equipped enemy if it catches and destroys them in a pursuit or close combat; the ability is lost if the unit flees.</description>
+    </rule>
+    <rule id="fdc0-f42c-7701-aa34" name="No Flags, No Trumpets (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The unit has no banners or musicians, so no combat bonus modifications from them and no Musician roll-off.</description>
+    </rule>
+    <rule id="39d7-f431-1ad7-fdf2" name="Simple Minded (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The unit must take a Leadership test whenever it wishes to charge; on a failure it stays where it is. Subject to the rules for Stubborn if formed.</description>
+    </rule>
+    <rule id="bbe3-9e62-098c-b1be" name="Peasants (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Peasants are Light Infantry using farm implements and rocks (javelins with a 4" range).</description>
+    </rule>
+    <rule id="82cd-df4e-2730-1ed3" name="Independent Character (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Independent Character: may not join a unit.</description>
+    </rule>
+    <rule id="4a67-d018-0b7c-18d5" name="Elephants (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Elephants as per the WAB rulebook.</description>
+    </rule>
+    <rule id="0eee-4b2a-fe67-042b" name="Royal Guard (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Royal Guard special rules, see the Early Chinese list.</description>
+    </rule>
+    <rule id="c6bf-b44f-c9da-06cb" name="Totem (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Totem special rules, see the Early Eastern Tribes list.</description>
+    </rule>
+    <rule id="1a24-5fa1-b293-3a71" name="Light Chariots" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Light Chariots as per the WAB rulebook p.57.</description>
+    </rule>
+    <rule id="b116-f9a6-35db-8f55" name="Causes Fear" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The model causes fear in the enemy.</description>
+    </rule>
+    <rule id="189d-46c5-7851-62a2" name="The Art of War Common Rules" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The minimum size of a unit is five infantry or five cavalry models; there is no upper limit. One model per unit may be upgraded to a Leader (+5 pts), a Standard Bearer (+5 pts) and a Musician (+5 pts) unless stated otherwise. Special Units: typically one choice per 1,000 points (some lists two); some are limited per army (0-1). Allies: percentage of the army from another list; no characters from that list; allied troops cannot use the Army General's Leadership or the Army Standard re-roll (allies are documented only). Lamellar armour gives a 5+ save but counts as light armour for movement. Noble Sword: +1 Strength on all hits. Axe (+2 pts): heavy two-handed axe, a Double-Handed Weapon. Dagger axe: counts as a halberd. Spear tipped halberd: used as thrusting spear or halberd (nominate before the Close Combat phase, one choice for the whole unit). Heavy Chariots cause D3 Strength 4 impact hits; crossbows from chariots may only fire once. Percentage limits are by points. Ruses and Military Strategists are not built.</description>
+    </rule>
+    <rule id="a8f4-41b2-8819-2b02" name="Casting the Oracle Bones" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The Shang relied on reading marks made by hot implements on animal bones or shells to foretell the outcome of battles. If the player includes a character with this special rule, the player rolls a D6 before setting up any units. 1 Heaven's displeasure: roll a D6 for every unit and character at the start of the player's first turn; on a 1 that unit or character must make an immediate Panic test, and if it fails it flees towards the player's table edge. 2 Snake hides in the grass: one unit (other than a skirmisher unit) can make a free 4" move at the start of the game. 3 An empty vessel: no effect. 4 The horns of the water buffalo: the player can deploy any units in the end 12" sections of the table (for scenarios where it applies, e.g. Pitched Battle). 5 Chariots of fire: the chariot crews are immune from any Psychology tests for one turn, stated at the start of the turn. 6 Heaven's blessing: in the first round of the first turn of close combat the player gets +1 WS on all units engaged in close combat that turn, plus an additional bonus point when deciding the winner of a round of combat.</description>
+    </rule>
+    <rule id="e34e-c820-4fcd-ef57" name="Charisma (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>A character with this ability provides his Leadership as Army General until he or his unit flees or breaks; then a Panic test is taken as for the death of the General.</description>
+    </rule>
+    <rule id="36b2-262e-48aa-4ff4" name="Sacred Chant (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>At the start of his turn the player may announce a Sacred Chant: all units become immune to Panic tests and each model gains one additional attack for that one turn. May be used once only.</description>
+    </rule>
+    <rule id="c59d-82a3-06c3-d7e2" name="Invulnerable to Weapons (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Units or characters with this ability may re-roll any Panic tests and are subject to the Stubborn rules.</description>
+    </rule>
+    <rule id="049b-afd7-54e1-53f9" name="Healing Potions (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Healing Potions: the character ignores one wound caused on any unit he is included with per turn.</description>
+    </rule>
+    <rule id="eb9c-0c5a-cb21-1649" name="Rouse the Mobs (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Rouse the Mobs: Mobs may use the Priest's Leadership for the Rouse the Mob test. The Mob becomes Invulnerable to Weapons if the Priest is present in the front rank. Rousing the Mob: at the start of the first turn the mob takes a Leadership test; if passed subtract the dice roll from its Leadership: 0-3 the Mob moves forward at least 4" and is subject to all Warband Psychology rules, 4-8 the same plus doubled attacks in the first round of all combats; if failed the mob counts as Levies.</description>
+    </rule>
+    <rule id="6d6e-e27a-2630-443d" name="Spirit of the Shaman" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Causes fear; roll a D6 for the unit the Shaman is with at the start of the game: 1 Snake - the unit does not move in the first turn and cannot move until it passes a Leadership test; 2 Bear - may not march but may re-roll missed To Wound rolls; 3 Deer - a formed unit may make a free 4" move at the start of the game; 4 Wolf - Frenzy; 5 Eagle - may Fall Back in Good Order even if outnumbered; 6 Buffalo - Stubborn. The Shaman is subject to the psychology of the group he joins.</description>
+    </rule>
+    <rule id="da19-646b-a51e-5873" name="Steadfast (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Steadfast (Liu Bei): may re-roll one Leadership test during a game; never subject to a further re-roll.</description>
+    </rule>
+    <rule id="8d90-5d34-c5e3-8e1a" name="Courage (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Courage (Guan Yu): any unit or character within 6" of Guan Yu at the Combat Resolution phase becomes Stubborn for that turn.</description>
+    </rule>
+    <rule id="94f9-96fa-c917-5c64" name="Guile (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Guile (Cao Cao): he may counteract any one Ruse per game before a player attempts their Leadership roll; may roll an additional D6 when fleeing.</description>
+    </rule>
+    <rule id="b5dd-044f-afab-b4b8" name="Master Strategist (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Master Strategist (Zhuge Liang): he can hold two Ruses instead of one per 1,000 pts.</description>
+    </rule>
+    <rule id="1130-3811-a8bd-733f" name="Sworn Brotherhood - First Brother" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The Brotherhood of the Peach Garden (Liu Bei, Guan Yu, Zhang Fei) must fight on the same side; taken together the First Brother (Liu Bei) is Army General, the Second Brother (Guan Yu) the Army Standard Bearer and the Third Brother (Zhang Fei) a Champion.</description>
+    </rule>
+    <rule id="35af-fc0d-7eb7-1904" name="Sworn Brotherhood - Second Brother" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The Brotherhood of the Peach Garden: the Second Brother (Guan Yu) is the Army Standard Bearer when taken with the other brothers.</description>
+    </rule>
+    <rule id="d6a4-6d63-9231-e0c3" name="Sworn Brotherhood - Third Brother" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>The Brotherhood of the Peach Garden: the Third Brother (Zhang Fei) is a Champion when taken with the other brothers.</description>
+    </rule>
+    <rule id="651e-8760-0bb0-1e11" name="Strongman (Art of War)" publicationId="b792-78e1-7b03-d4d6" hidden="false">
+      <description>Hero speciality: Strongman. The Hero has Strength 5 and Wounds 2 (costs +15 pts).</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="7ff2-453d-751e-5f78" name="Sling" publicationId="556c-7119-7234-b625" page="88 (summary p.209)" hidden="false" typeId="5de1-764d-a40b-f6b5" typeName="Missile Weapon">
@@ -9081,5 +10059,37 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
         <characteristic name="Note" typeId="86a0-abae-4649-7d70">Padded cloth barding covering the front half of the mount: +1 pip in hand-to-hand combat when fighting to the front only, not from the side or rear, not against shooting (p.98).</characteristic>
       </characteristics>
     </profile>
+    <profile id="9c22-a59b-81b9-8582" name="Noble Sword" publicationId="b792-78e1-7b03-d4d6" page="p.6" hidden="false" typeId="89ad-db9d-72f5-90d2" typeName="Hand-to-Hand Weapon">
+      <characteristics>
+        <characteristic name="Effects" typeId="fa7e-7b3b-c328-7b67">Nobles and other notables may have a specially forged sword, usually of extraordinary length and beauty. It confers a +1 Strength bonus on all hits.</characteristic>
+      </characteristics>
+    </profile>
+
+    <profile id="aae1-ff76-b491-96e0" name="Repeating Crossbow" publicationId="b792-78e1-7b03-d4d6" page="p.6" hidden="false" typeId="5de1-764d-a40b-f6b5" typeName="Missile Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="6962-86a7-af53-83bb">24"</characteristic>
+        <characteristic name="Strength" typeId="e237-5c6b-65a3-8bf7">3</characteristic>
+        <characteristic name="Save Modifier" typeId="b819-8576-7e60-dba3">-</characteristic>
+        <characteristic name="Notes" typeId="6282-7884-5061-ecf1">A crossbow with a feed magazine on top for the bolts. Fires twice per turn with a -1 To Hit roll. May be used as a Last Ditch Weapon (stand &amp; fire charge reaction even if the charging unit is within half distance; the unit may use no other close combat weapon except hand weapons after firing). Strength is not printed in the book; treated as 3.</characteristic>
+      </characteristics>
+    </profile>
+
+    <profile id="e34a-ac04-929b-28fd" name="Rocks" publicationId="b792-78e1-7b03-d4d6" page="p.110" hidden="false" typeId="5de1-764d-a40b-f6b5" typeName="Missile Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="6962-86a7-af53-83bb">4"</characteristic>
+        <characteristic name="Strength" typeId="e237-5c6b-65a3-8bf7">3</characteristic>
+        <characteristic name="Save Modifier" typeId="b819-8576-7e60-dba3">-</characteristic>
+        <characteristic name="Notes" typeId="6282-7884-5061-ecf1">Thrown rocks and farm implements (Peasants, Tribespeople).</characteristic>
+      </characteristics>
+    </profile>
+
+    <profile id="245a-bbf4-226a-cc61" name="Lamellar Armour" publicationId="b792-78e1-7b03-d4d6" page="p.6" hidden="false" typeId="96b5-bd5f-9a95-1bd7" typeName="Armour">
+      <characteristics>
+        <characteristic name="Infantry Save" typeId="80cf-4b2c-fa74-7e4d">5 or 6</characteristic>
+        <characteristic name="Cavalry Save" typeId="227d-844c-2992-a59b">4, 5 or 6</characteristic>
+        <characteristic name="Notes" typeId="85c2-9874-4f90-9229">Generals and other notable leaders may have increased protection, considered to be lamellar armour, which provides the wearer with a 5+ armour save but counts as light armour for the purposes of movement penalties.</characteristic>
+      </characteristics>
+    </profile>
+
   </sharedProfiles>
 </gameSystem>
