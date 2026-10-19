@@ -184,3 +184,9 @@ Three catalogues named "(Spartacus)": Spartacus's Slave Revolt (Early Revolt / G
 - Enforced: percentages by points per composition; per-composition availability; one General (Consul or Crassus; leader or Praetor as General options); Looted Light Bolt Thrower per army points; Gladiators and Bodyguard model limits per army points; once-per-army Fiery Rollers and Dogs.
 - Not built: allies (documented only), scenarios, campaign.
 - Issues are listed in `issues/Spartacus.txt`.
+
+## Added: Byzantium: Beyond the Golden Gate (Warhammer Historical, 2005)
+Nine catalogues named "(Byzantium)": Early Byzantines (Justinian / Heraclian), Sassanid Persians (Early / Later), Germanic Kingdoms (Vandals, Visigoths, Merovingian Franks, Ostrogoths, Gepids & Lombards), Steppe Nomads (Avars, Early and Later Khazars, Magyars, Pechenegs, Cumans), Bulgars & Slavs (Early/Later Slavs and Bulgars), Early Caliphates (Arab Conquest, Umayyad, Early and Later Abbasid, Aghlabids, Tulunids & Ikhshidids, Early Fatimid, Hamdanids), Thematic Byzantines (Isaurian & Phrygian / Macedonian), Rus (Early Pagan, Era of the Princes, Great Rus, Mongol Invasion) and Late Byzantines (Macedonian Successors / Komnenian). Files `*_Byzantium.cat`. Game system revision 14. Build with `sh tools/bz_all.sh <outdir>`.
+- Enforced: percentages by points per composition; per-composition availability of units and options; per-composition cost and stat changes; one General (inherent or option); once-per-army options; unit maximums per composition; points-based limits for elephants and scythed chariots.
+- Not built: allies drawn from other lists (documented only), Combined Formations, Rivalry, Stratagem, scenarios and Appendix I.
+- Issues are listed in `issues/Byzantium.txt`.
