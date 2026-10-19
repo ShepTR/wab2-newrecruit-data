@@ -33,6 +33,7 @@
         <characteristicType id="8ec4-e9a6-0b8a-08aa" name="I"/>
         <characteristicType id="ee87-e286-4768-82be" name="A"/>
         <characteristicType id="b6d1-0987-3a4d-d6a9" name="Ld"/>
+        <characteristicType id="7349-090e-ca0b-09ce" name="Sv"/>
       </characteristicTypes>
     </profileType>
     <profileType id="5de1-764d-a40b-f6b5" name="Missile Weapon">
@@ -71,6 +72,13 @@
         <characteristicType id="603e-2898-6af9-6cf1" name="Save"/>
         <characteristicType id="5882-dd5a-bc28-4024" name="With conditional bonuses"/>
         <characteristicType id="d5e4-804e-6192-0114" name="Notes"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="7f90-59b2-9f32-6fba" name="Requirements">
+      <characteristicTypes>
+        <characteristicType id="e67c-3fd6-bc18-aa6f" name="Take first"/>
+        <characteristicType id="b1d7-0310-5fa2-9279" name="Limit"/>
+        <characteristicType id="0dd5-ef89-9ca5-35ed" name="Not with"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>

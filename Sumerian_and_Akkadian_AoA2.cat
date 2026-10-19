@@ -27,6 +27,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">6</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">3</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="941f-6d4a-ead3-c27d" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -81,6 +82,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="907d-3cf4-a6f2-4686" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -148,6 +150,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="a86e-cc96-54dc-a688" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -225,6 +228,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="610a-b877-43d1-c4fc" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -353,8 +357,28 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
               <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="b9ff-44bb-4ad7-a750" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c86b-5be4-4e93-43af" type="atLeast"/>
+                <condition field="selections" scope="b9ff-44bb-4ad7-a750" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="df42-7cf6-4c20-3c49" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="b9ff-44bb-4ad7-a750" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c86b-5be4-4e93-43af" type="lessThan"/>
+                <condition field="selections" scope="b9ff-44bb-4ad7-a750" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="df42-7cf6-4c20-3c49" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="b9ff-44bb-4ad7-a750" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c86b-5be4-4e93-43af" type="atLeast"/>
+                <condition field="selections" scope="b9ff-44bb-4ad7-a750" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="df42-7cf6-4c20-3c49" type="atLeast"/>
+                </conditions>
+              </modifier>
                 <!-- encumbrance -->
               <modifier type="set" field="35a2-714d-db3e-3738" value="3">
                 <conditions>
@@ -517,7 +541,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="72ea-faf5-3e3f-766e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5d4-87ee-f4a3-b2a1" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="6479-9c2c-b8f4-6677" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -633,6 +666,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="d4fe-e28c-e5f3-991a" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -730,6 +764,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="cbbd-4436-6b6e-8d70" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -816,6 +851,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="4337-7b7a-fd42-0ae4" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -906,6 +942,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="c2c0-6ef8-3b31-20a1" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -972,6 +1009,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="443e-66a9-b708-10f7" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1064,6 +1102,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="dc48-5e74-b34c-9b1b" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1151,6 +1190,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="be84-12c5-d161-bae4" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">

@@ -12,6 +12,7 @@ OUT = sys.argv[1]
 def hid(*p):
     h = hashlib.md5('|'.join(str(x) for x in p).encode('utf8')).hexdigest()
     return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
+from ratiolib import ratio, size_limit
 BIG = 1000
 def cond(child, op, scope='force', incl='true'):
     return (f'<condition field="selections" scope="{scope}" value="1" percentValue="false" shared="true" includeChildSelections="{incl}" '
@@ -81,7 +82,7 @@ class Cat:
             self.s = re.sub(r' revision="(\d+)" battleScribeVersion', lambda mm: f' revision="{int(mm.group(1)) + 1}" battleScribeVersion', self.s, count=1)
             open(self.path, 'w', encoding='utf8').write(self.s)
 
-def ratio(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
+def _ratio_old(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
     """A units <= floor(units of Bs / per); `extra` conditions apply to the whole rule"""
     ids = [cat.unit(b)[0] for b in Bs]
     def mods(cid):
@@ -97,8 +98,10 @@ C = Cat('Carthaginian_Hannibal.cat')
 ratio(C, 'Spanish Caetrati', ['Spanish Scutarii'])
 ratio(C, 'Oscan Hoplites', ['Oscan Warriors'])
 ratio(C, 'Artillery (Heavy Bolt Ballista)', ['Citizen Infantry', 'Levy Africans', 'Trained Africans'])
+# one Skirmishers unit for every other skirmisher unit (all of them together), and none of them may be the largest skirmisher unit
 for a in ('Balearic Slingers', 'Ligurian Slingers', 'Sardinian Archers', 'Moorish Archers'):
     ratio(C, a, ['Skirmishers'], tag=f'limit-{a}-skirm')
+    size_limit(C, a, 'Skirmishers')
 C.save()
 
 R = Cat('Republican_Roman_Hannibal.cat')
@@ -121,6 +124,9 @@ sp_u, sp_m, _ = R.unit('Italian Spearmen')
 def extra(cid):
     return [mod('set', cid, 0, conds=[cond(sp_u, 'atLeast')]), mod('increment', cid, 1, conds=[cond(sp_u, 'atLeast')], repeat=(sp_m, 1, 'true'))]
 R.add_model_limit('Italian Extraordinarii', 'limit-extraordinarii-size', 'parent', BIG, extra)
+# Roman skirmish troops may not be the largest unit of infantry skirmishers
+for a in ('Cretan Archers', 'Syracusan Skirmishers', 'Balearic Slingers'):
+    size_limit(R, a, ['Velites', 'Leves'])
 R.save()
 
 S = Cat('Spanish_Hannibal.cat')

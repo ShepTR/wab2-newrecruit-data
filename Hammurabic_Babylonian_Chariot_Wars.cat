@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3cbd-723c-2d07-a742" name="Hammurabic Babylonian (Chariot Wars)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="3cbd-723c-2d07-a742" name="Hammurabic Babylonian (Chariot Wars)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Hammurabic Babylonian (Chariot Wars): units and points from the Chariot Wars army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="19ef-d438-b56d-089a" name="King (Shar) (General)" hidden="false" collective="false" import="true" type="unit">
@@ -16,6 +16,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="4af2-83b8-faf4-5e3e" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">General (Alik-Pani) (General)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="ba5c-b85c-766b-1ecf" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -36,6 +46,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">6</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">10</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="5527-7db7-394a-0b66" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -96,6 +107,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="87da-ed42-c688-8616" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">King (Shar) (General)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="bfcb-4b1c-a9b0-a79a" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -116,6 +137,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">6</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="1fc4-fea2-8d2f-1081" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -183,6 +205,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="3fd0-adfa-cbb0-cd20" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -252,7 +275,23 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="5390-2b55-a094-2705" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9be0-5a1a-e006-b607" type="atLeast"/>
+                <condition field="selections" scope="5390-2b55-a094-2705" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7aec-6051-3dad-3211" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="5390-2b55-a094-2705" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9be0-5a1a-e006-b607" type="atLeast"/>
+                <condition field="selections" scope="5390-2b55-a094-2705" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7aec-6051-3dad-3211" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="cea8-2add-d98e-a38f" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -383,6 +422,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="05f9-6483-fefe-07b7" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -429,6 +469,30 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="9e45-76ae-07f2-3adc" name="Chariots" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a85-3df5-b150-ff20" type="min"/>
+      </constraints>
+      <modifiers>
+        <!-- need -->
+        <!-- need:Chariot Runners -->
+        <modifier type="increment" field="8a85-3df5-b150-ff20" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b67-e96f-03bf-0187" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
+      </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="5372-1267-db8a-e11e" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Chariot Runners</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="ca06-b630-3b0d-7b04" name="Chariotry" hidden="false" targetId="a178-280d-202c-b3d0" primary="true"/>
       </categoryLinks>
@@ -476,6 +540,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="4c86-0ce8-d539-e98f" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -500,17 +565,20 @@
         <infoLink id="a7c9-b2e3-5b84-4e7d" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fd6-1f02-e673-1987" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Chariot Runners-per-Chariots -->
-        <modifier type="increment" field="9fd6-1f02-e673-1987" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e45-76ae-07f2-3adc" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="494c-dbaa-2748-5760" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Chariots</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Chariots</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="3e3b-410e-f1b1-fe47" name="Chariotry" hidden="false" targetId="a178-280d-202c-b3d0" primary="true"/>
       </categoryLinks>
@@ -558,6 +626,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="52ce-6823-9fc6-c9c3" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -628,6 +697,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="5b68-9cca-d398-2c25" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -697,6 +767,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="2945-4694-733c-94d7" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -792,7 +863,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="fec5-06b5-4ee4-d357" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4939-862a-0b72-28b4" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="b758-b024-1116-21d8" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -900,6 +980,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="62f4-fac6-95bd-75bc" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -988,6 +1069,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="07d6-2f59-ce0b-3218" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1101,6 +1183,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="5ff7-dfdb-573d-3071" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1170,6 +1253,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="ba2f-4798-924f-4602" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1238,6 +1322,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="f50a-3766-a4d0-ac4e" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1352,6 +1437,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="51d4-cc00-3357-76f4" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1471,6 +1557,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="68ba-4e06-56f9-316a" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1537,6 +1624,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="63b3-5682-7fda-fb93" name="Equipment and options (as printed in WAB2 army list)" publicationId="513c-2d0a-024a-da5a" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">

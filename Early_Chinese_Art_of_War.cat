@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a891-bf53-2551-dc32" name="Early Chinese (Art of War)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="a891-bf53-2551-dc32" name="Early Chinese (Art of War)" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Early Chinese (Art of War): units and points from the Art of War army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="f387-d8d3-0084-1800" name="King (Wang)" hidden="false" collective="false" import="true" type="unit">
@@ -21,6 +21,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="227b-5c0b-d1f3-bff2" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">Duke (Gong) or Fuhao (Warrior Consort)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="b28e-3295-cc54-2f99" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -41,7 +51,29 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">6</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">3</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="97d8-84cc-3b6d-6d25" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6f85-def1-61a5-b943" type="atLeast"/>
+                <condition field="selections" scope="97d8-84cc-3b6d-6d25" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b343-17d5-4a9d-d781" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="97d8-84cc-3b6d-6d25" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6f85-def1-61a5-b943" type="lessThan"/>
+                <condition field="selections" scope="97d8-84cc-3b6d-6d25" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b343-17d5-4a9d-d781" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="97d8-84cc-3b6d-6d25" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6f85-def1-61a5-b943" type="atLeast"/>
+                <condition field="selections" scope="97d8-84cc-3b6d-6d25" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b343-17d5-4a9d-d781" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="109b-5ddd-9d73-2ed2" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -179,6 +211,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="5962-c51c-3a07-1d18" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">King (Wang) or Fuhao (Warrior Consort)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="d148-bbdc-0fb7-acb0" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -199,7 +241,29 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="d79b-bfea-e491-a451" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b98-01e8-a525-e42b" type="atLeast"/>
+                <condition field="selections" scope="d79b-bfea-e491-a451" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a511-ff33-53ce-81b0" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="d79b-bfea-e491-a451" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b98-01e8-a525-e42b" type="lessThan"/>
+                <condition field="selections" scope="d79b-bfea-e491-a451" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a511-ff33-53ce-81b0" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="d79b-bfea-e491-a451" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b98-01e8-a525-e42b" type="atLeast"/>
+                <condition field="selections" scope="d79b-bfea-e491-a451" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a511-ff33-53ce-81b0" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="8ede-0605-d6ff-ef7a" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -344,6 +408,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="4421-18d1-3ab7-2970" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">King (Wang) or Duke (Gong)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="ee10-bd49-6bbd-110a" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -364,6 +438,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">6</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="34a5-ea8c-a182-5051" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -420,7 +495,29 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="292e-a865-2ce0-3f22" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da07-4e0c-1867-1cad" type="atLeast"/>
+                <condition field="selections" scope="292e-a865-2ce0-3f22" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2261-81f7-54c5-3bfa" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="292e-a865-2ce0-3f22" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da07-4e0c-1867-1cad" type="lessThan"/>
+                <condition field="selections" scope="292e-a865-2ce0-3f22" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2261-81f7-54c5-3bfa" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="292e-a865-2ce0-3f22" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da07-4e0c-1867-1cad" type="atLeast"/>
+                <condition field="selections" scope="292e-a865-2ce0-3f22" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2261-81f7-54c5-3bfa" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="38b1-73ac-d9c0-0eb0" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -529,7 +626,29 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="305c-25f9-bd4c-a2c1" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5fc-ba39-3823-df69" type="atLeast"/>
+                <condition field="selections" scope="305c-25f9-bd4c-a2c1" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c3e-ce1a-ad83-5ce4" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="305c-25f9-bd4c-a2c1" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5fc-ba39-3823-df69" type="lessThan"/>
+                <condition field="selections" scope="305c-25f9-bd4c-a2c1" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c3e-ce1a-ad83-5ce4" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="305c-25f9-bd4c-a2c1" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f5fc-ba39-3823-df69" type="atLeast"/>
+                <condition field="selections" scope="305c-25f9-bd4c-a2c1" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c3e-ce1a-ad83-5ce4" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="a67f-77ec-6f1d-010f" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -634,9 +753,19 @@
     </selectionEntry>
     <selectionEntry id="4244-13a5-8d44-144b" name="Chariots (Xiao Zhanche)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a42-9cd7-237b-4274" type="min"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fc4-61b5-dd90-98a6" type="max"/>
       </constraints>
       <modifiers>
+        <!-- need -->
+        <!-- need:Chariot Retinue (Zhanche Huweizhe) -->
+        <modifier type="increment" field="4a42-9cd7-237b-4274" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5910-17e9-ecdf-7997" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
         <!-- unav-sw -->
         <modifier type="set" field="2fc4-61b5-dd90-98a6" value="0">
           <conditions>
@@ -650,6 +779,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="9f9e-0318-8fd9-33bf" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Chariot Retinue (Zhanche Huweizhe)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="6e1c-43e4-241c-d138" name="Chariotry" hidden="false" targetId="a178-280d-202c-b3d0" primary="true"/>
       </categoryLinks>
@@ -697,6 +836,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="302b-75ef-cef2-d69c" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -722,16 +862,9 @@
         <infoLink id="118f-6d6f-91ff-d7a8" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f43e-5e3c-d23b-95d8" type="max"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa2b-77b2-2f55-fbe7" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Chariot Retinue (Zhanche Huweizhe)-per-Chariots (Xiao Zhanche) -->
-        <modifier type="increment" field="f43e-5e3c-d23b-95d8" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4244-13a5-8d44-144b" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
         <!-- unav-sw -->
         <modifier type="set" field="aa2b-77b2-2f55-fbe7" value="0">
@@ -741,6 +874,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="2c5d-8941-978a-c3d0" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Chariots (Xiao Zhanche)</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Chariots (Xiao Zhanche)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="b2eb-beca-d2ee-13a9" name="Chariotry" hidden="false" targetId="a178-280d-202c-b3d0" primary="true"/>
       </categoryLinks>
@@ -857,6 +1000,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="6393-3af5-0837-23f1" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1030,7 +1174,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="7bc1-48ef-5aa4-a98e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="11de-0a4c-7fa6-da84" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="46b2-303d-3b30-d91c" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -1226,7 +1379,39 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="455b-e1fb-5532-b994" type="atLeast"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a29-b058-d10e-bffc" type="lessThan"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0df4-372f-7fdb-84f9" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="None">
+                <conditions>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="455b-e1fb-5532-b994" type="lessThan"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a29-b058-d10e-bffc" type="atLeast"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0df4-372f-7fdb-84f9" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="None">
+                <conditions>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="455b-e1fb-5532-b994" type="lessThan"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a29-b058-d10e-bffc" type="lessThan"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0df4-372f-7fdb-84f9" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="None">
+                <conditions>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="455b-e1fb-5532-b994" type="lessThan"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a29-b058-d10e-bffc" type="atLeast"/>
+                <condition field="selections" scope="ba3e-db39-9fa2-4ebc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0df4-372f-7fdb-84f9" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="cff6-4e98-cb09-6978" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -1405,6 +1590,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="f04a-3e4c-bfe0-269c" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1440,6 +1626,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="291d-a6b6-17b4-75b1" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 1000 points in the army</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="693f-bcd3-84a2-0ae9" name="Special Units" hidden="false" targetId="099a-3435-f35a-fee2" primary="true"/>
       </categoryLinks>
@@ -1513,6 +1709,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">4</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">4</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="aa8a-4fae-9d06-f0e4" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1538,7 +1735,7 @@
             <cost name="pts" typeId="points" value="140"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6631-7ddd-a14a-41c7" name="Driver" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="6631-7ddd-a14a-41c7" name="Driver" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="533f-9060-e506-9515" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7066-e9eb-cc18-f928" type="max"/>
@@ -1555,6 +1752,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1575,7 +1773,7 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8c49-53a5-6005-d713" name="Elephant Crewman" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="8c49-53a5-6005-d713" name="Elephant Crewman" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af0d-74eb-8adb-68ca" type="min"/>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac6c-41ad-75ea-eac3" type="max"/>
@@ -1592,6 +1790,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1717,7 +1916,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="5368-ec52-3421-6049" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7954-1c39-fd47-d2a8" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="1c36-1a92-0103-74af" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="eaae-80c3-653b-cdff" name="zz_old_Ancient Greek" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="eaae-80c3-653b-cdff" name="zz_old_Ancient Greek" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ancient Greek (Armies of Antiquity): units and points from the Armies of Antiquity army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="4b1e-b287-f31a-8b63" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -26,6 +26,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">5</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">3</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">9</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">3+</characteristic>
               </characteristics>
               <modifiers>
                 <!-- encumbrance -->
@@ -77,17 +78,20 @@
     </selectionEntry>
     <selectionEntry id="0616-16ed-0223-efef" name="Theban / Thessalian Heavy Cavalry" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7677-dbd2-7b76-f702" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Theban / Thessalian Heavy Cavalry-per-Greek Heavy Cavalry -->
-        <modifier type="increment" field="7677-dbd2-7b76-f702" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4406-d9e2-d21c-dfd6" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="888a-b7c8-3a28-3617" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Greek Heavy Cavalry</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Greek Heavy Cavalry</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="19ca-96f3-063f-4446" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -168,7 +172,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="0616-16ed-0223-efef" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b91b-bf62-77a2-ae31" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="0c94-0d2c-aa48-0bfd" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -212,6 +225,30 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4406-d9e2-d21c-dfd6" name="Greek Heavy Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc41-e0d8-7612-6ef9" type="min"/>
+      </constraints>
+      <modifiers>
+        <!-- need -->
+        <!-- need:Theban / Thessalian Heavy Cavalry -->
+        <modifier type="increment" field="bc41-e0d8-7612-6ef9" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0616-16ed-0223-efef" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
+      </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="db6a-d5bc-4201-b7a3" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Theban / Thessalian Heavy Cavalry</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="e727-3f5d-ea17-050a" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -292,7 +329,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="4406-d9e2-d21c-dfd6" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="525b-a535-abb3-da0f" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="6d16-9383-b845-0964" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -337,17 +383,20 @@
     </selectionEntry>
     <selectionEntry id="3071-1ae2-0d32-363c" name="Thessalian / Thracian Light Cavalry" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c017-4115-7de0-2dae" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Thessalian / Thracian Light Cavalry-per-Greek Light Cavalry -->
-        <modifier type="increment" field="c017-4115-7de0-2dae" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e919-1bab-bcf7-2ee8" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="f8e1-bbd8-ba8c-c7d6" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Greek Light Cavalry</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Greek Light Cavalry</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="4dc9-3cea-a33f-f2e3" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -386,6 +435,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="da74-d189-a461-f954" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -405,6 +455,30 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="e919-1bab-bcf7-2ee8" name="Greek Light Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeaa-65c3-4a85-8143" type="min"/>
+      </constraints>
+      <modifiers>
+        <!-- need -->
+        <!-- need:Thessalian / Thracian Light Cavalry -->
+        <modifier type="increment" field="aeaa-65c3-4a85-8143" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3071-1ae2-0d32-363c" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
+      </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="b37d-fc3b-aaa0-2c71" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Thessalian / Thracian Light Cavalry</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="94a6-2585-9999-66a5" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -443,6 +517,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
             </profile>
             <profile id="2929-bbc7-a9c6-0eb5" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -563,8 +638,28 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
               </characteristics>
               <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="80c5-9f95-3c2f-552d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="824e-9a0b-2bd8-b632" type="atLeast"/>
+                <condition field="selections" scope="80c5-9f95-3c2f-552d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9be-fb1b-38e9-09c7" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="3+">
+                <conditions>
+                <condition field="selections" scope="80c5-9f95-3c2f-552d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="824e-9a0b-2bd8-b632" type="lessThan"/>
+                <condition field="selections" scope="80c5-9f95-3c2f-552d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9be-fb1b-38e9-09c7" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="3+">
+                <conditions>
+                <condition field="selections" scope="80c5-9f95-3c2f-552d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="824e-9a0b-2bd8-b632" type="atLeast"/>
+                <condition field="selections" scope="80c5-9f95-3c2f-552d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f9be-fb1b-38e9-09c7" type="atLeast"/>
+                </conditions>
+              </modifier>
                 <!-- encumbrance -->
               <modifier type="set" field="35a2-714d-db3e-3738" value="3">
                 <conditions>
@@ -756,8 +851,28 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
               </characteristics>
               <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="00d8-e0f1-f17d-e7cd" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ebe-32d2-7b3b-c913" type="atLeast"/>
+                <condition field="selections" scope="00d8-e0f1-f17d-e7cd" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b87-56de-8520-2812" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="3+">
+                <conditions>
+                <condition field="selections" scope="00d8-e0f1-f17d-e7cd" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ebe-32d2-7b3b-c913" type="lessThan"/>
+                <condition field="selections" scope="00d8-e0f1-f17d-e7cd" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b87-56de-8520-2812" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="3+">
+                <conditions>
+                <condition field="selections" scope="00d8-e0f1-f17d-e7cd" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ebe-32d2-7b3b-c913" type="atLeast"/>
+                <condition field="selections" scope="00d8-e0f1-f17d-e7cd" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b87-56de-8520-2812" type="atLeast"/>
+                </conditions>
+              </modifier>
                 <!-- encumbrance -->
               <modifier type="set" field="35a2-714d-db3e-3738" value="3">
                 <conditions>
@@ -887,6 +1002,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="f02e-d4b4-5a20-392f" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -976,6 +1092,7 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
               </characteristics>
             </profile>
             <profile id="9a95-cffb-b081-5a2f" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1075,7 +1192,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="e33b-c404-d437-0f87" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c208-6769-677c-5539" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="2b01-81a0-a2b0-1f65" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
@@ -1229,7 +1355,16 @@
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">None</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="6+">
+                <conditions>
+                <condition field="selections" scope="08b3-4e0f-e94b-b4dc" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e2a-4754-e576-0bdc" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="6501-249e-0965-627f" name="Equipment and options (as printed in WAB2 army list)" publicationId="aab0-aa1e-0319-4ffe" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>

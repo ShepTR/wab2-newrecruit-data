@@ -12,6 +12,7 @@ OUT = sys.argv[1]
 def hid(*p):
     h = hashlib.md5('|'.join(str(x) for x in p).encode('utf8')).hexdigest()
     return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
+from ratiolib import ratio, size_limit
 BIG = 1000
 def cond(child, op, scope='force', incl='true'):
     return (f'<condition field="selections" scope="{scope}" value="1" percentValue="false" shared="true" includeChildSelections="{incl}" '
@@ -81,7 +82,7 @@ class Cat:
             self.s = re.sub(r' revision="(\d+)" battleScribeVersion', lambda mm: f' revision="{int(mm.group(1)) + 1}" battleScribeVersion', self.s, count=1)
             open(self.path, 'w', encoding='utf8').write(self.s)
 
-def ratio(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
+def _ratio_old(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
     """A units <= floor(units of Bs / per); `extra` conditions apply to the whole rule"""
     ids = [cat.unit(b)[0] for b in Bs]
     def mods(cid):
