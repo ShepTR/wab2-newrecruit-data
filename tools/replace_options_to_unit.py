@@ -29,7 +29,7 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
                 cons = '\n'.join(l[4:] if l.startswith('    ') else l for l in cons.split('\n'))
                 head = re.match(r'( *)(<selectionEntry id="[^"]*" name="[^"]*") hidden="false" collective="true"( import="true" type="upgrade">)', ent)
                 mod = ''
-                flat = name in ('Leader', 'Standard bearer', 'Musician')      # command options cost once per unit, not per model
+                flat = name in ('Leader', 'Standard bearer', 'Musician') or name.startswith('Banner or parasol')      # command options cost once per unit, not per model
                 if float(cost) != 0 and not flat:
                     mod = (f'          <modifiers>\n            <modifier type="increment" field="points" value="{cost}">\n              <repeats>\n'
                            f'                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="{mid}" repeats="1" roundUp="false"/>\n'

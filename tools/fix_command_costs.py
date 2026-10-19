@@ -3,7 +3,7 @@
 Usage: python3 fix_command_costs.py <outdir>   (idempotent)"""
 import sys, os, re, glob
 OUT = sys.argv[1]; n = 0
-PAT = re.compile(r'(^        <selectionEntry id="[^"]*" name="(?:Leader|Standard bearer|Musician)"[^>]*type="upgrade">\n)(.*?)(^        </selectionEntry>\n)', re.S | re.M)
+PAT = re.compile(r'(^        <selectionEntry id="[^"]*" name="(?:Leader|Standard bearer|Musician|Banner or parasol[^"]*)"[^>]*type="upgrade">\n)(.*?)(^        </selectionEntry>\n)', re.S | re.M)
 for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
     s = open(path, encoding='utf8').read()
     def fix(m):
