@@ -29,12 +29,13 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
                 cons = '\n'.join(l[4:] if l.startswith('    ') else l for l in cons.split('\n'))
                 head = re.match(r'( *)(<selectionEntry id="[^"]*" name="[^"]*") hidden="false" collective="true"( import="true" type="upgrade">)', ent)
                 mod = ''
-                if float(cost) != 0:
+                flat = name in ('Leader', 'Standard bearer', 'Musician')      # command options cost once per unit, not per model
+                if float(cost) != 0 and not flat:
                     mod = (f'          <modifiers>\n            <modifier type="increment" field="points" value="{cost}">\n              <repeats>\n'
                            f'                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="{mid}" repeats="1" roundUp="false"/>\n'
                            f'              </repeats>\n            </modifier>\n          </modifiers>\n')
                 new += (f'        {head.group(2)} hidden="false" collective="false"{head.group(3)}\n{cons}{mod}'
-                        f'          <costs>\n            <cost name="pts" typeId="points" value="0"/>\n          </costs>\n        </selectionEntry>\n')
+                        f'          <costs>\n            <cost name="pts" typeId="points" value="{cost if flat else 0}"/>\n          </costs>\n        </selectionEntry>\n')
                 moved += 1
                 return ''
             mblk = re.sub(r'(            <selectionEntry id="[^"]*" name="([^"]*)"[^>]*type="upgrade">\n.*?\n            </selectionEntry>\n)', grab, mblk, flags=re.S)
