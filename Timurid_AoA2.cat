@@ -46,7 +46,7 @@
             </profile>
             <profile id="9347-217a-0120-0521" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">The General rides a horse and has a hand weapon, light armour, composite bow and shield. Army General. Expert Horsemen. Feigned Flight. Parthian shot. May have heavy armour (+1), thrusting spear (+2) and cloth barding (+3). May take lance (+1) if so loose Feigned Flight and Parthian shot.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">The General rides a horse and has a hand weapon, light armour, composite bow and shield. Army General. Expert Horsemen. Feigned Flight. Parthian shot. May have heavy armour (+1), thrusting spear (+2) and cloth barding (+3). May take lance (+1) if so, remove Feigned Flight and Parthian shot.</characteristic>
               </characteristics>
             </profile>
             <profile id="c837-75bd-844d-b1a2" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -187,7 +187,7 @@
             </profile>
             <profile id="0230-c078-7013-6bae" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">The General rides a horse and has a hand weapon, light armour, composite bow and shield. Army General. Expert Horsemen. Feigned Flight. Parthian shot. May have heavy armour (+1), thrusting spear (+2) and cloth barding (+3). May take lance (+1) if so loose Feigned Flight and Parthian shot.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">The General rides a horse and has a hand weapon, light armour, composite bow and shield. Army General. Expert Horsemen. Feigned Flight. Parthian shot. May have heavy armour (+1), thrusting spear (+2) and cloth barding (+3). May take lance (+1) if so, remove Feigned Flight and Parthian shot.</characteristic>
               </characteristics>
             </profile>
             <profile id="2be1-dda5-74e9-dda5" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -324,7 +324,7 @@
             </profile>
             <profile id="4e2b-3b3c-585c-b19f" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All ride a horse and have a hand weapon, light armour and shield. Feigned Flight. Parthian Shot. Amirs are Expert Horsemen and may have composite bow, (+4), thrusting spear (+3), heavy armour (+1) and cloth barding (+3). May take lance (+1) if so loose Feigned Flight and Parthian Shot.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All ride a horse and have a hand weapon, light armour and shield. Feigned Flight. Parthian Shot. Amirs are Expert Horsemen and may have composite bow, (+4), thrusting spear (+3), heavy armour (+1) and cloth barding (+3). May take lance (+1) if so, loose Feigned Flight and Parthian Shot.</characteristic>
               </characteristics>
             </profile>
             <profile id="fac2-afec-3bec-c18b" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -630,10 +630,76 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f4b6-30db-de1c-24c4" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8125-dabe-a5b4-ea42" name="Dismounted (Timurids" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8eb1-c356-9a2b-3bed" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="99d9-94f4-bd2d-54e0" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c009-80dd-e1bd-4b82" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2458-9509-4db2-dc77" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-16">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f565-2275-8712-88f3" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="b3d7-c58d-fe66-e1dd" name="Dismounted (Timurids" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2e60-c2d5-84de-3a8b" name="Subject Nobles" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3163-91af-a216-0522" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fa32-feea-f620-be37" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-14">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f565-2275-8712-88f3" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="67b5-b3ec-1b7a-7ec0" name="Subject Nobles" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aaad-db34-7522-17f7" name="Subject Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b0b9-eb0d-734b-03ff" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f370-2b25-a7ae-a20b" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-9">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f565-2275-8712-88f3" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="43f9-1502-17af-86d2" name="Subject Cavalry" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e932-45e5-0eee-ccee" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9f9f-ff04-f11c-c705" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f4ea-7539-1af4-e776" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="1">
@@ -644,16 +710,16 @@
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="f5a9-293a-bb65-5bc3" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+            <infoLink id="d142-047f-35e5-f400" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="eb1d-4655-e460-7120" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0560-62e8-8183-1da2" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fa6e-f074-b29d-0da1" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aee5-7d07-9a47-fa09" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8913-171a-4eac-5097" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5034-cd1a-75bc-a078" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="8">
@@ -664,16 +730,16 @@
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="15b4-db6a-cf9e-9c98" name="Lance" hidden="false" targetId="a4b8-1d78-eb6b-c4f2" type="profile"/>
+            <infoLink id="3a34-d5f6-f6e8-e535" name="Lance" hidden="false" targetId="a4b8-1d78-eb6b-c4f2" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cd3a-187f-922c-8317" name="Designated Light Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1f9a-e92e-3c66-9d67" name="Designated Light Cavalry" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8dc8-6420-2869-772e" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="90b1-ac21-acdc-c899" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9f12-1f2f-0cca-f78a" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36b7-0637-5b64-ce5a" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="2">
@@ -684,7 +750,7 @@
           </modifiers>
           <!-- def-link -->
           <rules>
-            <rule id="fe17-b3b2-cb2f-d975" name="Designated Light Cavalry" hidden="false">
+            <rule id="af60-2eeb-4107-36cf" name="Designated Light Cavalry" hidden="false">
               <description>Units that do not have heavy armour or lance may be designated Light Cavalry (+2).</description>
             </rule>
           </rules>
@@ -692,10 +758,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d674-a134-036a-f94b" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1f73-b4d1-65b2-a784" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d312-8d72-b4b2-0052" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ad4-dda0-d6c4-aef7" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f46f-ddb8-7263-38cd" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f25c-25ec-67ff-4bc3" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -708,10 +774,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a9ba-180b-855a-a5e3" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a8d9-3178-68bb-7797" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f847-84b9-b272-ba20" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e5b8-56c4-0339-0e6b" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb4d-a033-c37e-39d3" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4112-c706-5773-6d2c" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -724,10 +790,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="35e1-2bc7-062f-a615" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aac3-d132-0cf9-aa21" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b784-98de-b9e1-7e62" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d45-b8b1-61c6-9fa9" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f11c-93f3-da87-79b9" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="075b-b80f-708f-6aae" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -777,7 +843,7 @@
             </profile>
             <profile id="f1f5-a68f-e5f4-cb7a" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon, light armour, buckler and composite bow. May have heavy armour (+1), thrusting spear (+3) and swap buckler for shield (+1). May have cloth barding (+4). Timurid Cavalry are Drilled and Expert Horsemen, with Feigned Flight. May be Veteran (+1). May have lance (+8). If lance is taken, they lose Feigned Flight but gain First Charge. Units that do not have heavy armour or lance may be designated Light Cavalry (+2). They then have Parthian Shot. All heavy cavalry may be fielded dismounted (Timurids –16, Subject Nobles –14, Subject Cavalry -9)</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon, light armour, buckler and composite bow. May have heavy armour (+1), thrusting spear (+3) and swap buckler for shield (+1). May have cloth barding (+4). All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9)) Timurid Cavalry are Drilled and Expert Horsemen, with Feigned Flight. May be Veteran (+1). May have lance (+8). If lance is taken, they lose Feigned Flight but gain First Charge. Units that do not have heavy armour or lance may be designated Light Cavalry (+2). They then have Parthian Shot.</characteristic>
               </characteristics>
             </profile>
             <profile id="8811-18d7-9bf4-8832" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1013,10 +1079,138 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a54b-159d-2142-4a32" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cd94-ab12-eaaa-d712" name="Dismounted (Timurids" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0a2b-c55d-4673-be9b" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e573-9c44-ecdd-f53a" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df87-c8b9-3589-fe1a" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="661c-9ff6-6786-4f79" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-16">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cee8-c559-b771-82ea" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="8265-1b6a-fbf5-c7ea" name="Dismounted (Timurids" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4218-737b-dfb5-1508" name="Subject Nobles" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6780-2771-546f-a0d6" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="31a9-9092-8c3a-9d53" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-14">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cee8-c559-b771-82ea" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="6969-6c7f-f73f-48b7" name="Subject Nobles" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9)) Subject Nobles are Eastern Shock Cavalry.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="19eb-0efc-b965-8694" name="Subject Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc85-f984-8e6b-43be" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9720-3d17-d97e-d3d4" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-9">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cee8-c559-b771-82ea" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="abf0-cafe-2753-1f7d" name="Subject Cavalry" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f017-ad42-d3d7-2e50" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7fc1-fb23-3473-6f9d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6889-88b3-86b4-ba16" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cee8-c559-b771-82ea" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="7dad-777b-cc42-f545" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="deb6-d9e1-f505-1053" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3c3-47bc-40b1-6ab3" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d20e-f4f7-8933-1bc2" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="8">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cee8-c559-b771-82ea" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="0e32-035d-7bbe-6a80" name="Lance" hidden="false" targetId="a4b8-1d78-eb6b-c4f2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fc6e-848f-772e-f067" name="Designated Light Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32a0-c956-5e41-f062" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="205b-5b19-86b7-10f3" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cee8-c559-b771-82ea" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="066b-abbb-0fc3-dcb3" name="Designated Light Cavalry" hidden="false">
+              <description>Units that do not have heavy armour or lance may be designated Light Cavalry (+2).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="89ea-aaea-08be-01a0" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cc1-552c-3d48-db5d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="942c-85e9-4b90-fb91" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1029,10 +1223,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e14b-f32a-7f24-b4f6" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ce2a-f497-fc25-95d9" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f55-0795-dab1-71e8" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dc69-8996-0f0e-b42a" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1528-c143-cfee-a5c8" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e289-ed52-d4da-e622" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1045,10 +1239,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="197a-bfce-37f9-5e28" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b2cd-bc18-f44e-16cc" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1210-7f3e-f034-bbe5" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7162-bef8-1e44-9e0a" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="31d0-46dc-0ef4-859d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f2f-e231-44c9-4ace" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1098,7 +1292,7 @@
             </profile>
             <profile id="abf3-393c-449e-322e" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon, light armour, buckler and composite bow. May have heavy armour (+1), thrusting spear (+3) and swap buckler for shield (+1). May have cloth barding (+4). Subject Nobles are Eastern Shock Cavalry. All heavy cavalry may be fielded dismounted (Timurids –16, Subject Nobles –14, Subject Cavalry -9)</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon, light armour, buckler and composite bow. May have heavy armour (+1), thrusting spear (+3) and swap buckler for shield (+1). May have cloth barding (+4). All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9)) Timurid Cavalry are Drilled and Expert Horsemen, with Feigned Flight. May be Veteran (+1). May have lance (+8). If lance is taken, they lose Feigned Flight but gain First Charge. Units that do not have heavy armour or lance may be designated Light Cavalry (+2). They then have Parthian Shot. Subject Nobles are Eastern Shock Cavalry.</characteristic>
               </characteristics>
             </profile>
             <profile id="6e3c-b98b-1226-1529" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1204,6 +1398,10 @@
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="9d2e-214b-ae90-d932" name="Expert Horsemen" hidden="false" targetId="01f3-18f2-5b03-2aee" type="rule"/>
+            <infoLink id="9202-a3ac-b3b5-0d5c" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
+            <infoLink id="4bed-1ba4-64d6-757e" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
+            <infoLink id="9137-b38f-475f-d5ce" name="Parthian Shot" hidden="false" targetId="78a9-d49d-4efd-85c1" type="rule"/>
             <infoLink id="962f-2a43-35c2-3dbd" name="Eastern Shock Cavalry" hidden="false" targetId="b932-617b-b343-5f35" type="rule"/>
             <infoLink id="4cc0-1efe-8ebc-5ea8" name="Shock Cavalry" hidden="false" targetId="71de-f405-b88b-44fe" type="rule"/>
             <infoLink id="fa64-5d38-f686-18ab" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
@@ -1332,10 +1530,138 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e7b6-8f2e-384c-aefc" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d661-dda6-31b1-04be" name="Dismounted (Timurids" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c1d-ff27-e3d5-5522" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75e1-366c-f144-eafc" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a80b-7cf1-0aca-2be4" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="05dd-39e3-62d2-baf2" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-16">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f2b-c496-ddcc-40a4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="cf9f-8f4d-f41f-d303" name="Dismounted (Timurids" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b695-8fce-492e-9e5b" name="Subject Nobles" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7c27-ee79-ca9e-24c3" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e04-b4a5-3d28-5999" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-14">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f2b-c496-ddcc-40a4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="4b5a-3f4f-2a63-fd43" name="Subject Nobles" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="302a-7d74-f398-6ee6" name="Subject Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2526-2aee-a74a-eff6" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b77-2768-e1fe-1dfd" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="-9">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f2b-c496-ddcc-40a4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="605f-924d-d8cb-be7d" name="Subject Cavalry" hidden="false">
+              <description>All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9))</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="37b7-cc4f-092b-f9e0" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc88-4405-7112-2d7f" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="201e-d1c7-01ca-02b0" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f2b-c496-ddcc-40a4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="7ea7-e0f1-2b2b-fc29" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="eb99-7829-ff38-92c6" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c3eb-0bb3-b8b8-83cf" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc02-56f0-26b8-95e2" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="8">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f2b-c496-ddcc-40a4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="5a23-f182-5998-9419" name="Lance" hidden="false" targetId="a4b8-1d78-eb6b-c4f2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1e42-3319-cf9c-d5f4" name="Designated Light Cavalry" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b1e7-14a5-f700-8d62" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c692-821c-11ee-7d4d" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f2b-c496-ddcc-40a4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="07a5-d430-bacc-6e31" name="Designated Light Cavalry" hidden="false">
+              <description>Units that do not have heavy armour or lance may be designated Light Cavalry (+2).</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dd49-efe2-c6c7-ec3c" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="90d5-8d9d-67d0-45cd" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="852c-96ae-af7a-cf10" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1348,10 +1674,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5a87-26e3-1a16-4256" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0b58-8654-578d-5209" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b21b-a063-c99e-f141" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6722-d1f6-7917-3020" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a65-16d1-1e01-16c7" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6607-db3d-f42a-29f1" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1364,10 +1690,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="def1-23c5-df96-60f9" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="59f1-d464-46b7-2c41" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c598-0e04-462d-9147" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ecd6-0278-d9e3-e317" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0fef-76fa-0d41-8430" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="57a6-25fd-3f91-3a48" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1417,7 +1743,7 @@
             </profile>
             <profile id="44f7-aac5-d94a-aad3" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon, light armour, buckler and composite bow. May have heavy armour (+1), thrusting spear (+3) and swap buckler for shield (+1). May have cloth barding (+4). All heavy cavalry may be fielded dismounted (Timurids –16, Subject Nobles –14, Subject Cavalry -9)</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon, light armour, buckler and composite bow. May have heavy armour (+1), thrusting spear (+3) and swap buckler for shield (+1). May have cloth barding (+4). All heavy cavalry may be fielded dismounted (Timurids (–16), Subject Nobles (–14), Subject Cavalry (-9)) Timurid Cavalry are Drilled and Expert Horsemen, with Feigned Flight. May be Veteran (+1). May have lance (+8). If lance is taken, they lose Feigned Flight but gain First Charge. Units that do not have heavy armour or lance may be designated Light Cavalry (+2). They then have Parthian Shot.</characteristic>
               </characteristics>
             </profile>
             <profile id="cc24-2b4a-6282-1cde" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1523,6 +1849,10 @@
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="a7c5-aa99-5236-5212" name="Expert Horsemen" hidden="false" targetId="01f3-18f2-5b03-2aee" type="rule"/>
+            <infoLink id="dcc2-79bc-5fda-3cc4" name="Feigned Flight" hidden="false" targetId="23ce-0721-aa10-1f4d" type="rule"/>
+            <infoLink id="b4be-b235-e9fd-125a" name="Drilled" hidden="false" targetId="d6b3-51b2-64eb-2b91" type="rule"/>
+            <infoLink id="7da4-98b2-c311-ca2f" name="Parthian Shot" hidden="false" targetId="78a9-d49d-4efd-85c1" type="rule"/>
             <infoLink id="5d4f-01c6-acc0-ce52" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="a874-7763-40f9-d730" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="4d1f-e481-d68f-1849" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
@@ -1564,104 +1894,104 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry id="8ebc-e163-81a2-6cb4" name="Turco- Mongols" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="776c-02c6-8992-4204" name="Turco-Mongols" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink id="bbb0-39fb-cea0-e4cc" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
+        <categoryLink id="3850-04c0-9095-46f8" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9113-be10-d9e5-75b5" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b18c-0288-7bba-8058" name="Veteran" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="83fe-1de2-a3e5-4f70" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dbcc-763c-34c6-9cd7" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f52a-6b93-c653-2916" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2dc8-34b2-c1b9-83e9" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffa3-6169-1fd8-8408" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9426-4409-5696-58e2" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="444f-f1e5-818b-da24" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+            <infoLink id="1785-1202-3c9d-59eb" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c357-3abb-4167-df24" name="Thrusting spear" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="190b-4d86-4966-14f5" name="Thrusting spear" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0200-b14d-46d4-70a9" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8763-a81f-8e49-94b6" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3cc9-e6f1-8be3-be27" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="92c6-fb7d-328f-985e" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="3">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffa3-6169-1fd8-8408" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9426-4409-5696-58e2" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="b234-a576-0e51-2149" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
+            <infoLink id="33b3-4842-8b98-1446" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="551e-dd92-d241-8e6b" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="827e-6240-d691-b49a" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b14-61ec-6b5c-c7ba" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="caf9-fd2e-5c63-3cbe" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cf4-fd69-49f5-8df4" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f908-e192-7ca0-fa72" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffa3-6169-1fd8-8408" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9426-4409-5696-58e2" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="777d-ec12-6d0b-2450" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="0adc-9a5c-365e-e6c3" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-            <selectionEntry id="739a-0a56-2164-43d0" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="a25f-e29d-5cbb-9ff1" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c58a-878a-00ec-62e2" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b17-def4-842d-8a77" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46db-a10e-c325-6c12" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02f6-6a05-f8d0-ea3a" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e71a-d04d-c839-57c6" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="1d93-e41f-23a3-35cd" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af7d-ce56-94d9-e362" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="63b2-e97d-322b-d023" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35a4-df93-14e2-4040" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f2c-2683-642c-4ae2" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="bd5c-52d5-54df-077f" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="b739-14be-562e-04fe" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3618-b49b-9d92-347a" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2b3-3cbc-1f3e-c93f" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="526c-a312-f9e0-3dd4" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3eed-e90b-81cb-8609" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-        <selectionEntry id="ffa3-6169-1fd8-8408" name="Turco- Mongols" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="9426-4409-5696-58e2" name="Turco-Mongols" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf61-8409-f2d1-2c25" type="min"/>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f11b-92d3-60c2-e9fe" type="min"/>
           </constraints>
           <profiles>
-            <profile id="2a46-7a3c-8c94-4dbc" name="Turco- Mongols" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="f73d-01dd-b345-2e4f" name="Turco-Mongols" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
@@ -1674,12 +2004,12 @@
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
               </characteristics>
             </profile>
-            <profile id="da9d-2151-db7c-126e" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+            <profile id="de25-7349-d14b-b37b" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
                 <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All have a hand weapon and composite bow. Skirmishers. Nomad Cavalry. May be Veteran (+1). May have throwing or thrusting spear (+3) and shield (+1).</characteristic>
               </characteristics>
             </profile>
-            <profile id="8e3d-63e1-a0d3-08e9" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+            <profile id="db6c-2f26-f879-e68b" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
                 <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
@@ -1689,33 +2019,33 @@
                 <!-- armour-save -->
               <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
                 <conditions>
-                <condition field="selections" scope="8ebc-e163-81a2-6cb4" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="551e-dd92-d241-8e6b" type="atLeast"/>
+                <condition field="selections" scope="776c-02c6-8992-4204" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="827e-6240-d691-b49a" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="49e5-5874-8c38-b97b" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
-            <infoLink id="9ade-2114-4744-0060" name="Nomad Cavalry" hidden="false" targetId="123d-07c6-8e8c-e8db" type="rule"/>
-            <infoLink id="5881-2889-7ab7-a156" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="2647-23b8-f7e6-e960" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-            <infoLink id="2407-a499-f9b1-3a59" name="Thrusting Spear" hidden="true" targetId="5a59-1efb-14ef-017a" type="profile">
+            <infoLink id="a846-1ab6-016d-e8c3" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
+            <infoLink id="0c1e-3bd2-2089-7835" name="Nomad Cavalry" hidden="false" targetId="123d-07c6-8e8c-e8db" type="rule"/>
+            <infoLink id="3e76-afd0-7970-73da" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="6abd-21e5-06c3-d77a" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+            <infoLink id="bc01-9a8e-9406-abd3" name="Thrusting Spear" hidden="true" targetId="5a59-1efb-14ef-017a" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="8ebc-e163-81a2-6cb4" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c357-3abb-4167-df24" type="atLeast"/>
+                    <condition field="selections" scope="776c-02c6-8992-4204" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="190b-4d86-4966-14f5" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="576e-41aa-3013-7809" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+            <infoLink id="ff36-7154-11e8-ca42" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="8ebc-e163-81a2-6cb4" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="551e-dd92-d241-8e6b" type="atLeast"/>
+                    <condition field="selections" scope="776c-02c6-8992-4204" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="827e-6240-d691-b49a" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2246,7 +2576,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="af07-04c8-6777-0d3e" name="Timurid (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #96 (unofficial, Martin Gibbins). 1360 AD to 1450 AD Timur the Lame ranks alongside Alexander the Great and Genghis Khan as one of the few individuals to cause a total upheaval in the flow of world events; unlike the others, he left no lasting mark, creating chaos and destruction and no new social order. Beginning as a minor steppe chieftain, he set out on a campaign in 1376 against the Mongols and carried on campaigning for thirty years, overrunning most of the western Mongol Khanates, the Middle East and Northern India, defeating the Ottoman Turks, the Golden Horde, the Sultanate of Delhi and the Mamluks along the way. He imposed no real government on his subjects, and constantly had to return to put down rebellions. He died at the age of 69 while preparing to invade China. His heirs fell to fighting amongst themselves and the “Empire” fragmented into ever-weaker pieces. Timur’s army contained the best troops of each c Allies: The army may have allies from the Steppe Nomad list (Turcomans) or the Muslim Indian list. It may have elephants from that list without any other troops being taken, but the maximums above apply rather than those in the Muslim Indian list. The elephants may have barding (+8).
+      <description>ARMIES OF ANTIQUITY v2 #97 (unofficial, Martin Gibbins). Timur the Lame ranks alongside Alexander the Great and Genghis Khan as one of the few individuals to cause a total upheaval in the flow of world events; unlike the others, he left no lasting mark, creating chaos and destruction and no new social order. Beginning as a minor steppe chieftain, he set out on a campaign in 1376 against the Mongols and carried on campaigning for thirty years, overrunning most of the western Mongol Khanates, the Middle East and Northern India, defeating the Ottoman Turks, the Golden Horde, the Sultanate of Delhi and the Mamluks along the way. He imposed no real government on his subjects, and constantly had to return to put down rebellions. He died at the age of 69 while preparing to invade China. His heirs fell to fighting amongst themselves and the “Empire” fragmented into ever-weaker pieces. Timur’s army contained the best troops of each category that he cou Allies: The army may have allies from the Steppe Nomad list (Turcoman) or the Muslim Indian list. It may have elephants from that list without any other troops being taken, but the maximums above apply rather than those in the Muslim Indian list. The elephants may have barding (+8).
 
 ARMY COMPOSITION:
 [Timurid]

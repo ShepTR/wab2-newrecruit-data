@@ -429,7 +429,7 @@
             </profile>
             <profile id="ceec-db66-d0b9-45b6" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Light cavalry have hand weapon, throwing spear, javelins and shield. Light Cavalry.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Light cavalry have hand weapon, throwing spear, javelins and shield. Light Cavalry. Combined units: formed units of noble and light cavalry maybe in combined units where up to 75% of models maybe of the inferior type</characteristic>
               </characteristics>
             </profile>
             <profile id="253d-5939-47f8-ddad" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -731,7 +731,7 @@
             </profile>
             <profile id="0e09-6dff-ddd6-bb1c" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All Warriors have hand weapon, throwing Spear, javelins and shield. Warband. All Warriors may exchange throwing spear for heavy throwing spear (+1 point). In armies after 700 AD, all Warriors must exchange throwing spear for thrusting spear (+3). They cease to be Warband but gain Shieldwall.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All Warriors have hand weapon, throwing Spear, javelins and shield. Warband. All Warriors may exchange throwing spear for heavy throwing spear (+1 point). In armies after 700 AD, all Warriors must exchange throwing spear for thrusting spear (+3). They cease to be Warband but gain Shieldwall. Combined units: formed units of elite and other warriors maybe in combined units where up to 75% of models maybe of the inferior type</characteristic>
               </characteristics>
             </profile>
             <profile id="aab7-9c53-f6d7-4b67" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -938,54 +938,33 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="de4f-dc18-b9ea-f013" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d666-9356-0d80-3942" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75e9-51a2-4ac4-3e1b" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="5">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74aa-089a-28fc-44d2" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e52a-6801-082a-4f8c" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb58-b445-7cfd-1553" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a41d-3dce-8ab3-9ee8" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="5">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74aa-089a-28fc-44d2" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f0be-ba08-9452-3804" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0186-2974-ecbe-d9ef" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="17ad-3b21-0fbe-c80d" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="5">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="74aa-089a-28fc-44d2" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
+            <selectionEntry id="be74-475b-bb42-be0f" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="13da-c5ac-4fec-b914" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eeeb-c05e-fcf0-9540" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d3e1-935a-28ed-4663" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d6d-b7a6-3501-42c0" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1566-8a1e-e38c-6410" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2d85-5805-9ee1-d96b" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac8d-469c-97d8-0634" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a925-82af-1c42-dca5" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
         <selectionEntry id="74aa-089a-28fc-44d2" name="Skirmishers" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="83a4-196c-d26a-8127" type="min"/>
@@ -1006,11 +985,12 @@
             </profile>
             <profile id="c054-9216-4ba4-5498" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Improvised weapon and either javelins, short bow or sling. Skirmish.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Improvised weapon and either javelins, short bow or sling. Skirmishers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="4a29-6e2a-2797-900e" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
             <infoLink id="7e25-cf70-8165-e7cb" name="Improvised Weapon" hidden="false" targetId="026a-8df7-0a12-0a18" type="profile"/>
             <infoLink id="85ae-098f-fed0-c851" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="ed6c-5cff-63a6-2d3b" name="Sling" hidden="true" targetId="7ff2-453d-751e-5f78" type="profile">
@@ -1033,7 +1013,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="b592-3075-4dc4-aa6d" name="Franks (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #49 (unofficial, Martin Gibbins). 300AD to 750AD The Franks were the most successful of the German tribes that migrated into the Western Roman Empire, eventually taking over most of Gaul and holding it against all comers, including the conquering Arab armies. This list covers Frankish forces from the early days until the emphasis in the army tilted in favour of the cavalry arm. Allies: The pre-700 AD army may have allies from the Dark Age Britain and Ireland or Late Roman lists.
+      <description>ARMIES OF ANTIQUITY v2 #50 (unofficial, Martin Gibbins). The Franks were the most successful of the German tribes that migrated into the Western Roman Empire, eventually taking over most of Gaul and holding it against all comers, including the conquering Arab armies. This list covers Frankish forces from the early days until the emphasis in the army tilted in favour of the cavalry arm. Allies: The pre-700 AD army may have allies from the Dark Age Britain and Ireland or Late Roman lists.
 
 ARMY COMPOSITION:
 [Franks]

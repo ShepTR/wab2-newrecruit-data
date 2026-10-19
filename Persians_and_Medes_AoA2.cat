@@ -2887,46 +2887,6 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1f84-13b5-8db7-8f79" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d04-8088-e7b4-da9a" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="727b-8a33-86ed-9fda" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="061a-aa5b-5202-7b8c" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="c4f3-aec2-6982-e65e" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a367-1208-1d71-9030" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dc2c-3974-e7c0-ae6a" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="753a-bfb5-ba28-da21" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="2">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="061a-aa5b-5202-7b8c" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="a1bf-bbb0-be41-076a" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
             <selectionEntry id="1281-e05e-cc5e-f4b7" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0273-fb78-1d08-2283" type="max"/>
@@ -2974,36 +2934,8 @@
             </profile>
             <profile id="6e2b-b96c-cc3a-2ff2" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Slingers have hand weapon and sling. Skirmishers.Up to half of all Slinger units may replace sling with javelins (free) or composite bow (+1). Javelin armed troops may have shield (+1) and light armour (+2). There must be at least one sling-armed unit in a Cyrus period army.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Slingers have hand weapon and sling. Skirmishers. Up to half of all Slinger units may replace sling with javelins (free) or composite bow (+1).</characteristic>
               </characteristics>
-            </profile>
-            <profile id="f219-3719-3c41-86f1" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
-              <characteristics>
-                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
-                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
-                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
-              </characteristics>
-              <modifiers>
-                <!-- armour-save -->
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
-                <conditions>
-                <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f84-13b5-8db7-8f79" type="atLeast"/>
-                <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a367-1208-1d71-9030" type="lessThan"/>
-                </conditions>
-              </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
-                <conditions>
-                <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f84-13b5-8db7-8f79" type="lessThan"/>
-                <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a367-1208-1d71-9030" type="atLeast"/>
-                </conditions>
-              </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
-                <conditions>
-                <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f84-13b5-8db7-8f79" type="atLeast"/>
-                <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a367-1208-1d71-9030" type="atLeast"/>
-                </conditions>
-              </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -3030,26 +2962,6 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="dbd4-c135-146e-bed6" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
-              <modifiers>
-                <!-- profile-swap -->
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f84-13b5-8db7-8f79" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-            <infoLink id="da50-d040-5a49-e638" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
-              <modifiers>
-                <!-- profile-swap -->
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="f619-eef3-a693-247e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a367-1208-1d71-9030" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="7"/>
@@ -3057,86 +2969,106 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry id="1e7e-6ba8-cb9c-a14a" name="Javelinmen" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="583c-867e-f1f5-07a3" name="Javelin men" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink id="dd85-1d79-2f0f-1b81" name="Light Troops" hidden="false" targetId="8dcc-cc79-ff0f-ee8c" primary="true"/>
+        <categoryLink id="372b-2967-cc63-1989" name="Light Troops" hidden="false" targetId="8dcc-cc79-ff0f-ee8c" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="3821-2f91-25ff-bc9a" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7717-30fa-e213-6d55" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6e49-e3c8-c87a-f6a3" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4f66-e659-e414-f8ae" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a24d-1412-c4d0-053b" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e58-a518-69dd-96c6" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d69b-a6a9-d207-623f" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2a66-308f-1b4c-f964" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="1ac0-82b2-eedf-7621" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="ec41-db0c-df2a-796a" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ce75-8a18-4070-1f0f" name="Riding Camels" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c629-fe98-8179-a086" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6db3-cc40-ef8f-a0ce" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="259a-8bf5-f855-6387" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b4c-d686-88d1-bfd5" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="958e-1091-b5ad-3eb9" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="2">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2a66-308f-1b4c-f964" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="501c-f4f4-757a-66aa" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d9fa-16d7-80d2-62d0" name="Riding Camels" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="058b-d71a-0417-e293" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="492e-3d68-c684-7c41" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="1">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d69b-a6a9-d207-623f" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2a66-308f-1b4c-f964" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <!-- def-link -->
           <rules>
-            <rule id="b8e6-503a-026a-8b53" name="Riding Camels" hidden="false">
-              <description>may be Riding Camels.</description>
+            <rule id="24e3-90e3-6a39-9d92" name="Riding Camels" hidden="false">
+              <description>may be Riding Camels (+1)</description>
             </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-            <selectionEntry id="775e-abd4-76a2-e518" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="b68b-9321-5367-268d" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bba2-b573-3e83-4fad" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6fab-98db-c7ac-d40f" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="491f-ea56-8dd8-fa8c" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f4f4-1326-d25b-9123" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="53e8-8f17-8a17-e93f" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="4568-0a9a-928b-6316" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c2c8-82ab-481f-82c6" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0eca-b145-cbfe-ba38" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cfec-1aa3-7b99-1962" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="72bf-e2a9-a2dc-7813" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="506e-38d8-956f-f051" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="f1ab-c256-3a0e-d20c" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4741-8acc-5ad5-3019" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8efb-3379-a0be-099d" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5cd4-9b92-aae1-556f" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6560-e690-9246-a365" type="min"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-        <selectionEntry id="d69b-a6a9-d207-623f" name="Javelinmen" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="2a66-308f-1b4c-f964" name="Javelin men" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e6e-bc32-1ba6-5279" type="min"/>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18cc-86ea-f158-7335" type="min"/>
           </constraints>
           <profiles>
-            <profile id="a363-ed02-1457-17fe" name="Javelinmen" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="2c33-6966-e16d-8baa" name="Javelin men" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">5</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
@@ -3149,12 +3081,12 @@
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
               </characteristics>
             </profile>
-            <profile id="ae9d-6d94-6305-ba8e" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+            <profile id="9427-d8d8-ee6d-7c7c" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Javelinmen have a hand weapon and javelins. Skirmishers. May have shield (+1). One infantry unit (must be at least 10 figures) may be Riding Camels. (+1) in a Cyrus period army to allow for the tactics used to disrupt Lydian cavalry.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Javelin armed troops may have shield (+1) and light armour (+2). There must be at least one sling-armed unit in a Cyrus period army. Javelin men have a hand weapon and javelins. Skirmishers. May have shield (+1). One infantry unit (must be at least 10 figures) may be Riding Camels (+1) in a Cyrus period army to allow for the tactics used to disrupt Lydian cavalry.</characteristic>
               </characteristics>
             </profile>
-            <profile id="480a-0404-5f94-ee77" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+            <profile id="5900-adbb-81fa-f3d4" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
                 <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
@@ -3164,22 +3096,45 @@
                 <!-- armour-save -->
               <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
                 <conditions>
-                <condition field="selections" scope="1e7e-6ba8-cb9c-a14a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3821-2f91-25ff-bc9a" type="atLeast"/>
+                <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7717-30fa-e213-6d55" type="atLeast"/>
+                <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c629-fe98-8179-a086" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7717-30fa-e213-6d55" type="lessThan"/>
+                <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c629-fe98-8179-a086" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7717-30fa-e213-6d55" type="atLeast"/>
+                <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c629-fe98-8179-a086" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="22d7-2e63-334e-e461" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
-            <infoLink id="de2d-d078-7bb5-07c8" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="817f-8b64-ec35-6622" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
-            <infoLink id="1669-38f5-5c3b-8d20" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+            <infoLink id="2bf7-7d6c-2cdd-41ab" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
+            <infoLink id="9bb5-017d-5c40-1bdd" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="c205-f458-7b80-e8dc" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+            <infoLink id="f941-ccd2-61d1-4da2" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="1e7e-6ba8-cb9c-a14a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3821-2f91-25ff-bc9a" type="atLeast"/>
+                    <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7717-30fa-e213-6d55" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="2b60-ff51-7b4e-e48a" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="583c-867e-f1f5-07a3" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c629-fe98-8179-a086" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -3194,7 +3149,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="896a-9bd6-a856-ed99" name="Persians and Medes (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #5 (unofficial, Martin Gibbins). 550 BC to 420 BC This list covers the rise of the Persian empire from the defeat of Babylon to the abandonment of traditional Persian infantry tactics and their wholesale replacement with Greek methods and mercenaries. After its initial successes the army became swollen with large contingents of subject peoples. The list can be used to construct the early army of Cyrus, or the army that faced the Greeks in Asia Minor and the invasions of Greece itself. Note: Some troops in this list are equipped with Spara, a very large cane wicker shield that was propped up in front of the unit for protection. Spara count as large shields and give the unit the Shieldwall rule as long as at least half the front rank is equipped with them. A fleeing unit abandons its Spara for the rest of the game. Where troops in this army use the Combined Formation rule, all shooting casualties are taken from the ranks  Allies And Mercenaries: A Cyrus period army may use camel mounted archers (see the allies section of the Lydian list). A Xerxes period army may use up to two units of mercenary hoplites from the Greek list, and may use up to two scythed chariots from the Later Persian list. Note that while the points for these chariots come from the allies and mercenaries section, they are not Unreliable.
+      <description>ARMIES OF ANTIQUITY v2 #5 (unofficial, Martin Gibbins). This list covers the rise of the Persian empire from the defeat of Babylon to the abandonment of traditional Persian infantry tactics and their wholesale replacement with Greek methods and mercenaries. After its initial successes the army became swollen with large contingents of subject peoples. The list can be used to construct the early army of Cyrus, or the army that faced the Greeks in Asia Minor and the invasions of Greece itself. Note: Some troops in this list are equipped with Spara, a very large cane wicker shield that was propped up in front of the unit for protection. Spara count as large shields and give the unit the Shieldwall rule as long as at least half the front rank is equipped with them. A fleeing unit abandons its Spara for the rest of the game. Note: Where troops in this army use the Combined Formation rule, all shooting casualties are taken from the ranks of archers. Allies And Mercenaries: A Cyrus period army may use camel mounted archers (see the allies’ section of the Lydian list). A Xerxes period army may use up to two units of mercenary hoplites from the Greek list, and may use up to two scythed chariots from the Later Persian list. Note that while the points for these chariots come from the allies and mercenaries’ section, they are not Unreliable.
 
 ARMY COMPOSITIONS (pick one in the Army composition list):
 [Persians and Medes - Army of Cyrus]

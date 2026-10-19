@@ -454,7 +454,7 @@
           <!-- def-link -->
           <rules>
             <rule id="41f5-f9d0-5090-6414" name="Household" hidden="false">
-              <description>One unit may be upgraded to Household (+3). Household Men-at-Arms have WS4 and are Veteran.</description>
+              <description>One unit may be upgraded to Household (+3)and are WS4 and Veteran.</description>
             </rule>
           </rules>
           <costs>
@@ -598,7 +598,7 @@
             </profile>
             <profile id="4d86-64b8-ff52-c8ed" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mounted Men at Arms have hand weapon, full plate armour, lance and shield. They ride warhorses and one unit may have barding (+4). Shock Cavalry. First Charge. One unit may be upgraded to Household (+3). Household Men-at-Arms have WS4 and are Veteran. They must be led by the General at all times. Men at Arms may dismount (-25) and then have a hand weapon, double handed weapon and full plate armour. Stubborn. May be Riding Horses (+1).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mounted Men at Arms have hand weapon, full plate armour, lance and shield. They ride warhorses and one unit may have barding (+4). Shock Cavalry. First Charge. One unit may be upgraded to Household (+3)and are WS4 and Veteran. They must be led by the General at all times. Men at Arms may dismount (-25) and then have a hand weapon, double handed weapon and full plate armour. Stubborn. May be Riding Horses (+1).</characteristic>
               </characteristics>
             </profile>
             <profile id="f6e6-ee1a-dc22-1d43" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1253,10 +1253,30 @@
         <categoryLink id="3c47-23fa-4591-b15f" name="Foreigners" hidden="false" targetId="4520-614b-e270-55d2" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="afb6-1055-4193-1e00" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5027-8673-3af7-d828" name="Ride a horse" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73a0-2e50-4f25-b925" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ca2-5dda-ec5f-bae9" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac31-4fb6-aed4-fa48" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b0fb-cf2f-d5f1-0c49" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="10">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7182-e05a-b97f-d00f" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="651c-3f03-5d71-af56" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dd09-7cb6-f35a-849a" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b7e8-0d55-2b48-868d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="60b9-7613-f5ae-3843" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1269,10 +1289,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="baee-eaf5-7f16-a91c" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7790-6616-27f0-9d82" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c86-ec86-5eb1-13f5" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="52fa-654e-2a6d-d326" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="edc3-b013-1e50-20f2" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="951a-6e1b-cc24-61ee" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1285,10 +1305,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b4c6-8ad2-e559-246a" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f6de-dc70-e3da-9bb3" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="65c6-8a8b-c9db-3683" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5310-7bda-55f8-fcad" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02d3-ca41-c8c1-aae5" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9b2-7088-d613-a318" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -1318,10 +1338,18 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="d479-e288-a814-fdae" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5027-8673-3af7-d828" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="3b60-29ab-029d-259e" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Border Infantry have hand weapon, thrusting spear and shield. Every second unit may be mounted on horses (+10, M increased to 8).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Border Infantry have hand weapon, thrusting spear and shield. Every second unit may be mounted on horses (+10), M increased to 8).</characteristic>
               </characteristics>
             </profile>
             <profile id="820d-3f52-5f7e-eefb" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1330,7 +1358,14 @@
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
-              <!-- armour-save -->
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="d479-e288-a814-fdae" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5027-8673-3af7-d828" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -2100,6 +2135,33 @@
         <categoryLink id="f24a-8654-125e-5252" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+            <selectionEntry id="b582-5239-f3e7-a5d1" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5eeb-6375-d11a-8d33" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b15c-e295-ceac-db50" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="04e0-dbc1-ca51-f080" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="54c6-597a-ad6d-a1c9" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c71-417f-b45e-5a8f" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="03dd-b9f1-bdca-0cd8" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="263b-1de5-d946-1f0c" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c16e-35f2-2f77-f087" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
         <selectionEntry id="60a2-3a2a-c283-2154" name="Cannon" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d1de-ffbe-929b-9d32" type="min"/>
@@ -2112,8 +2174,8 @@
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">-</characteristic>
                 <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">-</characteristic>
                 <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">-</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">6</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">3</characteristic>
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">-</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">-</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
@@ -2129,40 +2191,49 @@
             <cost name="pts" typeId="points" value="82"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="50c8-aac5-dcf2-8ed1" name="Organ Gun" hidden="false" collective="false" import="true" type="model">
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="3d7a-13d4-50bb-caa7" name="Organ Gun" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="56c2-bb09-24f7-60ca" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="3330-7b2c-eb72-648c" name="Organ Gun" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3897-a59b-0797-358e" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ee7-56f1-949d-8969" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1300-4737-1122-908a" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fea7-6a35-5aa5-7634" type="max"/>
           </constraints>
           <profiles>
-            <profile id="dc5a-ca2c-dd25-427f" name="Organ Gun" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="9654-2008-bd68-cf64" name="Organ Gun" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">-</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">-</characteristic>
                 <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">-</characteristic>
                 <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">-</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">5</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">2</characteristic>
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">-</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">-</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
               </characteristics>
             </profile>
+            <profile id="e75c-975f-0d8d-9bbe" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">An artillery unit is made of one Cannon or Organ Gun and 3 crew. You may add up to 3 additional crew for +10 pts each. The crew have a hand weapon and may have light armour (+2).</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
-          <infoLinks>
-            <infoLink id="2ffc-5b1f-1bb1-f8ea" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-          </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0"/>
+            <cost name="pts" typeId="points" value="82"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a62e-3b3b-df22-5d19" name="Crew" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="5056-618a-dd85-854b" name="Crew" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4065-ee30-9cfd-6939" type="min"/>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce5c-05ff-a423-2e10" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="05be-7484-8849-b7d8" type="min"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a25-24f4-a966-0fa7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="67c7-a58a-46d6-fcaa" name="Crew" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="b0ea-0ad3-7dfd-a00d" name="Crew" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
@@ -2177,7 +2248,7 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="70e6-83b2-6507-871d" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="ac56-156d-3304-2418" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -2188,7 +2259,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="b29e-8cad-362a-294d" name="War of the Roses English (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #99 (unofficial, Martin Gibbins). 1455AD-1487AD The War of the Roses is the name given to a series of dynastic struggles that led to civil war in England between 1455 and 1487 and that opposed rival branches of the House of Lancaster: the Yorkists (with their white rose) and the Lancastrians (and their red rose, hence the name given to theses conflicts). The war ended with the marriage of Henry Tudor and Elizabeth of York, and the foundation of the Tudor dynasty. Field battles were dominated by the longbowmen, used in large numbers by both sides, the knights usually fighting dismounted with the occasional foreign mercenaries or allies joining the fighting. The list allows you to build either a Lancastrian army (L), a Yorkist army (Y), a Tudor army (T), the army of Ricchard III (R) or the ill-fated Yorkist Pretenders (YP). You may only select unit without label and the ones with your chosen faction label. Foreigners: All these units are Unreliable, except Irish and Islemen Warriors when these are fielded in a Yorkist Pretenders army.
+      <description>ARMIES OF ANTIQUITY v2 #100 (unofficial, Martin Gibbins). The War of the Roses is the name given to a series of dynastic struggles that led to civil war in England between 1455 and 1487 and that opposed rival branches of the House of Lancaster: The Yorkists (with their white rose) and the Lancastrians (and their red rose, hence the name given to these conflicts). The war ended with the marriage of Henry Tudor and Elizabeth of York, and the foundation of the Tudor dynasty. Field battles were dominated by the longbowmen, used in large numbers by both sides, the knights usually fighting dismounted with the occasional foreign mercenaries or allies joining the fighting. Foreigners: All these units are Unreliable, except Irish and Islemen Warriors when these are fielded in a Yorkist Pretenders army.
 
 ARMY COMPOSITION:
 [War of the Roses English]
@@ -2197,7 +2268,7 @@ ARMY COMPOSITION:
   Foreigners: up to 25%, at least 50%
   Horse: up to 33%
   Militia: up to 50%
-  Characters: Up to 25% Horse: Up to 33% (Up to 20% in Yorkist Pretenders armies) Foot: At least 50% (Up to 33% in Yorkist Pretenders armies) Militia: Up to 50% Foreigners: Up to 25% (At least 50% in Yorkist Pretenders armies) Artillery: Up to one Cannon per every 1400pts.</description>
+  The list allows you to build either a Lancastrian army (L), a Yorkist army (Y), a Tudor army (T), the army of Richard III (R) or the ill-fated Yorkist Pretenders (YP). You may only select units without label and the ones with your chosen faction label. Characters: Up to 25% Horse: Up to 33% (Up to 20% in Yorkist Pretenders armies) Foot: At least 50% (Up to 33% in Yorkist Pretenders armies) Militia: Up to 50% Foreigners: Up to 25% (At least 50% in Yorkist Pretenders armies) Artillery: Up to one Cannon per every 1400pts.</description>
     </rule>
   </sharedRules>
 </catalogue>

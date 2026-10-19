@@ -453,10 +453,30 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4405-6cdd-422a-197b" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f204-f239-3c43-d862" name="Ride a horse" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="883e-254d-d3d9-4726" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d05-a04f-370a-1aa3" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="497c-e1b6-b18a-ceb2" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ca1-fd3a-4ff7-a9ce" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="09c4-6e48-ff10-411a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="647d-1074-54a4-0f37" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="04c5-4117-84f6-64b3" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a384-8221-3c4f-3c4b" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="efaf-acca-86fe-dbda" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -469,10 +489,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4fc4-5c41-90c9-5b76" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fa47-6c01-a00e-1f6b" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beb9-e25e-ee9a-7438" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43bc-807d-e0f1-e652" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a71e-ac46-5f63-da80" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="480f-925e-2483-4ad0" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -485,10 +505,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1e52-aad4-2fcc-2081" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aa89-afc1-2d4d-acf3" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6baa-af45-5f00-a64c" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df46-f8d2-293a-0234" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ac87-4d1e-6c96-b370" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d84-b77c-8b2b-5043" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -523,13 +543,26 @@
               <modifier type="set" field="35a2-714d-db3e-3738" value="3">
                 <conditions>
                 <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b27f-d0e5-92bb-a0ca" type="atLeast"/>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f204-f239-3c43-d862" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b27f-d0e5-92bb-a0ca" type="lessThan"/>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f204-f239-3c43-d862" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b27f-d0e5-92bb-a0ca" type="atLeast"/>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f204-f239-3c43-d862" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
             <profile id="ed1e-18fc-92a1-f2ea" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">A huscarl has a hand weapon, light armour and shield. Shieldwall. Stubborn. May have heavy armour (+1), thrusting spear (+2), two-handed axe (+3) and javelins (+1). May be Veteran (+1). If any huscarls are used, Thegns and Fyrd cost +2 points and are no longer Warband. Saxon Combined Units Huscarl units can be split up to create Combined Units with Thegn or Fyrd.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">A huscarl has a hand weapon, light armour and shield. Shieldwall. Stubborn. May have heavy armour (+1), thrusting spear (+2), two-handed axe (+3) and javelins (+1). May be Veteran (+1). If any huscarls are used, Thegns and Fyrd cost +2 points and are no longer Warband. Saxon Combined Units: Huscarl units can be split up to create Combined Units with Thegn or Fyrd. Huscarl form the front rank, or if combining Thegns and Fyrd the Thegns. Units of Huscarls and thegns that do not combine with Fyrd may be riding horses (+1 point) Saxon infantry often advanced aggressively and their shieldwalls were by no means passive. A Saxon unit that has formed Shieldwall may advance up to its normal move distance and retain the benefit of the Shieldwall. It may also do so when it charges, so long as it does not move further than its normal move distance while doing so.</characteristic>
               </characteristics>
             </profile>
             <profile id="aff0-60a4-16d4-36db" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -543,6 +576,19 @@
               <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
                 <conditions>
                 <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b27f-d0e5-92bb-a0ca" type="atLeast"/>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f204-f239-3c43-d862" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b27f-d0e5-92bb-a0ca" type="lessThan"/>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f204-f239-3c43-d862" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="3+">
+                <conditions>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b27f-d0e5-92bb-a0ca" type="atLeast"/>
+                <condition field="selections" scope="ac9d-254c-ee79-411a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f204-f239-3c43-d862" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
@@ -691,17 +737,37 @@
           <!-- def-link -->
           <rules>
             <rule id="6328-7134-1f99-7675" name="Fight mounted" hidden="false">
-              <description>In armies that do not contain huscarls, thegns may fight mounted (+12), becoming Ld7 and losing Warband and Shieldwall.</description>
+              <description>In armies that do not contain huscarls, thegns may fight mounted (+12), becoming M8, Ld7 and losing Warband and Shieldwall.</description>
             </rule>
           </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ae59-fb51-55f6-63e9" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="276f-4413-417a-8f01" name="Ride a horse" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da4b-f13c-92b9-2867" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d2c-d380-8887-a0c7" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a852-6837-11b3-2515" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0935-940e-613a-7e34" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b0f-9f78-6f53-6850" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="ef34-6464-71e5-ec0b" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8919-8928-dc97-c66c" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2dd8-ca3f-a465-f5b0" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2df6-d693-1bc6-85b9" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -714,10 +780,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3d05-0b37-c721-93c2" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="33c2-3543-ba39-4c0c" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ec3-1964-7b5a-1673" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f0ab-e72d-a728-8d74" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="093b-d7c3-dadb-bfa6" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0dc-a73c-51ad-8808" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -730,10 +796,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="df7e-d683-46bc-086d" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5ab8-1c02-51be-2d5d" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dcb1-20cc-9da1-c3e7" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b86c-b13b-57dc-d325" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5701-d125-207a-1484" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a317-ab30-20f4-e2de" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -763,10 +829,25 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4db0-c3e2-e709-bf9e" type="lessThan"/>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="276f-4413-417a-8f01" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4db0-c3e2-e709-bf9e" type="atLeast"/>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="276f-4413-417a-8f01" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="b30c-e128-efc8-c920" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">A Thegn has a hand weapon and shield. Shieldwall. Warband. May have throwing or thrusting spear (+2), light armour (+2) and javelins (+1). May be Veteran (+1). In armies that do not contain huscarls, thegns may fight mounted (+12), becoming Ld7 and losing Warband and Shieldwall. Thegn units can be split up to create Combined Units with Fyrd. They may form up to 66% of such units. Saxon infantry often advanced aggressively and their shieldwalls were by no means passive. A Saxon unit that has formed Shieldwall may advance up to its normal move distance and retain the benefit of the Shieldwall. It may also do so when it charges, so long as it does not move further than its normal move distance while doing so.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">A Thegn has a hand weapon and shield. Shieldwall. Warband. May have throwing or thrusting spear (+2), light armour (+2) and javelins (+1). May be Veteran (+1). In armies that do not contain huscarls, thegns may fight mounted (+12), becoming M8, Ld7 and losing Warband and Shieldwall. Thegn units can be split up to create Combined Units with Fyrd. They may form up to 66% of such units. Units of Huscarls and thegns that do not combine with Fyrd may be riding horses (+1 point) Saxon infantry often advanced aggressively and their shieldwalls were by no means passive. A Saxon unit that has formed Shieldwall may advance up to its normal move distance and retain the benefit of the Shieldwall. It may also do so when it charges, so long as it does not move further than its normal move distance while doing so.</characteristic>
               </characteristics>
             </profile>
             <profile id="6a55-82a5-4bbd-cf74" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -780,6 +861,19 @@
               <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
                 <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4db0-c3e2-e709-bf9e" type="atLeast"/>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="276f-4413-417a-8f01" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4db0-c3e2-e709-bf9e" type="lessThan"/>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="276f-4413-417a-8f01" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4db0-c3e2-e709-bf9e" type="atLeast"/>
+                <condition field="selections" scope="bc0a-0556-0eac-504d" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="276f-4413-417a-8f01" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
@@ -1011,10 +1105,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="356d-fac1-384e-8ec7" name="Two-handed axe" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2587-77ee-e9f8-8b5f" name="Two- handed axe" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ab3-14c2-82bd-82e7" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01ec-5a9e-acee-5af4" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="15e5-3f83-7cc8-6c9d" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="336d-1c00-c7de-5343" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="3">
@@ -1025,8 +1119,8 @@
           </modifiers>
           <!-- def-link -->
           <rules>
-            <rule id="615b-5542-3d01-da72" name="Two-handed axe" hidden="false">
-              <description>or two-handed axe (+3).</description>
+            <rule id="2374-c3d5-c466-6401" name="Two- handed axe" hidden="false">
+              <description>or two- handed axe (+3).</description>
             </rule>
           </rules>
           <costs>
@@ -1101,7 +1195,7 @@
             </profile>
             <profile id="8266-5c36-247f-219f" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Vikings have a hand weapon and shield. Close or Open Order. Shieldwall. Different weapons. May have light armour (+2), throwing spear (+2), javelins (+1) or two-handed axe (+3).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Vikings have a hand weapon and shield. Close or Open Order. Shieldwall. Different weapons. May have light armour (+2), throwing spear (+2), javelins (+1) or two- handed axe (+3).</characteristic>
               </characteristics>
             </profile>
             <profile id="358b-638e-3e40-c6ba" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1284,7 +1378,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="65f6-1d2d-6098-ac59" name="Later Saxon Kingdoms (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #68 (unofficial, Martin Gibbins). 800 AD to 1100 AD The later Saxon armies fought mainly on foot in a shieldwall, having relatively few missile troops and usually relegating the horse to a mode of transport to the battlefield. The kingdoms were well organised and wealthy, and could produce a levy of decently armed and competent troops, the Fyrd, which would form up with their social betters, the Thegns, to the fore. From 800 AD England was beset by both raiding and invading forces of Vikings, which were largely successful; despite a spirited fight back by Wessex under Alfred the Great, the Northern half of the country fell under Scandinavian rule. In the ninth century all this ground was retaken, only for the entire country to be conquered by Swein Forkbeard and his son Cnut between 992 and 1016. Scandinavian rule lasted until 1042 and resulted in changes to the composition of the army, with a reduction in the enthusiasm 
+      <description>ARMIES OF ANTIQUITY v2 #69 (unofficial, Martin Gibbins). The later Saxon armies fought mainly on foot in a shieldwall, having relatively few missile troops and usually relegating the horse to a mode of transport to the battlefield. The kingdoms were well organised and wealthy, and could produce a levy of decently armed and competent troops, the Fyrd, which would form up with their social betters, the Thegns, to the fore. From 800 AD England was beset by both raiding and invading forces of Vikings, which were largely successful; despite a spirited fight back by Wessex under Alfred the Great, the Northern half of the country fell under Scandinavian rule. In the ninth century all this ground was retaken, only for the entire country to be conquered by Swein Forkbeard and his son Cnut between 992 and 1016. Scandinavian rule lasted until 1042 and resulted in changes to the composition of the army, with a reduction in the enthusiasm of the Fyrd and t 
 
 ARMY COMPOSITION:
 [Later Saxon Kingdoms]

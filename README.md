@@ -211,8 +211,8 @@ Fourteen catalogues named "(Art of War)": Early Chinese (Pre-Shang and Early Sha
 - Game system revision is now 17.
 - Issues are listed in `issues/The_Art_of_War.txt`.
 
-## Added: Armies of Antiquity v2 (unofficial, Martin Gibbins)
-101 catalogues named "(AoA2)", one per army list (Lydian through Ottoman Turks), file names `*_AoA2.cat`. This is an unofficial fan supplement, so unlike the official books these lists were generated from the source `.docx` by a script (`tools/aoa2_extract.py` then `tools/aoa2_gen.py` -> `tools/aoa2_data.py`) rather than typed by hand; build with `sh tools/aoa2_all.sh <outdir>`.
+## Added: Armies of Antiquity v2024 (unofficial, Martin Gibbins)
+125 catalogues named "(AoA2)", one per army list (Lydian through Ottoman Turks, plus the 23 WAB 2.0 Chariot Wars lists at the end of the file), file names `*_AoA2.cat`. This is an unofficial fan supplement, so unlike the official books the lists were generated from the source PDF (`Armies of Antiquity v 2024.pdf`) by a script (`tools/aoa24_extract.py` then `tools/aoa2_gen.py` -> `tools/aoa2_data.py`) rather than typed by hand; build with `sh tools/aoa2_all.sh <outdir>`. (`tools/aoa2_extract.py` is the reader for the earlier .docx version, which this PDF supersedes.)
 - Reliable: names, characteristics and points come straight from the source tables. Heuristic (needs a read-through per army): base weapons, option labels/prices, special rules and which description belongs to which table row.
 - Enforced: percentage limits by points per composition (period sub-lists such as Early/Feudal/Later Polish are picker compositions), 0-1 limits on units, Unreliable rule on allied/mercenary units, Leader/Standard/Musician options on troop units.
 - Not built: allies from other lists (documented only), per-army special deployment, the +50 Senior-Officer-to-General option, once-per-N-points limits, ratios between units.

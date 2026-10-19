@@ -52,7 +52,7 @@
             </profile>
             <profile id="5e81-001b-5919-db1d" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour, composite bow, javelins and throwing spear. May ride a horse (+9) or a Warhorse (+16), or ride in a four horse light chariot with unarmed driver (+30). The Warhorse may have half barding (+2). Army General. If the Great King is used, then units within 12” gain +1 leadership rather than using the Great King’s leadership. Units in the army take a panic test if he flees off table, in the same way as they would if he were killed. He may only join Persian units.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour, composite bow, javelins and throwing spear. May ride a horse (+9) or a Warhorse (+16), or ride in a four-horse light chariot with unarmed driver (+30). The Warhorse may have half barding (+2). Army General. If the Great King is used, then units all troops in the army within 12” gain +1 leadership rather than using the Great King’s leadership. Units in the army take a panic test if he flees off table, in the same way as they would if he were killed. He may only join Persian units.</characteristic>
               </characteristics>
             </profile>
             <profile id="a4d1-8f8e-f3c3-e7bc" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -145,7 +145,7 @@
               <!-- def-link -->
           <rules>
             <rule id="6fb7-0d58-74b7-fac2" name="Unarmed driver" hidden="false">
-              <description>or a Warhorse (+16), or ride in a four horse light chariot with unarmed driver (+30).</description>
+              <description>or a Warhorse (+16), or ride in a four-horse light chariot with unarmed driver (+30).</description>
             </rule>
           </rules>
           <costs>
@@ -174,8 +174,8 @@
         </selectionEntry>
         <selectionEntry id="efc3-ab9a-1374-32b9" name="Chariot" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ea2-8ed6-0a3a-4ede" type="min"/>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="48eb-73f8-7d30-9e64" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ea2-8ed6-0a3a-4ede" type="min"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="48eb-73f8-7d30-9e64" type="max"/>
           </constraints>
           <profiles>
             <profile id="3c77-5abf-8b8a-e66e" name="Chariot" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -202,6 +202,9 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="fc63-f78f-b1bb-d058" name="Satrap" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05e7-43e6-b7b8-5c40" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="35be-21f9-3e5d-b9a4" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -228,49 +231,94 @@
                 <!-- encumbrance -->
               <modifier type="set" field="35a2-714d-db3e-3738" value="8">
                 <conditions>
-                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aacf-71e6-bf8a-2455" type="atLeast"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="10e2-dbe7-29a9-7531" type="lessThan"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cabc-2449-4022-6071" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="10e2-dbe7-29a9-7531" type="atLeast"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cabc-2449-4022-6071" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
             <profile id="ee8a-2ee8-71e9-cb15" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">A Satrap has a hand weapon, light armour, composite bow, javelins and shield. May ride a Warhorse (+18), in which case the shield is replaced with a throwing spear. The Warhorse may have half barding (+2).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mounted characters may have heavy armour (+1). One Satrap may be upgraded to Army General (+50). A Satrap has a hand weapon, light armour, composite bow, javelins and shield. May ride a Warhorse (+18), in which case the shield is replaced with a throwing spear. The Warhorse may have half barding (+2).</characteristic>
               </characteristics>
             </profile>
             <profile id="c120-d22e-e01d-b01f" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="10e2-dbe7-29a9-7531" type="atLeast"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cabc-2449-4022-6071" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="10e2-dbe7-29a9-7531" type="lessThan"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cabc-2449-4022-6071" type="atLeast"/>
+                </conditions>
+              </modifier>
               <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
                 <conditions>
-                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aacf-71e6-bf8a-2455" type="atLeast"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="10e2-dbe7-29a9-7531" type="atLeast"/>
+                <condition field="selections" scope="ced9-0a7d-50a5-42f5" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cabc-2449-4022-6071" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="bff4-8acc-13a2-20f9" name="Army General (Chariot Wars)" hidden="false" targetId="592c-3ef3-9392-535a" type="rule"/>
             <infoLink id="36aa-2532-476e-b5b1" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="f381-0f1f-4b7f-8444" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-            <infoLink id="48f5-6550-f5f3-59f0" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-            <infoLink id="d72a-a90d-bee4-e6f9" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
-            <infoLink id="c4be-39bd-5e67-fdc8" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="87a9-e8ca-8ce1-7ab0" name="Later Achaemenid Persian (AoA2) - List Notes" hidden="false" targetId="2bd5-6249-e741-b57a" type="rule"/>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry id="aacf-71e6-bf8a-2455" name="Ride a warhorse" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="10e2-dbe7-29a9-7531" name="Heavy armour" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb63-9eec-6c2b-5462" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5cee-3cd9-c6c2-1dc9" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="76b7-8758-7a6c-d2b4" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9098-2b8e-5034-aa6a" type="min"/>
+              </constraints>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="1e83-c9e2-3446-fe60" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
+          </infoLinks>
+          <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6f6b-dc7d-3bd1-6d61" name="Army General" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc58-bc3c-d2ab-3c8e" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e416-ec9e-79a8-7bf7" type="min"/>
+              </constraints>
+              <!-- def-link -->
+          <rules>
+            <rule id="8cde-c9a2-1279-d0ba" name="Army General" hidden="false">
+              <description>One Satrap may be upgraded to Army General (+50).</description>
+            </rule>
+          </rules>
+          <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cabc-2449-4022-6071" name="Ride a warhorse" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="687a-0b71-22bc-f029" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="57cb-b2d0-2f85-5f71" type="min"/>
               </constraints>
               <!-- mount-profile -->
           <profiles>
-            <profile id="55a0-c9c6-3ae3-cb4a" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="8e40-b80a-0bde-ed6a" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
@@ -286,20 +334,20 @@
           </profiles>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="1f19-b29b-a216-a4c4" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
+            <infoLink id="2e21-74ae-a5d8-c37a" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
           </infoLinks>
           <costs>
                 <cost name="pts" typeId="points" value="18"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a4b0-8815-ec43-87eb" name="Half barding" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="c07a-1982-6bc9-972b" name="Half barding" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5895-3055-688b-9081" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43a8-c272-42c1-fbe8" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e9a2-0677-d055-ceea" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="76b8-90f1-ba87-867f" type="min"/>
               </constraints>
               <!-- def-link -->
           <rules>
-            <rule id="7dfb-a36c-77a6-cf4c" name="Half barding" hidden="false">
+            <rule id="e0ea-e551-ac00-d645" name="Half barding" hidden="false">
               <description>The Warhorse may have half barding (+2).</description>
             </rule>
           </rules>
@@ -344,75 +392,95 @@
                 <!-- encumbrance -->
               <modifier type="set" field="35a2-714d-db3e-3738" value="8">
                 <conditions>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ce-eaa3-6d4b-15b5" type="atLeast"/>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b6-3f39-6d90-3fd7" type="lessThan"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ea3-62cf-3fc9-98a7" type="lessThan"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d43-1b52-21cf-6238" type="atLeast"/>
                 </conditions>
               </modifier>
-              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
                 <conditions>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ce-eaa3-6d4b-15b5" type="lessThan"/>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b6-3f39-6d90-3fd7" type="atLeast"/>
-                </conditions>
-              </modifier>
-              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
-                <conditions>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ce-eaa3-6d4b-15b5" type="atLeast"/>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b6-3f39-6d90-3fd7" type="atLeast"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ea3-62cf-3fc9-98a7" type="atLeast"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d43-1b52-21cf-6238" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
             <profile id="061d-9e67-6769-592a" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Standard bearer has a hand weapon, light armour and shield. May ride a Warhorse (+15). In which case the shield is discarded. Army Standard Bearer. Mounted characters may have heavy armour (+1). One Satrap may be upgraded to Army General (+50).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mounted characters may have heavy armour (+1). One Satrap may be upgraded to Army General (+50). Standard bearer has a hand weapon, light armour and shield. May ride a Warhorse (+15). In which case the shield is discarded. Army Standard Bearer.</characteristic>
               </characteristics>
             </profile>
             <profile id="ce77-ae76-7faa-5fb6" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">None</characteristic>
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ce-eaa3-6d4b-15b5" type="atLeast"/>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b6-3f39-6d90-3fd7" type="lessThan"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ea3-62cf-3fc9-98a7" type="atLeast"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d43-1b52-21cf-6238" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ea3-62cf-3fc9-98a7" type="lessThan"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d43-1b52-21cf-6238" type="atLeast"/>
                 </conditions>
               </modifier>
               <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
                 <conditions>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ce-eaa3-6d4b-15b5" type="lessThan"/>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b6-3f39-6d90-3fd7" type="atLeast"/>
-                </conditions>
-              </modifier>
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="3+">
-                <conditions>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="87ce-eaa3-6d4b-15b5" type="atLeast"/>
-                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="50b6-3f39-6d90-3fd7" type="atLeast"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6ea3-62cf-3fc9-98a7" type="atLeast"/>
+                <condition field="selections" scope="f5ed-2168-5abc-0fd2" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d43-1b52-21cf-6238" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="ad05-b6cd-b571-c95a" name="Army Standard" hidden="false" targetId="41fc-5de5-0862-91b8" type="rule"/>
             <infoLink id="eb53-996d-9ce6-7a82" name="Army General (Chariot Wars)" hidden="false" targetId="592c-3ef3-9392-535a" type="rule"/>
+            <infoLink id="ad05-b6cd-b571-c95a" name="Army Standard" hidden="false" targetId="41fc-5de5-0862-91b8" type="rule"/>
             <infoLink id="811d-cea5-9dca-114e" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="01b1-2acf-16d9-325d" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-            <infoLink id="5f74-7c5a-dbc9-fb7a" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
             <infoLink id="9db9-6c6c-35b9-049e" name="Later Achaemenid Persian (AoA2) - List Notes" hidden="false" targetId="2bd5-6249-e741-b57a" type="rule"/>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry id="87ce-eaa3-6d4b-15b5" name="Ride a warhorse" hidden="false" collective="true" import="true" type="upgrade">
+            <selectionEntry id="6ea3-62cf-3fc9-98a7" name="Heavy armour" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eca3-e4d0-960b-950c" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a530-622b-032c-f1ab" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d52-0c1e-7916-18cc" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6758-87a6-ab27-3679" type="min"/>
+              </constraints>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="2d12-719a-5213-8f5e" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
+          </infoLinks>
+          <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8293-e089-9966-21fc" name="Army General" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a543-8d3a-1a7f-1c44" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e15-cc89-a321-4864" type="min"/>
+              </constraints>
+              <!-- def-link -->
+          <rules>
+            <rule id="fbc1-72b0-11bf-9611" name="Army General" hidden="false">
+              <description>One Satrap may be upgraded to Army General (+50).</description>
+            </rule>
+          </rules>
+          <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8d43-1b52-21cf-6238" name="Ride a warhorse" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34e4-f43f-a24c-baf7" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7944-ce22-4dc0-bdff" type="min"/>
               </constraints>
               <!-- mount-profile -->
           <profiles>
-            <profile id="3784-2601-d9c8-55a9" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="7465-35c8-31b0-30de" name="Warhorse" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
@@ -428,38 +496,10 @@
           </profiles>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="82f7-193b-e786-570d" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
+            <infoLink id="701a-ed3d-36cd-b8fb" name="Warhorse" hidden="false" targetId="48fa-efd4-2ade-8c63" type="rule"/>
           </infoLinks>
           <costs>
                 <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="50b6-3f39-6d90-3fd7" name="Heavy armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad7e-ad51-a5d1-69f0" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b9-7bc7-3177-361a" type="min"/>
-              </constraints>
-              <!-- def-link -->
-          <infoLinks>
-            <infoLink id="4475-752d-1510-d893" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
-          </infoLinks>
-          <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d988-5a54-cd7f-4870" name="Army General" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fd8-382a-19b5-eaae" type="max"/>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="faa7-b0dd-563c-f1b5" type="min"/>
-              </constraints>
-              <!-- def-link -->
-          <rules>
-            <rule id="d5ef-1c6a-e912-35f9" name="Army General" hidden="false">
-              <description>One Satrap may be upgraded to Army General (+50).</description>
-            </rule>
-          </rules>
-          <costs>
-                <cost name="pts" typeId="points" value="50"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1027,7 +1067,7 @@
             </profile>
             <profile id="d9cf-26c6-38ff-d14d" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Melophoroi have hand weapon, thrusting spear and shield. May have light armour (+2) and composite bow (+2). May upgrade shield to large shield (+1). Melophoroi may only be fielded in the presence of the Great King, and are Stubborn. All troops without thrusting spears become Light Infantry except archers fielded in Combined formation with spearmen. All units in this section are Combined Formation and may have Mixed Armour.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Melophoroi have hand weapon, thrusting spear and shield. May have light armour (+2) and composite bow (+2). May upgrade shield to large shield (+1). Melophoroi may only be fielded in the presence of the Great King, and are Stubborn. All troops without thrusting spears become Light Infantry except archers fielded in Combined Formation with spearmen. A Combined Formation must have a front rank entirely of spear armed troops. All units in this section are Combined Formation and may have Mixed Armour.</characteristic>
               </characteristics>
             </profile>
             <profile id="b789-bbba-55f9-5819" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1247,7 +1287,7 @@
             </profile>
             <profile id="1cda-9a7e-73ca-ad13" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Persians have hand weapon, thrusting spear and shield. May have light armour (+2) and composite bow (+2). May upgrade shield to large shield (+1). All troops without thrusting spears become Light Infantry except archers fielded in Combined formation with spearmen. All units in this section are Combined Formation and may have Mixed Armour.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Persians have hand weapon, thrusting spear and shield. May have light armour (+2) and composite bow (+2). May upgrade shield to large shield (+1). All troops without thrusting spears become Light Infantry except archers fielded in Combined Formation with spearmen. A Combined Formation must have a front rank entirely of spear armed troops. All units in this section are Combined Formation and may have Mixed Armour.</characteristic>
               </characteristics>
             </profile>
             <profile id="5949-1d25-ef2d-48a6" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1479,7 +1519,7 @@
             </profile>
             <profile id="110e-e7ed-9d5a-f4fd" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Kardakes have hand weapon, thrusting spear and shield. May have light armour (+2). May upgrade shield to large shield (+1) if they are not light infantry. May replace thrusting spears with javelins or slings (-1), or composite bow (free). All troops without thrusting spears become Light Infantry except archers fielded in Combined formation with spearmen. All units in this section are Combined Formation and may have Mixed Armour.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Kardakes have hand weapon, thrusting spear and shield. May have light armour (+2). May upgrade shield to large shield (+1) if they are not light infantry. May replace thrusting spears with javelins or slings (-1), or composite bow (free). All troops without thrusting spears become Light Infantry except archers fielded in Combined Formation with spearmen. A Combined Formation must have a front rank entirely of spear armed troops. All units in this section are Combined Formation and may have Mixed Armour.</characteristic>
               </characteristics>
             </profile>
             <profile id="0275-7fec-67be-3459" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1607,7 +1647,7 @@
             </profile>
             <profile id="0065-8d14-f8d8-f9df" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Driver has heavy armour and improvised weapon. Scythed chariots may be fielded in units of 1 models. Each model has a unit strength of 3. May not take leaders, standards or musicians. Scythed Chariot causing D6+2 impact hits.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Driver has heavy armour and improvised weapon. Scythed chariots may be fielded in units of 1 model. Each model has a unit strength of 3. May not take leaders, standards or musicians. Scythed Chariot causing D6+2 S5 impact hits.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1818,7 +1858,7 @@
             </profile>
             <profile id="d823-497a-e2ef-3dae" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and thrusting spear. May have light armour (+2) or heavy armour (+3). May exchange thrusting spear for throwing spear (free). Nobles may have half barding (+2). 0-1 unit of Nobles may have short bows (+3). Every second unit may be Nobles. All are Levy, and Massed cavalry.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and thrusting spear. May have light armour (+2) or heavy armour (+3). May exchange thrusting spear for throwing spear (free). Nobles may have half barding (+2). 0-1 unit of Nobles may have short bows (+3). Every second unit may be Nobles. All are Levies, and Massed Cavalry.</characteristic>
               </characteristics>
             </profile>
             <profile id="01ef-ecd7-c6e6-8abb" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1851,6 +1891,8 @@
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="c0b3-0c1d-c16e-8fea" name="Massed Cavalry" hidden="false" targetId="8593-b58d-8b0f-4b05" type="rule"/>
+            <infoLink id="44d8-dfb9-2340-5cae" name="Levies" hidden="false" targetId="27b0-fb8f-0353-5958" type="rule"/>
             <infoLink id="2988-940a-dfff-54a8" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="795a-b551-57e2-f7b5" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="f591-6aa3-6f39-3fe3" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
@@ -2016,7 +2058,7 @@
             </profile>
             <profile id="7dbe-9f0b-7993-95b0" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and thrusting spear. May have light armour (+2) or heavy armour (+3). May exchange thrusting spear for throwing spear (free). All are Levy, and Massed cavalry.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and thrusting spear. May have light armour (+2) or heavy armour (+3). May exchange thrusting spear for throwing spear (free). All are Levies, and Massed Cavalry.</characteristic>
               </characteristics>
             </profile>
             <profile id="d9c6-ea5d-7812-3e0f" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -2049,6 +2091,8 @@
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="91d8-bc41-ae39-3700" name="Massed Cavalry" hidden="false" targetId="8593-b58d-8b0f-4b05" type="rule"/>
+            <infoLink id="ecc8-6418-88c5-f4bf" name="Levies" hidden="false" targetId="27b0-fb8f-0353-5958" type="rule"/>
             <infoLink id="7de4-7829-fe13-83fb" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="5ba6-2d0c-c14b-dbf2" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="f5b5-d393-1ad3-3542" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
@@ -2214,7 +2258,7 @@
             </profile>
             <profile id="b6b1-ae63-b1c5-9397" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and thrusting spear. May have light armour (+2) or heavy armour (+3). May exchange thrusting spear for throwing spear (free). All are Levy, and Massed cavalry.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and thrusting spear. May have light armour (+2) or heavy armour (+3). May exchange thrusting spear for throwing spear (free). All are Levies, and Massed Cavalry.</characteristic>
               </characteristics>
             </profile>
             <profile id="bb61-d7e5-3ae3-0caf" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -2247,6 +2291,8 @@
             </profile>
           </profiles>
           <infoLinks>
+            <infoLink id="b817-c37d-69c2-4b91" name="Massed Cavalry" hidden="false" targetId="8593-b58d-8b0f-4b05" type="rule"/>
+            <infoLink id="e5c1-cd23-adc1-897c" name="Levies" hidden="false" targetId="27b0-fb8f-0353-5958" type="rule"/>
             <infoLink id="ea13-faf8-4fd3-efb6" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="0c56-5fff-3030-713c" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="071e-0f6f-e3c1-9213" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
@@ -3493,7 +3539,7 @@
             </profile>
             <profile id="1063-c853-0f70-6f17" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Each machine has a crew of two armed with hand weapons. They may have light armour (+2). One light ballista may be taken for each Persian unit in the army.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Each machine has a crew of two armed with hand weapons. They may have light armour (+2). One light ballista may be taken for each Persian unit in the army. Fires as per Roman Scorpio – 36” range, S4, no armour save, D3 wounds.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3536,7 +3582,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="2bd5-6249-e741-b57a" name="Later Achaemenid Persian (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #15 (unofficial, Martin Gibbins). 420 BC to 330 BC Having failed to overcome the Greeks, the Persians now incorporated Greek mercenary troops into their armies in ever increasing numbers. This gave them the solid infantry core they had lacked and made a potentially formidable force that was only beaten by the genius of Alexander. Mercenaries: The army may take a contingent from the Later Hoplite Greek list. This may be led by a Polemarch who acts as Army General for the contingent. Allies: If the Great King is present, it may take a contingent from the Classical Indian list; this must consist of 01 cavalry unit, hereditary infantry and 0-1 elephant and may be led by a Padika. Allies: The army may take a contingent from the Thracian list (not highland infantry) that may be led by a chieftain.
+      <description>ARMIES OF ANTIQUITY v2 #16 (unofficial, Martin Gibbins). Having failed to overcome the Greeks, the Persians now incorporated Greek mercenary troops into their armies in ever increasing numbers. This gave them the solid infantry core they had lacked and made a potentially formidable force that was only beaten by the genius of Alexander. Mercenaries: The army may take a contingent from the Later Hoplite Greek list. This may be led by a Polemarch who acts as Army General for the contingent. Allies: If the Great King is present, it may take a contingent from the Classical Indian list; this must consist of 01 cavalry unit, hereditary infantry and 0-1 elephant and may be led by a Padika. Allies: The army may take a contingent from the Thracian list (not highland infantry) that may be led by a chieftain.
 
 ARMY COMPOSITION:
 [Later Achaemenid Persian]
@@ -3544,7 +3590,7 @@ ARMY COMPOSITION:
   Characters: up to 25%
   Levies: up to 50%
   Persians: at least 25%
-  Characters: up to 25% Persians: At least 25% Levies: Up to 50% Greek Mercenaries: up to 25% Allies and war machines: up to 15% Chariots: One model per 700 points in the army.</description>
+  Characters: up to 25% Persians: At least 25% Levies: Up to 50% Greek Mercenaries: up to 25% Allies and war machines: up to 15% There may not be more war machines than Persian units within the army. Chariots: One model per 700 points in the army.</description>
     </rule>
   </sharedRules>
 </catalogue>

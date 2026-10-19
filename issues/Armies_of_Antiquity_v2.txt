@@ -1,36 +1,46 @@
-Armies of Antiquity v2 (unofficial, Martin Gibbins) - issues and open points
-============================================================================
-Built: 101 catalogues (one per army list, file names *_AoA2.cat), 1276 unit entries. Game system revision 18.
-Source: "02_Armies of Antiquity v 2.0.docx" (and the matching PDF). Everything is untested in New Recruit.
+Armies of Antiquity v2024 (unofficial, Martin Gibbins; "AoA2") - issues and open points
+====================================================================================
+Built: 125 catalogues (one per army list, file names *_AoA2.cat), 1505 unit entries. Game system revision 18.
+Source: "Armies of Antiquity v 2024.pdf" (updated 01 January 2024, includes the v2.0 army lists, FAQs and list errata). It replaces the earlier .docx version of the lists,
+so the first generated set was regenerated from it (the errata/clarifications are already merged into the 2024 lists, so they were not applied separately).
+Everything is untested in New Recruit.
 
 IMPORTANT - how these lists were made
-- Unlike the official books, these 101 lists were NOT typed in by hand. tools/aoa2_extract.py reads the .docx (tables + italic rule markers) and tools/aoa2_gen.py turns it into tools/aoa2_data.py.
-  The generated data is meant to be corrected by hand afterwards (re-running aoa2_gen.py overwrites it). Stat lines and points come straight from the source tables and are reliable;
-  weapons, options and special rules are parsed from the description text by heuristics and need a read-through, army by army.
+- Unlike the official books, these lists were NOT typed in by hand. tools/aoa24_extract.py reads the PDF text layout (tables + paragraphs) and tools/aoa2_gen.py turns it into tools/aoa2_data.py.
+  tools/aoa2_extract.py is the older reader for the .docx version. The generated data is meant to be corrected by hand afterwards (re-running aoa2_gen.py overwrites it).
+  Stat lines and points come straight from the source tables; weapons, options and special rules are parsed from the description text by heuristics and need a read-through, army by army.
 - Known weak spots of the parser (check these on any list you use):
   * Option labels come from the text before each "(+N)": a few are clumsy or mislabelled (e.g. stat changes such as "Ld8", "WS3", "+1A" are priced options that do not change the profile;
-    "Chariot as from the list below", "Instead be deployed as Skirmishers" and similar are priced notes only). A negative price is a real saving printed in the book (e.g. -2).
+    "Chariot as from the list below" and similar are priced notes only). A negative price is a real saving printed in the book (e.g. -2).
   * "Instead of" choices (X or Y) are listed as free options named "X (instead of Y)"; the base weapon is the first one listed and nothing removes it when the option is chosen.
   * Special rules are taken from the base description sentences; rules that apply only in some compositions, or only "if dismounted", are mostly left off or may be attached wrongly.
   * "Light Infantry/Cavalry/Camelry" is modelled with the Light Troops rule; "Skirmishers" uses the Art of War skirmisher rule; "Unreliable" allies carry the Allies and Mercenaries (Unreliable) rule.
-  * Characters' mount: "Ride a horse" / "Ride a warhorse" options with the printed cost; barding is a priced option only. M in the table is used as printed (some lists print the mounted value).
-  * Machines: a machine model plus a crew model; extra crew options and crew counts are parsed from words ("two crewmen") and default to 2 when no number was found.
-  * Unit sizes: the minimum is 5 models for infantry/cavalry units (1 for characters, chariots, elephants, machines); no upper limit. Leader/Standard/Musician options (+5 each) are on every troop unit except
+  * Characters' mounts: "Ride a horse" / "Ride a warhorse" options with the printed cost; barding is a priced option only.
+  * Machines: a machine model plus a crew model; crew counts are parsed from words ("two crewmen") and default to 2 when no number was found.
+  * Unit sizes: minimum 5 models for infantry/cavalry (1 for characters, chariots, elephants, machines), no maximum. Leader/Standard/Musician options (+5 each) are on every troop unit except
     skirmishers and units whose text says they may not have a standard or musician; lists that state "no army or unit standards" (e.g. Lydian) have no Standard bearer option.
 - Army size note from the source: 2,800 points of these lists is roughly 2,000 points of a period supplement. A Senior Officer may become the Army General for +50 (not built).
-- Allies lists ("may take allies from the X list"), Wagon Tabors, Camps and per-army special deployment rules are documented only.
+- Allies lists ("may take allies from the X list"), the Allies and Mercenaries guidelines in the errata (host list sets the points; compulsory units first; no war machines from allies), Wagon Tabors, Camps and
+  per-army special deployment rules are documented only.
+
+The last 23 lists in the file (Sumerian & Akkadian through Kushite Egyptian) are the WAB 2.0 Chariot Wars lists. They are built with the same script but their descriptions are laid out differently
+(several units share one paragraph), so they are the least reliable of the set. They duplicate the official Chariot Wars catalogues (hand-built, more reliable); prefer those.
 
 Lists most likely to need manual rework (odd source structure)
 - Steppe Nomads (tribe-by-tribe equipment tables)
-- Mongol Conquest and Khanates (four sub-armies share one layout; compositions/ally text not split)
-- Ordensstaat (custom groups)
-- Crusaders, Russian, Hussite, Swiss, Medieval French (custom group names)
+- Mongol Conquest and Khanates (several sub-armies share one layout; compositions/ally text not split)
+- Ordensstaat, Swiss (custom groups; Vorhut/Nachhut upgrades not built)
+- Crusaders, Russian, Hussite, Medieval French (custom group names)
+- Hindu India ("Specials": one elephant per 600 points, at least one required - documented only)
 
 Parser notes by army (what the generator could not place cleanly)
 - Persians And Medes:
     no description for ['Skirmish'] in table [LEVY CAVALRY]
 - Italian Hill Tribes:
     composition limit for Skirmishers dropped (no units in that category): {'max': 10}
+- Ligurian:
+    no description for ['Standard Bearer Equipment all: Hand Weapon'] in table [CHARACTERS]
+    no description for ['0-1 Caplialati'] in table [INFANTRY]
 - Later Achaemenid Persian:
     composition limit for Greek Mercenaries dropped (no units in that category): {'max': 25}
 - Syracusan:
@@ -38,7 +48,8 @@ Parser notes by army (what the generator could not place cleanly)
     composition limit for Artillery and Allies dropped (no units in that category): {'max': 20}
 - Warring States Chinese:
     no description for ['Crossbows'] in table [MISSILE TROOPS]
-    composition limit for Artillery dropped (no units in that category): {'max': 10}
+- Republican Rome:
+    composition limit for Cavalry dropped (no units in that category): {'max': 25}
 - Ptolemaic Egyptian:
     no description for ['Elephant escorts', 'Mercenaries'] in table [SKIRMISHERS]
 - Parthian:
@@ -47,20 +58,25 @@ Parser notes by army (what the generator could not place cleanly)
     no description for ['Crossbows'] in table [MISSILE TROOPS]
 - Bastarnae:
     no description for ['Wagon'] in table [WAGON LAGER]
-- Maccabean Revolt:
-    no description for ['Guerillas'] in table [INFANTRY]
+- Early German:
+    no description for ['Noble Cavalry Mixed Weapons and Shield'] in table [CAVALRY]
 - Dacian:
     no description for ['Falxmen'] in table [INFANTRY]
 - Early Imperial Roman:
     composition limit for Infantry dropped (no units in that category): {'min': 50}
     composition limit for Infantry dropped (no units in that category): {'min': 33}
+- Dark Age Britain And Ireland:
+    composition limit for Infantry dropped (no units in that category): {'min': 50}
+    composition limit for Infantry dropped (no units in that category): {'min': 50}
+    composition limit for Infantry dropped (no units in that category): {'min': 50}
+    composition limit for Infantry dropped (no units in that category): {'min': 50}
+    composition limit for Infantry dropped (no units in that category): {'min': 50}
 - Middle Imperial Rome:
     composition limit for Infantry dropped (no units in that category): {'min': 33}
 - Sassanid:
     no description for ['Militia Spearmen', 'Kurdish Skirmishers'] in table [INFANTRY]
     no description for ['0-1 Elite Cavalry'] in table [ALLIES AND VASSALS]
 - Late Imperial Roman:
-    no description for ['Illyricani/Sagittarii'] in table [CAVALRY]
     composition limit for Artillery dropped (no units in that category): {'max': 20}
     composition limit for Foederati dropped (no units in that category): {'max': 33}
     composition limit for Foederati dropped (no units in that category): {'min': 33}
@@ -74,6 +90,8 @@ Parser notes by army (what the generator could not place cleanly)
 - Arab Caliphate:
     composition limit for Special Troops dropped (no units in that category): {'max': 33}
     composition limit for Cavalry and Infantry dropped (no units in that category): {'max': 66}
+- Carolingian:
+    no description for ['Breton Cavalry'] in table [VASSALS]
 - Ghaznavid:
     composition limit for Special Troops dropped (no units in that category): {'max': 50}
 - Medieval Hungarian:
@@ -89,12 +107,17 @@ Parser notes by army (what the generator could not place cleanly)
     composition limit for Crusaders dropped (no units in that category): {'min': 33}
     composition limit for Vassals dropped (no units in that category): {'max': 50}
 - Mongol Conquest And Khanates:
+    composition limit for Characters dropped (no units in that category): {'max': 25}
     composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
     composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+    composition limit for Auxiliary Cavalry dropped (no units in that category): {'max': 25}
+    composition limit for Characters dropped (no units in that category): {'max': 25}
     composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
     composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+    composition limit for Characters dropped (no units in that category): {'max': 25}
     composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
     composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+    composition limit for Characters dropped (no units in that category): {'max': 25}
     composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
     composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
 - Mamluks:
@@ -103,14 +126,28 @@ Parser notes by army (what the generator could not place cleanly)
     composition line not mapped: Vorhut: You may upgrade a second of your Close Order units as the Vorhut for +30
     composition line not mapped: Nachhut: You may upgrade a third of your Close Order units as the Nachhut for +2
     composition limit for Gewalthut dropped (no units in that category): {'max': 0}
-- Low Countries:
-    no points value for Artillery - Cannon
 - Hussite:
     no points value for Crew (Artillery)
+- Ordnance Burgundian:
+    no description for ['Ordnance Pike'] in table [FOOT]
 - Late Medieval French:
-    no description for ['Crossbowman'] in table [INFANTRY]
     composition limit for Mercenaries dropped (no units in that category): {'max': 50}
 - Ottoman Turks:
     no description for ['Padishah'] in table [0-1 GENERAL]
+- Sumerian & Akkadian:
+    no description for ['Nim Skirmishers'] in table [INFANTRY]
+    no description for ['Amorites', 'Amorites or Gutian Skirmishers', 'Elamites'] in table [ALLIES AND MERCENARIES]
+- Old Kingdom Egyptian:
+    no description for ['Nubians'] in table [ALLIES AND MERCENARIES]
+- Early Babylonian:
+    no description for ['Hunters (Ba’irum)'] in table [INFANTRY]
+- Hittite Empire:
+    no description for ['2-Crew Hittite Chariots', '0-1 Cavalry'] in table [CHARIOTRY AND CAVALRY]
+- Israelite:
+    no description for ['Ark of the Covenant and 4 priests'] in table [0-1 GENERAL]
+    no description for ['Zubulanites'] in table [LIGHT INFANTRY]
+- Later Babylonian:
+    no description for ['Cavalry'] in table [CHARIOTRY AND CAVALRY]
+    no description for ['Kisir Sharruti (L)', 'Sab Sharri (L)', 'Chaldeans'] in table [INFANTRY]
 
-- 83 composition limits for "Allies and Mercenaries" were dropped because those lists name allies from other lists (no units of their own); they appear in each catalogue's notes only.
+- 92 composition limits for "Allies and Mercenaries" were dropped because those lists name allies from other lists (no units of their own); they appear in each catalogue's notes only.

@@ -162,7 +162,7 @@
             </profile>
             <profile id="428f-caba-f66b-16cb" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Equipment: Hand weapon and partial plate armor. Army General. Options: May have shield (+1), double handed weapon (if dismounted) (+3), and full plate armour (+1). May ride a warhorse (+16) that may be cloth barded (+3). If mounted may have a lance (+6). May have Stubborn (+3).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon and partial plate armour. Army General. May have shield (+1), double handed weapon (if dismounted) (+3), and full plate armour (+1). May ride a warhorse (+16) that may be cloth barded (+3). If mounted may have a lance (+6). May be Stubborn (+3).</characteristic>
               </characteristics>
             </profile>
             <profile id="9b82-b9ea-afdc-edd4" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1007,7 +1007,7 @@
             </profile>
             <profile id="20fb-41ac-6a8e-c2d9" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">The Bearer of the Oriflamme is Stubborn and any unit he leads become Stubborn. The Oriflamme itself can be captured like a banner and if captured (or the bearer is killed) the opponent gets an extra 300 victory points (or 3 ABP id you use Army Break Points). Any Captain may be upgraded to Mercenary Captain (+25) Mercenary Captains are Unreliable and may join a Mercenary unit. Any Mercenary unit within 8” of the Mercenary Captain may use his Leadership vale for all Leadership tests, even though he is a not an army general. The Standard Bearer has a hand weapon and partial plate armour. Army Standard Bearer. May have shield (+1) and full plate armour (+1). May ride a warhorse (+16) that may be cloth barded (+4). May have Stubborn (+3).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">The Bearer of the Oriflamme is Stubborn and any unit he leads become Stubborn. The Oriflamme itself can be captured like a banner and if captured (or the bearer is killed) the opponent gets an extra 300 victory points (or 3 ABP if you use Army Break Points). Any Captain may be upgraded to Mercenary Captain (+25) Mercenary Captains are Unreliable and may join a Mercenary unit. Any Mercenary unit within 8” of the Mercenary Captain may use his Leadership vale for all Leadership tests, even though he is a not an army general. The Standard Bearer has a hand weapon and partial plate armour. Army Standard Bearer. May have shield (+1) and full plate armour (+1). May ride a warhorse (+16) that may be cloth barded (+4). May be Stubborn (+3).</characteristic>
               </characteristics>
             </profile>
             <profile id="65a5-47f0-f42a-277e" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1336,17 +1336,15 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aa0e-18e8-f35e-d26c" name="Full plate armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7a4f-d1a2-b7bb-c262" name="Full plate armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0da9-5415-f288-b22e" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="56cc-cab5-6508-acf5" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f1fa-e864-a58c-1f83" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ede-da97-e1e0-9ed2" type="min"/>
           </constraints>
           <!-- def-link -->
-          <rules>
-            <rule id="a3c2-37a3-1069-25ba" name="Full plate armor" hidden="false">
-              <description>They may have full plate armor (free)</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="27cc-74c5-4642-8a27" name="Full Plate Armour" hidden="false" targetId="70a8-fcb7-f10e-4737" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1442,31 +1440,63 @@
                 <conditions>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="lessThan"/>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="lessThan"/>
                 </conditions>
               </modifier>
               <modifier type="set" field="35a2-714d-db3e-3738" value="7">
                 <conditions>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="atLeast"/>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="lessThan"/>
                 </conditions>
               </modifier>
               <modifier type="set" field="35a2-714d-db3e-3738" value="7">
                 <conditions>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="lessThan"/>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
                 </conditions>
               </modifier>
               <modifier type="set" field="35a2-714d-db3e-3738" value="7">
                 <conditions>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="atLeast"/>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
             <profile id="f842-db9f-327e-c171" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mounted Knights have hand weapon, partial plate armour, horse, and shield. Shock Cavalry. First Charge. Veterans, Impetuous. May be mounted on a warhorse (+7) that may have cloth barding (+3). They may have full plate armor (free) and may take a lance (+6).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mounted Knights have hand weapon, partial plate armour, horse, and shield. Shock Cavalry. First Charge. Veterans, Impetuous. May be mounted on a warhorse (+7) that may have cloth barding (+3). They may have full plate armour (free) and may take a lance (+6).</characteristic>
               </characteristics>
             </profile>
             <profile id="1616-cc73-0022-7c07" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1481,12 +1511,28 @@
                 <conditions>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="lessThan"/>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="lessThan"/>
                 </conditions>
               </modifier>
               <modifier type="set" field="5882-dd5a-bc28-4024" value="2+ with Cloth barding +1 in hand-to-hand only">
                 <conditions>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="atLeast"/>
                 <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="2+ with Cloth barding +1 in hand-to-hand only">
+                <conditions>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="lessThan"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="2+ with Cloth barding +1 in hand-to-hand only">
+                <conditions>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6bf8-fa5b-00ad-7244" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9056-8223-dac8-9c18" type="atLeast"/>
+                <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
@@ -1498,6 +1544,16 @@
             <infoLink id="ac45-5481-754d-af2b" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="e5d0-b2e6-8255-8b20" name="Partial Plate Armour" hidden="false" targetId="8430-72da-5ac5-d33f" type="profile"/>
             <infoLink id="d07d-d044-9d21-c387" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="cd97-c85d-5569-5e92" name="Full Plate Armour" hidden="true" targetId="70a8-fcb7-f10e-4737" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="a3c5-ef9f-f16e-d545" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a4f-d1a2-b7bb-c262" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="39"/>
@@ -1510,17 +1566,15 @@
         <categoryLink id="9c81-7a86-718a-4b57" name="Nobles and Retainers" hidden="false" targetId="ef0c-765b-531d-44d3" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="39bf-b665-cde1-8546" name="Full plate armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2559-9ea2-d594-52c4" name="Full plate armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f817-447f-c8c3-87fa" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8bb8-7162-6fce-23f1" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9d1-7876-c779-3272" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="698f-4d71-a7dc-d9dd" type="min"/>
           </constraints>
           <!-- def-link -->
-          <rules>
-            <rule id="a6f0-748b-1b33-44d6" name="Full plate armor" hidden="false">
-              <description>May have full plate armor (free)</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="d96f-aa1a-cc78-6f05" name="Full Plate Armour" hidden="false" targetId="70a8-fcb7-f10e-4737" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1613,12 +1667,20 @@
               <modifiers>
                 <!-- encumbrance -->
               <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="c49b-0da0-4da2-deed" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2559-9ea2-d594-52c4" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="c49b-0da0-4da2-deed" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2559-9ea2-d594-52c4" type="atLeast"/>
+                </conditions>
               </modifier>
               </modifiers>
             </profile>
             <profile id="f3f1-69c0-3754-6a92" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Dismounted Knight have hand weapon, shield, and partial plate armor. May have full plate armor (free) and double handed weapon (+3). Veteran, Riding Horses. Sergeants</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Dismounted Knight have hand weapon, shield, and partial plate armour. May have full plate armour (free) and double handed weapon (+3). Veteran, Riding Horses. Sergeants</characteristic>
               </characteristics>
             </profile>
             <profile id="d764-e04a-0ac2-909b" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1635,6 +1697,16 @@
             <infoLink id="3e5d-2a4a-8028-b01d" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="d3ce-d43e-371f-7955" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
             <infoLink id="c0db-ffb3-9af3-d910" name="Partial Plate Armour" hidden="false" targetId="8430-72da-5ac5-d33f" type="profile"/>
+            <infoLink id="2355-ea31-cc50-34c5" name="Full Plate Armour" hidden="true" targetId="70a8-fcb7-f10e-4737" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="c49b-0da0-4da2-deed" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2559-9ea2-d594-52c4" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="7483-a948-66fd-3761" name="Double-handed Weapon" hidden="true" targetId="bebe-c4da-722c-c475" type="profile">
               <modifiers>
                 <!-- profile-swap -->
@@ -1657,17 +1729,15 @@
         <categoryLink id="b6b4-6503-9c12-6e28" name="Nobles and Retainers" hidden="false" targetId="ef0c-765b-531d-44d3" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="2ee5-1a43-2473-9c2d" name="Heavy armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1fbf-567d-0751-3323" name="Heavy armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="499b-8073-ce6b-d181" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a97-11c6-5afd-593f" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c73-8586-d0e4-cf4f" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1523-b92d-1daf-d9d8" type="min"/>
           </constraints>
           <!-- def-link -->
-          <rules>
-            <rule id="2851-bac4-872e-dd8a" name="Heavy armor" hidden="false">
-              <description>Mounted Sergeants may exchange light armor and shield for heavy armor (free)</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="6b83-02e5-aa24-ea53" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -1779,10 +1849,18 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="84a2-cdc2-9888-850f" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fbf-567d-0751-3323" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="9a0c-71f8-bfe2-0e54" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Equipment: Hand Weapon, thrusting spear, light armor, shield. Mounted Sergeants ride a horse. Mounted Sergeants may exchange light armor and shield for heavy armor (free) and thrusting spear for either lance (+3) or light crossbow (-1).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand Weapon, thrusting spear, light armour, shield. Mounted Sergeants ride a horse. Mounted Sergeants may exchange light armour and shield for heavy armour (free) and thrusting spear for either lance (+3) or light crossbow (-1).</characteristic>
               </characteristics>
             </profile>
             <profile id="77cd-ca42-853f-eb3f" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1791,7 +1869,14 @@
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
-              <!-- armour-save -->
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="84a2-cdc2-9888-850f" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fbf-567d-0751-3323" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -1799,6 +1884,16 @@
             <infoLink id="b334-173f-946d-9bf4" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="1109-5743-7f93-981b" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
             <infoLink id="93f3-2483-906c-ebb3" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="31b9-9509-8b1a-8876" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="84a2-cdc2-9888-850f" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fbf-567d-0751-3323" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="382d-1483-a446-ae12" name="Light Crossbow" hidden="true" targetId="019d-351d-ecdc-c800" type="profile">
               <modifiers>
                 <!-- profile-swap -->
@@ -1944,7 +2039,7 @@
             </profile>
             <profile id="81c5-e09e-3ece-1976" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Equipment: Hand Weapon, thrusting spear, light armor, shield. Dismounted Sergeants may exchange thrusting spear and shield for crossbow (+1), and if they do may have pavise (+2). May alternatively exchange thrusting spear, shield and light armor for heavy armor and halberd (free). Crossbow equipped sergeants are open order.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand Weapon, thrusting spear, light armour, shield. Dismounted Sergeants may exchange thrusting spear and shield for crossbow (+1), and if they do may have pavise (+2). May alternatively exchange thrusting spear, shield and light armour for heavy armour and halberd (free). Crossbow equipped sergeants are open order.</characteristic>
               </characteristics>
             </profile>
             <profile id="b188-94c9-aeed-2111" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -1990,10 +2085,10 @@
         <categoryLink id="77d8-9d59-7176-b0a5" name="Commoners" hidden="false" targetId="6f31-904b-a27a-5e59" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="14ec-e246-b9d9-e25f" name="Light armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="29ed-c138-3da3-8e37" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9409-8fb0-22cd-5410" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3959-d4ec-c68d-02a7" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7526-0546-c50b-3d67" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="98b7-0f15-b333-a5a4" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="2">
@@ -2003,11 +2098,9 @@
             </modifier>
           </modifiers>
           <!-- def-link -->
-          <rules>
-            <rule id="1222-f3f0-5066-29b5" name="Light armor" hidden="false">
-              <description>May have light armor (+2)</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="bbd2-0702-aeb3-f1fc" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -2122,7 +2215,7 @@
             </profile>
             <profile id="ab14-bc3b-d9c1-9460" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapons, thrusting spear, and shield. May have light armor (+2) and may exchange shield for pavise (+1). May exchange thrusting spear for crossbow or handgun (+1). The number of handgunners may not exceed the number of crossbowmen. You may combine Militia with pavise and militia with crossbows into a combined formation. The first rank of crossbowmen can fire at full effect (subsequent ranks cannot fire at all) if the unit is stationary. Crossbowmen not in combined formation are open order. Handgunners are skirmishers. Light Foot</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapons, thrusting spear, and shield. May have light armour (+2) and may exchange shield for pavise (+1). May exchange thrusting spear for crossbow or handgun (+1). The number of handgunners may not exceed the number of crossbowmen. You may combine Militia with pavise and militia with crossbows into a combined formation. The first rank of crossbowmen can fire at full effect (subsequent ranks cannot fire at all) if the unit is stationary. Crossbowmen not in combined formation are open order. Handgunners are skirmishers. Light Foot</characteristic>
               </characteristics>
             </profile>
             <profile id="c697-4f87-fe72-558b" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -2133,8 +2226,27 @@
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="29ed-c138-3da3-8e37" type="atLeast"/>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="08ba-10d2-f3b3-417d" type="lessThan"/>
+                </conditions>
+              </modifier>
               <modifier type="set" field="5882-dd5a-bc28-4024" value="5+ with Pavise +2 when shot at from the front only">
                 <conditions>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="29ed-c138-3da3-8e37" type="lessThan"/>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="08ba-10d2-f3b3-417d" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="29ed-c138-3da3-8e37" type="atLeast"/>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="08ba-10d2-f3b3-417d" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="4+ with Pavise +2 when shot at from the front only">
+                <conditions>
+                <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="29ed-c138-3da3-8e37" type="atLeast"/>
                 <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="08ba-10d2-f3b3-417d" type="atLeast"/>
                 </conditions>
               </modifier>
@@ -2145,6 +2257,16 @@
             <infoLink id="c2fa-21e8-9af0-2a9b" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="907a-b98e-453b-264b" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="2a35-7a36-b042-5377" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="a93d-d50c-48f5-1348" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="e264-521a-2a6e-2236" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="29ed-c138-3da3-8e37" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
@@ -2157,10 +2279,10 @@
         <categoryLink id="0d91-76f5-969b-469b" name="Commoners" hidden="false" targetId="6f31-904b-a27a-5e59" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="73d0-5d8e-1834-8fa2" name="Light armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6228-5ad0-5009-2301" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b144-05b4-3db8-6f3a" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a0c6-01c1-aa82-84c1" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="97af-d90d-0b0f-3c60" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9a8d-76ed-f5ef-e1b1" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="2">
@@ -2170,11 +2292,9 @@
             </modifier>
           </modifiers>
           <!-- def-link -->
-          <rules>
-            <rule id="3f3c-2514-57b0-fc72" name="Light armor" hidden="false">
-              <description>May have light armor (+2), halberd (+3), thrusting spear (+2), and buckler (free).</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="bb5c-fc9f-50f0-1a36" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -2300,7 +2420,7 @@
             </profile>
             <profile id="568b-0a80-71c3-5052" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Brigans have hand weapon. May have light armor (+2), halberd (+3), thrusting spear (+2), and buckler (free). Open Order.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Brigans have hand weapon. May have light armour (+2), halberd (+3), thrusting spear (+2), and buckler (free). Open Order.</characteristic>
               </characteristics>
             </profile>
             <profile id="a8f5-5150-c8b4-ebda" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -2311,8 +2431,27 @@
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6228-5ad0-5009-2301" type="atLeast"/>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e204-daf4-e632-2aba" type="lessThan"/>
+                </conditions>
+              </modifier>
               <modifier type="set" field="5882-dd5a-bc28-4024" value="6+ with Buckler +1 in hand-to-hand only">
                 <conditions>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6228-5ad0-5009-2301" type="lessThan"/>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e204-daf4-e632-2aba" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="6+">
+                <conditions>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6228-5ad0-5009-2301" type="atLeast"/>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e204-daf4-e632-2aba" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="5+ with Buckler +1 in hand-to-hand only">
+                <conditions>
+                <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6228-5ad0-5009-2301" type="atLeast"/>
                 <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e204-daf4-e632-2aba" type="atLeast"/>
                 </conditions>
               </modifier>
@@ -2322,6 +2461,16 @@
           <infoLinks>
             <infoLink id="0a37-f5af-0f0c-ce46" name="Open Order" hidden="false" targetId="6b07-0a99-df48-7a76" type="rule"/>
             <infoLink id="a066-c939-675a-033f" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="9e26-e9ce-2415-ccbd" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="01eb-4fcb-281a-ea94" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6228-5ad0-5009-2301" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="fc2f-e957-e50a-972a" name="Halberd" hidden="true" targetId="635a-1d79-5976-954c" type="profile">
               <modifiers>
                 <!-- profile-swap -->
@@ -2470,10 +2619,54 @@
         <categoryLink id="8af2-bf5c-c79e-7bbf" name="Commoners" hidden="false" targetId="6f31-904b-a27a-5e59" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5200-f480-a031-f569" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7715-feb0-4d07-7e5e" name="Hand weapons" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3651-bf61-9218-061b" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5dd5-9361-0daa-1769" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b2a4-cf7d-689b-1ad1" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f917-efad-213c-a37b" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca39-85b6-18be-5b88" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="9d92-f0eb-1dc1-fced" name="Hand weapons" hidden="false">
+              <description>May have hand weapons (+1)</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a28b-1ea9-7ef1-fad2" name="Short bow" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2ae1-4cf5-a5ca-8cbf" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c6a1-4146-804c-aa51" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca39-85b6-18be-5b88" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <rules>
+            <rule id="ac6d-c04d-d26d-4b8d" name="Short bow" hidden="false">
+              <description>or short bow (+1). Any unit equipped with short bow becomes Skirmishers.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fae1-9c5f-83f3-27d2" name="Standard bearer" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7621-8740-a8dc-33de" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9b8-ef9d-0472-52eb" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -2486,10 +2679,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4709-11b8-16d9-6061" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f7b1-85c4-e52a-3321" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb35-b466-a376-0ac9" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c178-c18f-9435-e226" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8bde-f4aa-23c1-db30" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f58c-c5cc-ca37-a1a8" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -2502,10 +2695,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6ef4-8dfa-d3eb-23f6" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8d4e-ed94-2037-dea1" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9aa5-2845-47dd-d242" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6dbb-b386-9965-24c6" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5ea-c9af-e5e6-5ceb" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7028-f4e5-ec6a-4f8d" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="5">
@@ -2538,15 +2731,13 @@
             </profile>
             <profile id="cd23-fe1d-0bc9-0e97" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Improvised weapons. Man have hand weapons (+1) or short bow (+1). Light Infantry, Levies. Any unit equipped with short bow becomes Skirmishers.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Improvised weapons. May have hand weapons (+1) or short bow (+1). Light Infantry, Levies. Any unit equipped with short bow becomes Skirmishers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
             <infoLink id="a601-e342-bfd0-553a" name="Levies" hidden="false" targetId="27b0-fb8f-0353-5958" type="rule"/>
             <infoLink id="2429-516b-8797-9115" name="Improvised Weapon" hidden="false" targetId="026a-8df7-0a12-0a18" type="profile"/>
-            <infoLink id="2484-27bb-6fa3-fadf" name="Short Bow" hidden="false" targetId="c963-937b-87a2-24f9" type="profile"/>
-            <infoLink id="42d9-3117-5555-7b60" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="1"/>
@@ -2598,8 +2789,8 @@
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">-</characteristic>
                 <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">-</characteristic>
                 <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">-</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">6</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">3</characteristic>
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">-</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">-</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
@@ -2612,7 +2803,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="94"/>
+            <cost name="pts" typeId="points" value="82"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2634,8 +2825,8 @@
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">-</characteristic>
                 <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">-</characteristic>
                 <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">-</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">-</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">-</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">5</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">2</characteristic>
                 <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">-</characteristic>
                 <characteristic name="A" typeId="ee87-e286-4768-82be">-</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">-</characteristic>
@@ -2648,7 +2839,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="94"/>
+            <cost name="pts" typeId="points" value="82"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3ddb-30b1-3fdd-e9dd" name="Crew" hidden="false" collective="false" import="true" type="model">
@@ -2685,10 +2876,10 @@
         <categoryLink id="07d1-6d26-172d-0730" name="Mercenaries" hidden="false" targetId="28b5-6150-ecee-a852" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="91b4-4080-300f-a1b2" name="Heavy armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eca5-118e-e70d-a795" name="Heavy armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="12f7-b966-da32-7bf4" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d46b-5549-5d18-cb81" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e2c-92bd-eea1-0837" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd6a-7020-3587-b52f" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="3">
@@ -2698,11 +2889,9 @@
             </modifier>
           </modifiers>
           <!-- def-link -->
-          <rules>
-            <rule id="3182-0187-a48b-7e4f" name="Heavy armor" hidden="false">
-              <description>May have heavy armor (+3)</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="2348-f751-e11e-ad17" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -2837,7 +3026,7 @@
             </profile>
             <profile id="56f7-a7d7-d85a-9f70" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mercenary Crossbowmen: Hand weapon and crossbow. May have heavy armor (+3) and pavise (+2). May exchange crossbow for light crossbow (-2) but then may not take any other equipment options. Mercenary Knights: Hand weapon, lance partial plate armor, shield, and warhorse. May give warhorse cloth barding (+3). Shock Cavalry. First Charge. Veteran, Unreliable.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mercenary Crossbowmen: Hand weapon and crossbow. May have heavy armour (+3) and pavise (+2). May exchange crossbow for light crossbow (-2) but then may not take any other equipment options. Mercenary Knights: Hand weapon, lance partial plate armour, shield, and warhorse. May give warhorse cloth barding (+3). Shock Cavalry. First Charge. Veteran, Unreliable.</characteristic>
               </characteristics>
             </profile>
             <profile id="d16b-97cb-a794-5cc7" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -2848,8 +3037,27 @@
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca5-118e-e70d-a795" type="atLeast"/>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="baf8-40bb-44fa-f71f" type="lessThan"/>
+                </conditions>
+              </modifier>
               <modifier type="set" field="5882-dd5a-bc28-4024" value="5+ with Pavise +2 when shot at from the front only">
                 <conditions>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca5-118e-e70d-a795" type="lessThan"/>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="baf8-40bb-44fa-f71f" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca5-118e-e70d-a795" type="atLeast"/>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="baf8-40bb-44fa-f71f" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="3+ with Pavise +2 when shot at from the front only">
+                <conditions>
+                <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca5-118e-e70d-a795" type="atLeast"/>
                 <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="baf8-40bb-44fa-f71f" type="atLeast"/>
                 </conditions>
               </modifier>
@@ -2862,6 +3070,16 @@
             <infoLink id="1c90-4a77-0ebb-d70a" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
             <infoLink id="c1d1-af57-2897-3e11" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="5308-ed88-8b25-0e5a" name="Crossbow" hidden="false" targetId="feb3-06f6-871d-95f9" type="profile"/>
+            <infoLink id="2d9c-7d81-31af-a6b9" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="816e-22ae-94cc-51f7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca5-118e-e70d-a795" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="53e4-e0f7-91d7-a475" name="Light Crossbow" hidden="true" targetId="019d-351d-ecdc-c800" type="profile">
               <modifiers>
                 <!-- profile-swap -->
@@ -2884,10 +3102,10 @@
         <categoryLink id="a0a0-dd94-49e2-4ee4" name="Mercenaries" hidden="false" targetId="28b5-6150-ecee-a852" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b925-2e08-bb23-354d" name="Heavy armor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1d83-c661-0a55-62c9" name="Heavy armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed06-5243-167e-df16" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b277-e9be-a93b-3509" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6662-ac23-1454-0388" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb1e-5dd8-f7ee-b8a8" type="min"/>
           </constraints>
           <modifiers>
             <modifier type="increment" field="points" value="3">
@@ -2897,11 +3115,9 @@
             </modifier>
           </modifiers>
           <!-- def-link -->
-          <rules>
-            <rule id="16b6-b0a4-8361-c1d5" name="Heavy armor" hidden="false">
-              <description>May have heavy armor (+3)</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink id="7b36-4b19-3a22-715a" name="Heavy Armour" hidden="false" targetId="16c5-d2b2-fa96-9cd2" type="profile"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -3036,7 +3252,7 @@
             </profile>
             <profile id="44e0-43db-4c3e-c29e" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mercenary Crossbowmen: Hand weapon and crossbow. May have heavy armor (+3) and pavise (+2). May exchange crossbow for light crossbow (-2) but then may not take any other equipment options. Mercenary Knights: Hand weapon, lance partial plate armor, shield, and warhorse. May give warhorse cloth barding (+3). Shock Cavalry. First Charge. Veteran, Unreliable.</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mercenary Crossbowmen: Hand weapon and crossbow. May have heavy armour (+3) and pavise (+2). May exchange crossbow for light crossbow (-2) but then may not take any other equipment options. Mercenary Knights: Hand weapon, lance partial plate armour, shield, and warhorse. May give warhorse cloth barding (+3). Shock Cavalry. First Charge. Veteran, Unreliable.</characteristic>
               </characteristics>
             </profile>
             <profile id="3df5-9288-c892-69be" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -3047,8 +3263,27 @@
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d83-c661-0a55-62c9" type="atLeast"/>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb96-12f5-3865-d454" type="lessThan"/>
+                </conditions>
+              </modifier>
               <modifier type="set" field="5882-dd5a-bc28-4024" value="5+ with Pavise +2 when shot at from the front only">
                 <conditions>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d83-c661-0a55-62c9" type="lessThan"/>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb96-12f5-3865-d454" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d83-c661-0a55-62c9" type="atLeast"/>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb96-12f5-3865-d454" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="5882-dd5a-bc28-4024" value="3+ with Pavise +2 when shot at from the front only">
+                <conditions>
+                <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d83-c661-0a55-62c9" type="atLeast"/>
                 <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb96-12f5-3865-d454" type="atLeast"/>
                 </conditions>
               </modifier>
@@ -3061,6 +3296,16 @@
             <infoLink id="f734-c8b1-5185-23a6" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
             <infoLink id="cd13-66d9-0ed4-09aa" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="f064-a1b8-4d56-8e3a" name="Crossbow" hidden="false" targetId="feb3-06f6-871d-95f9" type="profile"/>
+            <infoLink id="1ef3-e03f-e5a8-dff2" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="01ce-2070-6d4d-b79b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d83-c661-0a55-62c9" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink id="19c5-b62f-39c3-8c29" name="Light Crossbow" hidden="true" targetId="019d-351d-ecdc-c800" type="profile">
               <modifiers>
                 <!-- profile-swap -->
@@ -3081,7 +3326,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="98e8-8b87-8f24-8f69" name="Medieval French (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #93 (unofficial, Martin Gibbins). 1328AD-1444AD This army list covers the French armies from the reign of Philip VI, first Valoisking, up to the Ordnances issued by Charles VII in 1445. This period is obviously marked by the conflict with the Dnglish kings, known later as the Hundred Years War and a spectacular list of defeats, the sole exception being the last quarter of the 14th century when the Constable of France, Du Fuescling, was the only one to understand that the English wouldn’t be defeated on the battlefield, and another approach was required. The core of the army was the nobility that fought mounted, and later, after the disaster at Crecy, started to dismount in an unsuccessful attempt to resist the English barrage of arrows. Only later, with the development of artillery and the Ordnances of Charles VII that modernized the army, would the French be successful on the battlefield. Nobles &amp; Retainers: Knights Commoners: Town -Militia Allies: Medieval Scottish. You may only have Schiltrons, Archers, and Dismounted Men at Arms. Thanks to the Auld Alliance, these units Do Not count as Unreliable, and are treated as regular French units.
+      <description>ARMIES OF ANTIQUITY v2 #94 (unofficial, Martin Gibbins). This army list covers the French armies from the reign of Philip VI, first Valoisking, up to the Ordnances issued by Charles VII in 1445. This period is obviously marked by the conflict with the English kings, known later as the Hundred Years War and a spectacular list of defeats, the sole exception being the last quarter of the 14th century when the Constable of France, Du Fuescling, was the only one to understand that the English wouldn’t be defeated on the battlefield, and another approach was required. The core of the army was the nobility that fought mounted, and later, after the disaster at Crecy, started to dismount in an unsuccessful attempt to resist the English barrage of arrows. Only later, with the development of artillery and the Ordnances of Charles VII that modernized the army, would the French be successful on the battlefield. Nobles &amp; Retainers: Knights Commoners: Town -Militia Allies: Medieval Scottish. You may only have Schiltrons, Archers, and Dismounted Men at Arms. Thanks to the Auld Alliance, these units do not count as Unreliable, and are treated as regular French units.
 
 ARMY COMPOSITION:
 [Medieval French]

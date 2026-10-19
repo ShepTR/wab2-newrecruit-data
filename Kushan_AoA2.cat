@@ -360,11 +360,34 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="6">
+                <conditions>
+                <condition field="selections" scope="62f4-fcd8-e025-29e9" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52db-f0f4-e17e-86ed" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="fecf-d81a-dda6-7ba4" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Cataphracts. May have barding (+4).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Cataphracts may have barding (+4). Cataphracts have hand weapon, Cataphract. Armour and kontos.</characteristic>
               </characteristics>
+            </profile>
+            <profile id="0702-e3cc-6c25-0efe" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="62f4-fcd8-e025-29e9" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="52db-f0f4-e17e-86ed" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -375,60 +398,6 @@
             <cost name="pts" typeId="points" value="36"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9353-e132-5016-66df" name="LIGHT CAVALRY" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b91-ee83-481c-b071" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d86d-63bd-50c6-f965" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="138e-1111-decf-2886" name="LIGHT CAVALRY" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="35a2-714d-db3e-3738">-</characteristic>
-                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">Cataphracts</characteristic>
-                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">have</characteristic>
-                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">hand</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">weapon,</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">Cataphract</characteristic>
-                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">Armour</characteristic>
-                <characteristic name="A" typeId="ee87-e286-4768-82be">and</characteristic>
-                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">kontos.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="5a94-5a60-2977-0eac" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9804-cfb0-8055-0e14" name="Crew" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ad4-5093-fd86-2fba" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="239c-d807-c056-b47a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7dda-013c-c622-fb22" name="Crew" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="35a2-714d-db3e-3738">M</characteristic>
-                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">WS</characteristic>
-                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">BS</characteristic>
-                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">S</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">T</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">W</characteristic>
-                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">I</characteristic>
-                <characteristic name="A" typeId="ee87-e286-4768-82be">A</characteristic>
-                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">Ld</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="1245-9b52-cab0-b3ad" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4781-e39a-8433-13db" name="Lancers" hidden="false" collective="false" import="true" type="unit">
@@ -436,13 +405,13 @@
         <categoryLink id="f1e4-8b8a-b9f1-844c" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="3f21-c8d0-53a4-1190" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fb64-eb11-7dcd-0a01" name="Light armour" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da6f-0e7a-da0d-f48f" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f431-6659-2545-dcd7" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c60a-ec58-de5f-8b81" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="696d-95cb-452f-efed" type="min"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" field="points" value="4">
+            <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7aa0-2abd-9d00-6310" repeats="1" roundUp="false"/>
               </repeats>
@@ -450,7 +419,7 @@
           </modifiers>
           <!-- def-link -->
           <infoLinks>
-            <infoLink id="7fb8-12e4-5b0b-e5ba" name="Full Metal Barding" hidden="false" targetId="e556-cf0c-4c05-4d8b" type="profile"/>
+            <infoLink id="e8c8-9187-4797-34e8" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -521,18 +490,10 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
               </characteristics>
-              <modifiers>
-                <!-- encumbrance -->
-              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
-                <conditions>
-                <condition field="selections" scope="4781-e39a-8433-13db" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f21-c8d0-53a4-1190" type="atLeast"/>
-                </conditions>
-              </modifier>
-              </modifiers>
             </profile>
             <profile id="4151-8a76-637f-2af9" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Cataphracts. May have barding (+4).</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Lancers have hand weapon, composite bow and kontos. Light Cavalry. Expert Horsemen. May have light armour (+2).</characteristic>
               </characteristics>
             </profile>
             <profile id="ba5c-ba52-70ce-f0b6" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -545,18 +506,143 @@
                 <!-- armour-save -->
               <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
                 <conditions>
-                <condition field="selections" scope="4781-e39a-8433-13db" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3f21-c8d0-53a4-1190" type="atLeast"/>
+                <condition field="selections" scope="4781-e39a-8433-13db" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb64-eb11-7dcd-0a01" type="atLeast"/>
                 </conditions>
               </modifier>
               </modifiers>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="d455-6d46-dcef-9010" name="Cataphracts" hidden="false" targetId="eb86-0081-b1a8-a733" type="rule"/>
+            <infoLink id="0497-e055-f382-2271" name="Expert Horsemen" hidden="false" targetId="01f3-18f2-5b03-2aee" type="rule"/>
             <infoLink id="2e87-3d36-0fe7-a01d" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="f280-3c40-53c1-4954" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+            <infoLink id="6469-1cb8-7fec-fe73" name="Kontos" hidden="false" targetId="f901-2529-d411-6ed0" type="profile"/>
+            <infoLink id="4e14-f3f0-379a-7455" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="4781-e39a-8433-13db" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb64-eb11-7dcd-0a01" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="70fb-19dc-ca82-f16c" name="Horse Archers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="3fd8-1fad-5488-406e" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6242-51a7-7305-0e73" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+<constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="881d-772c-7ffe-dbfb" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="611f-a51e-8d85-4b3f" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" field="points" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a92d-d786-9f0e-31ad" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <!-- def-link -->
+          <infoLinks>
+            <infoLink id="96bf-7551-398b-beed" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+            <selectionEntry id="17f6-9d42-d37c-c044" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d561-543d-27b1-4395" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9995-278d-bd68-9aae" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6475-787b-4054-ceb9" name="Standard bearer" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3355-e722-c1b2-5dd1" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2091-499c-ecb6-7206" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ab81-2a01-441d-0214" name="Musician" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba43-d547-8e11-118e" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3db5-5b7c-a3e0-dbc0" type="min"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+        <selectionEntry id="a92d-d786-9f0e-31ad" name="Horse Archers" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a17a-9390-075e-e5b3" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="94c7-c021-6d07-154f" name="Horse Archers" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7438-4911-7cee-91f1" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Horse archers have hand weapon and composite bow. Nomad Cavalry. Skirmishers. May have shield (+1). There must be at least one horse archer figure for each cataphract figure in the army.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b244-ceb3-888c-76bf" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="70fb-19dc-ca82-f16c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6242-51a7-7305-0e73" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="051b-bfe7-780f-5f0a" name="Nomad Cavalry" hidden="false" targetId="123d-07c6-8e8c-e8db" type="rule"/>
+            <infoLink id="aa14-99f7-1622-f72b" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
+            <infoLink id="46d3-698d-3933-ba35" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="4990-c587-955b-bb2a" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+            <infoLink id="0d47-833b-f9a8-0eee" name="Shield" hidden="true" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="70fb-19dc-ca82-f16c" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6242-51a7-7305-0e73" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="29"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1506,7 +1592,7 @@
   </selectionEntries>
   <sharedRules>
     <rule id="ec01-df92-853d-1a01" name="Kushan (AoA2) - List Notes" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
-      <description>ARMIES OF ANTIQUITY v2 #39 (unofficial, Martin Gibbins). 140 BC to 400 AD The Kushan were a central Asian steppe people who conquered the Greek kingdoms of Bactria, and later came to rule much of eastern Iran, Afghanistan, northern India and central Asia. Their position astride the trade routes bought them into conflict with China. The state broke up in and the various splinter states were eventually overcome by the Sassanids or the Huns. The early army made use of the remnant Graeco-Bactrian troops while later on good use was made of Indian subject forces. Allies: The army may have allies from the Bactrian Greek List (infantry only) or the Steppe Nomad list (use the Alan entry), or the Classical Indian list, including up to 1 elephant per 900 points.
+      <description>ARMIES OF ANTIQUITY v2 #41 (unofficial, Martin Gibbins). The Kushan were a central Asian steppe people who conquered the Greek kingdoms of Bactria, and later came to rule much of eastern Iran, Afghanistan, northern India and central Asia. Their position astride the trade routes bought them into conflict with China. The state broke up in and the various splinter states were eventually overcome by the Sassanids or the Huns. The early army made use of the remnant Graeco-Bactrian troops while later on good use was made of Indian subject forces. Allies: The army may have allies from the Bactrian Greek List (infantry only) or the Steppe Nomad list (use the Alan entry), or the Classical Indian list, including up to 1 elephant per 900 points.
 
 ARMY COMPOSITION:
 [Kushan]
