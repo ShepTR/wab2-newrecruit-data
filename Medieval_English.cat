@@ -4579,6 +4579,24 @@ Levy Archers have improvised weapon and longbow. Open Order. Levies. May not hav
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="30c5-bf58-bad7-a90a" name="Cannon" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+      <!-- crew-merge -->
+        <modifier type="increment" field="points" value="10">
+          <conditions>
+            <condition field="selections" scope="30c5-bf58-bad7-a90a" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c507-ee6d-0d97-2c50" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="points" value="10">
+          <conditions>
+            <condition field="selections" scope="30c5-bf58-bad7-a90a" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c507-ee6d-0d97-2c50" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="points" value="10">
+          <conditions>
+            <condition field="selections" scope="30c5-bf58-bad7-a90a" value="6" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c507-ee6d-0d97-2c50" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f5a1-73ae-fe2b-2519" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>
@@ -4611,7 +4629,7 @@ Levy Archers have improvised weapon and longbow. Open Order. Levies. May not hav
           <modifiers>
             <modifier type="increment" field="points" value="2">
               <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a2b-3367-33b8-5e73" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c507-ee6d-0d97-2c50" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -4656,10 +4674,10 @@ Levy Archers have improvised weapon and longbow. Open Order. Levies. May not hav
         <selectionEntry id="c507-ee6d-0d97-2c50" name="Crew" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5105-c472-0e12-36c7" type="min"/>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb0a-f148-7185-46ea" type="max"/>
+            <constraint field="selections" scope="parent" value="6" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb0a-f148-7185-46ea" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6ee7-35e5-de0a-2767" name="Crew (3x)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="6ee7-35e5-de0a-2767" name="Crew" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
@@ -4672,24 +4690,6 @@ Levy Archers have improvised weapon and longbow. Open Order. Levies. May not hav
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
                 <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
-              <modifiers>
-                <!-- crew-line -->
-                <modifier type="set" field="name" value="Crew (4x)">
-                  <conditions>
-                    <condition field="selections" scope="30c5-bf58-bad7-a90a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a2b-3367-33b8-5e73" type="atLeast"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="name" value="Crew (5x)">
-                  <conditions>
-                    <condition field="selections" scope="30c5-bf58-bad7-a90a" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a2b-3367-33b8-5e73" type="atLeast"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="name" value="Crew (6x)">
-                  <conditions>
-                    <condition field="selections" scope="30c5-bf58-bad7-a90a" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a2b-3367-33b8-5e73" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -4700,37 +4700,10 @@ Levy Archers have improvised weapon and longbow. Open Order. Levies. May not hav
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1a2b-3367-33b8-5e73" name="Additional Crew" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51e0-dc8d-b283-d7c6" type="min"/>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="390e-8bbe-9bb3-af22" type="max"/>
-          </constraints>
-          <!-- crew-line -->
-          <profiles>
-            <profile id="9da4-664a-542f-321d" name="Additional Crew" publicationId="fcb9-17be-94c2-bcfc" hidden="true" typeId="a802-40b5-d980-cabc" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
-                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
-                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
-                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
-                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
-                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
-                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
-                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="4dd3-90e1-72d5-0f22" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="c116-b351-f3a3-77dc" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="db42-7777-fa7b-6bc5" name="Gascon Knight" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>

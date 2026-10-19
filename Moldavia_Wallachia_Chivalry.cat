@@ -3047,6 +3047,17 @@
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b865-df36-3030-24b0" type="max"/>
       </constraints>
       <modifiers>
+      <!-- crew-merge -->
+        <modifier type="increment" field="points" value="10">
+          <conditions>
+            <condition field="selections" scope="a62c-66be-16fa-d861" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5738-7d5a-edd6-d358" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="points" value="10">
+          <conditions>
+            <condition field="selections" scope="a62c-66be-16fa-d861" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5738-7d5a-edd6-d358" type="atLeast"/>
+          </conditions>
+        </modifier>
         <!-- points-limit-1-per-1000 -->
         <modifier type="increment" field="b865-df36-3030-24b0" value="1">
           <repeats>
@@ -3124,10 +3135,10 @@
         <selectionEntry id="5738-7d5a-edd6-d358" name="Crew" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e13-66df-8307-1211" type="min"/>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8cfe-4308-2b9b-d87f" type="max"/>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8cfe-4308-2b9b-d87f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9edf-6951-2698-9e65" name="Crew (3x)" publicationId="da79-edc9-ea11-dbc4" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="9edf-6951-2698-9e65" name="Crew" publicationId="da79-edc9-ea11-dbc4" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
@@ -3140,19 +3151,6 @@
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
                 <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
-              <modifiers>
-                <!-- crew-line -->
-                <modifier type="set" field="name" value="Crew (4x)">
-                  <conditions>
-                    <condition field="selections" scope="a62c-66be-16fa-d861" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e5da-0b36-df16-f10a" type="atLeast"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="name" value="Crew (5x)">
-                  <conditions>
-                    <condition field="selections" scope="a62c-66be-16fa-d861" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e5da-0b36-df16-f10a" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -3182,37 +3180,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e5da-0b36-df16-f10a" name="Additional Crew" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0bcf-db19-c80c-0865" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c690-2779-3492-6e95" type="max"/>
-          </constraints>
-          <!-- crew-line -->
-          <profiles>
-            <profile id="267a-53a1-811d-b3f0" name="Additional Crew" publicationId="da79-edc9-ea11-dbc4" hidden="true" typeId="a802-40b5-d980-cabc" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
-                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
-                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
-                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
-                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">2</characteristic>
-                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
-                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
-                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="cf53-6689-cf9f-0b22" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-            <infoLink id="2a02-072a-ad9a-22af" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e28d-ba86-c49d-88c3" name="Wagon Tabor" hidden="false" collective="false" import="true" type="unit">
       <constraints>

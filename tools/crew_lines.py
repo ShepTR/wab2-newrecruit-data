@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Additional / extra / third crew are folded into the existing crew stat line instead of showing a second line:
+"""SUPERSEDED by crew_merge.py (kept for reference; no longer run). Additional / extra / third crew are folded into the existing crew stat line instead of showing a second line:
 the crew profile is named 'Crew (Nx)' and its name changes to 'Crew (N+kx)' when k additional crew are taken; the additional model's own profile is hidden.
 Usage: python3 crew_lines.py <outdir>   (idempotent)"""
 import sys, os, re, glob

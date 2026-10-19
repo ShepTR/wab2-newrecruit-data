@@ -5716,6 +5716,14 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="8eff-1163-3505-6ee9" name="Heavy Ballista" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+      <!-- crew-merge -->
+        <modifier type="increment" field="points" value="6">
+          <conditions>
+            <condition field="selections" scope="8eff-1163-3505-6ee9" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="76f1-b3f3-02af-5ce6" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="e1df-87c1-a10b-1dd3" name="Special Troops, Mercenaries &amp; Allies" hidden="false" targetId="c943-6d8d-bb33-47ee" primary="true"/>
       </categoryLinks>
@@ -5792,10 +5800,10 @@
         <selectionEntry id="76f1-b3f3-02af-5ce6" name="Crew" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7bc-e569-1c7b-56cb" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3205-7ffe-a32b-a3c1" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3205-7ffe-a32b-a3c1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0a49-ae50-91bd-08c3" name="Crew (2x)" publicationId="0641-2ee1-c462-c414" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="0a49-ae50-91bd-08c3" name="Crew" publicationId="0641-2ee1-c462-c414" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
@@ -5808,14 +5816,6 @@
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
                 <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
-              <modifiers>
-                <!-- crew-line -->
-                <modifier type="set" field="name" value="Crew (3x)">
-                  <conditions>
-                    <condition field="selections" scope="8eff-1163-3505-6ee9" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8d5c-f844-8391-8d6e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -5845,38 +5845,25 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8d5c-f844-8391-8d6e" name="Additional Crew" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b63-e9b4-0a2b-0f70" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b87b-0f68-582a-8b00" type="max"/>
-          </constraints>
-          <!-- crew-line -->
-          <profiles>
-            <profile id="70ae-bafa-1b02-a2c7" name="Additional Crew" publicationId="0641-2ee1-c462-c414" hidden="true" typeId="a802-40b5-d980-cabc" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
-                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
-                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
-                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
-                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
-                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
-                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
-                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="d69c-76e2-6d66-d34e" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="6"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1ce8-4eda-24a1-dee1" name="Stone Thrower" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+      <!-- crew-merge -->
+        <modifier type="increment" field="points" value="6">
+          <conditions>
+            <condition field="selections" scope="1ce8-4eda-24a1-dee1" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3a21-3646-8a73-f7a5" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="points" value="6">
+          <conditions>
+            <condition field="selections" scope="1ce8-4eda-24a1-dee1" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3a21-3646-8a73-f7a5" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="05e1-ddc4-3247-4de3" name="Special Troops, Mercenaries &amp; Allies" hidden="false" targetId="c943-6d8d-bb33-47ee" primary="true"/>
       </categoryLinks>
@@ -5953,10 +5940,10 @@
         <selectionEntry id="3a21-3646-8a73-f7a5" name="Crew" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b872-fe8b-87d4-228d" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4c31-a1e6-2faa-6aa2" type="max"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4c31-a1e6-2faa-6aa2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ec84-6570-e1d3-baf5" name="Crew (2x)" publicationId="0641-2ee1-c462-c414" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+            <profile id="ec84-6570-e1d3-baf5" name="Crew" publicationId="0641-2ee1-c462-c414" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
                 <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
@@ -5969,19 +5956,6 @@
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
                 <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
               </characteristics>
-              <modifiers>
-                <!-- crew-line -->
-                <modifier type="set" field="name" value="Crew (3x)">
-                  <conditions>
-                    <condition field="selections" scope="1ce8-4eda-24a1-dee1" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f08-83b7-e74c-5094" type="atLeast"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="name" value="Crew (4x)">
-                  <conditions>
-                    <condition field="selections" scope="1ce8-4eda-24a1-dee1" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f08-83b7-e74c-5094" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -6011,36 +5985,10 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6f08-83b7-e74c-5094" name="Additional Crew" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9706-2022-ded6-9296" type="min"/>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d015-5ccf-536a-b587" type="max"/>
-          </constraints>
-          <!-- crew-line -->
-          <profiles>
-            <profile id="a52d-16f3-f7e7-7839" name="Additional Crew" publicationId="0641-2ee1-c462-c414" hidden="true" typeId="a802-40b5-d980-cabc" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
-                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
-                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
-                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
-                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
-                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
-                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
-                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
-                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
-                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="6c1f-5ddf-9874-85ff" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="6"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedRules>
