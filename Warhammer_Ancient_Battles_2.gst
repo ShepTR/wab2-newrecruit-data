@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="18" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="19" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -7941,10 +7941,10 @@
         </categoryLink>
         <categoryLink id="8d83-86a9-1331-6caa" name="Common Troops: Almohads" hidden="false" targetId="2cd3-c879-de42-09e1" primary="false">
           <constraints>
-            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="e167-f620-50a5-2865" type="min"/>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="660e-39ec-fcbb-6f28" type="max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" field="e167-f620-50a5-2865" value="50">
+            <modifier type="set" field="660e-39ec-fcbb-6f28" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0632-d00f-88f4-ca36" type="atLeast"/>
               </conditions>
@@ -15431,9 +15431,9 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     <profile id="aae1-ff76-b491-96e0" name="Repeating Crossbow" publicationId="b792-78e1-7b03-d4d6" page="p.6" hidden="false" typeId="5de1-764d-a40b-f6b5" typeName="Missile Weapon">
       <characteristics>
         <characteristic name="Range" typeId="6962-86a7-af53-83bb">24"</characteristic>
-        <characteristic name="Strength" typeId="e237-5c6b-65a3-8bf7">3</characteristic>
+        <characteristic name="Strength" typeId="e237-5c6b-65a3-8bf7">4</characteristic>
         <characteristic name="Save Modifier" typeId="b819-8576-7e60-dba3">-</characteristic>
-        <characteristic name="Notes" typeId="6282-7884-5061-ecf1">A crossbow with a feed magazine on top for the bolts. Fires twice per turn with a -1 To Hit roll. May be used as a Last Ditch Weapon (stand &amp; fire charge reaction even if the charging unit is within half distance; the unit may use no other close combat weapon except hand weapons after firing). Strength is not printed in the book; treated as 3.</characteristic>
+        <characteristic name="Notes" typeId="6282-7884-5061-ecf1">A crossbow with a feed magazine on top for the bolts. Fires twice per turn with a -1 To Hit roll. May be used as a Last Ditch Weapon (stand &amp; fire charge reaction even if the charging unit is within half distance; the unit may use no other close combat weapon except hand weapons after firing).</characteristic>
       </characteristics>
     </profile>
 

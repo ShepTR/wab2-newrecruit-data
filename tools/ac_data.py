@@ -81,7 +81,7 @@ E.append(U(ARC, 'Trained Archers', [M('Trained Archer', '4 2 3 3 3 1 3 1 7', 8, 
     'Longbow and hand weapon. Stakes (+20 pts per unit). May have light armour (+2 pts). Open Order, Stakes. 0-1 unit of Trained Archers may be designated Mounted Infantry, but cannot take stakes as an equipment option.', page='15'))
 E.append(U(ARC, 'Poor Archers', [M('Poor Archer', '4 2 2 3 3 1 3 1 6', 6, mn=5, weapons=['Long Bow', 'Hand Weapon'], rules=['Open Order'], options=[('Light armour', 2), ('Stakes (+20 pts per unit)', 0)])],
     'Longbow and hand weapon. Stakes (+20 pts per unit). May have light armour (+2 pts). Open Order, Stakes. Not allowed in the Continental army; the Home army must have at least one unit of Poor Archers (not enforced).', page='15'))
-E.append(U(INF, 'Spearmen / Billmen', [M('Spearman/Billman', '4 3 2 3 3 1 3 1 6', 7, mn=5, weapons=['Thrusting Spear', 'Hand Weapon', 'Shield'], options=[('Light armour', 2), (HEAVY, 1)])],
+E.append(U(INF, 'Spearmen / Billmen', [M('Spearman/Billman', '4 3 2 3 3 1 3 1 6', 7, mn=5, weapons=['Thrusting Spear', 'Hand Weapon', 'Shield'], options=[('Light armour', 2), (HEAVY, 3)])],
     'Thrusting spear or bill (counts as halberd; both entered as the thrusting spear), hand weapon and shield. May have light armour (+2 pts) or heavy armour (+3 pts).', page='15'))
 E.append(U(INF, 'Peasants', [M('Peasant', '4 1 2 3 3 1 2 1 4', 3, mn=5, weapons=['Improvised Weapon'], rules=['Open Order', 'Warband Psychology (rule 1)', 'Peasants (Chivalry)'])],
     'Improvised weapons. Open Order. Warband Rule 1. Peasants fear all formed enemy cavalry and infantry except other peasants. Peasant units may not include a Standard or Musician. Not allowed in the Continental army.', page='15'))

@@ -10,7 +10,7 @@ B = RB.B
 hid = B.hid
 OUT = RB.OUT
 SPUB = hid('pub', 'vlad')
-REV = '15'
+REV = '19'
 CW.DROP_WEAPONS.update({'Horse', 'Warhorse'})
 CW.WEAPON_MAP.update({'Javelins': 'Javelin', 'Two-handed Weapon': 'Double-handed Weapon', 'Kontarion': 'Kontos', 'Full Plate': 'Full Plate Armour', 'Partial Plate': 'Partial Plate Armour', 'Composite Bow': 'Bow', 'Sword': 'Hand Weapon'})
 RULE_MAP = {'Frenzy (Religious Personality)': 'Frenzy (Religious Personality)', 'Army General': 'Army General (Chariot Wars)', 'Expert Horsemen (if mounted)': 'Expert Horsemen', 'Feigned Flight (if mounted)': 'Feigned Flight', 'Warband Psychology (rules 1 & 2)': 'Warband Psychology (rules 1 & 2)'}

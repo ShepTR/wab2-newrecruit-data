@@ -324,8 +324,8 @@ FR.append(U('Pueri', 'Pueri', [M('Pueri Light Cavalryman', '8 3 3 3 3 1 3 1 7', 
 FR.append(U('Liberi', 'Liberi', [M('Freeman', '4 3 3 3 3 1 3 1 6', 6, mn=5, weapons=['Hand Weapon', 'Thrusting Spear', 'Shield'], options=[('Javelins', 1), ('Exchange thrusting spear and shield for bow', 0), ('Light infantry (free)', 0),
     ('Men of the Marches (Leadership 7)', 1), ('Light armour', 2), ('Shieldwall', 0), ('Exchange thrusting spear for throwing spear', 0)])],
     'Hand weapons, thrusting spears and shield. May be additionally equipped with javelins (+1 pt). Every other unit may exchange thrusting spear and shield for bows (free). Any unit of Liberi may be designated as light infantry (free). Carolingian French: units may be upgraded to Men of the Marches (+1 pt; Leadership 7). Flanders: cost 7 pts each, have Shieldwall and may be given light armour (+2 pts). Bretons: all Liberi count as light infantry and may exchange thrusting spears for throwing spears (free).', page='73'))
-FR.append(U('Coloni', 'Coloni', [M('Unfree & poor', '4 2 3 3 3 1 3 1 5', 4, mn=5, weapons=['Hand Weapon', 'Javelin'], options=[('Exchange javelins for sling', 0), ('Exchange javelins for bow', 1)])],
-    'Hand weapons and javelins. May exchange javelins (and buckler) for sling (free), or bow (+1 pt). Skirmishers.', page='73'))
+FR.append(U('Coloni', 'Coloni', [M('Unfree & poor', '4 2 3 3 3 1 3 1 5', 4, mn=5, weapons=['Hand Weapon', 'Javelin', 'Buckler'], options=[('Exchange javelins and buckler for sling', 0), ('Exchange javelins for bow', 1)])],
+    'Hand weapons, javelins and buckler. May exchange javelins and buckler for sling (free), or javelins for bow (+1 pt). Skirmishers.', page='73'))
 for n in ('Vikings', 'Gestir', 'Stipendarii (dismounted)', 'Stipendarii (mounted)', 'Serjeants', 'Devroet', 'Freebooters', 'Cottereaux'): FR.append(DOW(n))
 VAR['FR'] = {k: f'Shieldwall: Western Franks - {k}' for k in ('Carolingian French', 'County of Flanders', 'Duchy of Normandy', 'The Bretons', 'Capetian French')}
 FC_ML = 'Common Warriors: Milites and Liberi'; FC_MP = 'Common Warriors: Milites and Pueri'

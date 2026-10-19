@@ -11,7 +11,7 @@ B = RB.B
 hid = B.hid
 OUT = RB.OUT
 SPUB = hid('pub', 'artofwar')
-REV = '17'
+REV = '19'
 CW.DROP_WEAPONS.update({'Horse', 'Warhorse'})
 CW.WEAPON_MAP.update({'Javelins': 'Javelin', 'Compound Bow': 'Bow', 'Repeat Crossbow': 'Repeating Crossbow', 'Barding': 'Full Metal Barding', 'Rocks': 'Rocks'})
 RULE_MAP = {'Army General': 'Army General (Chariot Wars)'}
@@ -39,7 +39,7 @@ def main():
     # new shared weapon / armour profiles used by the Art of War
     PROFS = [
      ('Noble Sword', 'p.6', '89ad-db9d-72f5-90d2', [('fa7e-7b3b-c328-7b67', 'Nobles and other notables may have a specially forged sword, usually of extraordinary length and beauty. It confers a +1 Strength bonus on all hits.')]),
-     ('Repeating Crossbow', 'p.6', '5de1-764d-a40b-f6b5', [('6962-86a7-af53-83bb', '24"'), ('e237-5c6b-65a3-8bf7', '3'), ('b819-8576-7e60-dba3', '-'), ('6282-7884-5061-ecf1', 'A crossbow with a feed magazine on top for the bolts. Fires twice per turn with a -1 To Hit roll. May be used as a Last Ditch Weapon (stand & fire charge reaction even if the charging unit is within half distance; the unit may use no other close combat weapon except hand weapons after firing). Strength is not printed in the book; treated as 3.')]),
+     ('Repeating Crossbow', 'p.6', '5de1-764d-a40b-f6b5', [('6962-86a7-af53-83bb', '24"'), ('e237-5c6b-65a3-8bf7', '4'), ('b819-8576-7e60-dba3', '-'), ('6282-7884-5061-ecf1', 'A crossbow with a feed magazine on top for the bolts. Fires twice per turn with a -1 To Hit roll. May be used as a Last Ditch Weapon (stand & fire charge reaction even if the charging unit is within half distance; the unit may use no other close combat weapon except hand weapons after firing).')]),
      ('Rocks', 'p.110', '5de1-764d-a40b-f6b5', [('6962-86a7-af53-83bb', '4"'), ('e237-5c6b-65a3-8bf7', '3'), ('b819-8576-7e60-dba3', '-'), ('6282-7884-5061-ecf1', 'Thrown rocks and farm implements (Peasants, Tribespeople).')]),
      ('Lamellar Armour', 'p.6', '96b5-bd5f-9a95-1bd7', [('80cf-4b2c-fa74-7e4d', '5 or 6'), ('227d-844c-2992-a59b', '4, 5 or 6'), ('85c2-9874-4f90-9229', 'Generals and other notable leaders may have increased protection, considered to be lamellar armour, which provides the wearer with a 5+ armour save but counts as light armour for the purposes of movement penalties.')]),
     ]

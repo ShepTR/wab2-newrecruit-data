@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6864-b22f-4cf1-3e9e" name="English Hundred Years War (Armies of Chivalry)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6864-b22f-4cf1-3e9e" name="English Hundred Years War (Armies of Chivalry)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>English Hundred Years War (Armies of Chivalry): units and points from the Armies of Chivalry army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="9ce0-3eae-0df7-13da" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -4168,6 +4168,12 @@
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9890-5abf-805a-a1c0" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+          <!-- optexcl -->
+          <modifier type="set" field="hidden" value="true">
+            <conditions>
+              <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3de2-7a63-9ddb-bf68" type="atLeast"/>
+            </conditions>
+          </modifier>
           </modifiers>
           <!-- def-link -->
           <infoLinks>
@@ -4183,11 +4189,17 @@
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8b8-9b98-0b67-fd47" type="min"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" field="points" value="1">
+            <modifier type="increment" field="points" value="3">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9890-5abf-805a-a1c0" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+          <!-- optexcl -->
+          <modifier type="set" field="hidden" value="true">
+            <conditions>
+              <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2f7-52ee-8791-b4e3" type="atLeast"/>
+            </conditions>
+          </modifier>
           </modifiers>
           <!-- def-link -->
           <infoLinks>

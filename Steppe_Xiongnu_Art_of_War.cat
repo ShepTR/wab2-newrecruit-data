@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bb2e-e36f-389d-3c20" name="Eastern Steppe Nomads: Xiongnu (Art of War)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="bb2e-e36f-389d-3c20" name="Eastern Steppe Nomads: Xiongnu (Art of War)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Eastern Steppe Nomads: Xiongnu (Art of War): units and points from the Art of War army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="800f-f318-a03c-6c2d" name="Army General (Shanyu)" hidden="false" collective="false" import="true" type="unit">
@@ -972,10 +972,18 @@
                 <characteristic name="A" typeId="ee87-e286-4768-82be">2</characteristic>
                 <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">10</characteristic>
               </characteristics>
+              <modifiers>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="8">
+                <conditions>
+                <condition field="selections" scope="e528-fe3e-9d3b-e6c9" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffb2-23cf-cc75-c736" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
             <profile id="b1a5-a46b-d145-f09c" name="Equipment and options (as printed in WAB2 army list)" publicationId="b792-78e1-7b03-d4d6" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
               <characteristics>
-                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Special Character. Armed with a hand weapon, bow, thrusting spear, lamellar armour and horse (free; Movement 8"). Army General. Warrior of Legend. Fearsome. Steppe Nomad Cavalry. Founder of the Xiongnu empire. (The Art of War p.71)</characteristic>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Special Character. Armed with a hand weapon, bow, thrusting spear and lamellar armour. May ride a horse (free; Movement 8"). Army General. Warrior of Legend. Fearsome. Steppe Nomad Cavalry. Founder of the Xiongnu empire. (The Art of War p.71)</characteristic>
               </characteristics>
             </profile>
             <profile id="8104-eff7-39c4-e18a" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
@@ -984,7 +992,14 @@
                 <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
                 <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
               </characteristics>
-              <!-- armour-save -->
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="e528-fe3e-9d3b-e6c9" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffb2-23cf-cc75-c736" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -998,6 +1013,21 @@
             <infoLink id="3f06-4ad9-15ed-2963" name="Lamellar Armour" hidden="false" targetId="245a-bbf4-226a-cc61" type="profile"/>
             <infoLink id="a274-e4c4-134b-5131" name="Eastern Steppe Nomads: Xiongnu (Art of War) - List Notes" hidden="false" targetId="0ce4-f9bb-7d7c-d0c4" type="rule"/>
           </infoLinks>
+          <selectionEntries>
+            <selectionEntry id="ffb2-23cf-cc75-c736" name="Ride a horse" hidden="false" collective="true" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f03c-c350-4132-0d40" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8af7-23ec-c460-10e9" type="min"/>
+              </constraints>
+              <!-- def-link -->
+          <infoLinks>
+            <infoLink id="d0a6-8992-8c8f-1774" name="Horse" hidden="false" targetId="aceb-51bd-e1cd-6b4d" type="rule"/>
+          </infoLinks>
+          <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="200"/>
           </costs>

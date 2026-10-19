@@ -10,7 +10,7 @@ B = RB.B
 hid = B.hid
 OUT = RB.OUT
 SPUB = hid('pub', 'aoa2')
-REV = '18'
+REV = '19'
 CW.DROP_WEAPONS.update({'Horse', 'Warhorse'})
 
 RULE_MAP = {'Army General': 'Army General (Chariot Wars)'}

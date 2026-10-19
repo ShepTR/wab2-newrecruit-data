@@ -10,7 +10,7 @@ B = RB.B
 hid = B.hid
 OUT = RB.OUT
 SPUB = hid('pub', 'armies of chivalry')
-REV = '12'
+REV = '19'
 CW.DROP_WEAPONS.update({'Horse', 'Warhorse'})
 CW.WEAPON_MAP.update({'Longbow': 'Long Bow', 'Javelins': 'Javelin', 'Two-handed Weapon': 'Double-handed Weapon'})
 RULE_MAP = {'Army General': 'Army General (Chariot Wars)',
