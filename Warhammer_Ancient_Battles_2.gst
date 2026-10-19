@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="14" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="15" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -14,6 +14,7 @@
     <publication id="da79-edc9-ea11-dbc4" name="Armies of Chivalry" shortName="AC" publisher="Warhammer Historical Wargames" publicationDate="2004"/>
     <publication id="eb14-e889-c793-0fc4" name="Spartacus" shortName="SP" publisher="Warhammer Historical Wargames" publicationDate="2008"/>
     <publication id="15ea-5299-d0f5-5dbb" name="Byzantium: Beyond the Golden Gate" shortName="BZ" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
+    <publication id="dab5-785d-be28-f228" name="Vlad the Impaler" shortName="VL" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -175,6 +176,10 @@
     <categoryEntry id="7af6-6c4c-dd00-596a" name="Slave Infantry" hidden="false"/>
     <categoryEntry id="bfb2-2e9c-2a30-fac2" name="Ghulams" hidden="false"/>
     <categoryEntry id="496f-313e-c4d8-b20a" name="Light Cavalry" hidden="false"/>
+    <categoryEntry id="0246-7cd4-4165-5d79" name="Crusaders" hidden="false"/>
+    <categoryEntry id="147e-b6fe-a941-e104" name="Great Host" hidden="false"/>
+    <categoryEntry id="0f1f-77c2-d12a-13a3" name="Kapikulu &amp; Special Troops" hidden="false"/>
+    <categoryEntry id="da7f-5ad4-d244-41f1" name="Small Host" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="3083-ceb0-f2dc-6449" name="Army" hidden="false">
@@ -226,6 +231,11 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0636-e4a8-1ccf-14d8" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b6b1-1a8a-7f57-8453" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="85c6-18d9-9371-f27a" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0d73-ed8f-90fc-a48b" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6e53-b662-13ff-c947" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e78-59f6-163f-f9a7" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7b5e-27ba-2bb9-3ae8" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e9c-b098-416d-b148" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -306,6 +316,56 @@
             <modifier type="set" field="f74a-7438-43a8-644d" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c96-52e8-a508-6265" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93b5-db57-b3b4-0f8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d9b9-6605-1bf7-b496" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d82-3523-009f-3f19" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b7a7-ed1f-bcd7-557c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="75">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea4a-18e9-3b9f-b98b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="75">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef7-920c-cdee-b049" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="75">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3289-ea6e-3f19-6358" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e163-21b3-0b81-8919" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="5637-6150-b5a7-08d5" value="25">
@@ -751,6 +811,61 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c96-52e8-a508-6265" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="75">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72c2-9eea-83f7-ea5f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2e9-c53c-1a69-a69b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="40">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93b5-db57-b3b4-0f8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d9b9-6605-1bf7-b496" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="75">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b7a7-ed1f-bcd7-557c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea4a-18e9-3b9f-b98b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef7-920c-cdee-b049" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3289-ea6e-3f19-6358" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="75">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e163-21b3-0b81-8919" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c498-30a0-abb8-9a0e" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="563b-400b-59e4-fb06" type="instanceOf"/>
@@ -934,6 +1049,51 @@
             <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="39e0-d11d-3ba7-3303" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72c2-9eea-83f7-ea5f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1057-5cdf-83d1-e10a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f8c-67c2-b52e-6c4c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f68b-8c28-1d2e-9fd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93b5-db57-b3b4-0f8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d9b9-6605-1bf7-b496" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d82-3523-009f-3f19" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b7a7-ed1f-bcd7-557c" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1812,6 +1972,96 @@
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
               <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72c2-9eea-83f7-ea5f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2e9-c53c-1a69-a69b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1057-5cdf-83d1-e10a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32d2-1bb8-bff0-93dd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c9-1273-18a3-c016" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81db-e1d3-3470-087f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f8c-67c2-b52e-6c4c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f68b-8c28-1d2e-9fd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93b5-db57-b3b4-0f8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d9b9-6605-1bf7-b496" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d82-3523-009f-3f19" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b7a7-ed1f-bcd7-557c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea4a-18e9-3b9f-b98b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef7-920c-cdee-b049" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3289-ea6e-3f19-6358" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e163-21b3-0b81-8919" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7874-ab14-bb42-91bc" type="instanceOf"/>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d28f-0a2b-884a-cebb" type="atLeast"/>
               </conditions>
@@ -2144,6 +2394,81 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c96-52e8-a508-6265" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="72c2-9eea-83f7-ea5f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="75">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2e9-c53c-1a69-a69b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1057-5cdf-83d1-e10a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f8c-67c2-b52e-6c4c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="35">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f68b-8c28-1d2e-9fd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93b5-db57-b3b4-0f8b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d9b9-6605-1bf7-b496" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d82-3523-009f-3f19" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b7a7-ed1f-bcd7-557c" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea4a-18e9-3b9f-b98b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ef7-920c-cdee-b049" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3289-ea6e-3f19-6358" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e163-21b3-0b81-8919" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="959b-b12c-054a-e973" value="75">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="9f0e-4146-4168-a5b3" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b9ef-b43e-36be-5a69" type="atLeast"/>
@@ -2454,6 +2779,16 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="deb1-afb0-adb0-35f5" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c2e9-c53c-1a69-a69b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9f0e-4146-4168-a5b3" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink id="98ac-47a5-f36a-27ee" name="Men at Arms" hidden="false" targetId="db3d-508f-dcf6-1ae7" primary="false">
@@ -2708,6 +3043,11 @@
             <modifier type="set" field="7205-4ae8-6709-c2a3" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c96-52e8-a508-6265" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7205-4ae8-6709-c2a3" value="10">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b579-057b-089f-777d" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="abf8-3982-14a4-3dcc" value="25">
@@ -4292,6 +4632,16 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7957-daa2-010c-e9e8" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="05fc-80d6-e5c6-32e1" value="10">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f8c-67c2-b52e-6c4c" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="05fc-80d6-e5c6-32e1" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f68b-8c28-1d2e-9fd5" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </categoryLink>
         <categoryLink id="a4c1-a245-f9c4-ab86" name="Vassals, Allies &amp; Mercenaries" hidden="false" targetId="8914-868d-c4b1-e363" primary="false">
@@ -4479,6 +4829,102 @@
             <modifier type="set" field="6cf9-4f1b-6b11-4f91" value="25">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f50b-9084-3f14-b738" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="2c84-a748-5035-59ac" name="Crusaders" hidden="false" targetId="0246-7cd4-4165-5d79" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="be48-ea7b-5e0c-fd03" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="b215-4a70-d793-ce74" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="be48-ea7b-5e0c-fd03" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1057-5cdf-83d1-e10a" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b215-4a70-d793-ce74" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1057-5cdf-83d1-e10a" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="a5f3-c8d4-2c26-01e3" name="Great Host" hidden="false" targetId="147e-b6fe-a941-e104" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="38b7-388b-a844-c023" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="f1d7-e348-e4e3-c35d" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="38b7-388b-a844-c023" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32d2-1bb8-bff0-93dd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="38b7-388b-a844-c023" value="66">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c9-1273-18a3-c016" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="38b7-388b-a844-c023" value="15">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81db-e1d3-3470-087f" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f1d7-e348-e4e3-c35d" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32d2-1bb8-bff0-93dd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="f1d7-e348-e4e3-c35d" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c9-1273-18a3-c016" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="cde6-0dd8-1584-16b6" name="Kapikulu &amp; Special Troops" hidden="false" targetId="0f1f-77c2-d12a-13a3" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="99a2-d423-d715-9bcf" type="max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="99a2-d423-d715-9bcf" value="40">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f68b-8c28-1d2e-9fd5" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink id="74ff-8bb4-dae4-9f32" name="Small Host" hidden="false" targetId="da7f-5ad4-d244-41f1" primary="false">
+          <constraints>
+            <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="e1e6-9fdd-d2bf-2ce7" type="max"/>
+            <constraint field="limit::points" scope="roster" value="0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="2197-485c-351c-89d8" type="min"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" field="e1e6-9fdd-d2bf-2ce7" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32d2-1bb8-bff0-93dd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e1e6-9fdd-d2bf-2ce7" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c9-1273-18a3-c016" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="2197-485c-351c-89d8" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32d2-1bb8-bff0-93dd" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="2197-485c-351c-89d8" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="35c9-1273-18a3-c016" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="2197-485c-351c-89d8" value="50">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81db-e1d3-3470-087f" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6268,6 +6714,188 @@
         <categoryLink id="39a0-6a91-873c-0e63" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry id="72c2-9eea-83f7-ea5f" name="Arpad &amp; Angevin (1280-1441)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Kingdom_of_Hungary_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0d73-ed8f-90fc-a48b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4030-1f79-3241-fea2" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="c2e9-c53c-1a69-a69b" name="Period of the New Men (1441-1526)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Kingdom_of_Hungary_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0d73-ed8f-90fc-a48b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="06ad-35dc-171d-bdfe" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="1057-5cdf-83d1-e10a" name="Hungarian-Crusader (1396, 1443-8, 1456)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Kingdom_of_Hungary_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0d73-ed8f-90fc-a48b" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ad2a-5538-8cc5-92f4" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="32d2-1bb8-bff0-93dd" name="Walachia, Great Host (1330-1508)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Moldavia_and_Walachia_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6e53-b662-13ff-c947" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3954-0b83-17d6-3ea0" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="35c9-1273-18a3-c016" name="Moldavia, Great Host (1359-1527)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Moldavia_and_Walachia_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6e53-b662-13ff-c947" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f483-f11d-db36-c9f2" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="81db-e1d3-3470-087f" name="Small Host Army (Moldavia or Walachia)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Moldavia_and_Walachia_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6e53-b662-13ff-c947" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a4bc-077b-3b72-4453" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="1f8c-67c2-b52e-6c4c" name="Gazi State (1281-1361)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Ottomans_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e78-59f6-163f-f9a7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="1b2f-1e30-b0c9-24c9" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="f68b-8c28-1d2e-9fd5" name="Ottoman Empire (1362-1526)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Ottomans_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e78-59f6-163f-f9a7" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f08a-01a3-7745-3738" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="93b5-db57-b3b4-0f8b" name="Kingdom of Serbia (1280-1340)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Serbia_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7b5e-27ba-2bb9-3ae8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c744-0567-85a6-0535" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="d9b9-6605-1bf7-b496" name="Serbian Empire (1340-1371)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Serbia_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7b5e-27ba-2bb9-3ae8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3e3b-2aad-f6c8-bf60" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b579-057b-089f-777d" name="Serb Despotates (1372-1459)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Serbia_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7b5e-27ba-2bb9-3ae8" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0af7-6609-a8c1-9b3b" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="ea4a-18e9-3b9f-b98b" name="Paleologan Byzantines (1280-1453)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Byzantine_Empire_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e9c-b098-416d-b148" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3ef6-95e5-187f-b221" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="3ef7-920c-cdee-b049" name="Despotates of Epiros (1280-1340) and Thessaly (1280-1318)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Byzantine_Empire_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e9c-b098-416d-b148" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c79b-4f2e-ad5e-b2f6" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="3289-ea6e-3f19-6358" name="Despotate of the Morea (1280-1460)" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Byzantine_Empire_Vlad.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e9c-b098-416d-b148" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="a507-4947-3dba-3b51" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <sharedRules>
     <rule id="6e8f-14cf-a018-5d1c" name="Allies and Mercenaries (Unreliable)" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
@@ -7563,6 +8191,108 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </rule>
     <rule id="3343-f051-f099-9927" name="Byzantium Common Rules" publicationId="15ea-5299-d0f5-5dbb" hidden="false">
       <description>The minimum size of a unit is five models unless stated otherwise. One model in each unit may be upgraded to a Leader, Standard Bearer and Musician as in the WAB rulebook. Stratagem (documented): armies led by an Army General of the relevant kind may use the Stratagem special rule from the Early Byzantine chapter.</description>
+    </rule>
+    <rule id="23b9-9bad-68b9-f602" name="Crusader (Vlad)" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Crusader Arrogant Pride: French and Burgundian Crusaders came to the Balkans with strong ideas about how battle should be conducted. If a unit containing knights of any nationality declares a charge against an enemy unit, any friendly unit subject to Crusader Arrogant Pride within 12" of the charging unit will automatically charge their nearest enemy (or, if no such unit is within charge distance, they will move at least 4" towards the nearest enemy unit within their charge arc). This is to prevent their colleagues from gaining an advantage in military prowess and glory.</description>
+    </rule>
+    <rule id="4a1c-088a-d6cf-7c4b" name="Athlete of Christ" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>János Hunyadi: troops under his command trust his judgment and ability implicitly. In armies he leads, no Allies and Mercenaries tests are required for allied troops deployed within his 12" command radius at the start of battle; they are considered to have automatically passed this test and may move as normal for the rest of the battle.</description>
+    </rule>
+    <rule id="9c8e-1edb-84ad-8bb2" name="Leader of the Black Army" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>King Mátyás I Corvinus: the Black Army must be built from a New Men army list; at least 25% of its total must be taken from the Allies and Mercenaries list and up to 35% may be. The Black Army must take one War Wagon for every 1,000 points, and 2+ units of Hussite Handgunners. Mercenary troops in a Black Army led by Corvinus are not bound by the Allies and Mercenaries special rule if deployed within his 12" command radius at the start of battle.</description>
+    </rule>
+    <rule id="e372-9f0d-7a57-1723" name="Strategist" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>After choosing sides, a player fielding an army with the Strategist special rule may place one additional terrain feature anywhere on the battlefield outside the enemy deployment zone.</description>
+    </rule>
+    <rule id="b65a-5010-85cf-3651" name="Scythe" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>A farm implement used expertly by Romanian peasants, the scythe is a double-handed weapon. Scythe-armed models gain a +1 to hit bonus against cavalry. At the same time, cavalry attacking them are at -1 to hit.</description>
+    </rule>
+    <rule id="0c07-dcff-0137-a921" name="Grim Reputation" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Vlad (but not his bodyguard) causes fear in enemy troops.</description>
+    </rule>
+    <rule id="735f-7985-847d-a67c" name="Pagan Hatred" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Vlad has Hatred against Ottoman troops and their allies.</description>
+    </rule>
+    <rule id="88a2-0b00-7ca7-f2bf" name="Loyal Bodyguard" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Vlad has learned to trust no one and thus does not join any unit except his loyal bodyguard of foreign mercenaries. Vlad must be accompanied by a unit of Garda Domneasca who have Ld 8, are Veterans and wear partial plate armour at a basic cost of 16 pts for a dismounted guard model and 30 pts for a mounted guard model. Additional equipment may be bought as normal.</description>
+    </rule>
+    <rule id="9963-5bab-ddc7-8624" name="Beloved Leader" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Stefan's popularity among the people and the army has never been matched by any Romanian ruler since. His Ld radius as Army General is increased by D6", roll at the start of the battle, before deployment.</description>
+    </rule>
+    <rule id="d504-f53c-a5fa-0688" name="Resilient" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Stefan was a veteran of many campaigns and received numerous wounds. To show his resiliency, his Wounds value has been increased by 1, but the effects of his wounds and his small stature (only 5'5") is reflected in his decreased Strength and Toughness values.</description>
+    </rule>
+    <rule id="6473-f476-86a1-ed74" name="Master of Ambushes" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>If Stefan is the army's General, the 0-2 restriction for Plaiesi/Darabanti is lifted.</description>
+    </rule>
+    <rule id="164d-d3ff-5dea-88cf" name="Permanent Mercenaries" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Byzantine armies had so many mercenaries in them that it was hard for contemporary observers to find the native Greek soldiers. All units subject to the Allies and Mercenaries rule may be upgraded to Permanent Mercenaries for +2 points per model (the cost is stated in the unit entry). Permanent Mercenary units increase their Leadership value by +1. Furthermore, they automatically pass the Allies and Mercenaries test they would otherwise be required to take at the beginning of their first turn. Although they are Permanent Mercenaries, they are still mercenaries and cannot use the Leadership value of the Army General or the re-roll benefit of the Army Standard Bearer.</description>
+    </rule>
+    <rule id="7ec2-a254-95e3-53f8" name="The Padişah is Dead!" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>If the Padişah is killed, each unit in the army takes its Panic test at -1 to its Leadership.</description>
+    </rule>
+    <rule id="9252-babd-0041-02da" name="Kapikulu" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Kapikulu, literally Slaves of the Gate, are a completely professional body. Kapikulu units may re-roll their first failed Panic test.</description>
+    </rule>
+    <rule id="e3f7-bcea-5c3a-386e" name="Ottoman Artillery" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>All artillery pieces in the Ottoman army may take a Master Gunner for only 20 pts per Cannon.</description>
+    </rule>
+    <rule id="5c58-22bb-9105-0e72" name="Ditch &amp; Stakes" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Ottoman units that purchase Ditch &amp; Stakes will be -2 to hit by cavalry and their mounts in close combat. All enemy units that break an Ottoman unit behind Ditch &amp; Stakes fortifications must subtract D6 from their pursuit roll. If a unit with Ditch &amp; Stakes moves outside the fortification for any reason, they lose the benefits, but may attempt to retake the fortification and use them again. Azabs and certain Kapikulu units may purchase Ditch &amp; Stakes for the front of their units only (barricade) or fully encircled (stockade). Several Kapikulu and Azab units may be deployed adjacent to each other and then combine their stockades as one fortification, but they still count as separate units. Ditch &amp; Stakes barricades and stockades do not count as defended obstacles; units fighting over them retain their ranks and are still vulnerable to flank or rear attack. They are placed when a unit is initially deployed and must be represented by suitable models. Ditch &amp; Stakes may not be moved once deployed.</description>
+    </rule>
+    <rule id="1eb6-036a-f036-2285" name="Gazi (Vlad)" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>In an Ottoman Gazi State army, any infantry or cavalry unit may upgrade to Gazis for +1 pt per model. Gazis were religious warriors flush with the prospect of victory and as such may re-roll their first failed Panic test.</description>
+    </rule>
+    <rule id="1c90-2554-6c62-6fad" name="Grenadoes" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Some armies of the period used incendiary grenades. Regardless of how many grenades a unit has purchased, it may only make a maximum of one grenade attack per the controlling player's Shooting phase. Grenades may not be used as part of a stand &amp; fire or fire &amp; flee charge response. Grenade: range 4", save modifier -2, Strength 4. Any model in the unit may be nominated as a grenadier. No To hit roll is made; the burst of the grenade covers 3" across (use the 3" template). The model directly under the centre hole is automatically hit. Models whose bases lie under the rest of the template are hit on a D6 roll of 4+. If more than half a model's base lies under the template it is considered to be fully under the template. Before rolling your To wound dice, roll a D6 - on a roll of 1, the Grenade is a dud and no one has been wounded; on a 6 the grenade has gone off in the thrower's face: roll to wound as normal, but with the template placed around the throwing model.</description>
+    </rule>
+    <rule id="3722-260f-c2bf-81f9" name="Guard Archers" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Some bodyguard units that are limited in size have been designated Guard Archers. In these units, all figures may fire if the unit did not move during its Movement phase.</description>
+    </rule>
+    <rule id="062c-6bde-f1e3-4ca1" name="Heavy Artillery" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Heavy artillery cannot be turned or pivoted, and is therefore restricted to only the 45 degree field of fire it has at time of deployment. Heavy artillery confers D6 wounds. Heavy artillery is a large target.</description>
+    </rule>
+    <rule id="b5cf-f02e-10af-f264" name="Mantlets" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Mantlets confer a 5+ armour save to the gun and add +2 to the crew's armour save against missile attacks coming from the front arc of the artillery piece only. As mantlets are part of a fixed emplacement, any gun protected by a mantlet is restricted to the 90 degree field of fire it has at time of deployment (or 45 degrees in the case of Heavy Artillery) and may not pivot or be moved.</description>
+    </rule>
+    <rule id="4204-84e9-ec5a-a78a" name="Stone Thrower" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Stone Thrower. Range 60". Once deployed, these weapons may not be turned and may only shoot forward in a straight line, down the centre of the model.</description>
+    </rule>
+    <rule id="2a1d-4006-a4f0-8f9a" name="Thunderbolt" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Bayezit's legendary speed gives him and his escort extra movement on the charge. When Bayezit and any cavalry unit he accompanies charges, you may add D6" to their charge move. If the charge fails, Bayezit and his unit move forward at half their regular charge rate.</description>
+    </rule>
+    <rule id="82dc-484a-20ad-7b67" name="Protect the Sultan at all Costs" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Mehmet is a great leader, but as the head of the Empire, his presence on the battlefield is an inherent risk. His viziers are mindful of this, and they have surrounded the Sultan with the best troops available. If taken, Mehmet must be deployed within a designated bodyguard unit - either Solaks or Kapikulu Suvarileri.</description>
+    </rule>
+    <rule id="cf72-9efd-c09e-04e8" name="The Mighty" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Stefan Dušan earned his nickname in combat as an expert fighter skilled in the use of the lance. He must re-roll his lance attacks once every battle; he must re-roll all dice and abide by the result of the re-roll.</description>
+    </rule>
+    <rule id="d66c-4e72-c9f2-87f9" name="Wealthy (Dušan)" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Stefan Dušan inherited his family's wealth, which he compounded through taxing the output of Serbia's silver mines and collecting tribute from his Empire's member states. The restriction of this troop type is lifted; up to 100% of the mercenary allowance may be spent on Mercenary Knights.</description>
+    </rule>
+    <rule id="00b1-6e76-8283-87dd" name="Leader of the Resistance" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Skanderbeg is leading a war of resistance against the Ottoman Empire, and his army is highly motivated, and trying to gain their independence. When fighting against Ottoman armies, Stradioti may always use Skanderbeg's Leadership, even if they are in skirmish formation.</description>
+    </rule>
+    <rule id="7009-942e-2065-0112" name="Leader of the True Faith" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>As the leader of the Orthodox Christian Empire, Konstantinos is an inspiring presence. He allows any one non-allied or mercenary unit to automatically pass one Panic test per game - no dice roll is required.</description>
+    </rule>
+    <rule id="a487-11fd-6ccd-60f5" name="Embodiment of the State" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>If Konstantinos is slain, each unit in the Byzantine army and all allied and mercenary units take the resultant Panic test at -1 to their Leadership.</description>
+    </rule>
+    <rule id="aadb-0715-504e-7be4" name="Desperation" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>When Longo led the Byzantine army, they fought the most desperate, and last, fight in the Empire's life. All mercenaries under Longo knew that there was no retreat from the Turks; therefore all allied and mercenary troops count as being Permanent Mercenaries in armies led by Longo and automatically pass their Allies and Mercenaries tests when fighting against Ottomans.</description>
+    </rule>
+    <rule id="d5e9-73e8-02e1-ec28" name="The Devotion of his Men" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>As long as Longo led them, the troops were determined to stay by his side. If Longo is killed or leaves the field, all allies and mercenaries take their Panic test at -1 to their Leadership.</description>
+    </rule>
+    <rule id="e6cc-c4fb-5d95-c10e" name="Almughavars!" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>1. Almughavar units not designated as Skirmishers are Open Order, and may claim up to a +2 rank bonus when in open terrain. 2. They ignore any opponent's save bonuses for being mounted in close combat (barding still applies as normal). 3. Almughavars receive an unmodified 6+ save when in open terrain, improving to an unmodified 5+ save if the model is in difficult or very difficult terrain. 4. Almughavars may perform Feigned Flight. 5. Formed Almughavar units may re-roll failed Panic tests until the first formed Almughavar unit fails a re-roll; after that, the ability is lost for the remainder of the game.</description>
+    </rule>
+    <rule id="02de-f799-cca9-5024" name="Impressed Archers" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>Any Panic test that results in a natural roll of higher than a 7 is a failure regardless of character influence.</description>
+    </rule>
+    <rule id="209b-e438-964a-fe33" name="Vlad the Impaler Common Rules" publicationId="dab5-785d-be28-f228" hidden="false">
+      <description>The minimum size of a unit is five models unless stated otherwise. One model in each unit may be upgraded to a Leader, Standard Bearer and Musician as in the WAB rulebook. Units described as Allies and Mercenaries are subject to the Allies and Mercenaries rule. Mangonel (all lists): Stone Thrower, range 60", three crewmen with hand weapon (two additional crewmen +10 pts each, crew may have light armour +2 pts). Optional medieval rules (Deployment by Battles, Battle Leaders and others on pp.133-134) are not built.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

@@ -190,3 +190,10 @@ Nine catalogues named "(Byzantium)": Early Byzantines (Justinian / Heraclian), S
 - Enforced: percentages by points per composition; per-composition availability of units and options; per-composition cost and stat changes; one General (inherent or option); once-per-army options; unit maximums per composition; points-based limits for elephants and scythed chariots.
 - Not built: allies drawn from other lists (documented only), Combined Formations, Rivalry, Stratagem, scenarios and Appendix I.
 - Issues are listed in `issues/Byzantium.txt`.
+
+## Added: Vlad the Impaler (Warhammer Historical, 2007)
+Nine catalogues named "(Vlad the Impaler)": Kingdom of Hungary (Arpad & Angevin, Period of the New Men, Hungarian-Crusader), Moldavia and Walachia (Walachian Great Host, Moldavian Great Host, Small Host Army), Ottomans (Gazi State, Ottoman Empire), Serbia (Kingdom, Empire, Despotates), Return of the Bulgars, Albania, Byzantine Empire (Paleologan Byzantines, Epiros & Thessaly, Morea), Achaian Franks and the Catalan Company. Files `*_Vlad.cat`. Game system revision 15. Build with `sh tools/vlad_all.sh <outdir>`.
+- Enforced: percentages by points per composition (including Crusaders, Small Host and Great Host, Kapikulu & Special Troops and Vassals as separate allocations); per-composition availability of units and options; one General (inherent or option); once-per-army options; unit maximums per composition; points-based limits for artillery, wagons and Sailors; ratios such as Imam per Iayalar and Pronija Retainers per Provincial Pronija.
+- Not built: allies drawn from other lists (documented only), scenarios (pp.99-130), the optional medieval rules (Battles, Battle Leaders), sample rosters.
+- Also in this commit: the Themata Army Standard Bearer heavy armour in the Byzantium catalogue was corrected to +2 pts.
+- Issues are listed in `issues/Vlad_the_Impaler.txt`.
