@@ -1,0 +1,116 @@
+Armies of Antiquity v2 (unofficial, Martin Gibbins) - issues and open points
+============================================================================
+Built: 101 catalogues (one per army list, file names *_AoA2.cat), 1276 unit entries. Game system revision 18.
+Source: "02_Armies of Antiquity v 2.0.docx" (and the matching PDF). Everything is untested in New Recruit.
+
+IMPORTANT - how these lists were made
+- Unlike the official books, these 101 lists were NOT typed in by hand. tools/aoa2_extract.py reads the .docx (tables + italic rule markers) and tools/aoa2_gen.py turns it into tools/aoa2_data.py.
+  The generated data is meant to be corrected by hand afterwards (re-running aoa2_gen.py overwrites it). Stat lines and points come straight from the source tables and are reliable;
+  weapons, options and special rules are parsed from the description text by heuristics and need a read-through, army by army.
+- Known weak spots of the parser (check these on any list you use):
+  * Option labels come from the text before each "(+N)": a few are clumsy or mislabelled (e.g. stat changes such as "Ld8", "WS3", "+1A" are priced options that do not change the profile;
+    "Chariot as from the list below", "Instead be deployed as Skirmishers" and similar are priced notes only). A negative price is a real saving printed in the book (e.g. -2).
+  * "Instead of" choices (X or Y) are listed as free options named "X (instead of Y)"; the base weapon is the first one listed and nothing removes it when the option is chosen.
+  * Special rules are taken from the base description sentences; rules that apply only in some compositions, or only "if dismounted", are mostly left off or may be attached wrongly.
+  * "Light Infantry/Cavalry/Camelry" is modelled with the Light Troops rule; "Skirmishers" uses the Art of War skirmisher rule; "Unreliable" allies carry the Allies and Mercenaries (Unreliable) rule.
+  * Characters' mount: "Ride a horse" / "Ride a warhorse" options with the printed cost; barding is a priced option only. M in the table is used as printed (some lists print the mounted value).
+  * Machines: a machine model plus a crew model; extra crew options and crew counts are parsed from words ("two crewmen") and default to 2 when no number was found.
+  * Unit sizes: the minimum is 5 models for infantry/cavalry units (1 for characters, chariots, elephants, machines); no upper limit. Leader/Standard/Musician options (+5 each) are on every troop unit except
+    skirmishers and units whose text says they may not have a standard or musician; lists that state "no army or unit standards" (e.g. Lydian) have no Standard bearer option.
+- Army size note from the source: 2,800 points of these lists is roughly 2,000 points of a period supplement. A Senior Officer may become the Army General for +50 (not built).
+- Allies lists ("may take allies from the X list"), Wagon Tabors, Camps and per-army special deployment rules are documented only.
+
+Lists most likely to need manual rework (odd source structure)
+- Steppe Nomads (tribe-by-tribe equipment tables)
+- Mongol Conquest and Khanates (four sub-armies share one layout; compositions/ally text not split)
+- Ordensstaat (custom groups)
+- Crusaders, Russian, Hussite, Swiss, Medieval French (custom group names)
+
+Parser notes by army (what the generator could not place cleanly)
+- Persians And Medes:
+    no description for ['Skirmish'] in table [LEVY CAVALRY]
+- Italian Hill Tribes:
+    composition limit for Skirmishers dropped (no units in that category): {'max': 10}
+- Later Achaemenid Persian:
+    composition limit for Greek Mercenaries dropped (no units in that category): {'max': 25}
+- Syracusan:
+    no description for ['0-1 Superior Hoplites'] in table [MERCENARIES]
+    composition limit for Artillery and Allies dropped (no units in that category): {'max': 20}
+- Warring States Chinese:
+    no description for ['Crossbows'] in table [MISSILE TROOPS]
+    composition limit for Artillery dropped (no units in that category): {'max': 10}
+- Ptolemaic Egyptian:
+    no description for ['Elephant escorts', 'Mercenaries'] in table [SKIRMISHERS]
+- Parthian:
+    no description for ['Army Standard'] in table [CHARACTERS]
+- Han Chinese:
+    no description for ['Crossbows'] in table [MISSILE TROOPS]
+- Bastarnae:
+    no description for ['Wagon'] in table [WAGON LAGER]
+- Maccabean Revolt:
+    no description for ['Guerillas'] in table [INFANTRY]
+- Dacian:
+    no description for ['Falxmen'] in table [INFANTRY]
+- Early Imperial Roman:
+    composition limit for Infantry dropped (no units in that category): {'min': 50}
+    composition limit for Infantry dropped (no units in that category): {'min': 33}
+- Middle Imperial Rome:
+    composition limit for Infantry dropped (no units in that category): {'min': 33}
+- Sassanid:
+    no description for ['Militia Spearmen', 'Kurdish Skirmishers'] in table [INFANTRY]
+    no description for ['0-1 Elite Cavalry'] in table [ALLIES AND VASSALS]
+- Late Imperial Roman:
+    no description for ['Illyricani/Sagittarii'] in table [CAVALRY]
+    composition limit for Artillery dropped (no units in that category): {'max': 20}
+    composition limit for Foederati dropped (no units in that category): {'max': 33}
+    composition limit for Foederati dropped (no units in that category): {'min': 33}
+    composition limit for Foederati dropped (no units in that category): {'max': 33}
+- Steppe Nomads:
+    composition limit for Subject Units dropped (no units in that category): {'min': 25}
+- Hindu India:
+    composition line not mapped: Specials: Up to one elephant per 600 points. There must be at least one elephant
+- Thematic Byzantine:
+    composition limit for Special Units dropped (no units in that category): {'max': 25}
+- Arab Caliphate:
+    composition limit for Special Troops dropped (no units in that category): {'max': 33}
+    composition limit for Cavalry and Infantry dropped (no units in that category): {'max': 66}
+- Ghaznavid:
+    composition limit for Special Troops dropped (no units in that category): {'max': 50}
+- Medieval Hungarian:
+    no description for ['Serbian Hussar'] in table [LIGHT CAVALRY]
+- Later Byzantine:
+    composition limit for Special Units dropped (no units in that category): {'max': 25}
+    composition limit for Special Units dropped (no units in that category): {'max': 33}
+- Italian City States:
+    no description for ['0-1 Carroccio'] in table [0-1 GENERAL OR CONDOTIERRE]
+- Ordensstaat:
+    composition limit for Crusaders dropped (no units in that category): {'max': 75}
+    composition limit for Vassals dropped (no units in that category): {'max': 50}
+    composition limit for Crusaders dropped (no units in that category): {'min': 33}
+    composition limit for Vassals dropped (no units in that category): {'max': 50}
+- Mongol Conquest And Khanates:
+    composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
+    composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+    composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
+    composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+    composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
+    composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+    composition limit for Heavy Cavalry dropped (no units in that category): {'max': 60}
+    composition limit for Mongol Light Cavalry dropped (no units in that category): {'max': 50}
+- Mamluks:
+    no description for ['Sultans Mamluks'] in table [MAMLUKS]
+- Swiss:
+    composition line not mapped: Vorhut: You may upgrade a second of your Close Order units as the Vorhut for +30
+    composition line not mapped: Nachhut: You may upgrade a third of your Close Order units as the Nachhut for +2
+    composition limit for Gewalthut dropped (no units in that category): {'max': 0}
+- Low Countries:
+    no points value for Artillery - Cannon
+- Hussite:
+    no points value for Crew (Artillery)
+- Late Medieval French:
+    no description for ['Crossbowman'] in table [INFANTRY]
+    composition limit for Mercenaries dropped (no units in that category): {'max': 50}
+- Ottoman Turks:
+    no description for ['Padishah'] in table [0-1 GENERAL]
+
+- 83 composition limits for "Allies and Mercenaries" were dropped because those lists name allies from other lists (no units of their own); they appear in each catalogue's notes only.
