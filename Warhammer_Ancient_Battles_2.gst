@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="15" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="6f1f-5f84-d7e5-4889" name="Warhammer Ancient Battles 2.0" revision="16" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>Pilot data set: Warhammer Ancient Battles 2nd Edition, built from the 2.0 rulebook reference pages and Armies of Antiquity v2.0.</readme>
   <publications>
     <publication id="556c-7119-7234-b625" name="Warhammer Ancient Battles 2nd Edition" shortName="WAB2" publisher="Warhammer Historical Wargames" publicationDate="2010"/>
@@ -15,6 +15,7 @@
     <publication id="eb14-e889-c793-0fc4" name="Spartacus" shortName="SP" publisher="Warhammer Historical Wargames" publicationDate="2008"/>
     <publication id="15ea-5299-d0f5-5dbb" name="Byzantium: Beyond the Golden Gate" shortName="BZ" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
     <publication id="dab5-785d-be28-f228" name="Vlad the Impaler" shortName="VL" publisher="Warhammer Historical Wargames" publicationDate="2007"/>
+    <publication id="28aa-c13e-b61d-4f3e" name="The Age of Arthur" shortName="AA" publisher="Warhammer Historical Wargames" publicationDate="2005"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -236,6 +237,10 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e78-59f6-163f-f9a7" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7b5e-27ba-2bb9-3ae8" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2e9c-b098-416d-b148" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1061-9766-560f-e6ed" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="323e-ba28-936c-b234" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d1f-0527-c7dd-ef2e" type="instanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e02-66f7-1168-d4b5" type="instanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2058,6 +2063,101 @@
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1452-e1d2-0ea1-56d3" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9947-d60a-4c4a-3f65" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23c5-0729-c32c-45c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="250d-4a1b-fd5c-0760" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6fc4-d5ee-2dcc-26bb" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e0a2-8aee-2a07-900d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfd6-0b0c-1aca-5841" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2257-88d5-989c-ad03" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4316-3869-90e9-fb75" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8241-41c6-f196-c696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d568-593c-3fcd-c611" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8f72-301d-a70d-6e08" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="da94-7df3-71e5-2b47" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd67-752e-c9d8-e9c2" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3be0-82ca-31b8-ea33" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a690-7be5-2f6a-5af1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="40">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b870-a041-2c16-ba47" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f253-a387-765e-dbda" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff8b-da94-79a6-391e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a7e0-b98f-7f0a-fcfa" type="atLeast"/>
               </conditions>
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
@@ -3929,6 +4029,11 @@
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bd7-798e-a0b7-097b" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="e0cc-b055-706c-9741" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="250d-4a1b-fd5c-0760" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da14-812b-9f0f-b0a6" type="atLeast"/>
@@ -3997,6 +4102,96 @@
             <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2501-daac-06e2-9700" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9947-d60a-4c4a-3f65" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23c5-0729-c32c-45c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6fc4-d5ee-2dcc-26bb" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e0a2-8aee-2a07-900d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfd6-0b0c-1aca-5841" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2257-88d5-989c-ad03" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4316-3869-90e9-fb75" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="50">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8241-41c6-f196-c696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d568-593c-3fcd-c611" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8f72-301d-a70d-6e08" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="da94-7df3-71e5-2b47" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd67-752e-c9d8-e9c2" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3be0-82ca-31b8-ea33" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a690-7be5-2f6a-5af1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b870-a041-2c16-ba47" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f253-a387-765e-dbda" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff8b-da94-79a6-391e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="bd2c-3f66-10f6-3862" value="33">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a7e0-b98f-7f0a-fcfa" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4131,6 +4326,101 @@
             <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4bd7-798e-a0b7-097b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9947-d60a-4c4a-3f65" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23c5-0729-c32c-45c1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="250d-4a1b-fd5c-0760" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6fc4-d5ee-2dcc-26bb" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e0a2-8aee-2a07-900d" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfd6-0b0c-1aca-5841" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2257-88d5-989c-ad03" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="10">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4316-3869-90e9-fb75" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="10">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8241-41c6-f196-c696" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d568-593c-3fcd-c611" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="33">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8f72-301d-a70d-6e08" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="da94-7df3-71e5-2b47" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd67-752e-c9d8-e9c2" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3be0-82ca-31b8-ea33" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a690-7be5-2f6a-5af1" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b870-a041-2c16-ba47" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f253-a387-765e-dbda" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="20">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff8b-da94-79a6-391e" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9a05-798d-10bc-17d2" value="25">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a7e0-b98f-7f0a-fcfa" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6896,6 +7186,175 @@
         <categoryLink id="a507-4947-3dba-3b51" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry id="9947-d60a-4c4a-3f65" name="Twilight of Britannia" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Romano_British_Civitates_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1061-9766-560f-e6ed" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5dfe-491a-50a0-9559" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="23c5-0729-c32c-45c1" name="Brittany" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Romano_British_Civitates_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1061-9766-560f-e6ed" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="107c-040f-67f4-15bb" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="6fc4-d5ee-2dcc-26bb" name="British Kingdoms" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>British_Welsh_Kingdoms_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="323e-ba28-936c-b234" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="34fe-8eaa-ab26-0c05" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="e0a2-8aee-2a07-900d" name="Welsh Kingdoms in the West" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>British_Welsh_Kingdoms_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="323e-ba28-936c-b234" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0b25-e29e-8faa-c655" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="cfd6-0b0c-1aca-5841" name="Welsh Kingdoms in the North" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>British_Welsh_Kingdoms_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="323e-ba28-936c-b234" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="cfbf-5c7d-4696-e824" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="2257-88d5-989c-ad03" name="Dumnonia and the South-West" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>British_Welsh_Kingdoms_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="323e-ba28-936c-b234" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0ef7-8475-9d0d-4a29" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="fd67-752e-c9d8-e9c2" name="Early Southern Pictish Kingdoms" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Picts_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d1f-0527-c7dd-ef2e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="672a-2043-336e-187e" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="3be0-82ca-31b8-ea33" name="Later Southern Pictish Kingdoms" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Picts_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d1f-0527-c7dd-ef2e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="36b4-c8ed-8063-8039" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="a690-7be5-2f6a-5af1" name="Picts of the North" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Picts_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d1f-0527-c7dd-ef2e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="1e58-61c8-4cfb-1f3d" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="b870-a041-2c16-ba47" name="The Attecotti" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Picts_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8d1f-0527-c7dd-ef2e" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3aa6-8c8c-09df-95aa" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="f253-a387-765e-dbda" name="Scotti Raiders and Settlers" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Scots_Irish_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e02-66f7-1168-d4b5" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="8cf8-7142-5746-b037" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="ff8b-da94-79a6-391e" name="Dalriada" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Scots_Irish_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e02-66f7-1168-d4b5" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c715-0b07-3ec3-b3d1" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="a7e0-b98f-7f0a-fcfa" name="Kingdoms of Ireland" hidden="true" collective="false" import="true" type="upgrade">
+      <comment>Scots_Irish_Arthur.cat</comment>
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0e02-66f7-1168-d4b5" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="532e-1c30-ad19-d331" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <sharedRules>
     <rule id="6e8f-14cf-a018-5d1c" name="Allies and Mercenaries (Unreliable)" publicationId="fcb9-17be-94c2-bcfc" hidden="false">
@@ -8293,6 +8752,99 @@ FALLING BACK IN GOOD ORDER: if one side outnumbers the other by over 2:1 (models
     </rule>
     <rule id="209b-e438-964a-fe33" name="Vlad the Impaler Common Rules" publicationId="dab5-785d-be28-f228" hidden="false">
       <description>The minimum size of a unit is five models unless stated otherwise. One model in each unit may be upgraded to a Leader, Standard Bearer and Musician as in the WAB rulebook. Units described as Allies and Mercenaries are subject to the Allies and Mercenaries rule. Mangonel (all lists): Stone Thrower, range 60", three crewmen with hand weapon (two additional crewmen +10 pts each, crew may have light armour +2 pts). Optional medieval rules (Deployment by Battles, Battle Leaders and others on pp.133-134) are not built.</description>
+    </rule>
+    <rule id="7f30-d259-de60-3262" name="Allies (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Allied units may be led only by certain characters from their own list and get no benefit from the Army General or Army Standard Bearer. The first time an allied unit moves, charges or shoots, roll a D6 for reliability: on a 1 the unit remains stationary until a 2-6 is rolled; on a 2+ it is reliable for the rest of the game.</description>
+    </rule>
+    <rule id="47d6-c0c0-89a3-d73d" name="Bard (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>A Bard may re-roll ONE failed Panic test per battle. He may accompany the Army General, adding D6" to the General's command range while within 2".</description>
+    </rule>
+    <rule id="47b4-81c2-72dc-78a2" name="Christian Priest (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Christian Priest: the unit he leads may re-roll any failed Panic test throughout the battle (and must abide by the re-roll).</description>
+    </rule>
+    <rule id="8b79-d87a-3b4f-d6d9" name="Pagan Priest (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Pagan Priest: the unit he leads becomes Stubborn and Fierce, even if mounted.</description>
+    </rule>
+    <rule id="2db7-06cc-7797-dfac" name="Concealment (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Concealed units are placed after all on-table enemy units, anywhere not within 12" of an enemy unit. They may never take a free 4" skirmisher move.</description>
+    </rule>
+    <rule id="ca7b-e7ee-e9de-3e25" name="Fierce (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Fierce: as Warband Rule 2, but the unit fails on a 1 or 2. A Fierce unit must always pursue.</description>
+    </rule>
+    <rule id="1a39-e573-683e-3c72" name="Mixed Weapons (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Mixed weapons count as javelins and hand weapons. The unit may re-roll failed to-hit rolls in the first round of each combat.</description>
+    </rule>
+    <rule id="983b-d839-b60f-dd3f" name="Shieldwall (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Shieldwall: -1 to be hit from the front while stationary and not losing a combat round.</description>
+    </rule>
+    <rule id="f8b3-e8a2-621c-4c48" name="Skirmishers (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Skirmishers fight in skirmish formation (WAB rulebook).</description>
+    </rule>
+    <rule id="b984-aa30-c3c8-18e3" name="Run for the Woods (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Any unit with Run for the Woods may re-roll any failed Leadership or Break test taken in woods or difficult terrain. Even if the unit is only partially in the woods or difficult terrain it is still allowed. A failed Leadership test may not be re-rolled more than once (for example if the Army Standard is present).</description>
+    </rule>
+    <rule id="cfe1-23f2-8324-634e" name="Saxon Buckler" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Figures armed with a Saxon Buckler and fighting on foot may re-roll all unmodified to-hit rolls of 1 (cannot be combined with any other re-roll benefits; available in any round of combat; mounted troops cannot use it offensively). Saxon Bucklers confer a +1 save modifier in close combat for all troops (like an ordinary buckler, only skirmishers may use it against missile fire). Infantry with Saxon Bucklers are always Light Troops and have a Movement characteristic of 5.</description>
+    </rule>
+    <rule id="df9e-25a8-7b3f-f524" name="The Age of Arthur Common Rules" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>The minimum size of a unit is five models unless stated otherwise. One model in each unit may be upgraded to a Leader, Standard Bearer and Musician (+5 pts each) as listed. Percentage limits are by points. Ponies: M6, pursue/flee 2D6; Horses: M7, pursue/flee 3D6; Finest Horses: M8 (Character Advantage only). Warband rule 1: close-combat rank bonus is added to the Leadership of the unit (+1 per rank after the first up to +3). Warband rule 2: roll a D6 at the start of each turn: on a 1 the unit surges forward and charges. Warbands use their own Leadership or that of a character. Allied units are documented only (see Allies).</description>
+    </rule>
+    <rule id="335c-9019-ece9-8190" name="Angones et Franciscae (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (30 pts): The character may lead a single unit of Franci or Pueri. The unit counts as armed with heavy throwing spears. Characters may not take heavy throwing spears themselves. If the character is killed, the advantage cannot be used from the next battle onwards.</description>
+    </rule>
+    <rule id="a8c1-921f-007b-9ec1" name="Boats (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (10 pts): An army including a character with Boats can have up to three boat models (+10 pts per boat). Boats are used only if the scenario features a coastline or tidal estuary. Each boat may carry a single unit of up to 30 models (including characters); no mounted or chariot models. After both armies have deployed, before the first turn, a player using boats may land his waterborne warriors (before Concealed troops are deployed). The unit is placed on the shore touching its boat, no figure more than 6" from it. Units that have just landed move normally and may be charged; a unit forced to flee or fall back in good order into the water is destroyed. If both players have boats, roll a dice each: the highest scorer chooses whether to deploy first or second.</description>
+    </rule>
+    <rule id="aa0d-e573-6830-8735" name="Born to the Purple (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (30 pts): Army General only. When the character is fielded as Army General his Leadership range is increased from 12" to 18".</description>
+    </rule>
+    <rule id="cda4-9021-a96c-6657" name="Chieftain Chariot (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (50 pts): Army General only (Picts and Scots-Irish). The Chieftain rides a light chariot (see the WAB rulebook p.57; chariot stats are in the character entry). He is assumed to fulfil the roles of Army General and Army Standard Bearer (the army may not also take a separate Army Standard Bearer). His Leadership range and the Battle Standard range are increased from 12" to 18" (cannot be increased further by a Bard). If he dismounts from the chariot he is only a normal Army General with a 12" range and the Army Standard ability is lost.</description>
+    </rule>
+    <rule id="4a9a-2a31-6d78-4262" name="Fabricae (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (15 pts): Any units of Milites, Pedyt, Duguth, Geoguth, Frankish Milites and Pueri in the character's army may have Light Armour at +2 points per model. If the character is killed, Fabricae cannot be used to provide armour from the next battle onwards.</description>
+    </rule>
+    <rule id="653e-00f8-0d44-aee5" name="Fearsome Blow (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (20 pts): Once per game the character can declare he is using the Fearsome Blow in combat (before any character attacks). His attacks are made at +1 Strength. They cannot be made in conjunction with any re-roll ability (Veteran, Saxon Buckler, Throwing Spear) but can be used with a Strength benefit from a particular weapon such as a heavy throwing spear. Cannot be used in the same round as Hail of Blows or Salmon Leap.</description>
+    </rule>
+    <rule id="ae70-b894-f54f-d081" name="Finest Armour (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (15 pts): The character and any one unit that he leads may exchange their Light Armour for Heavy Armour (only units that already have Light Armour can do this). Units wearing heavy armour and carrying shields have their movement reduced by 1". If the character is killed, Finest Armour cannot be fielded by the unit from the next battle onwards.</description>
+    </rule>
+    <rule id="1186-e520-42cb-fb10" name="Finest Horses (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (20 pts): The character and any one mounted unit that he leads may exchange their Horses (Move 7") for Finest Horses (Move 8"). Only units that already have Horses can do this. If the character is killed, Finest Horses cannot be fielded by the unit from the next battle onwards.</description>
+    </rule>
+    <rule id="8dac-805c-2cbf-fa7b" name="Goad (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (15 pts): Once per game the character can declare that he is using Goad when issuing a challenge (WAB rulebook p.42). The goading character can specify which enemy character he wishes to fight. The challenged character can only refuse if he passes a Leadership test on 3D6; otherwise he must accept the challenge and fight. If he successfully refuses he must retire to the rear ranks as usual.</description>
+    </rule>
+    <rule id="60cb-c79e-4df4-5725" name="Hail of Blows (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (20 pts): Once per game the character can declare he is using Hail of Blows in combat (before any character attacks). He attacks with an extra two attacks, but all his attacks are made with a -1 to hit modifier. Cannot be made in conjunction with any re-roll ability (Veteran, Saxon Buckler, Throwing Spear). Cannot be used in the same round as Fearsome Blow or Salmon Leap.</description>
+    </rule>
+    <rule id="c22d-f9b1-215b-cbb2" name="Javelin Hurling (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (10 pts): Once per game, in the Shooting phase, the character may hurl three javelins (declared before his shooting attack): range 8", Strength 3. Cannot be combined with any re-roll ability (e.g. Veteran). May be used as a stand &amp; shoot response if charged (each javelin still at -1 to hit). Cannot be used in the same round as Piercing Dart.</description>
+    </rule>
+    <rule id="5b93-13c7-d9a5-8db9" name="Knight Commander (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (20 pts): The character may lead a mounted unit. The unit can claim a Rank Bonus of up to +1 in combat and loses its Light Cavalry status. If he leaves the unit or is slain the Rank Bonus is lost and the unit reverts to normal Light Cavalry (except when he leaves the unit to fight a single combat; the bonus is restored if he rejoins).</description>
+    </rule>
+    <rule id="94f6-4fd2-10bd-f929" name="Loyalty (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (40 pts): Army General only. The character may lead a single unit. This unit becomes Stubborn (WAB rulebook p.53). Only formed infantry units may use the Stubborn ability (not in skirmish formation or mounted). If the character leaves the unit or is slain the Stubborn ability is lost (restored if he rejoins after a single combat).</description>
+    </rule>
+    <rule id="3c46-3d8f-b207-e1b7" name="Man of the People (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (40 pts): Army General only. All units in the army (including skirmishers, but not allies) may take all their Leadership tests as if they had a Leadership of 7 (they may use their own Ld if it is higher). All other normal Leadership rules apply (only units within 12" can use the General's Leadership and the Battle Standard; Break tests are still taken with the usual modifiers). Lost instantly if the character is slain; a Man of the People who flees the field regains the advantage in time for the next game.</description>
+    </rule>
+    <rule id="4ccb-8604-4808-49b0" name="Mounted Raider (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (20 pts): The character may lead a Light Cavalry unit. This unit can use the Feigned Flight ability: if the cavalry choose to flee or fire &amp; flee as a charge reaction they rally immediately at the end of their move and may reform facing in any direction. If the charging enemy encounters them they are not destroyed and may fight in the Close Combat phase; their opponents still count as charging. Lost if the character leaves the unit or is slain (restored after a single combat if he rejoins).</description>
+    </rule>
+    <rule id="9a78-3f84-ae1a-26da" name="Piercing Dart (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (5 pts): Once per game, in the Shooting phase, the character may hurl a single javelin that strikes with Strength 5 and a -2 saving throw modifier, range 8". Declared before the shooting attack; cannot be combined with any re-roll ability. Only one javelin may be thrown. May be used as a stand &amp; shoot response (-1 to hit). Cannot be used in the same round as Javelin Hurling.</description>
+    </rule>
+    <rule id="aff2-126c-28d5-2be1" name="Professional (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (25 pts): The character may lead a single unit. This unit becomes Drilled (WAB rulebook p.120). It cannot use the Drilled ability in skirmish formation. Lost instantly if the character leaves the unit or is slain (restored after a single combat if he rejoins).</description>
+    </rule>
+    <rule id="a591-5dac-bf13-5b56" name="Salmon Leap (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (15 pts): Once per game, in the Close Combat phase and before any To Hit dice are rolled, the character leaps into the air and strikes first, regardless of charging or Initiative. He makes all his attacks before his opponent. Cannot be used in conjunction with any re-roll ability (Veteran, Throwing Spear). Cannot be used in the same round as Hail of Blows or Fearsome Blow.</description>
+    </rule>
+    <rule id="ff1b-4cde-5894-ede9" name="Veteran (Arthur)" publicationId="28aa-c13e-b61d-4f3e" hidden="false">
+      <description>Character Advantage (10 pts): Once per game the character may re-roll all his To Hit dice, either for combat or for shooting. He must re-roll all his dice (not just the misses) and must abide by the re-roll.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

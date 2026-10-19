@@ -197,3 +197,9 @@ Nine catalogues named "(Vlad the Impaler)": Kingdom of Hungary (Arpad & Angevin,
 - Not built: allies drawn from other lists (documented only), scenarios (pp.99-130), the optional medieval rules (Battles, Battle Leaders), sample rosters.
 - Also in this commit: the Themata Army Standard Bearer heavy armour in the Byzantium catalogue was corrected to +2 pts.
 - Issues are listed in `issues/Vlad_the_Impaler.txt`.
+
+## Added: The Age of Arthur (Warhammer Historical, 2005)
+Ten catalogues named "(Age of Arthur)": Romano-British Civitates (Twilight of Britannia and Brittany in one catalogue; Age of Vortigern separately because Milites change category), British and Welsh Kingdoms (British Kingdoms, Welsh Kingdoms in the North, Welsh Kingdoms in the West, Dumnonia and the South-West), four Saxon catalogues (Sea Raiders, Early Anglo-Saxon Kingdoms, Saxon Kingdoms of the Heptarchy, Anglian Kingdoms of the Heptarchy), Franks (Early Merovingian), Picts (Early Southern, Later Southern, Picts of the North, Attecotti) and Scots-Irish (Raiders and Settlers, Dalriada, Kingdoms of Ireland).
+- Enforced: percentages by points per composition (Characters, Common warriors, Uncommon warriors are the primary categories); per-composition availability of units and options; Character Advantages as priced options with the advantage rule attached, available only where the composition lists them; one Army General (inherent or upgrade); once-per-army Army Standard Bearer options per character type; 0-1 unit limits; Chieftain/Curadh/Toiseach chariot movement and attacks; horses are M7 in these catalogues.
+- Not built: allies (documented only), the maximum of one/two advantages per character, once per 1,000 points limits for advantages, scenarios, campaigns, optional shield rules.
+- Issues are listed in `issues/The_Age_of_Arthur.txt`.
