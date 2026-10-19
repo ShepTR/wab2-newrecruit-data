@@ -8,6 +8,7 @@ Usage: python3 sp_limits.py <outdir>   (run after the post-processing scripts; i
 import sys, os, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from limlib import *
+from ratiolib import strip_model
 import sp_data as D
 
 GST = open(os.path.join(OUT, 'Warhammer_Ancient_Battles_2.gst'), encoding='utf8').read()
@@ -167,7 +168,12 @@ for key, unit, per, vs in D.PTSLIM:
     if not (vs and vs[0] in D.VAR.get(key, {})): points_limit(C(key), unit, per, vs)
 for (key, unit), groups in grouped([(k, u, per, vs) for k, u, m, per, vs in D.MODLIM]).items():
     cat = C(key)
-    cat.add_model_limit(unit, 'model-limit-var', 'force', 0, lambda cid, cat=cat, key=key, groups=groups: [rep(cid, per, p) for per, vs in groups for p in pids(cat, key, vs)])
+    strip_model(cat, unit, 'model-limit-var')
+    mn = int(re.search(r'value="(\d+)"[^>]*type="min"', re.search(r'^        <selectionEntry id="%s"[^>]*type="model">\n.*?\n        </selectionEntry>\n' % cat.unit(unit)[1], cat.unit(unit)[2].group(2), re.S | re.M).group(0)).group(1))
+    def floor_min(cid, per, p):     # below `min` figures' worth of points the unit may still have its minimum size
+        return (f'<modifier type="set" field="{cid}" value="{mn}">\n  <conditions>\n    {cond(p, "atLeast")}\n'
+                f'    <condition field="points" scope="roster" value="{per * mn}" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" type="lessThan"/>\n  </conditions>\n</modifier>\n')
+    cat.add_model_limit(unit, 'model-limit-var', 'force', 0, lambda cid, cat=cat, key=key, groups=groups: [rep(cid, per, p) for per, vs in groups for p in pids(cat, key, vs)] + [floor_min(cid, per, p) for per, vs in groups for p in pids(cat, key, vs)])
 for c in cats.values(): c.save()
 print('limits added')
 

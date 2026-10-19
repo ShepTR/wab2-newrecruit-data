@@ -56,8 +56,9 @@ def clean(units):
             m['weapons'] = list(dict.fromkeys(m['weapons']))
             m['rules'] = [RULE_MAP.get(r, r) for r in m['rules'] if r not in DROP_RULES]
             nm = m['name']
-            if ('Chariot' in nm and 'Runner' not in nm) or nm == 'Eqeta' or nm == 'Chariotry' or nm == 'Ark & four priests' and False:
-                m['mn'] = max(m['mn'], 3)
+            if (('Chariot' in nm and 'Runner' not in nm) or nm == 'Eqeta' or nm == 'Chariotry') and u['cat'] != 'Characters':
+                m['mn'] = max(m['mn'], 3)                        # chariot squadrons: at least three
+                if m.get('mx') is not None and m['mx'] < 3: m['mx'] = None
 
 def comp_text(variants):
     out = ['ARMY COMPOSITIONS:']
