@@ -7,10 +7,8 @@
 Usage: python3 figure_limits.py <outdir>   (idempotent)"""
 import sys
 from limlib import *
-from ratiolib import ratio, size_limit
-def figs(cat, A, B, tag, scope):
-    bm = cat.unit(B)[1]
-    cat.add_model_limit(A, tag, scope, 0, lambda cid: [mod('increment', cid, 1, repeat=(bm, 1, 'true'))])
+from ratiolib import ratio, size_limit, fig_cap
+def figs(cat, A, B, tag, scope): fig_cap(cat, A, B, tag, scope)
 I = Cat('Illyrians_Alexander.cat')
 ratio(I, 'Slave Warriors', ['Illyrian Warriors'])
 figs(I, 'Slave Warriors', 'Illyrian Warriors', 'figures-vs-warriors', 'force')
@@ -20,7 +18,6 @@ H = Cat('Kingdom_of_Hungary_Vlad.cat')
 figs(H, 'Tartar Cavalry', 'Szekeler Cavalry', 'figures-vs-szekelers', 'force')
 H.save()
 G = Cat('Germanic_Kingdoms_Byzantium.cat')
-wm = [G.unit(n)[1] for n in ('Warrior Elite (On Foot)', 'Warrior Elite (Mounted)')]
-G.add_model_limit('Unfree', 'figures-vs-warrior-elite', 'force', 0, lambda cid: [mod('increment', cid, 1, repeat=(m, 1, 'true')) for m in wm])
+fig_cap(G, 'Unfree', ['Warrior Elite (On Foot)', 'Warrior Elite (Mounted)'], 'figures-vs-warrior-elite', 'force')
 G.save()
 print('figure limits added')

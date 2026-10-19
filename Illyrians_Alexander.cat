@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4cdd-c505-ebb3-6e24" name="Illyrians (Alexander the Great)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="4cdd-c505-ebb3-6e24" name="Illyrians (Alexander the Great)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Illyrians (Alexander the Great): units and points from the Alexander the Great army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="8917-94d6-b9bd-bb69" name="Illyrian Warlord" hidden="false" collective="false" import="true" type="unit">
@@ -1335,15 +1335,21 @@
         <selectionEntry id="e907-32b2-709c-98a8" name="Slave Warrior" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="484d-9e52-43b1-87d0" type="min"/>
-            <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bc8-b95b-7d4e-6b1f" type="max"/>
+            <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bc8-b95b-7d4e-6b1f" type="max"/>
           </constraints>
           <modifiers>
           <!-- figures-vs-warriors -->
+          <modifier type="set" field="3bc8-b95b-7d4e-6b1f" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b59-b072-b49b-ba59" type="atLeast"/>
+            </conditions>
+          </modifier>
           <modifier type="increment" field="3bc8-b95b-7d4e-6b1f" value="1">
             <repeats>
               <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1283-6d25-c2e5-fde9" repeats="1" roundUp="false"/>
             </repeats>
           </modifier>
+
 
           </modifiers>
           <profiles>
@@ -1466,15 +1472,21 @@
         <selectionEntry id="435a-3c02-7145-8d16" name="Skirmisher" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43e2-4bd8-b160-afc7" type="min"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1023-9dc7-2a0a-31d9" type="max"/>
+            <constraint field="selections" scope="parent" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1023-9dc7-2a0a-31d9" type="max"/>
           </constraints>
           <modifiers>
           <!-- size-Illyrian Skirmishers-vs-Illyrian Warriors -->
+          <modifier type="set" field="1023-9dc7-2a0a-31d9" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b59-b072-b49b-ba59" type="atLeast"/>
+            </conditions>
+          </modifier>
           <modifier type="increment" field="1023-9dc7-2a0a-31d9" value="1">
             <repeats>
               <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1283-6d25-c2e5-fde9" repeats="1" roundUp="false"/>
             </repeats>
           </modifier>
+
 
           </modifiers>
           <profiles>

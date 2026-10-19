@@ -12,7 +12,7 @@ OUT = sys.argv[1]
 def hid(*p):
     h = hashlib.md5('|'.join(str(x) for x in p).encode('utf8')).hexdigest()
     return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
-from ratiolib import ratio, size_limit
+from ratiolib import ratio, size_limit, fig_cap
 BIG = 1000
 def cond(child, op, scope='force', incl='true'):
     return (f'<condition field="selections" scope="{scope}" value="1" percentValue="false" shared="true" includeChildSelections="{incl}" '
@@ -145,17 +145,14 @@ S.add_model_limit('Caetrati', 'limit-caetrati-vs-scutarii-size', 'parent', BIG, 
 S.save()
 
 N = Cat('Numidian_Hannibal.cat')
-w_u, w_m, _ = N.unit('Warriors')
-def figs(cid):      # total figures of this unit type may not exceed the total figures of Warriors
-    return [mod('set', cid, 0), mod('increment', cid, 1, repeat=(w_m, 1, 'true'))]
-N.add_model_limit('Trained Infantry', 'limit-figures-vs-warriors', 'force', BIG, figs)
-N.add_model_limit('Imitation Legionaries (optional)', 'limit-figures-vs-warriors', 'force', BIG, figs)
+# total figures of this unit type may not exceed the total figures of Warriors (applies once Warriors are in the army)
+fig_cap(N, 'Trained Infantry', 'Warriors', 'limit-figures-vs-warriors', 'force')
+fig_cap(N, 'Imitation Legionaries (optional)', 'Warriors', 'limit-figures-vs-warriors', 'force')
 N.save()
 
 G = Cat('Gallic_Hannibal.cat')
-ch_u = G.unit('Chariots')[0]; gw_m = G.unit('Warriors')[1]
+ch_u = G.unit('Chariots')[0]
 G.add_unit_limit('Fanatics', 'need-chariots', 'max', 0, lambda cid: [mod('set', cid, BIG, conds=[cond(ch_u, 'atLeast')])])
-def gfigs(cid): return [mod('set', cid, 0), mod('increment', cid, 1, repeat=(gw_m, 1, 'true'))]
-G.add_model_limit('Fanatics', 'limit-figures-vs-warriors', 'force', BIG, gfigs)
+fig_cap(G, 'Fanatics', 'Warriors', 'limit-figures-vs-warriors', 'force')
 G.save()
 print('limits added')

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a058-c4af-57bc-05ae" name="Germanic Kingdoms (Byzantium)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="a058-c4af-57bc-05ae" name="Germanic Kingdoms (Byzantium)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Germanic Kingdoms (Byzantium): units and points from the Byzantium: Beyond the Golden Gate army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="746b-d342-67f5-92fe" name="King" hidden="false" collective="false" import="true" type="unit">
@@ -4246,10 +4246,20 @@
         <selectionEntry id="3e40-b129-9b46-13d1" name="Unfree" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="89ae-d297-bd0c-a1bf" type="min"/>
-            <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f19d-de29-9e9a-9d89" type="max"/>
+            <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f19d-de29-9e9a-9d89" type="max"/>
           </constraints>
           <modifiers>
           <!-- figures-vs-warrior-elite -->
+          <modifier type="set" field="f19d-de29-9e9a-9d89" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="108d-3ce5-bea1-2851" type="atLeast"/>
+            </conditions>
+          </modifier>
+          <modifier type="set" field="f19d-de29-9e9a-9d89" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2622-1614-ce17-7456" type="atLeast"/>
+            </conditions>
+          </modifier>
           <modifier type="increment" field="f19d-de29-9e9a-9d89" value="1">
             <repeats>
               <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="534c-e6df-37c6-eb32" repeats="1" roundUp="false"/>
@@ -4260,6 +4270,7 @@
               <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f322-1b25-1683-97d2" repeats="1" roundUp="false"/>
             </repeats>
           </modifier>
+
 
           </modifiers>
           <profiles>

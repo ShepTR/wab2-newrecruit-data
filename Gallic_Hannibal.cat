@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="15" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="16" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="21ce-00fc-6575-f75d" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -1097,12 +1097,16 @@
           <modifiers>
           <!-- limit-figures-vs-warriors -->
           <modifier type="set" field="b7d7-8d98-311a-f808" value="0">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c068-f0fd-4d24-de69" type="atLeast"/>
+            </conditions>
           </modifier>
           <modifier type="increment" field="b7d7-8d98-311a-f808" value="1">
             <repeats>
               <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
             </repeats>
           </modifier>
+
 
           </modifiers>
           <profiles>

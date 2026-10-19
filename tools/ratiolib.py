@@ -51,9 +51,27 @@ def ratio(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
         return out
     cat.add_unit_limit(A, tag, 'max', 0, mods)
 
-def size_limit(cat, A, B, tag=None):
-    """models of one A unit <= total models in the B unit(s) (0 with none); B = unit name or list of names"""
+def strip_model(cat, A, tag):
+    """remove a model-figure limit built earlier under this tag (constraint, comment, modifiers, empty wrapper)"""
+    uid, mid, _ = cat.unit(A); cid = hid(mid, tag)
+    if f'<!-- {tag} -->' not in cat.s or cid not in cat.s: return
+    s = cat.s
+    s = re.sub(r'^ *<constraint [^\n]*id="%s" type="max"/>\n' % re.escape(cid), '', s, flags=re.M)
+    s = re.sub(r'^ *<!-- %s -->\n(?: *<modifier type="[a-z]+" field="%s" value="[^"]*">\n.*?</modifier>\n)+' % (re.escape(tag), re.escape(cid)), '', s, flags=re.M | re.S)
+    s = re.sub(r'^ *<modifiers>\n *</modifiers>\n', '', s, flags=re.M)
+    cat.s = s; cat.changed = True
+
+def fig_cap(cat, A, B, tag, scope):
+    """figures of A (per unit with scope 'parent', all units with 'force') may not exceed the figures of the B unit(s).
+    Only applies once a B unit is in the army (until then A is uncapped so the unit starts at its minimum size; the missing B is flagged elsewhere)."""
     Bs = [B] if isinstance(B, str) else list(B)
-    tag = tag or f'size-{A}-vs-{"-".join(Bs)}'
-    mids = [cat.unit(b)[1] for b in Bs]
-    cat.add_model_limit(A, tag, 'parent', 0, lambda cid: [mod('increment', cid, 1, repeat=(m, 1, 'true')) for m in mids])
+    strip_model(cat, A, tag)
+    bu = [cat.unit(b)[0] for b in Bs]; bm = [cat.unit(b)[1] for b in Bs]
+    def mods(cid):
+        out = [mod('set', cid, 0, conds=[cond(u, 'atLeast')]) for u in bu]
+        return out + [mod('increment', cid, 1, repeat=(m, 1, 'true')) for m in bm]
+    cat.add_model_limit(A, tag, scope, BIG, mods)
+
+def size_limit(cat, A, B, tag=None):
+    Bs = [B] if isinstance(B, str) else list(B)
+    fig_cap(cat, A, Bs, tag or f'size-{A}-vs-{"-".join(Bs)}', 'parent')
