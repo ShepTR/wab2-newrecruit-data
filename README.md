@@ -20,7 +20,7 @@ Game system revision: **19**. All catalogues reference it.
 
 | Book (publisher, year) | File suffix | Catalogues | Source |
 |---|---|---|---|
-| WAB 2nd Edition rulebook | `Roman_Army_List`, `Barbarian_Army_List` | 2 | Official, hand-transcribed |
+| WAB 2nd Edition rulebook | `Roman_Army_List`, `Barbarian_Army_List` (named "… (Main Rulebook)") | 2 | Official, hand-transcribed |
 | Armies of Antiquity (Warhammer Historical, 1999) | `_Armies_of_Antiquity` | 22 | Official; superseded by v2 below, so renamed `zz_old_<army>` to sort last |
 | Hannibal & the Punic Wars (2005) | `_Hannibal` | 6 | Official |
 | Chariot Wars | `_Chariot_Wars` | 7 | Official |
@@ -92,7 +92,7 @@ tools/<book>_build.py    writes the catalogues
 tools/<book>_all.sh      build + the post-processing chain + lint
 ```
 
-Books with a script: `ac` (Chivalry), `ad` (Alexander), `aoa` (Armies of Antiquity v1), `aoa2`, `aow` (Art of War), `arthur`, `bz` (Byzantium), `cw` (Chariot Wars), `el` (El Cid), `fw` (Fall of the West), `sp` (Spartacus), `sw` (Shieldwall), `vlad`. The rulebook lists use `rb_build.py`; Hannibal uses `hb_build.py` and `hannibal_limits.py`. The base game system and the AoA2 pilot lists come from `build_wab2.py`.
+Books with a script: `ac` (Chivalry), `ad` (Alexander), `aoa` (Armies of Antiquity v1), `aoa2`, `aow` (Art of War), `arthur`, `bz` (Byzantium), `cw` (Chariot Wars), `el` (El Cid), `fw` (Fall of the West), `sp` (Spartacus), `sw` (Shieldwall), `vlad`. The rulebook lists use `rb_build.py` then `catalogue_tags.py` (adds the "(Main Rulebook)" tag to the catalogue names); Hannibal uses `hb_build.py` and `hannibal_limits.py`. The base game system and the AoA2 pilot lists come from `build_wab2.py`.
 
 Post-processing steps run, in order, by every `<book>_all.sh`:
 
