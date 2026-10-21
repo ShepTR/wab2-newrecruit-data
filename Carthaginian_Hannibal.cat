@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="30b1-e14e-f544-81c3" name="Carthaginian (Hannibal)" revision="18" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="30b1-e14e-f544-81c3" name="Carthaginian (Hannibal)" revision="19" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Carthaginian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="4c65-c760-9110-46c2" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -1602,9 +1602,31 @@
     </selectionEntry>
     <selectionEntry id="0cb2-de5e-8a2b-65fc" name="Citizen Infantry" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d90f-aa49-b360-f72a" type="min"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5180-3657-02ba-1120" type="max"/>
       </constraints>
       <modifiers>
+        <!-- need -->
+        <!-- need:Artillery (Heavy Bolt Ballista) -->
+        <modifier type="increment" field="d90f-aa49-b360-f72a" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1de6-9509-fa68-475c" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Artillery (Heavy Bolt Ballista) -->
+        <modifier type="increment" field="d90f-aa49-b360-f72a" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5116-0bf8-7c12-0091" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Artillery (Heavy Bolt Ballista) -->
+        <modifier type="increment" field="d90f-aa49-b360-f72a" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="729f-fcaf-0531-7c0a" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
         <!-- carth-restrictions -->
           <modifier type="set" field="5180-3657-02ba-1120" value="-1">
             <conditionGroups>
@@ -1640,6 +1662,16 @@
       <infoLinks>
         <infoLink id="462f-6cde-52f2-d2cd" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
+<!-- req-notes -->
+      <profiles>
+        <profile id="63da-6301-2b07-e2ae" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Artillery (Heavy Bolt Ballista) (units of Levy Africans or Trained Africans count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="f342-8722-5f4a-1bb3" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -5956,6 +5988,7 @@
           </modifier>
 
 
+
           </modifiers>
           <profiles>
             <profile id="cc98-19ad-f99c-ef81" name="Balearic" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -6593,6 +6626,7 @@
           </modifier>
 
 
+
           </modifiers>
           <profiles>
             <profile id="79ae-dcb9-56d3-d188" name="Ligurian Slinger" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -6885,6 +6919,7 @@
           </modifier>
 
 
+
           </modifiers>
           <profiles>
             <profile id="5b68-5c27-3e93-2b6e" name="Sardinian" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -7006,6 +7041,7 @@
           </modifier>
 
 
+
           </modifiers>
           <profiles>
             <profile id="9bfa-066b-3dc4-bf25" name="Moor" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -7039,7 +7075,6 @@
     </selectionEntry>
     <selectionEntry id="1de6-9509-fa68-475c" name="Artillery (Heavy Bolt Ballista)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccc1-2f16-2d9a-c26c" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8580-2ec2-75e1-ea28" type="max"/>
       </constraints>
       <modifiers>
@@ -7048,22 +7083,6 @@
           <conditions>
             <condition field="selections" scope="1de6-9509-fa68-475c" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c5e8-ee80-eaa2-4cb8" type="atLeast"/>
           </conditions>
-        </modifier>
-        <!-- limit-Artillery (Heavy Bolt Ballista)-per-Citizen Infantry-Levy Africans-Trained Africans -->
-        <modifier type="increment" field="ccc1-2f16-2d9a-c26c" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0cb2-de5e-8a2b-65fc" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="ccc1-2f16-2d9a-c26c" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5116-0bf8-7c12-0091" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="ccc1-2f16-2d9a-c26c" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="729f-fcaf-0531-7c0a" repeats="1" roundUp="false"/>
-          </repeats>
         </modifier>
 
         <!-- carth-restrictions -->
@@ -7118,7 +7137,7 @@
         <profile id="9487-bed7-06cb-b7a9" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Citizen Infantry, Levy Africans or Trained Africans</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Citizen Infantry; 1 per unit of Levy Africans; 1 per unit of Trained Africans</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Citizen Infantry, Levy Africans and Trained Africans combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>

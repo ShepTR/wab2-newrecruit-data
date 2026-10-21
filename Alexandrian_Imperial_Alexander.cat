@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6e15-d81e-9e7c-dca8" name="Alexandrian Imperial (Alexander the Great)" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6e15-d81e-9e7c-dca8" name="Alexandrian Imperial (Alexander the Great)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Alexandrian Imperial (Alexander the Great): units and points from the Alexander the Great army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="05f4-9093-2f79-3f2c" name="Alexander the Great" hidden="false" collective="false" import="true" type="unit">
@@ -4174,25 +4174,8 @@
         <infoLink id="654e-f1a4-3e74-eec3" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1854-2fd3-faeb-5fef" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Hypaspists-per-Pezhetairoi-Epigonoi-Experimental Phalanx -->
-        <modifier type="increment" field="1854-2fd3-faeb-5fef" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="54be-f6f1-d264-03f9" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="1854-2fd3-faeb-5fef" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe48-b203-5c1f-24b8" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="1854-2fd3-faeb-5fef" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8d5d-cf95-2ca0-c0e6" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
 <!-- req-notes -->
@@ -4200,7 +4183,7 @@
         <profile id="8ac1-32fc-6653-6efc" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Pezhetairoi, Epigonoi or Experimental Phalanx</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2 units of Pezhetairoi; 1 per 2 units of Epigonoi; 1 per 2 units of Experimental Phalanx</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2 units of Pezhetairoi, Epigonoi and Experimental Phalanx combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>
@@ -4402,6 +4385,42 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="54be-f6f1-d264-03f9" name="Pezhetairoi" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34c9-067c-e90a-a05c" type="min"/>
+      </constraints>
+      <modifiers>
+        <!-- need -->
+        <!-- need:Hypaspists -->
+        <modifier type="increment" field="34c9-067c-e90a-a05c" value="2">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="917b-83da-f703-73e2" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Hypaspists -->
+        <modifier type="increment" field="34c9-067c-e90a-a05c" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fe48-b203-5c1f-24b8" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Hypaspists -->
+        <modifier type="increment" field="34c9-067c-e90a-a05c" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8d5d-cf95-2ca0-c0e6" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
+      </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="87b7-9f29-b056-508c" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 2 units for each unit of Hypaspists (units of Epigonoi or Experimental Phalanx count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="9b50-3b71-e03e-df41" name="Phalangites" hidden="false" targetId="80e0-112f-b3d4-3e5c" primary="true"/>
       </categoryLinks>
@@ -4811,20 +4830,8 @@
     </selectionEntry>
     <selectionEntry id="e62f-6c8d-ca3a-7eb8" name="Agrianians" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ffe-cae6-ff9b-1019" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Agrianians-per-Mercenary Skirmishers-Skirmishers -->
-        <modifier type="increment" field="8ffe-cae6-ff9b-1019" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b0c7-bbee-134d-eb49" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="8ffe-cae6-ff9b-1019" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b5aa-0a9c-f85e-8a37" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
 <!-- req-notes -->
@@ -4832,7 +4839,7 @@
         <profile id="c372-1a27-fde9-4deb" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Mercenary Skirmishers or Skirmishers</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2 units of Mercenary Skirmishers; 1 per 2 units of Skirmishers</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2 units of Mercenary Skirmishers and Skirmishers combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>
@@ -4952,6 +4959,36 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="b0c7-bbee-134d-eb49" name="Mercenary Skirmishers" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e99c-c4e2-940b-731b" type="min"/>
+      </constraints>
+      <modifiers>
+        <!-- need -->
+        <!-- need:Agrianians -->
+        <modifier type="increment" field="e99c-c4e2-940b-731b" value="2">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e62f-6c8d-ca3a-7eb8" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Agrianians -->
+        <modifier type="increment" field="e99c-c4e2-940b-731b" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b5aa-0a9c-f85e-8a37" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
+      </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="a9cf-0f92-0cd3-cc73" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 2 units for each unit of Agrianians (units of Skirmishers count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="93f2-810c-aea4-ff66" name="Skirmishers" hidden="false" targetId="8c10-93c8-bc16-a231" primary="true"/>
       </categoryLinks>

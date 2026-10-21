@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="50be-dbef-ae9e-f1d0" name="Late Roman (Fall of the West)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="50be-dbef-ae9e-f1d0" name="Late Roman (Fall of the West)" revision="11" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Late Roman (Fall of the West): units and points from the Fall of the West army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="a3af-45f1-53c0-0cd4" name="Roman Army General" hidden="false" collective="false" import="true" type="unit">
@@ -3059,6 +3059,21 @@
     </selectionEntry>
     <selectionEntry id="da90-26eb-6f22-ed43" name="Light Bolt Thrower (Scorpio)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- need -->
+        <!-- need:Small Stone Thrower (Tormenta) -->
+        <modifier type="increment" field="982d-6713-f89f-fbcb" value="2">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="127a-2c9b-6c02-97cf" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Small Stone Thrower (Tormenta) -->
+        <modifier type="increment" field="982d-6713-f89f-fbcb" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e4cd-327f-7e09-1d38" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
       <!-- crew-merge -->
         <modifier type="increment" field="points" value="8">
           <conditions>
@@ -3071,6 +3086,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="982d-6713-f89f-fbcb" type="min"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="b12a-8ea4-d63c-331a" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 2 units for each unit of Small Stone Thrower (Tormenta) (units of Bolt Thrower (Ballista) count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="c233-7a08-f380-ea16" name="Special Units" hidden="false" targetId="099a-3435-f35a-fee2" primary="true"/>
       </categoryLinks>
@@ -3345,7 +3373,6 @@
     </selectionEntry>
     <selectionEntry id="127a-2c9b-6c02-97cf" name="Small Stone Thrower (Tormenta)" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8016-27f2-05ea-56cb" type="max"/>
       </constraints>
       <modifiers>
       <!-- crew-merge -->
@@ -3354,22 +3381,6 @@
             <condition field="selections" scope="127a-2c9b-6c02-97cf" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2c3d-ec78-4b72-5e44" type="atLeast"/>
           </conditions>
         </modifier>
-        <!-- tormenta-per-two-bolt-shooters -->
-        <modifier type="increment" field="8016-27f2-05ea-56cb" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="da90-26eb-6f22-ed43" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="8016-27f2-05ea-56cb" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e4cd-327f-7e09-1d38" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="8016-27f2-05ea-56cb" value="-1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="127a-2c9b-6c02-97cf" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
 <!-- req-notes -->
@@ -3377,7 +3388,7 @@
         <profile id="f752-4393-223d-60cf" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Light Bolt Thrower (Scorpio) or Bolt Thrower (Ballista)</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Light Bolt Thrower (Scorpio); 1 per unit of Bolt Thrower (Ballista)</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2 units of Light Bolt Thrower (Scorpio) and Bolt Thrower (Ballista) combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>

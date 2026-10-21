@@ -31,7 +31,9 @@ def strip_old(cat, A, tag):
 def ratio(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
     tag = tag or f'limit-{A}-per-{"-".join(Bs)}'
     ids = [cat.unit(b)[0] for b in Bs]
-    if len(Bs) == 1 and not extra and not unless_none:
+    if not extra and not unless_none:
+        # one B: min on B.  Several B's ("A per N units of B1 or B2 ..."): the B's together must reach N*count(A), written as ONE min on the
+        # first B that is reduced by 1 for every unit of the other B's  (min(B1) = N*A - count(B2) - ...), so the error names a unit to add.
         strip_old(cat, A, tag)
         b = Bs[0]; buid = cat.unit(b)[0]; aid = cat.unit(A)[0]
         if '<!-- need -->' not in cat.unit(b)[2].group(0):
@@ -41,6 +43,8 @@ def ratio(cat, A, Bs, per=1, extra=(), tag=None, unless_none=False):
         if mk in m: return
         cid = hid(buid, 'need')
         x = mod('increment', cid, per, repeat=(aid, 1, 'false'))
+        for o in Bs[1:]:
+            x += f'<!-- needalt:{A} -->\n' + mod('increment', cid, -1, repeat=(cat.unit(o)[0], 1, 'false'))
         x = f'        {mk}\n' + ''.join(('        ' + l if l.strip() else l) for l in x.splitlines(True))
         nb = m.replace('        <!-- need -->\n', '        <!-- need -->\n' + x, 1)
         cat.s = cat.s.replace(m, nb, 1); cat.changed = True

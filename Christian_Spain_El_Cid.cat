@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f89e-42a7-5272-fedd" name="Christian Spain (El Cid)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="f89e-42a7-5272-fedd" name="Christian Spain (El Cid)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Christian Spain (El Cid): units and points from the El Cid army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="1c3d-6df3-ed3b-6948" name="Rey" hidden="false" collective="false" import="true" type="unit">
@@ -4754,9 +4754,25 @@
     </selectionEntry>
     <selectionEntry id="f86f-a03b-e484-b304" name="Caballeros Hidalgos" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2b0-3f49-421a-fbf7" type="min"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="114d-a631-acbf-5ea3" type="max"/>
       </constraints>
       <modifiers>
+        <!-- need -->
+        <!-- need:Ballesteros -->
+        <modifier type="increment" field="a2b0-3f49-421a-fbf7" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-7c5e-3e5e-6bb5" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Ballesteros -->
+        <modifier type="increment" field="a2b0-3f49-421a-fbf7" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7699-442a-4592-8e79" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
         <!-- unav-sw -->
         <modifier type="set" field="114d-a631-acbf-5ea3" value="0">
           <conditions>
@@ -4765,6 +4781,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="82d5-a67b-300b-41d2" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Ballesteros (units of Caballeros de las Ordenes Militares count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="a710-f9d1-37a9-7467" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
         <categoryLink id="595b-9812-ea24-bfab" name="Common Troops: El Cid" hidden="false" targetId="74ba-c414-a747-826c" primary="false"/>
@@ -6505,21 +6531,9 @@
         <infoLink id="9f2c-dcbe-8006-6baa" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11e9-a8d9-2e82-fc4f" type="max"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f8c-915d-9db9-8364" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Ballesteros-per-Caballeros Hidalgos-Caballeros de las Ordenes Militares -->
-        <modifier type="increment" field="11e9-a8d9-2e82-fc4f" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f86f-a03b-e484-b304" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="11e9-a8d9-2e82-fc4f" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7699-442a-4592-8e79" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
         <!-- unav-sw -->
         <modifier type="set" field="2f8c-915d-9db9-8364" value="0">
@@ -6534,7 +6548,7 @@
         <profile id="21aa-ab01-95ac-6fd7" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Caballeros Hidalgos or Caballeros de las Ordenes Militares</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Caballeros Hidalgos; 1 per unit of Caballeros de las Ordenes Militares</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Caballeros Hidalgos and Caballeros de las Ordenes Militares combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>

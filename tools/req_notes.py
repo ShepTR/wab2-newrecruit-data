@@ -39,6 +39,13 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
     for bm in re.finditer(r'^    <selectionEntry id="[^"]*" name="([^"]*)"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', s, re.S | re.M):
         for nm in re.finditer(r'<!-- need:([^>]*?) -->\n\s*<modifier type="increment" field="[^"]*" value="(\d+)">', bm.group(0)):
             need_a.setdefault(nm.group(1), {})[bm.group(1).replace('&amp;', '&')] = int(nm.group(2)); need_b.setdefault(bm.group(1).replace('&amp;', '&'), {})[nm.group(1).replace('&amp;', '&')] = int(nm.group(2))
+    need_alt = {}   # A -> other base units whose units also count toward A's ratio (several-base rules)
+    for bm in re.finditer(r'^    <selectionEntry id="[^"]*" name="([^"]*)"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', s, re.S | re.M):
+        bn = bm.group(1).replace('&amp;', '&')
+        for nm in re.finditer(r'<!-- needalt:([^>]*?) -->\n\s*<modifier type="increment" field="[^"]*" value="-1">\n\s*<repeats>\n\s*<repeat [^>]*childId="([^"]*)"', bm.group(0)):
+            need_alt.setdefault(nm.group(1).replace('&amp;', '&'), []).append(nm.group(2))
+    ids2name = {}
+    for m_ in re.finditer(r'^    <selectionEntry id="([^"]*)" name="([^"]*)"[^>]*type="unit">', s, re.M): ids2name[m_.group(1)] = m_.group(2).replace('&amp;', '&')
     out = s; n = 0
     for um in list(re.finditer(r'^    <selectionEntry id="([^"]*)" name="([^"]*)"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', s, re.S | re.M)):
         blk = um.group(0); uid, uname = um.group(1), um.group(2)
@@ -79,11 +86,19 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
         if uname in need_b:
             grp = {}
             for k, v in need_b[uname].items(): grp.setdefault(v, []).append(k)
-            lim.append('Need at least ' + '; and '.join(f'{v} unit{"s" if v > 1 else ""} for each unit of ' + ', '.join(ks) for v, ks in grp.items()))
+            alts = sorted({ids2name.get(o, o) for k in need_b[uname] for o in need_alt.get(k, [])})
+            lim.append('Need at least ' + '; and '.join(f'{v} unit{"s" if v > 1 else ""} for each unit of ' + ', '.join(k.replace('&amp;', '&') for k in ks) for v, ks in grp.items())
+                       + (f' (units of {join(alts)} count toward this)' if alts else ''))
+        combined = None
+        if uname.replace('&amp;', '&') in need_alt and ratio:
+            first = next(iter(ratio)); n_ = ratio[first]
+            combined = (n_, [first] + [ids2name.get(o, o) for o in need_alt[uname.replace('&amp;', '&')]])
+            ratio = {k: n_ for k in combined[1]}
         if ratio:
             allb = list(ratio)
             req.append('At least one of: ' + join(allb))
-            lim.append('; '.join(f'1 per {"" if v == 1 else str(v) + " units of "}{k}' if v != 1 else f'1 per unit of {k}' for k, v in ratio.items()))
+            if combined: lim.append(f'1 per {"" if combined[0] == 1 else str(combined[0]) + " units of "}{"unit of " if combined[0] == 1 else ""}' + join(combined[1]).replace(' or ', ' and ') + ' combined')
+            else: lim.append('; '.join(f'1 per {"" if v == 1 else str(v) + " units of "}{k}' if v != 1 else f'1 per unit of {k}' for k, v in ratio.items()))
         if pts:
             lim.append(f'1 per {pts[0]} points in the army' + (f' (shared with {join(pool)})' if pool else ''))
         if unlock:

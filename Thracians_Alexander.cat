@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="acdb-8982-b749-a280" name="Thracians (Alexander the Great)" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="acdb-8982-b749-a280" name="Thracians (Alexander the Great)" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Thracians (Alexander the Great): units and points from the Alexander the Great army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="7cc5-6b17-c4e5-f78b" name="Thracian King" hidden="false" collective="false" import="true" type="unit">
@@ -4284,9 +4284,25 @@
     </selectionEntry>
     <selectionEntry id="6554-06ec-a41f-e25a" name="Noble Cavalry" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67d6-c2d1-e869-feee" type="min"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0471-457b-61a7-cc28" type="max"/>
       </constraints>
       <modifiers>
+        <!-- need -->
+        <!-- need:Getae Cavalry -->
+        <modifier type="increment" field="67d6-c2d1-e869-feee" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="77f8-2530-898d-09e9" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Getae Cavalry -->
+        <modifier type="increment" field="67d6-c2d1-e869-feee" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e516-875d-3a28-de22" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
         <!-- unav-sw -->
         <modifier type="set" field="0471-457b-61a7-cc28" value="0">
           <conditions>
@@ -4295,6 +4311,16 @@
         </modifier>
 
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="8f29-4a77-13da-e6b9" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Getae Cavalry (units of Thracian Light Cavalry count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="c8a1-0d10-a35a-ef6a" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -4495,21 +4521,9 @@
         <infoLink id="ef9c-cbcd-40f8-020b" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aefa-5786-3266-de2b" type="max"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9501-59f0-ad7a-9edf" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Getae Cavalry-per-Noble Cavalry-Thracian Light Cavalry -->
-        <modifier type="increment" field="aefa-5786-3266-de2b" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6554-06ec-a41f-e25a" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="aefa-5786-3266-de2b" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e516-875d-3a28-de22" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
         <!-- unav-sw -->
         <modifier type="set" field="9501-59f0-ad7a-9edf" value="0">
@@ -4524,7 +4538,7 @@
         <profile id="2d8c-df84-f025-0d34" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Noble Cavalry or Thracian Light Cavalry</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Noble Cavalry; 1 per unit of Thracian Light Cavalry</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Noble Cavalry and Thracian Light Cavalry combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>

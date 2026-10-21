@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b54a-4a3e-53ff-e612" name="zz_old_Ancient Chinese" revision="7" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b54a-4a3e-53ff-e612" name="zz_old_Ancient Chinese" revision="8" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ancient Chinese (Armies of Antiquity): units and points from the Armies of Antiquity army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="e2e7-5692-9f46-25d1" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -859,6 +859,60 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="05ed-b7a0-0745-cc2f" name="Halberdiers" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cac-ec8d-b44f-49da" type="min"/>
+      </constraints>
+      <modifiers>
+        <!-- need -->
+        <!-- need:Rocket Artillery -->
+        <modifier type="increment" field="1cac-ec8d-b44f-49da" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7726-47dc-df2d-330e" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Rocket Artillery -->
+        <modifier type="increment" field="1cac-ec8d-b44f-49da" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6223-4c4d-fb7c-b24c" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- need:Stone Thrower -->
+        <modifier type="increment" field="1cac-ec8d-b44f-49da" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="32d2-9831-1c24-5f14" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Stone Thrower -->
+        <modifier type="increment" field="1cac-ec8d-b44f-49da" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6223-4c4d-fb7c-b24c" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- need:Bolt Thrower -->
+        <modifier type="increment" field="1cac-ec8d-b44f-49da" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8bac-9ac0-665f-cf0a" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <!-- needalt:Bolt Thrower -->
+        <modifier type="increment" field="1cac-ec8d-b44f-49da" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6223-4c4d-fb7c-b24c" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
+
+      </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="64bc-7e8d-ebed-216d" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Rocket Artillery, Stone Thrower, Bolt Thrower (units of Spearmen count toward this)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="9754-cf93-4189-3097" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
@@ -1466,20 +1520,8 @@
     </selectionEntry>
     <selectionEntry id="8bac-9ac0-665f-cf0a" name="Bolt Thrower" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4db8-89b2-3c3c-9329" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Bolt Thrower-per-Halberdiers-Spearmen -->
-        <modifier type="increment" field="4db8-89b2-3c3c-9329" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05ed-b7a0-0745-cc2f" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="4db8-89b2-3c3c-9329" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6223-4c4d-fb7c-b24c" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
 <!-- req-notes -->
@@ -1487,7 +1529,7 @@
         <profile id="1e54-26b5-9f7e-6102" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Halberdiers or Spearmen</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Halberdiers; 1 per unit of Spearmen</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Halberdiers and Spearmen combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>
@@ -1608,20 +1650,8 @@
     </selectionEntry>
     <selectionEntry id="32d2-9831-1c24-5f14" name="Stone Thrower" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4be-da9b-d3c5-fd2e" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Stone Thrower-per-Halberdiers-Spearmen -->
-        <modifier type="increment" field="c4be-da9b-d3c5-fd2e" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05ed-b7a0-0745-cc2f" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="c4be-da9b-d3c5-fd2e" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6223-4c4d-fb7c-b24c" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
 <!-- req-notes -->
@@ -1629,7 +1659,7 @@
         <profile id="939c-6951-2a0e-75fb" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Halberdiers or Spearmen</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Halberdiers; 1 per unit of Spearmen</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Halberdiers and Spearmen combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>
@@ -1750,20 +1780,8 @@
     </selectionEntry>
     <selectionEntry id="7726-47dc-df2d-330e" name="Rocket Artillery" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a6c-430d-e0f5-1bc5" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Rocket Artillery-per-Halberdiers-Spearmen -->
-        <modifier type="increment" field="2a6c-430d-e0f5-1bc5" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05ed-b7a0-0745-cc2f" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="2a6c-430d-e0f5-1bc5" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6223-4c4d-fb7c-b24c" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
 
       </modifiers>
 <!-- req-notes -->
@@ -1771,7 +1789,7 @@
         <profile id="440b-9ce7-749a-abce" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Halberdiers or Spearmen</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Halberdiers; 1 per unit of Spearmen</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Halberdiers and Spearmen combined</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>

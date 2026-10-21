@@ -108,9 +108,8 @@ FW = '_Fall_of_the_West.cat'
 # ---------------------------------------------------------------------------------------------------------------------------
 # Tormenta: one stone thrower per two bolt shooters (rulebook p.181): T <= (Scorpio units + Ballista units) - T  <=>  2T <= S+B
 def tormenta(cat):
-    t = cat.unit('Small Stone Thrower (Tormenta)')[0]; a = cat.unit('Light Bolt Thrower (Scorpio)')[0]; b = cat.unit('Bolt Thrower (Ballista)')[0]
-    cat.add_unit_limit('Small Stone Thrower (Tormenta)', 'tormenta-per-two-bolt-shooters', 'max', 0, lambda cid: [
-        mod('increment', cid, 1, repeat=(a, 1, 'false')), mod('increment', cid, 1, repeat=(b, 1, 'false')), mod('increment', cid, -1, repeat=(t, 1, 'false'))])
+    from ratiolib import ratio
+    ratio(cat, 'Small Stone Thrower (Tormenta)', ['Light Bolt Thrower (Scorpio)', 'Bolt Thrower (Ballista)'], per=2, tag='tormenta-per-two-bolt-shooters')
 
 # Skirmish formation (free) and "one soldier in four may take a bow" (Fall of the West p.46, p.48)
 LT = '5be5-5832-c8fb-3a19'     # Light Troops rule
