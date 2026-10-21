@@ -39,6 +39,18 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
     for bm in re.finditer(r'^    <selectionEntry id="[^"]*" name="([^"]*)"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', s, re.S | re.M):
         for nm in re.finditer(r'<!-- need:([^>]*?) -->\n\s*<modifier type="increment" field="[^"]*" value="(\d+)">', bm.group(0)):
             need_a.setdefault(nm.group(1), {})[bm.group(1).replace('&amp;', '&')] = int(nm.group(2)); need_b.setdefault(bm.group(1).replace('&amp;', '&'), {})[nm.group(1).replace('&amp;', '&')] = int(nm.group(2))
+    # prerequisites written as a minimum on the prerequisite unit (prereq_min.py): <!-- prereq:A --> increment (+ <!-- prereqalt:A --> alternatives)
+    prereq = {}   # A -> [(war picker names, [prerequisite unit names])]
+    for bm in re.finditer(r'^    <selectionEntry id="[^"]*" name="([^"]*)"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', s, re.S | re.M):
+        cur = None
+        for pm in re.finditer(r'<!-- (prereq|prereqalt):([^>]*?) -->\n\s*<modifier type="increment" field="[^"]*" value="-?1">\n(.*?)</modifier>', bm.group(0), re.S):
+            kind_, an, body_ = pm.groups(); an = an.replace('&amp;', '&')
+            if kind_ == 'prereq':
+                wars_ = [anyent[c].replace('&amp;', '&') for c in re.findall(r'childId="([^"]*)" type="atLeast"', body_) if c not in units and c in anyent]
+                cur = (wars_, [bm.group(1).replace('&amp;', '&')]); prereq.setdefault(an, []).append(cur)
+            elif cur is not None:
+                rid = re.search(r'<repeat [^>]*childId="([^"]*)"', body_)
+                if rid and rid.group(1) in units: cur[1].append(units[rid.group(1)])
     need_alt = {}   # A -> other base units whose units also count toward A's ratio (several-base rules)
     for bm in re.finditer(r'^    <selectionEntry id="[^"]*" name="([^"]*)"[^>]*type="unit">\n.*?\n    </selectionEntry>\n', s, re.S | re.M):
         bn = bm.group(1).replace('&amp;', '&')
@@ -82,6 +94,9 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
                 excl += names
                 if lt and not names: unlock += lt
         req, lim, notw = [], [], []
+        for wars_, names_ in prereq.get(uname.replace('&amp;', '&'), []):
+            if wars_: cunlock.setdefault(tuple(names_), []).extend(wars_)
+            else: unlock += names_
         ratio.update(need_a.get(uname.replace('&amp;', '&'), {}) or need_a.get(uname, {}))
         if uname in need_b:
             grp = {}
@@ -103,12 +118,13 @@ for path in sorted(glob.glob(os.path.join(OUT, '*.cat'))):
             lim.append(f'1 per {pts[0]} points in the army' + (f' (shared with {join(pool)})' if pool else ''))
         if unlock:
             req.append('At least one of: ' + join(unlock))
+        wunlock = [w for w in dict.fromkeys(wunlock) if not any(w in v for v in cunlock.values())]
         if cunlock and wunlock:
             req.append('Available in: ' + join(wunlock))
         for nm, wars in cunlock.items():
             req.append('In ' + join(wars) + ': at least one of: ' + join(list(nm)))
         if excl:
-            notw.append(join(excl))
+            notw.append(join(list(dict.fromkeys(excl))))
         if not (req or lim or notw): continue
         def ch(name, v): return f'              <characteristic name="{name}" typeId="{CT[name]}">{esc(v) if v else "-"}</characteristic>\n'
         rule = (f'      <profiles>\n        <profile id="{hid(uid, "req-notes")}" name="Requirements" hidden="false" typeId="{PT}" typeName="Requirements">\n'

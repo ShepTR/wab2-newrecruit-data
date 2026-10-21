@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="35a7-4fe9-8ce7-4dc8" name="Late Barbarian (Fall of the West)" revision="9" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="35a7-4fe9-8ce7-4dc8" name="Late Barbarian (Fall of the West)" revision="10" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Late Barbarian (Fall of the West): units and points from the Fall of the West army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="15c5-1ad0-e784-7fde" name="Barbarian Warlord" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1180-e267-1651-b7f8" type="min"/>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5065-d2a8-bbbd-0f44" type="max"/>
       </constraints>
+      <modifiers>
+        <!-- prereq-Comitatus -->
+        <!-- prereq:Comitatus -->
+        <modifier type="increment" field="1180-e267-1651-b7f8" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d98d-0dde-43aa-c8e9" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f224-d90a-08cf-a101" name="Characters" hidden="false" targetId="d087-5488-98c4-52b6" primary="true"/>
       </categoryLinks>
@@ -476,18 +487,6 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="d98d-0dde-43aa-c8e9" name="Comitatus" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2024-7ed1-4626-c88b" type="max"/>
-      </constraints>
-      <modifiers>
-        <!-- needs-warlord -->
-        <modifier type="set" field="2024-7ed1-4626-c88b" value="1000">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="15c5-1ad0-e784-7fde" type="atLeast"/>
-          </conditions>
-        </modifier>
-
-      </modifiers>
 <!-- req-notes -->
       <profiles>
         <profile id="957a-7315-ae25-802b" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
