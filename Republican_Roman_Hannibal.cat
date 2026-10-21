@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="20" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9c9b-cdcf-a528-ea88" name="Republican Roman (Hannibal)" revision="21" battleScribeVersion="2.03" authorName="WAB2 New Recruit pilot" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Republican Roman (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="ea5b-ece5-bf3a-0ea7" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -2580,6 +2580,12 @@
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cb1-9c53-8372-0aba" type="max"/>
       </constraints>
       <modifiers>
+        <!-- hide-leves-if-velites -->
+          <modifier type="set" field="hidden" value="true">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="atLeast"/>
+            </conditions>
+          </modifier>
         <!-- min-leves -->
         <modifier type="set" field="3e47-0feb-0de1-725f" value="1">
           <conditions>
@@ -2643,6 +2649,16 @@
             </conditionGroups>
           </modifier>
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="fa7c-f140-1976-7ccc" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">Velites</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="e910-6482-9a72-803c" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -2786,9 +2802,23 @@
     </selectionEntry>
     <selectionEntry id="c7cb-3c3a-91fd-ac51" name="Hastati" hidden="false" collective="false" import="true" type="unit">
       <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="706e-89a5-70f6-b41a" type="min"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d28d-ea89-d884-a71c" type="max"/>
       </constraints>
       <modifiers>
+        <!-- need -->
+        <!-- need:Principes -->
+        <modifier type="increment" field="706e-89a5-70f6-b41a" value="1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4d07-b6c0-74bc-fb66" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="706e-89a5-70f6-b41a" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdbb-41c6-203c-b273" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+
         <!-- roman-restrictions -->
           <modifier type="set" field="d28d-ea89-d884-a71c" value="-1">
             <conditionGroups>
@@ -2845,6 +2875,16 @@
             </conditionGroups>
           </modifier>
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="1dce-ca29-deea-f376" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Principes</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="ac81-d772-3464-ddd2" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -3202,21 +3242,29 @@
     </selectionEntry>
     <selectionEntry id="4d07-b6c0-74bc-fb66" name="Principes" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bbd-3683-b50e-c822" type="max"/>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="534d-d198-2e84-37a7" type="min"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7434-9b02-ed17-35a3" type="max"/>
       </constraints>
       <modifiers>
-        <!-- limit-Principes-per-Hastati-Raw Hastati -->
-        <modifier type="increment" field="2bbd-3683-b50e-c822" value="1">
+        <!-- need -->
+        <!-- need:Triarii -->
+        <modifier type="increment" field="534d-d198-2e84-37a7" value="1">
           <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c7cb-3c3a-91fd-ac51" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="da24-e6f8-8487-086f" repeats="1" roundUp="false"/>
           </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
+          </conditions>
         </modifier>
-        <modifier type="increment" field="2bbd-3683-b50e-c822" value="1">
+        <modifier type="increment" field="534d-d198-2e84-37a7" value="2">
           <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdbb-41c6-203c-b273" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="da24-e6f8-8487-086f" repeats="1" roundUp="false"/>
           </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="atLeast"/>
+          </conditions>
         </modifier>
+
 
         <!-- roman-restrictions -->
           <modifier type="set" field="7434-9b02-ed17-35a3" value="-1">
@@ -3278,8 +3326,8 @@
       <profiles>
         <profile id="d48e-e11c-df46-2270" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
-              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Hastati or Raw Hastati</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Hastati; 1 per unit of Raw Hastati</characteristic>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Hastati</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">Need at least 1 unit for each unit of Triarii. 1 per unit of Hastati</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>
@@ -3493,30 +3541,12 @@
     <selectionEntry id="da24-e6f8-8487-086f" name="Triarii" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d38-e7ea-c9bd-018e" type="min"/>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72dd-abcf-a1bf-02c2" type="max"/>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92cb-8f41-bfa5-ebfe" type="max"/>
       </constraints>
       <modifiers>
         <!-- min-triarii -->
 
 
-        <!-- limit-triarii-per-principes -->
-        <modifier type="increment" field="72dd-abcf-a1bf-02c2" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4d07-b6c0-74bc-fb66" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="lessThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="72dd-abcf-a1bf-02c2" value="1">
-          <repeats>
-            <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4d07-b6c0-74bc-fb66" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="62b8-1114-5c31-f3e2" type="atLeast"/>
-          </conditions>
-        </modifier>
 
         <!-- roman-restrictions -->
           <modifier type="set" field="92cb-8f41-bfa5-ebfe" value="-1">
@@ -3579,7 +3609,7 @@
         <profile id="5398-5a49-c7b4-b548" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
           <characteristics>
               <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">At least one of: Principes</characteristic>
-              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2 units of Principes</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per unit of Principes</characteristic>
               <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
           </characteristics>
         </profile>
@@ -3993,6 +4023,22 @@
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0278-8777-0e91-a938" type="max"/>
       </constraints>
       <modifiers>
+        <!-- hide-velites-if-leves -->
+          <modifier type="set" field="hidden" value="true">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52a2-880b-8aa8-896c" type="atLeast"/>
+            </conditions>
+          </modifier>
+          <modifier type="set" field="hidden" value="true">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2212-96b5-7b1c-b003" type="atLeast"/>
+            </conditions>
+          </modifier>
+          <modifier type="set" field="hidden" value="true">
+            <conditions>
+              <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8436-371d-cfea-42e8" type="atLeast"/>
+            </conditions>
+          </modifier>
         <!-- roman-restrictions -->
           <modifier type="set" field="0278-8777-0e91-a938" value="-1">
             <conditionGroups>
@@ -4052,6 +4098,16 @@
             </conditionGroups>
           </modifier>
       </modifiers>
+<!-- req-notes -->
+      <profiles>
+        <profile id="3b81-e560-374d-8806" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">-</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">Leves, Rorarii (use Leves profile) or Accensi</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="7b71-9864-d029-71f3" name="Common Troops" hidden="false" targetId="cdbb-fd56-92b1-73b7" primary="true"/>
       </categoryLinks>
@@ -5254,6 +5310,7 @@
           </modifier>
 
 
+
           </modifiers>
           <profiles>
             <profile id="fe8e-d7f7-263d-fc0b" name="Cretan" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -5413,6 +5470,7 @@
           </modifier>
 
 
+
           </modifiers>
           <profiles>
             <profile id="f4cc-74a3-4f32-3154" name="Syracusan" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
@@ -5556,6 +5614,7 @@
               <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19eb-b00a-bed8-9fd1" repeats="1" roundUp="false"/>
             </repeats>
           </modifier>
+
 
 
           </modifiers>
