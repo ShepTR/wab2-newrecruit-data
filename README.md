@@ -69,7 +69,7 @@ Not built: Siege & Conquest, allied contingents (described in each list's *List 
 
 - **Unit ratios** ("one X per Y units of Z") are a minimum on the base unit: the base unit shows an error when you have fewer than the ratio needs, whatever order units are added in. Example: Carthaginian Skirmishers need at least one unit for every Balearic, Ligurian, Sardinian or Moorish skirmisher unit. Where several base units share a rule (the Ballista, Hypaspists per Pezhetairoi, Epigonoi or Experimental Phalanx, Chinese war machines per Halberdier or Spearman unit) the minimum sits on the first base unit and is reduced by one for each unit of the others, so any mix of them satisfies it. The only exception is "unless none" rules such as the Spanish Caetrati, which stay a maximum on the dependent unit.
 - **Unit size and figure limits**, for example "may not be the largest unit of skirmishers" (Carthaginian and Roman slingers and archers), Slave Warriors against Illyrian Warriors, Tartars against Szekelers, Germanic Unfree against Warrior Elite, Numidian Trained Infantry against Warriors. These apply once the unit they are compared with is in the army. With several comparison units the total of their figures is used, which is lenient.
-- **Per-war availability and "R:" restrictions** (Carthaginians, Republican Romans, Spanish sub-lists). A unit that needs another unit first can be added at any time; the error then appears on the prerequisite unit ("needs at least 1"), so it names what to add. Units not on the chosen war's list are hidden.
+- **Per-war availability and "R:" restrictions** (Carthaginians, Republican Romans, Spanish sub-lists). A unit that needs another unit first can be added at any time; the error then appears on the prerequisite unit ("needs at least 1"), so it names what to add. Units not on the chosen war's list are hidden, and in lists with several wars or periods every unit stays hidden until you pick the Army composition, so the first step is obvious.
 - **Either/or choices** (alternative generals, King or Marshal, Leves or Velites, mounted or dismounted versions): once one is in the army the other disappears from the add list and still fails validation if it was added first.
 - **0-1 limits**, one General (alternative generals exclude each other), once-per-army options, per-composition costs and statistics.
 - **Points-based limits** ("one per 500 or 1,000 points" for artillery, war wagons, elephants and scythed chariots), shared across the units that share the allowance. The roster total includes the unit being added, so these are slightly lenient.
@@ -107,13 +107,13 @@ Post-processing steps run, in order, by every `<book>_all.sh`:
 | `<book>_limits` | Per-book rules; uses `limlib.py` and `ratiolib.py` (ratios as minimums, figure caps) |
 | `option_excl` | Mutually exclusive options (Light/Heavy armour, spear types, horse/warhorse) from `option_excl.json` |
 | `figure_limits` | Total-figure rules for Alexander, Byzantium and Vlad |
-| `prereq_min`, `excl_hide` | Prerequisites as a minimum on the prerequisite unit; hide the excluded half of either/or choices |
+| `prereq_min`, `excl_hide`, `compose_first` | Prerequisites as a minimum on the prerequisite unit; hide the excluded half of either/or choices; hide all units until the Army composition is picked |
 | `req_notes` | The Requirements profile |
 | `sv_stat` | Sv in the stat line |
 | `crew_merge`, `elephant_count` | Crew line and elephant unit size |
 | `mix_models` | Spear/bow model split (AoA2) |
 
-Hannibal has no `_all.sh`; run `python3 tools/prereq_min.py .`, `python3 tools/excl_hide.py .`, `python3 tools/req_notes.py .` and `python3 tools/sv_stat.py .` on that folder after `hb_build.py` and `hannibal_limits.py`.
+Hannibal has no `_all.sh`; run `python3 tools/prereq_min.py .`, `python3 tools/excl_hide.py .`, `python3 tools/compose_first.py .`, `python3 tools/req_notes.py .` and `python3 tools/sv_stat.py .` on that folder after `hb_build.py` and `hannibal_limits.py`.
 
 The AoA2 lists come from the source PDF: `aoa24_extract.py`, then `aoa2_gen.py` → `aoa2_data.py`, with corrections in `aoa2_fixes.py`. Other one-off fixers are `fix_command_costs.py` and `fix_chariot_sizes.py` (for catalogues built before the fix; the builders now do it themselves).
 
