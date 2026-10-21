@@ -92,7 +92,7 @@ tools/<book>_build.py    writes the catalogues
 tools/<book>_all.sh      build + the post-processing chain + lint
 ```
 
-Books with a script: `ac` (Chivalry), `ad` (Alexander), `aoa` (Armies of Antiquity v1), `aoa2`, `aow` (Art of War), `arthur`, `bz` (Byzantium), `cw` (Chariot Wars), `el` (El Cid), `fw` (Fall of the West), `sp` (Spartacus), `sw` (Shieldwall), `vlad`. The rulebook lists use `rb_build.py` then `catalogue_tags.py` (adds the "(Main Rulebook)" tag to the catalogue names); Hannibal uses `hb_build.py` and `hannibal_limits.py`. The base game system and the AoA2 pilot lists come from `build_wab2.py`.
+Books with a script: `ac` (Chivalry), `ad` (Alexander), `aoa` (Armies of Antiquity v1), `aoa2`, `aow` (Art of War), `arthur`, `bz` (Byzantium), `cw` (Chariot Wars), `el` (El Cid), `fw` (Fall of the West), `sp` (Spartacus), `sw` (Shieldwall), `vlad`. The rulebook lists use `rb_build.py` then `catalogue_tags.py` (adds the "(Main Rulebook)" tag to the catalogue names and drops a leading "The " from names so they sort properly); Hannibal uses `hb_build.py` and `hannibal_limits.py`. The base game system and the AoA2 pilot lists come from `build_wab2.py`.
 
 Post-processing steps run, in order, by every `<book>_all.sh`:
 
