@@ -333,6 +333,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     open(os.path.join(OUT,'Warhammer_Ancient_Battles_2.gst'),'w',encoding='utf8').write(''.join(g))
     for name, xml in cat_files.items():
+        continue   # the four pilot catalogues were superseded by the full AoA2 set (aoa2_all.sh) and removed; only the game system is written here
         fn = re.sub(r'[^A-Za-z0-9 _\-]','',name).replace(' ','_')+'.cat'
         open(os.path.join(OUT,fn),'w',encoding='utf8').write(xml)
     open(os.path.join(OUT,'_build_report.txt'),'w',encoding='utf8').write('\n'.join(report))

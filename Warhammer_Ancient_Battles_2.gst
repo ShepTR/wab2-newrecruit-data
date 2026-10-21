@@ -259,7 +259,6 @@
                 <conditionGroup type="or">
                   <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="30b1-e14e-f544-81c3" type="instanceOf"/>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77be-8814-23e3-4ce5" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9c9b-cdcf-a528-ea88" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="178c-ffbc-b301-16ba" type="instanceOf"/>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eb28-6ed4-bf69-dbe1" type="instanceOf"/>
@@ -366,21 +365,6 @@
             <modifier type="set" field="f74a-7438-43a8-644d" value="0">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d74-a514-2459-5a06" type="atLeast"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d05-8c94-0564-9abf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9640-4e8c-c5b2-04ae" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="f74a-7438-43a8-644d" value="25">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="25b3-496d-3222-47d5" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="f74a-7438-43a8-644d" value="33">
@@ -636,11 +620,6 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="52f6-e805-2e4a-6d4e" type="instanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="ae4a-e3c1-cedd-c368" value="50">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9640-4e8c-c5b2-04ae" type="instanceOf"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="ae4a-e3c1-cedd-c368" value="25">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7576-1447-92b5-2d67" type="atLeast"/>
@@ -671,11 +650,6 @@
             <modifier type="set" field="98a6-15e9-d534-2f30" value="50">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d74-a514-2459-5a06" type="atLeast"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="98a6-15e9-d534-2f30" value="25">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9640-4e8c-c5b2-04ae" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="98a6-15e9-d534-2f30" value="10">
@@ -1681,11 +1655,6 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="563b-400b-59e4-fb06" type="instanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="0b6e-4b03-466f-bf4f" value="50">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="25b3-496d-3222-47d5" type="instanceOf"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="0b6e-4b03-466f-bf4f" value="25">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8962-12c2-9bdf-5a66" type="instanceOf"/>
@@ -2120,11 +2089,6 @@
             </modifier>
             <modifier type="set" field="7ce4-868d-cff5-30d1" value="25">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d05-8c94-0564-9abf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="7ce4-868d-cff5-30d1" value="25">
-              <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="18f0-175f-4e79-c39a" type="instanceOf"/>
               </conditions>
             </modifier>
@@ -2223,11 +2187,6 @@
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d05-8c94-0564-9abf" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
-              <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="18f0-175f-4e79-c39a" type="instanceOf"/>
               </conditions>
             </modifier>
@@ -2238,17 +2197,7 @@
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9640-4e8c-c5b2-04ae" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
-              <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="563b-400b-59e4-fb06" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="25b3-496d-3222-47d5" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="835a-e3d9-7c19-a1aa" value="25">
@@ -4340,11 +4289,6 @@
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="563b-400b-59e4-fb06" type="instanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="959b-b12c-054a-e973" value="25">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="25b3-496d-3222-47d5" type="instanceOf"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="959b-b12c-054a-e973" value="50">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="00e3-617c-a758-7e27" type="instanceOf"/>
@@ -5168,11 +5112,6 @@
             <modifier type="set" field="9f0e-4146-4168-a5b3" value="33">
               <conditions>
                 <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d74-a514-2459-5a06" type="atLeast"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="9f0e-4146-4168-a5b3" value="50">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d05-8c94-0564-9abf" type="instanceOf"/>
               </conditions>
             </modifier>
             <modifier type="set" field="9f0e-4146-4168-a5b3" value="50">
@@ -6084,11 +6023,6 @@
           <modifiers>
             <modifier type="set" field="960a-16c9-6ffd-5743" value="50">
               <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9640-4e8c-c5b2-04ae" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="960a-16c9-6ffd-5743" value="50">
-              <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="dd92-9446-b164-cd78" type="instanceOf"/>
               </conditions>
             </modifier>
@@ -6099,11 +6033,6 @@
             <constraint field="limit::points" scope="roster" value="100" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="dfcb-64eb-5fb6-b8c6" type="max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" field="dfcb-64eb-5fb6-b8c6" value="20">
-              <conditions>
-                <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2d05-8c94-0564-9abf" type="instanceOf"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="dfcb-64eb-5fb6-b8c6" value="25">
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e317-4c41-6256-6973" type="instanceOf"/>
@@ -9711,32 +9640,6 @@
       </modifiers>
       <categoryLinks>
         <categoryLink id="c0c5-6aa4-8e63-8037" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry id="b9ef-b43e-36be-5a69" name="Early Army 30 BC to 110 AD" hidden="true" collective="false" import="true" type="upgrade">
-      <comment>Early_Imperial_Roman.cat</comment>
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77be-8814-23e3-4ce5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="5661-d7a5-6977-6c18" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry id="4d74-a514-2459-5a06" name="Later Army 110 AD to 193 AD" hidden="true" collective="false" import="true" type="upgrade">
-      <comment>Early_Imperial_Roman.cat</comment>
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="primary-catalogue" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="77be-8814-23e3-4ce5" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="1993-ef2e-5c11-ab57" name="Army composition" hidden="false" targetId="fb15-1790-2ccc-50c8" primary="true"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry id="7337-545b-6742-671e" name="First Punic War" hidden="true" collective="false" import="true" type="upgrade">
