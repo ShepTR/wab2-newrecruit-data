@@ -2,7 +2,7 @@
 
 BattleScribe-format data (`.gst` game system plus one `.cat` catalogue per army) for **Warhammer Ancient Battles 2nd Edition** and its supplements, for use in the [New Recruit](https://www.newrecruit.eu/) army builder.
 
-This is an unofficial fan project. See [Disclaimer](#disclaimer).
+**Version 0.1.0** (first release). This is an unofficial fan project. See [Disclaimer](#disclaimer).
 
 ## What is in here
 
@@ -14,7 +14,7 @@ This is an unofficial fan project. See [Disclaimer](#disclaimer).
 | `tools/` | The scripts that generate and post-process everything (see [How it is built](#how-it-is-built)) |
 | `extraction_review.txt` | Historical: what the first pilot extractor detected for four AoA2 lists (those pilot catalogues were later removed in favour of the full AoA2 set) |
 
-Game system revision: **19**. All catalogues reference it.
+Game system revision: **20** (release v0.1.0). All catalogues reference it.
 
 ### Books and catalogues
 
@@ -79,6 +79,7 @@ Not built: Siege & Conquest, allied contingents (described in each list's *List 
 - "May not outnumber any other unit of cavalry" and similar comparisons against the largest or smallest of several units.
 - Weapon mixes that cannot be expressed on unit-level checkboxes, such as "bows may not outnumber other weapons in the army".
 - Allies from other lists, optional rules, and scenario or campaign content.
+- Some Hannibal & the Punic Wars skirmisher rules (Spanish Balearic/Gallic) and a few deferred Armies of Antiquity v2 list fixes; see the `issues/` files.
 
 Each book's specifics are in the `issues/` file for that book and in the *List Notes* rule of each catalogue.
 

@@ -14,7 +14,7 @@ OUT = sys.argv[2]
 PILOT = [a.upper() for a in sys.argv[3:]] or ['EARLY IMPERIAL ROMAN','GALLIC','PARTHIAN','MEDIEVAL ENGLISH']
 
 GS_NAME = "Warhammer Ancient Battles 2.0"
-AUTHOR = "WAB2 New Recruit pilot"
+AUTHOR = "WAB2"
 STATS = ['M','WS','BS','S','T','W','I','A','Ld']
 
 def hid(*parts):
