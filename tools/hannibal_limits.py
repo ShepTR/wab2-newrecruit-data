@@ -106,21 +106,20 @@ C.save()
 
 R = Cat('Republican_Roman_Hannibal.cat')
 vel = R.unit('Velites')[0]
-ratio(R, 'Principes', ['Hastati', 'Raw Hastati'])
+ratio(R, 'Principes', ['Hastati'])
 # Ratios written as minimums on the base unit (the error names what is missing, whatever order units are added in):
 #  Principes need >= 1 unit per Triarii unit (2 per Triarii after the reorganisation, i.e. when Velites are in the army)
-#  Hastati (Hastati + Raw Hastati together) need >= 1 unit per Principes unit
+#  Hastati need >= 1 unit per Principes unit (Raw Hastati are an upgrade on Hastati, see roman_fixes.py)
 from ratiolib import strip_old
 strip_old(R, 'Triarii', 'limit-triarii-per-principes')
-strip_old(R, 'Principes', 'limit-Principes-per-Hastati-Raw Hastati')
+strip_old(R, 'Principes', 'limit-Principes-per-Hastati')
 tri_u = R.unit('Triarii')[0]; pr_u = R.unit('Principes')[0]
-rh_u = R.unit('Raw Hastati')[0]
 def need_principes(cid):
     return ['<!-- need:Triarii -->\n' + mod('increment', cid, 1, conds=[cond(vel, 'lessThan')], repeat=(tri_u, 1, 'false')),
             mod('increment', cid, 2, conds=[cond(vel, 'atLeast')], repeat=(tri_u, 1, 'false'))]
 R.add_unit_limit('Principes', 'need', 'min', 0, need_principes)
 def need_hastati(cid):
-    return ['<!-- need:Principes -->\n' + mod('increment', cid, 1, repeat=(pr_u, 1, 'false')), mod('increment', cid, -1, repeat=(rh_u, 1, 'false'))]
+    return ['<!-- need:Principes -->\n' + mod('increment', cid, 1, repeat=(pr_u, 1, 'false'))]
 R.add_unit_limit('Hastati', 'need', 'min', 0, need_hastati)
 R.add_unit_limit('Triarii', 'min-triarii', 'min', 1, lambda cid: [])
 # Leves: at least one unit unless Velites replace them (First Punic War, Second Punic War in Spain / Italy)
@@ -134,7 +133,7 @@ def extra(cid):
     return [mod('set', cid, 0, conds=[cond(sp_u, 'atLeast')]), mod('increment', cid, 1, conds=[cond(sp_u, 'atLeast')], repeat=(sp_m, 1, 'true'))]
 R.add_model_limit('Italian Extraordinarii', 'limit-extraordinarii-size', 'parent', BIG, extra)
 # Roman skirmish troops may not be the largest unit of infantry skirmishers
-for a in ('Cretan Archers', 'Syracusan Skirmishers', 'Balearic Slingers'):
+for a in ('Cretan Archers', 'Syracusan Skirmishers'):   # Balearic Slingers are unavailable (roman_fixes.py)
     size_limit(R, a, ['Velites', 'Leves'])
 # Leves OR Velites (and no Velites with Rorarii / Accensi): hide the blocked unit instead of letting it be added and flagged
 def add_hide(cat, name, tag, others):

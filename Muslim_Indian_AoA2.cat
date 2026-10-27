@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bee6-da40-7caf-8454" name="Muslim Indian (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="bee6-da40-7caf-8454" name="Muslim Indian (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Muslim Indian (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="3089-d1a1-14ef-d587" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -2357,6 +2357,18 @@
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0ffd-e6d5-9e3a-09de" type="lessThan"/>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c5d-5f07-9cf5-5c41" type="lessThan"/>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="17ae-f66a-81a1-aa0d" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <!-- unavailable-in:6c5d-5f07-9cf5-5c41 -->
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6c5d-5f07-9cf5-5c41" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <!-- unavailable-in:17ae-f66a-81a1-aa0d -->
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="17ae-f66a-81a1-aa0d" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>

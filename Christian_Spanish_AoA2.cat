@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6ce2-3dd9-788a-324c" name="Christian Spanish (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6ce2-3dd9-788a-324c" name="Christian Spanish (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Christian Spanish (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="7b91-c5d8-1ca4-0472" name="King" hidden="false" collective="false" import="true" type="unit">
@@ -786,6 +786,12 @@
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="308c-f3b2-5069-e321" type="lessThan"/>
           </conditions>
         </modifier>
+        <!-- unavailable-in:5a51-03b3-47c6-3637 -->
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a51-03b3-47c6-3637" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="b1c4-dbc1-5d1a-0390" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
@@ -1099,6 +1105,18 @@
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a51-03b3-47c6-3637" type="lessThan"/>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ec3d-3b54-e220-84ca" type="lessThan"/>
             <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="308c-f3b2-5069-e321" type="lessThan"/>
+          </conditions>
+        </modifier>
+        <!-- unavailable-in:5a51-03b3-47c6-3637 -->
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a51-03b3-47c6-3637" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <!-- unavailable-in:308c-f3b2-5069-e321 -->
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="308c-f3b2-5069-e321" type="atLeast"/>
           </conditions>
         </modifier>
       </modifiers>

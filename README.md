@@ -113,7 +113,7 @@ Post-processing steps run, in order, by every `<book>_all.sh`:
 | `crew_merge`, `elephant_count` | Crew line and elephant unit size |
 | `mix_models` | Spear/bow model split (AoA2) |
 
-Hannibal has no `_all.sh`; run `python3 tools/prereq_min.py .`, `python3 tools/excl_hide.py .`, `python3 tools/compose_first.py .`, `python3 tools/req_notes.py .` and `python3 tools/sv_stat.py .` on that folder after `hb_build.py` and `hannibal_limits.py`.
+Hannibal has no `_all.sh`; run `python3 tools/prereq_min.py .`, `python3 tools/excl_hide.py .`, `python3 tools/compose_first.py .`, `python3 tools/req_notes.py .` and `python3 tools/sv_stat.py .` on that folder after `hb_build.py` and `hannibal_limits.py`, then `python3 tools/roman_fixes.py .` (Raw Hastati upgrade, Balearic Slingers unavailable). `tools/composition_exclusions.py` hides units a composition bans (run by the aow, aoa2, bz and fw scripts); `tools/audit_compositions.py` is a read-only check of what each composition can field, and `issues/Composition_review.txt` lists the open questions.
 
 The AoA2 lists come from the source PDF: `aoa24_extract.py`, then `aoa2_gen.py` → `aoa2_data.py`, with corrections in `aoa2_fixes.py`. Other one-off fixers are `fix_command_costs.py` and `fix_chariot_sizes.py` (for catalogues built before the fix; the builders now do it themselves).
 

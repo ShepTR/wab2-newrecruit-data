@@ -15,7 +15,7 @@ def hid(*parts):
     return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
 
 G = {   # list entry in the book -> catalogue units
- 'Leves': ['Leves'], 'Velites': ['Velites'], 'Hastati': ['Hastati', 'Raw Hastati'], 'Principes': ['Principes'], 'Triarii': ['Triarii'],
+ 'Leves': ['Leves'], 'Velites': ['Velites'], 'Hastati': ['Hastati'], 'Principes': ['Principes'], 'Triarii': ['Triarii'],
  'Roman and Italian Cavalry': ['Roman and Italian Cavalry'], 'Italian Spearmen': ['Italian Spearmen', 'Italian Extraordinarii'],
  'Rorarii': ['Rorarii (use Leves profile)'], 'Accensi': ['Accensi'], 'Spanish Infantry': ['Spanish Infantry'], 'Spanish Cavalry': ['Spanish Cavalry'],
  'Cretan Archers': ['Cretan Archers'], 'Syracusan Skirmishers': ['Syracusan Skirmishers'], 'Tarentine Cavalry': ['Tarentine Cavalry'],
@@ -72,7 +72,7 @@ for war, lst in W.items():
 for un, wars in CHAR_WARS.items():
     for war in wars: rules.setdefault(un, {})[war] = (None, [], None, [])
 ALWAYS = {'Army General', 'Alternative General - Political Animal', 'Alternative General - Military Man', 'Army Battle Standard', 'Consul', 'Cavalry Prefect',
-          'Military Tribune', 'Prefect of the Allies', 'Balearic Slingers'}   # characters; Balearic Slingers are named in no composition (left unrestricted)
+          'Military Tribune', 'Prefect of the Allies', 'Balearic Slingers'}   # characters; Balearic Slingers are named in no composition: made unavailable by roman_fixes.py
 
 done = 0
 def do_unit(m):

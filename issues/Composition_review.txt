@@ -1,0 +1,96 @@
+Army composition review - all books - potential issues and questions
+=======================================================================
+Scope: every catalogue that has more than one army composition (87 of 246 catalogues). For each composition the new tool
+tools/audit_compositions.py works out which units can actually be added once that composition is picked (not hidden, not capped
+at 0) and compares that with the unit names in the composition's own text (the "ARMY COMPOSITIONS" note). Run it with
+  python3 tools/audit_compositions.py --review [catalogue.cat ...]
+Its output is a pointer, not a verdict: it flags things like "no Cavalry" next to a unit that is still available, and it also
+flags false positives (for example a unit mentioned in a "may take X only if..." sentence). Every flag was read against the text.
+
+A. FIXED IN THIS PASS
+---------------------
+Republican Roman (Hannibal)
+- Balearic Slingers are named in no composition, so they are now hidden and capped at 0 in every composition (kept in the
+  catalogue for reference). See question 1 below.
+- "Raw Hastati" was not a unit. It is now an upgrade on the Hastati unit: -2 pts per model, WS 3 -> 2 and Ld 7 -> 5 (so the
+  statline changes when it is taken). The separate unit entry and the Principes ratio rule that counted it are gone.
+  (tools/roman_fixes.py)
+Hidden when the composition is picked (tools/composition_exclusions.py, run by the aow, aoa2, bz and fw scripts):
+- Warring States: Yan - Military Strategist.
+- AoA2 Al-Andalus and Granada: Al Andalus - Lancers, Crossbowmen (both); Taifa - Lancers, cavalry Crossbowmen; Nasrid - Noble Cavalry.
+- AoA2 Christian Spanish: Early - Noble Cavalry, Military Orders; Middle - Military Orders.
+- AoA2 Crusaders: Later Crusades - Pilgrims.
+- AoA2 Late Imperial Roman: Romano-British - Imperator.
+- AoA2 Medieval Hungarian: Early - Royal Banderium, Cannon, Wagon.
+- AoA2 Muslim Indian: Lodi and Tughluq - Handgunners.
+- AoA2 North African Berbers: Other Dynasties - Christian Captain.
+- AoA2 Ottoman Turks: Early - Bandsman, Guard Cavalry, Janissaries, Cannon, Mortar; Later - Imam.
+- AoA2 Rus: Christianised - Berserker; Pagan Rus - Druzhina (Cavalry: none). Byzantium Rus: Era of the Princes - Grid Druzhina,
+  Chernye Klobuki.
+- AoA2 Russian: Post-Mongol - Aga, Militia Cavalry.
+- AoA2 Polish: Early - Cannon, Lithuanians, Cumans, Russians, Rycerz, Strzelcy (cavalry may only be Druzhina); Feudal - Cannon;
+  Later - Russians.
+- AoA2 Hindu India: Orissa - Elite Cavalry, Muslim Cavalry, Muslim Infantry; Rajputs - Rocket launcher, Muslim Cavalry/Infantry;
+  Standard Army - Elite Cavalry, Muslim Infantry.
+- AoA2 Italian City States: Early - Cannon, Organ Gun, Balkan Light Cavalry, Stradioti.
+- Fall of the West Barbarians: Sea Raiders - Barbarian Shock Cavalry, Barbarian Light Cavalry ("no cavalry").
+Units whose name carries composition codes are now available only in the matching compositions:
+- AoA2 Assyrian (E)/(L), AoA2 Japanese (E)/(M,L), AoA2 Medieval Balkan States (A/B/S/M).
+Audit of the earlier books (Chivalry, Alexander, El Cid, Vlad, Arthur, Spartacus, Shieldwall, Byzantium, Art of War, Chariot
+Wars, Hannibal, Fall of the West): the existing per-composition gating agrees with the texts apart from the items in B and C.
+
+B. QUESTIONS (need your decision or a source I do not have)
+-----------------------------------------------------------
+1. Balearic Slingers (Hannibal, Republican Roman): confirm "unavailable in every composition" stands unless you find an FAQ
+   that adds them (pp.51-52 name them nowhere).
+2. Italian Extraordinarii (Hannibal, Republican Roman): not named in any composition either. Same treatment as the Balearic
+   Slingers, or are they allowed in some list?
+3. AoA2 Italian City States, Later Italians: units are labelled F/M/P/N/V (Florence, Milan, Papal States, Naples, Venice) and "you
+   may only take units allowed to your city state". There is only one Later composition, so every labelled unit is visible.
+   Do you want five city-state compositions (more pickers), or leave it as text?
+4. AoA2 Japanese: besides Early/Middle/Late there is a fourth composition called "Japanese" (the general rules entry). It hides
+   nothing, so someone could pick it and get every unit. Should it be removed as a picker?
+5. AoA2 Steppe Nomads: the "Infantry: None" caps (Cuman, Magyar) are left alone because the same text lets those armies take a
+   few Subject Tribesmen units (Magyar up to two). Five of the nine compositions (Alan, Avar, Early Khazar, Huns, Late Khazar) have
+   no composition text in the catalogue at all. Can you point me to the AoA2 text for them?
+6. AoA2 compositions with no composition text in the catalogue (nothing to check against, so nothing is gated):
+   Dark Age Britain and Ireland (5), Early Byzantine (Early/Later Army), Early Hoplite Greek (Athens/Sparta/Thebes), Early Imperial
+   Roman (2), Gothic and Vandal Kingdoms (4), Israelite (2), Later Hoplite Greek (6), Later Irish (2), Mongol Conquest and
+   Khanates (Jalayirids), Persians and Medes (2), Shang Chinese (2), Slav or Bulgar (4), Thracian (3). Is there a source, or do these
+   lists simply have no per-period unit restrictions?
+7. Byzantium: Bulgars and Slavs (all four compositions), Early Caliphates (Tulunids; Ikhshidids), Thematic Byzantines
+   (Isaurian; Phrygian) have no composition text in the data, so only the percentage caps are in place. Was the text missing in
+   the book, or did I miss it?
+8. Shieldwall English: Kent and Home Counties (one composition) has no composition text.
+9. Vlad the Impaler, Kingdom of Hungary (Arpad and Angevin composition) and Armies of Chivalry Moldavia and Walachia (two
+   compositions) have no composition text.
+10. Armies of Chivalry: Liberi in the Capetian and Breton lists - which compositions may take them?
+11. AoA2 Arab Conquest, Umayyad Caliphate: "may not be led by a Companion". Companions are left available as ordinary
+    characters. Correct, or hidden entirely?
+12. Warring States, Chu: "Eastern Shaman only if no Military Strategist is taken" is documented in text, not enforced. Yan is
+    enforced (strategist hidden). Do you want the Chu either/or enforced?
+13. Leader-type restrictions ("no chieftain: led by a mormaer upgraded to army general", Scots-Irish "curadh", El Cid Al-Andalus
+    Caliphate "not a Christian captain") are text only. Hide the character for those compositions?
+
+C. NOT ENFORCED (rules the program cannot express, or ones not modelled; spot-check individual units, a few of these may
+   already carry a ratio rule from the book's own limits script)
+---------------------------------------------------------------------------
+- Partial limits: "only one unit of crossbowmen" (Al-Andalus Taifa, infantry crossbowmen), "no more than 2 units of Hindu cavalry"
+  (Rajputs), "no more than one unit of Elite Cavalry" (Vijayanagar), "a maximum of one unit each of elite cavalry and horse
+  archers" (Lodi), "only one unit of Hindu cavalry" (Tughluq), "at least half the cavalry must be Jinetes" (Al-Andalus),
+  Ottoman ratios (Imam per Tribal Infantry, Tribal Infantry/Feudal Horse per 1,200 pts, stone thrower per 1,400 pts), "Cumans
+  may not outnumber Lithuanians" (Later Polish), "at least one unit of Varjazi" (Pagan Rus).
+- Option bans: "may not take heavy armour" (Early Christian Spanish), "no unit may take heavy armour" (Pagan Rus), "may not have
+  barding" (Rajput characters and elite cavalry).
+- Conditional rules: Carroccio only if no army standard bearer (Holy Roman Empire, Early City/Clerical); no Tartar nobles or
+  warriors if western Russian states are taken; Sipahis and volunteers limits in the Ottoman Chivalry lists; "no armigeri" in
+  the Italian condotta allies of the Hungarian-Crusader army (Vlad); thegns, gebur, hirdmen/bondir and similar unit-count
+  rules in Shieldwall; Lusitanian/Caetrati ratios in the Spanish Hannibal list (partly enforced as a ratio).
+- Allies "from the X list" lines are text only; allies cannot be linked across catalogues.
+- Percentage caps per composition are applied as army-composition limits; they do not hide units, so a unit in a category
+  capped at 0% stays visible (only the bans listed in section A hide units).
+
+D. WHAT TO DO WITH THIS
+-----------------------
+Answers to B1-B13 and any missing source text are enough for the next pass; each decision becomes a one-line addition to the
+table at the top of tools/composition_exclusions.py (or a new composition entry in the book's data file for B3-B4).

@@ -24,9 +24,7 @@ R.append(U('Characters', 'Prefect of the Allies', [M('Praefectus Socii', '4 4 4 
 R.append(U('Common Troops', 'Leves', [M('Leves', '5 2 3 3 3 1 3 1 5', 4, mn=5, weapons=['Javelin'], options=[('Shield', 1), ('Thrusting spear', 0)])],
     'Javelins. May have shield (+1) and thrusting spear (free). Skirmishers. There must be at least one unit of Leves in the army, unless replaced by Velites.', page='57'))
 R.append(U('Common Troops', 'Hastati', [M('Hastatus', '4 3 3 3 3 1 3 1 7', 9, mn=5, weapons=['Hand Weapon', 'Heavy Throwing Spear', 'Large Shield'], rules=['Manipular Unit'], options=[('Light armour', 2), ('Drilled', 2)])],
-    'Sword, pilum, large shield. Light armour +2. Manipular Unit. May be Drilled (+2). One unit of Hastati for each unit of Principes. ' + LEAD, page='57'))
-R.append(U('Common Troops', 'Raw Hastati', [M('Raw Hastatus', '4 2 3 3 3 1 3 1 5', 7, mn=5, weapons=['Hand Weapon', 'Heavy Throwing Spear', 'Large Shield'], rules=['Manipular Unit'], options=[('Light armour', 2), ('Drilled', 2)])],
-    'Hastily raised and very young troops, replacing Hastati. Sword, pilum, large shield. ' + LEAD, page='57'))
+    'Sword, pilum, large shield. Light armour +2. Manipular Unit. May be Drilled (+2). May be replaced by Raw Hastati to depict hastily-raised and very young troops levied in emergencies (added by roman_fixes.py as a unit upgrade: -2 pts per model, WS 2, Ld 5). One unit of Hastati for each unit of Principes. ' + LEAD, page='57'))
 R.append(U('Common Troops', 'Principes', [M('Princeps', '4 3 3 3 3 1 3 1 7', 8, mn=5, weapons=['Hand Weapon', 'Thrusting Spear', 'Large Shield'], rules=['Manipular Unit'],
     options=[('Light armour', 2), ('Pilum (replaces thrusting spear)', 1), ('Drilled', 2), ('Stubborn', 3)])],
     'Sword, thrusting spear, large shield. Manipular Unit. One unit of Principes for each unit of Triarii (two units of Principes per Triarii after the legion reorganisation). ' + LEAD, page='57'))

@@ -10,7 +10,7 @@ def hid(*parts):
     return '-'.join(h[i:i + 4] for i in range(0, 16, 4))
 def q(s): return '"' + str(s).replace('&', '&amp;').replace('"', '&quot;').replace('<', '&lt;') + '"'
 
-FREE = {'Hastati', 'Raw Hastati', 'Principes', 'Triarii'}          # Hannibal p.55: free for the manipular units
+FREE = {'Hastati', 'Principes', 'Triarii'}          # Hannibal p.55: free for the manipular units
 UPGRADES = [('Leader', r'leader|centurion'), ('Standard bearer', r'standard bearer'), ('Musician', r'musician')]
 SKIP_UNIT = re.compile(r'elephant|warhound', re.I)
 
