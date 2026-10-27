@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5358-6843-c670-58f2" name="Italian City States (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="5358-6843-c670-58f2" name="Italian City States (AoA2)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Italian City States (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="fafd-829b-40ac-da0b" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1169,6 +1169,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="e30b-3832-90c8-372a" name="Militia" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <modifiers>
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
@@ -1182,21 +1183,6 @@
         <categoryLink id="06f7-fe6c-46ae-0c6f" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="df7f-e5ad-069f-0f34" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="15f3-711d-179c-6f4e" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a99-db76-043b-e342" type="min"/>
-          </constraints>
-          <!-- def-link -->
-          <rules>
-            <rule id="7a5d-66c9-1765-248a" name="Crossbow" hidden="false">
-              <description>Up to half the spearmen may replace their thrusting spear and large shield with crossbow (free) The whole unit is a Combined Formation, but the first rank of crossbowmen may shoot over the head of any front rank(s)</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="19cb-11ff-9d9a-5514" name="Pavises" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b74f-a9fb-9827-d48c" type="max"/>
@@ -1236,6 +1222,7 @@
             <modifier type="increment" field="points" value="-1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d3-b80f-a86c-4201" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="812d-fa06-0e56-15ec" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1278,6 +1265,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b4a7-ae22-be6d-6f7a" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="b4a7-ae22-be6d-6f7a" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="812d-fa06-0e56-15ec" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="d137-b21b-4728-56af" name="Militia" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1315,6 +1310,72 @@
             <infoLink id="8824-b577-c321-4db5" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="4c49-03fb-4b56-9408" name="Large Shield" hidden="false" targetId="8367-11b2-7778-977f" type="profile"/>
             <infoLink id="a0f4-2b99-f5be-73f8" name="Buckler" hidden="true" targetId="aa05-2e85-a1d8-8d69" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="e30b-3832-90c8-372a" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7fdc-4e3b-d11d-8251" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="812d-fa06-0e56-15ec" name="Militia (crossbow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d906-48bc-10e7-aeb1" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="d906-48bc-10e7-aeb1" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="90d3-b80f-a86c-4201" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="83f8-3ff6-ec6c-9a36" name="Militia (crossbow)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d769-6030-bf92-49cc" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Militia have hand weapon, thrusting spear and large shield. Up to half the spearmen may replace their thrusting spear and large shield with crossbow (free) and the other half replace the large shield with a pavises (free). The whole unit is a Combined Formation, but the first rank of crossbowmen may shoot over the head of any front rank(s) of spearmen, this is an exception to the normal rules for Combined Formations. In a Florentine army, Militia may replace thrusting spear and large shield with a pike (free), and are Medieval Phalanx. In a Neapolitan army, the thrusting spear and large shield may be replaced with a longbow and buckler (-1), and the unit becomes Open Order.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="44c0-5ce9-a9cf-5a97" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">-</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="721a-c827-03c7-d35b" name="Crossbow" hidden="false">
+              <description>Up to half the spearmen may replace their thrusting spear and large shield with crossbow (free) The whole unit is a Combined Formation, but the first rank of crossbowmen may shoot over the head of any front rank(s)</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="c59f-cb06-aece-0e95" name="Combined Formations" hidden="false" targetId="e22b-5445-d10a-9d89" type="rule"/>
+            <infoLink id="7e56-5955-e003-059c" name="Phalanx" hidden="false" targetId="8703-52e8-b888-e691" type="rule"/>
+            <infoLink id="8e28-d28d-98e1-8705" name="Open Order" hidden="false" targetId="6b07-0a99-df48-7a76" type="rule"/>
+            <infoLink id="7ca2-5923-dc5d-ce25" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="5de7-d67e-37c0-1cad" name="Buckler" hidden="true" targetId="aa05-2e85-a1d8-8d69" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">

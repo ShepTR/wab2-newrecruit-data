@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0636-e4a8-1ccf-14d8" name="Thematic Byzantines (Byzantium)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0636-e4a8-1ccf-14d8" name="Thematic Byzantines (Byzantium)" revision="10" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Thematic Byzantines (Byzantium): units and points from the Byzantium: Beyond the Golden Gate army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="5a53-1426-f85d-d8cf" name="Domestikos" hidden="false" collective="false" import="true" type="unit">
@@ -6098,6 +6098,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="9f6f-5d71-004d-797e" name="Tagmata Heavy Kavallarioi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <infoLinks>
         <infoLink id="badc-277f-9dde-3890" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
@@ -6123,6 +6124,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e8d-c747-836c-8693" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8bc0-0b39-b3e3-53e7" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6143,6 +6145,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e8d-c747-836c-8693" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8bc0-0b39-b3e3-53e7" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6200,6 +6203,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fe84-3b7b-f82c-136c" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="fe84-3b7b-f82c-136c" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8bc0-0b39-b3e3-53e7" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="b2c1-9f18-d83e-4b43" name="Tagmata Kavallarios" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -6281,9 +6292,103 @@
             <cost name="pts" typeId="points" value="24"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="8bc0-0b39-b3e3-53e7" name="Tagmata Kavallarios (Hippo-toxotai)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4061-f3a8-80df-2142" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="4061-f3a8-80df-2142" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e8d-c747-836c-8693" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="d798-d3fe-6030-5b2c" name="Tagmata Kavallarios (Hippo-toxotai)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">4</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">4</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="9f6f-5d71-004d-797e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e91-800a-8d9a-9113" type="atLeast"/>
+                </conditions>
+              </modifier>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="9f6f-5d71-004d-797e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e91-800a-8d9a-9113" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="8b9f-216e-f686-b269" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour, shield and Kontarion. May have heavy armour (+1 pt). Defensores &amp; Cursores: for every two units of the same type and with the same equipment, the smallest unit may be designated as Cursores (free), who count as Light Cavalry. Superior Byzantine Cavalry. Combined Formation - up to half of any unit of Kavallarioi may be Hippo-toxotai, who are placed in the rear ranks. May be Drilled (+1 pt). Isaurian &amp; Phrygian armies: any unit of Themata or Elite Themata Kavallarioi, and any character leading them, may be upgraded to Akritai Border Cavalry (+1 pt; no Hippo-toxotai; Feigned Flight).  (Byzantium p.69)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="504e-dc6c-4f95-07ea" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="9f6f-5d71-004d-797e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e91-800a-8d9a-9113" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8dab-cd58-3c27-e5a7" name="Superior Byzantine Cavalry" hidden="false" targetId="d81e-b4ce-ed5b-0f8a" type="rule"/>
+            <infoLink id="fe9e-3540-082a-2fd1" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="cc90-56f6-2bcd-7b45" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="67c3-4d6e-48d2-6b5c" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="9f6f-5d71-004d-797e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e91-800a-8d9a-9113" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="573a-0215-e23d-93f9" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="36ee-de26-7f1f-0ce0" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="9f6f-5d71-004d-797e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e91-800a-8d9a-9113" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="8b35-56fa-d874-a2e9" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="24"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="231a-9f29-427c-72fb" name="Elite Themata Heavy Kavallarioi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <infoLinks>
         <infoLink id="8ba9-3eba-6076-e374" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
@@ -6309,6 +6414,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="357d-5fe2-5770-78dc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2074-d573-429d-b2fa" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6329,6 +6435,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="357d-5fe2-5770-78dc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2074-d573-429d-b2fa" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6370,6 +6477,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="357d-5fe2-5770-78dc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2074-d573-429d-b2fa" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6418,6 +6526,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="127d-8c74-9957-625b" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="127d-8c74-9957-625b" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2074-d573-429d-b2fa" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="967b-d8d6-bee7-1a86" name="Elite Themata Kavallarios" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -6499,9 +6615,103 @@
             <cost name="pts" typeId="points" value="22"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="2074-d573-429d-b2fa" name="Elite Themata Kavallarios (Hippo-toxotai)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f1bf-7dc7-bd11-8244" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="f1bf-7dc7-bd11-8244" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="357d-5fe2-5770-78dc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="90b3-acb2-e7c1-b6cb" name="Elite Themata Kavallarios (Hippo-toxotai)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">4</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">4</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="231a-9f29-427c-72fb" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8777-40f2-0506-5fe1" type="atLeast"/>
+                </conditions>
+              </modifier>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="231a-9f29-427c-72fb" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8777-40f2-0506-5fe1" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="6c3e-a437-1a5c-d199" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour, shield and Kontarion. May have heavy armour (+1 pt). Defensores &amp; Cursores: for every two units of the same type and with the same equipment, the smallest unit may be designated as Cursores (free), who count as Light Cavalry. Superior Byzantine Cavalry. Combined Formation - up to half of any unit of Kavallarioi may be Hippo-toxotai, who are placed in the rear ranks. May be Drilled (+1 pt). Isaurian &amp; Phrygian armies: any unit of Themata or Elite Themata Kavallarioi, and any character leading them, may be upgraded to Akritai Border Cavalry (+1 pt; no Hippo-toxotai; Feigned Flight).  (Byzantium p.69)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4a6a-7766-010a-1ad0" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="231a-9f29-427c-72fb" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8777-40f2-0506-5fe1" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="603f-9e04-7812-12b9" name="Superior Byzantine Cavalry" hidden="false" targetId="d81e-b4ce-ed5b-0f8a" type="rule"/>
+            <infoLink id="fde1-c962-7d97-e545" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="cf7a-0028-3fc5-8a77" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="4750-4044-561b-cd7f" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="231a-9f29-427c-72fb" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8777-40f2-0506-5fe1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="5fb7-121a-cf0d-332c" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="55a6-e6c0-d4ae-2ea7" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="231a-9f29-427c-72fb" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8777-40f2-0506-5fe1" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="7c67-eb01-904d-259f" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="22"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="b3ed-5e5c-66a1-96ad" name="Themata Heavy Kavallarioi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <infoLinks>
         <infoLink id="00ac-d827-e4b3-e085" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
@@ -6527,6 +6737,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46ed-b34d-9f6c-e44e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="691a-fcc8-c4ea-13fe" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6547,6 +6758,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46ed-b34d-9f6c-e44e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="691a-fcc8-c4ea-13fe" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6588,6 +6800,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46ed-b34d-9f6c-e44e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="691a-fcc8-c4ea-13fe" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -6636,6 +6849,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32f0-f9a1-59b6-9c64" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="32f0-f9a1-59b6-9c64" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="691a-fcc8-c4ea-13fe" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="4373-ae3a-1fdd-5373" name="Themata Kavallarios" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -6712,6 +6933,99 @@
                 </modifier>
               </modifiers>
             </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="691a-fcc8-c4ea-13fe" name="Themata Kavallarios (Hippo-toxotai)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fcd-7e23-7126-7cf6" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="9fcd-7e23-7126-7cf6" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46ed-b34d-9f6c-e44e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="5ce1-4838-8246-18af" name="Themata Kavallarios (Hippo-toxotai)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="b3ed-5e5c-66a1-96ad" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dbe-8712-940e-14a4" type="atLeast"/>
+                </conditions>
+              </modifier>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="7">
+                <conditions>
+                <condition field="selections" scope="b3ed-5e5c-66a1-96ad" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dbe-8712-940e-14a4" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="b370-163d-03e9-130e" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour, shield and Kontarion. May have heavy armour (+1 pt). Defensores &amp; Cursores: for every two units of the same type and with the same equipment, the smallest unit may be designated as Cursores (free), who count as Light Cavalry. Superior Byzantine Cavalry. Combined Formation - up to half of any unit of Kavallarioi may be Hippo-toxotai, who are placed in the rear ranks. May be Drilled (+1 pt). Isaurian &amp; Phrygian armies: any unit of Themata or Elite Themata Kavallarioi, and any character leading them, may be upgraded to Akritai Border Cavalry (+1 pt; no Hippo-toxotai; Feigned Flight).  (Byzantium p.69)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4052-c723-2410-3fa2" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="b3ed-5e5c-66a1-96ad" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dbe-8712-940e-14a4" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="d56e-3ddf-7840-b4da" name="Superior Byzantine Cavalry" hidden="false" targetId="d81e-b4ce-ed5b-0f8a" type="rule"/>
+            <infoLink id="a9e7-a9d4-c5de-7f17" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="7ad0-0a19-e1f2-5b82" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="7298-c496-2e3a-f598" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="b3ed-5e5c-66a1-96ad" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dbe-8712-940e-14a4" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="7eb4-396a-0444-882b" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="4fd1-542a-8f0b-804f" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="b3ed-5e5c-66a1-96ad" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8dbe-8712-940e-14a4" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="1fcb-1d2c-2571-36d3" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
@@ -8139,6 +8453,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="4af0-4743-d48e-f18d" name="Tagmata Kataphraktoi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <constraints>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97f8-673c-65fa-9bda" type="max"/>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ec3-685b-ee7e-f9a6" type="max"/>
@@ -8276,6 +8591,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33e6-d7fb-a9c1-b1c2" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="33e6-d7fb-a9c1-b1c2" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8372-5c39-ce0c-aaaf" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="e445-08e4-a395-b26a" name="Kataphraktos" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -8324,8 +8647,16 @@
         </selectionEntry>
         <selectionEntry id="8372-5c39-ce0c-aaaf" name="Kataphraktos Archer (up to a third of the unit)" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f487-5369-1773-b9a7" type="min"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f487-5369-1773-b9a7" type="max"/>
           </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="f487-5369-1773-b9a7" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f4f5-f881-eb2c-dcef" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="c91a-1c54-55ff-f54a" name="Kataphraktos Archer (up to a third of the unit)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -8442,6 +8773,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="08f0-a4b9-2517-1d25" name="Elite Themata Kontaratoi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <constraints>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63fc-b445-b0a2-95a4" type="max"/>
       </constraints>
@@ -8474,6 +8806,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6457-bc51-04a1-4196" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f66-4f0c-cdcb-b017" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -8516,6 +8849,7 @@
             <modifier type="increment" field="points" value="3">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6457-bc51-04a1-4196" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f66-4f0c-cdcb-b017" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -8536,6 +8870,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6457-bc51-04a1-4196" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f66-4f0c-cdcb-b017" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -8578,6 +8913,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d7e-cd40-5add-52b8" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="1d7e-cd40-5add-52b8" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f66-4f0c-cdcb-b017" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="b4fa-bb36-f2d6-92aa" name="Elite Themata Kontaratos" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -8695,9 +9038,139 @@
             <cost name="pts" typeId="points" value="9"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="4f66-4f0c-cdcb-b017" name="Elite Themata Kontaratos (Toxotai)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a034-af72-220c-3d61" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="a034-af72-220c-3d61" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6457-bc51-04a1-4196" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="9678-e7fe-cb81-5011" name="Elite Themata Kontaratos (Toxotai)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">4</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="lessThan"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="atLeast"/>
+                </conditions>
+              </modifier>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="7b84-77e9-766d-e019" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, shield and thrusting spear. May have large shield instead of shield (+1 pt), and javelins or darts (+1 pt). Elite Themata Kontaratoi and Themata may have light armour (+3 pts). Special Rules: Shieldwall. Combined Formation - up to half of any unit may be Toxotai, who are placed in the rear ranks. Elite Themata Kontaratoi may be Drilled (+1 pt). Irregular troops count as Levies. In Isaurian &amp; Phrygian armies up to two units of Elite Themata Kontaratoi may be chosen. (Byzantium p.69)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="59e7-1522-36d4-14b6" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="lessThan"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f46e-9f31-3d24-e852" name="Shieldwall (Byzantium)" hidden="false" targetId="e3a9-d9d8-2307-2312" type="rule"/>
+            <infoLink id="c888-2e09-4926-739d" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="914f-653d-6e2f-ae76" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="edbd-ba41-86d2-7081" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="1201-516d-8165-2293" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="228c-6708-08b4-8f39" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="db9b-70fd-77a3-3958" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="08f0-a4b9-2517-1d25" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1426-8513-ad26-ec39" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="3095-01bf-2203-9fff" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="9"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="0b33-ce9c-e286-f86b" name="Themata Kontaratoi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <modifiers>
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
@@ -8720,6 +9193,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c30c-3a26-58f8-2fa8" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f93-c525-9c66-29ee" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -8762,6 +9236,7 @@
             <modifier type="increment" field="points" value="3">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c30c-3a26-58f8-2fa8" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f93-c525-9c66-29ee" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -8804,6 +9279,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fda5-cfa0-4fb3-0f31" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="fda5-cfa0-4fb3-0f31" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4f93-c525-9c66-29ee" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="2138-1e64-b8af-1fa9" name="Themata Kontaratos" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -8921,9 +9404,139 @@
             <cost name="pts" typeId="points" value="7"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="4f93-c525-9c66-29ee" name="Themata Kontaratos (Toxotai)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e79d-3270-a5e7-56f6" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="e79d-3270-a5e7-56f6" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c30c-3a26-58f8-2fa8" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="b927-2141-3d45-7843" name="Themata Kontaratos (Toxotai)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="lessThan"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="4+">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="atLeast"/>
+                </conditions>
+              </modifier>
+                <!-- encumbrance -->
+              <modifier type="set" field="35a2-714d-db3e-3738" value="3">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="1763-3778-7b93-2611" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, shield and thrusting spear. May have large shield instead of shield (+1 pt), and javelins or darts (+1 pt). Elite Themata Kontaratoi and Themata may have light armour (+3 pts). Special Rules: Shieldwall. Combined Formation - up to half of any unit may be Toxotai, who are placed in the rear ranks. Elite Themata Kontaratoi may be Drilled (+1 pt). Irregular troops count as Levies.  (Byzantium p.69)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="647c-3838-6088-29a7" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="lessThan"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="lessThan"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="atLeast"/>
+                </conditions>
+              </modifier>
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="4+">
+                <conditions>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a0e2-db05-e6dd-9711" name="Shieldwall (Byzantium)" hidden="false" targetId="e3a9-d9d8-2307-2312" type="rule"/>
+            <infoLink id="8762-76cb-a8a1-1ecb" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="723b-4a96-0156-30f0" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="bf73-ec77-55bf-cabf" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="24d3-e497-a78a-bef5" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db0b-f2cd-96e1-66a0" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="61e2-b123-033a-cbff" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="0b33-ce9c-e286-f86b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="60bd-3840-7012-7f79" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="6383-c465-e6ed-e7b0" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="93f3-34d0-57c0-2b82" name="Irregular Kontaratoi" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <modifiers>
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
@@ -8946,6 +9559,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6adc-1813-b55b-fd9d" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c492-927f-6892-eb35" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -9010,6 +9624,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9bdd-2a12-b3cd-bf3a" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="9bdd-2a12-b3cd-bf3a" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c492-927f-6892-eb35" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="f54a-231f-21b2-7638" name="Irregular Kontaratos" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -9080,6 +9702,93 @@
                 </modifier>
               </modifiers>
             </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="4"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c492-927f-6892-eb35" name="Irregular Kontaratos (Toxotai)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0372-4dea-8ee9-0c7f" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="0372-4dea-8ee9-0c7f" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6adc-1813-b55b-fd9d" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="17bd-4cd8-63b4-2749" name="Irregular Kontaratos (Toxotai)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">2</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">2</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="93f3-34d0-57c0-2b82" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efaf-ad9c-5779-473c" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="805e-4394-2c4f-a548" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, shield and thrusting spear. May have large shield instead of shield (+1 pt), and javelins or darts (+1 pt). Elite Themata Kontaratoi and Themata may have light armour (+3 pts). Special Rules: Shieldwall. Combined Formation - up to half of any unit may be Toxotai, who are placed in the rear ranks. Elite Themata Kontaratoi may be Drilled (+1 pt). Irregular troops count as Levies.  (Byzantium p.69)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="51e2-0f11-a235-1898" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="93f3-34d0-57c0-2b82" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efaf-ad9c-5779-473c" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="0690-e30b-d73e-030c" name="Shieldwall (Byzantium)" hidden="false" targetId="e3a9-d9d8-2307-2312" type="rule"/>
+            <infoLink id="1d51-33b5-cfaa-7074" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="72ff-0344-ba98-5f67" name="Levies (Byzantium)" hidden="false" targetId="7490-e7d5-847a-a64d" type="rule"/>
+            <infoLink id="cf83-b0fb-239c-e4a0" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="7ad6-93a1-5356-bd39" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="93f3-34d0-57c0-2b82" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efaf-ad9c-5779-473c" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="fdee-b67e-dfea-b755" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="93f3-34d0-57c0-2b82" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efaf-ad9c-5779-473c" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="8e96-e92d-3c9c-e541" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="4"/>

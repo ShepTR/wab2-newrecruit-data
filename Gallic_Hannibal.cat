@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="18" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="18f0-175f-4e79-c39a" name="Gallic (Hannibal)" revision="19" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gallic (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="21ce-00fc-6575-f75d" name="High Chieftain" hidden="false" collective="false" import="true" type="unit">
@@ -892,30 +892,11 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="c068-f0fd-4d24-de69" name="Warriors" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <categoryLinks>
         <categoryLink id="e195-989d-fbf9-e99f" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="198d-883e-5068-c337" name="Light armour (up to a quarter of figures)" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ab4-c280-37d2-f1a3" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="35bd-a9ce-c682-1cd6" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="2">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="5142-273f-d883-aeee" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="f256-e512-9add-810f" name="Stubborn (one unit, per figure)" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0271-7778-acba-52ba" type="max"/>
@@ -927,6 +908,7 @@
             <modifier type="increment" field="points" value="3">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3aec-de09-985b-8157" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -969,6 +951,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00ab-8eaa-efb4-1376" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="00ab-8eaa-efb4-1376" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3aec-de09-985b-8157" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="a23f-da6c-e96e-0745" name="Warrior" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -985,11 +975,6 @@
               </characteristics>
               <modifiers>
                 <!-- sv-stat -->
-              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
-                <conditions>
-                <condition field="selections" scope="c068-f0fd-4d24-de69" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="198d-883e-5068-c337" type="atLeast"/>
-                </conditions>
-              </modifier>
               </modifiers>
             </profile>
             <profile id="da1b-3ab8-df95-4318" name="Equipment and options (as printed in WAB2 army list)" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
@@ -1005,11 +990,6 @@
               </characteristics>
               <modifiers>
                 <!-- armour-save -->
-              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
-                <conditions>
-                <condition field="selections" scope="c068-f0fd-4d24-de69" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="198d-883e-5068-c337" type="atLeast"/>
-                </conditions>
-              </modifier>
               </modifiers>
             </profile>
           </profiles>
@@ -1020,19 +1000,68 @@
             <infoLink id="d53f-2c5c-05c0-db52" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="2f1f-1e2a-5306-a0c6" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
             <infoLink id="6805-ee33-7fd0-66cf" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
-            <infoLink id="9564-caea-4a86-3163" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
-              <modifiers>
-                <!-- profile-swap -->
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="c068-f0fd-4d24-de69" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="198d-883e-5068-c337" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3aec-de09-985b-8157" name="Warrior (light armour)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="827d-0055-242f-aa18" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="827d-0055-242f-aa18" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb6e-6428-cbfa-b77a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="ac8d-bf8d-50b9-fac9" name="Warrior (light armour)" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">5</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              </modifiers>
+            </profile>
+            <profile id="a7e8-d670-97bc-ced9" name="Equipment and options (as printed in WAB2 army list)" publicationId="fc9f-8438-629b-e92d" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Shield and mixed weapons. Up to a quarter of the figures in each unit may have light armour (+2). Warband, Stealth. One unit in the army may be Stubborn (+3 per figure). (Hannibal p.80)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="ed85-afc8-c54c-c102" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="aafe-d89b-8c57-e423" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
+            <infoLink id="1f51-f4f3-fd98-7604" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
+            <infoLink id="80ee-0cd3-622c-02d1" name="Mixed Weapons (Hannibal)" hidden="false" targetId="610e-5657-af1c-01eb" type="rule"/>
+            <infoLink id="c005-a62c-59f5-c1da" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="be06-8619-c2d1-3455" name="Javelin" hidden="false" targetId="10ef-3567-0d3f-d9e7" type="profile"/>
+            <infoLink id="c3e2-26cb-9b1a-91af" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="c75a-6b40-e396-1ecc" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="8"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

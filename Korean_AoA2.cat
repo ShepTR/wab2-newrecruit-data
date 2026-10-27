@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a5f4-01c9-4edd-c1a6" name="Korean (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="a5f4-01c9-4edd-c1a6" name="Korean (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Korean (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="ca04-6f95-65c8-1676" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -643,6 +643,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="d206-5790-a733-08d0" name="Spearmen" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <categoryLinks>
         <categoryLink id="e375-9fca-45d7-33d4" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
@@ -656,6 +657,8 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2207-e354-823b-961a" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a34-f07e-e3ed-ecee" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e76f-2be6-6ce7-9bca" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -676,41 +679,6 @@
           <infoLinks>
             <infoLink id="25a1-6702-256a-fec3" name="Halberd" hidden="false" targetId="635a-1d79-5976-954c" type="profile"/>
           </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a87a-fb06-bdc8-5c6d" name="Composite bow" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="717d-18db-c869-f1dc" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3594-a6bf-21bb-6f34" type="min"/>
-          </constraints>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="2eb7-8b89-acda-eb3d" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5f52-736e-4f6d-faee" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8680-a18d-0305-551d" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f738-fbc1-460e-5cd0" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="2">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2207-e354-823b-961a" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <rules>
-            <rule id="98c5-dfac-8754-4b28" name="Crossbow" hidden="false">
-              <description>Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2).</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -746,6 +714,19 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e78-9311-2370-8d50" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="0e78-9311-2370-8d50" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a34-f07e-e3ed-ecee" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="0e78-9311-2370-8d50" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e76f-2be6-6ce7-9bca" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="5e7f-45e6-1e46-8307" name="Spearmen" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -815,24 +796,193 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="0480-760d-01d7-cbcc" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="11"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5a34-f07e-e3ed-ecee" name="Spearmen (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a27-f058-59b7-45b7" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b7e2-f243-988a-a6fa" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="3a27-f058-59b7-45b7" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2207-e354-823b-961a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="b7e2-f243-988a-a6fa" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2207-e354-823b-961a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="b7e2-f243-988a-a6fa" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e76f-2be6-6ce7-9bca" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="73a1-41ab-0867-2ecb" name="Spearmen (bow)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f30e-17f7-4e06-b164" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="76f5-e60b-bbed-f4b0" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Spearmen and Levy Spearmen have a hand weapon, thrusting spear and shield. Different Weapons. May have a large shield (+1) and may exchange thrusting spear for halberd (free). May use a Combined Formation where up to half of the figures exchange thrusting spear for composite bow (free) and form the rear ranks. Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2).</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3ce8-e286-a2f8-b6b0" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f30e-17f7-4e06-b164" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b3af-cf34-49dc-3b36" name="Different Weapons" hidden="false" targetId="eef3-c374-e2ed-8cd9" type="rule"/>
+            <infoLink id="c319-c965-ab3a-e892" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="b61a-9ab9-2fcd-4e1d" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="f766-3b4c-b91a-d9eb" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a87a-fb06-bdc8-5c6d" type="atLeast"/>
+                    <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f30e-17f7-4e06-b164" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="3959-789f-0e3b-d6b5" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="11"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e76f-2be6-6ce7-9bca" name="Spearmen (crossbow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8dab-6b80-fc49-0b87" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="17f4-5da9-a979-185d" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="8dab-6b80-fc49-0b87" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2207-e354-823b-961a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="17f4-5da9-a979-185d" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2207-e354-823b-961a" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="17f4-5da9-a979-185d" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5a34-f07e-e3ed-ecee" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="3c65-0903-c820-80c8" name="Spearmen (crossbow)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f30e-17f7-4e06-b164" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="6261-fbe6-2738-b682" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Spearmen and Levy Spearmen have a hand weapon, thrusting spear and shield. Different Weapons. May have a large shield (+1) and may exchange thrusting spear for halberd (free). May use a Combined Formation where up to half of the figures exchange thrusting spear for composite bow (free) and form the rear ranks. Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2).</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="98ba-fef0-d380-1b3b" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f30e-17f7-4e06-b164" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="3bfd-f841-f3a4-b6b3" name="Crossbow" hidden="false">
+              <description>Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2).</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="4750-cf36-5caf-8f56" name="Different Weapons" hidden="false" targetId="eef3-c374-e2ed-8cd9" type="rule"/>
+            <infoLink id="d9cc-ab45-d9c3-f031" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="e885-bdc7-6292-96c0" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="1bc3-d697-5cde-e1c0" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="d206-5790-a733-08d0" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f30e-17f7-4e06-b164" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="11"/>
+            <cost name="pts" typeId="points" value="13"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="226a-31cb-bd94-a6a7" name="Levy Spearmen" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <categoryLinks>
         <categoryLink id="ce8f-719b-801a-f9be" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
@@ -846,6 +996,8 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebb2-3b50-0088-df49" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ecf-f951-b4ab-d97c" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aa0e-0ae0-0a9f-42d5" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -866,41 +1018,6 @@
           <infoLinks>
             <infoLink id="f642-c1a2-0748-3a79" name="Halberd" hidden="false" targetId="635a-1d79-5976-954c" type="profile"/>
           </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d743-1d70-7317-5280" name="Composite bow" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="66b0-0b66-f7da-35bd" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="15d6-3132-0d28-2907" type="min"/>
-          </constraints>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="37f3-8582-b544-3ab5" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ed1d-6711-a7e2-ac18" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="16dd-23e3-cc7d-5985" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8525-b315-eccd-e214" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="2">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebb2-3b50-0088-df49" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <rules>
-            <rule id="6bbf-a78d-f131-a970" name="Crossbow" hidden="false">
-              <description>Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2).</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -936,6 +1053,19 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b848-069d-7aa6-8c12" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="b848-069d-7aa6-8c12" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ecf-f951-b4ab-d97c" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="b848-069d-7aa6-8c12" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aa0e-0ae0-0a9f-42d5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="dd50-d1c6-0bc3-163f" name="Levy Spearmen" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1005,19 +1135,187 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="109d-a173-8f52-8bb4" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6ecf-f951-b4ab-d97c" name="Levy Spearmen (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b48-63a6-286a-da0e" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="81fa-3eea-2538-1d58" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="7b48-63a6-286a-da0e" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebb2-3b50-0088-df49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="81fa-3eea-2538-1d58" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebb2-3b50-0088-df49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="81fa-3eea-2538-1d58" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aa0e-0ae0-0a9f-42d5" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="7a0b-df6a-7ce8-4728" name="Levy Spearmen (bow)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2d-13e2-49cf-a68e" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="0d4b-720f-f415-5ae1" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Spearmen and Levy Spearmen have a hand weapon, thrusting spear and shield. Different Weapons. May have a large shield (+1) and may exchange thrusting spear for halberd (free). May use a Combined Formation where up to half of the figures exchange thrusting spear for composite bow (free) and form the rear ranks. Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2). Levy Spearmen are Levy.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a13e-ce64-9ed8-4cab" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2d-13e2-49cf-a68e" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="72ae-9ff3-1b35-2305" name="Different Weapons" hidden="false" targetId="eef3-c374-e2ed-8cd9" type="rule"/>
+            <infoLink id="e0ad-c66c-ff0d-86df" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="dcfa-fdae-28f2-8bab" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="e227-bee4-ab1d-3691" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d743-1d70-7317-5280" type="atLeast"/>
+                    <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2d-13e2-49cf-a68e" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="63e7-bac3-ba43-5ac0" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="aa0e-0ae0-0a9f-42d5" name="Levy Spearmen (crossbow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="53cb-37e9-c4c0-ae2b" type="max"/>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="629a-a30f-6ea4-f94c" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="53cb-37e9-c4c0-ae2b" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebb2-3b50-0088-df49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="629a-a30f-6ea4-f94c" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebb2-3b50-0088-df49" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="629a-a30f-6ea4-f94c" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6ecf-f951-b4ab-d97c" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="5cef-c4a5-faee-9837" name="Levy Spearmen (crossbow)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2d-13e2-49cf-a68e" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="4f39-12bf-351e-7b0f" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Spearmen and Levy Spearmen have a hand weapon, thrusting spear and shield. Different Weapons. May have a large shield (+1) and may exchange thrusting spear for halberd (free). May use a Combined Formation where up to half of the figures exchange thrusting spear for composite bow (free) and form the rear ranks. Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2). Levy Spearmen are Levy.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b687-b1d9-160b-945a" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2d-13e2-49cf-a68e" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="4636-d4f1-73b8-ac53" name="Crossbow" hidden="false">
+              <description>Alternatively, may use a Mixed Formation where up to half of the figures exchange thrusting spear for crossbow (+2).</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="0215-863b-0012-d065" name="Different Weapons" hidden="false" targetId="eef3-c374-e2ed-8cd9" type="rule"/>
+            <infoLink id="e241-fd37-333f-7995" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="68ca-34be-d9d5-2da1" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="32d0-ea2b-2991-51f9" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="226a-31cb-bd94-a6a7" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db2d-13e2-49cf-a68e" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="6"/>
+            <cost name="pts" typeId="points" value="8"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

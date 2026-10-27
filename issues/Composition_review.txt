@@ -90,9 +90,12 @@ Enforced as validation (the roster shows an error when the limit is broken; tabl
   one allowance for pairs; "every second" is ceil(units/2), so the first unit may always have the option.
 Still NOT enforced (the program cannot express them, or the text is ambiguous):
 - Allowances shared by three or more options (each option is limited on its own; the engine prints a note when it meets one).
-- "Up to half of the figures" rules (per-model counts inside a unit): Gebur bows, Korean Spearmen bows / crossbows, Greek skirmisher
-  "up to half may replace javelins" (the unit-count form is enforced), Maccabean Foot vs Peltast figures, "may not outnumber" rules
-  (Cumans vs Lithuanians, Normans vs Bretons, Tribal Infantry vs Religious Volunteers, Mongol Heavy vs Light cavalry models).
+- "Up to half / a third / a quarter of the figures" rules are now enforced as separate model lines (tools/loadout_split.py, 59 units; section E).
+  Still plain unit-wide options: Mercenary Infantry (Later Byzantine, "up to two units instead"), Tang Skirmishers, Daylamite archer
+  option, Landsknecht pike units (unit-level rule), Israelite Zebulunites ("half the unit"), Alexandrian Experimental Phalanx ("at least
+  half archers"), Early Byzantine Bucellarii (AoA2), Archers joining spearmen units (Trojan, Minoan), Dismounted Milites' separate +1 bow.
+- "May not outnumber" rules (Cumans vs Lithuanians, Normans vs Bretons, Tribal Infantry vs Religious Volunteers, Mongol Heavy vs Light
+  cavalry models).
 - Ratios that differ between compositions of one book (Serbia lance vs bow-and-spear units, Spanish Lusitanians vs Caetrati partly).
 - Raised caps: Warring States Zhao 0-2 Light Cavalry Archers and Qin 0-2 Light Cavalry Lancers (the 0-1 cap stays).
 - Unit-level "every second unit" rules (Greek AoA1 Theban / Thessalian cavalry, Alexander Successors Elite Light Cavalry, Comnenian guards).
@@ -113,3 +116,17 @@ D. WHAT TO DO WITH THIS
 -----------------------
 Answers to B1-B13 and any missing source text are enough for the next pass; each decision becomes a one-line addition to the
 table at the top of tools/composition_exclusions.py (or a new composition entry in the book's data file for B3-B4).
+
+E. FRACTIONAL LOADOUTS (version 0.1.1) - assumptions to check
+-------------------------------------------------------------
+Units are split into a base model line and one line per loadout (tools/loadout_split.json). Choices I made where the books are silent:
+- Price: the difference printed in the book. Where no price is printed (Skutatoi archers, Hippo-toxotai, Toxotai, Greek Ghulam and
+  Emperor's Guard archers, Western Franks' Dismounted Milites bow) the loadout costs the same as the base figure.
+- Loadout lines drop the replaced weapons. Where the book says "spear and shield" for a bow, the shield (and large shield) is dropped and
+  the armour save is rebuilt (none, or 6+ with light armour). Cavalry that only swap the spear keep their save.
+- "May take no further equipment" is honoured by not charging the unit's other options on the loadout line; the program cannot stop
+  the player ticking an option that applies to the whole unit, so the unit-wide armour/shield options still show.
+- Hereditary infantry and Guildsmen (India): the bowmen are the base figures; "up to half may replace longbow with throwing spear,
+  javelins and shield (+1)" is the loadout, and the large shield upgrade is charged only on those figures.
+- Late Imperial Legionaries and Auxilia: composite bow and buckler (-3) for up to a third, locked.
+- Western Franks (Shieldwall) mounted Milites are not covered ("including mounted troops").

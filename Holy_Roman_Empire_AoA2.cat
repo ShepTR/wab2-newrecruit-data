@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bdbc-9c94-f42f-9bcc" name="Holy Roman Empire (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="bdbc-9c94-f42f-9bcc" name="Holy Roman Empire (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Holy Roman Empire (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="334c-00be-fdb4-0d9d" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1756,6 +1756,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="09fa-9ac9-f0c1-f06b" name="Landsknechts (L, I)" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <categoryLinks>
         <categoryLink id="d9bf-c9c7-9892-60d8" name="Mercenaries" hidden="false" targetId="28b5-6150-ecee-a852" primary="true"/>
       </categoryLinks>
@@ -1769,6 +1770,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e673-39c9-9b95-6a6e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2962-477c-6a89-d881" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1789,6 +1791,7 @@
             <modifier type="increment" field="points" value="-2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e673-39c9-9b95-6a6e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2962-477c-6a89-d881" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1809,6 +1812,7 @@
             <modifier type="increment" field="points" value="-2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e673-39c9-9b95-6a6e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2962-477c-6a89-d881" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1835,19 +1839,6 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0f4f-d90e-22f2-14d9" name="Double-handed weapon" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1980-3063-24f1-9ecc" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5f91-cc30-1f64-1594" type="min"/>
-          </constraints>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="5c16-38da-c3e2-670e" name="Double-handed Weapon" hidden="false" targetId="bebe-c4da-722c-c475" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="56de-9dce-7bf9-8a62" name="Stubborn" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b055-d003-be8d-f3b8" type="max"/>
@@ -1857,6 +1848,7 @@
             <modifier type="increment" field="points" value="3">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e673-39c9-9b95-6a6e" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2962-477c-6a89-d881" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1899,6 +1891,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a14-de9b-778d-7c81" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="4a14-de9b-778d-7c81" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2962-477c-6a89-d881" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="4800-dfc7-10fb-c0e9" name="Landsknechts (L, I)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1980,6 +1980,104 @@
                 </modifier>
               </modifiers>
             </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="19"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2962-477c-6a89-d881" name="Landsknechts (L, I) (double-handed)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb21-7452-3d29-b7af" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="fb21-7452-3d29-b7af" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e673-39c9-9b95-6a6e" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="374d-0062-de34-610e" name="Landsknechts (L, I) (double-handed)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">4</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">8</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="09fa-9ac9-f0c1-f06b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fbb-bdbc-d707-9554" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="f927-b1ea-47b2-afbd" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">All mercenaries have the Unreliable rule. Landsknechts have a hand weapon, pike and light armour. May have heavy armour (+1). Veteran. Up to two out of three pike armed units may replace their pikes with halberd (-2), light crossbow (-2) or handgun (free). May downgrade to WS3, I3 (-3) , or WS4, I3 for (-1) Pike armed Landsknecht units are Medieval Phalanx. Within a pike armed unit, up to a third of the models may replace pike with double-handed weapon (free) and form the front rank(s) of the unit. (Note that the models with double handed weapons do not count against the necessary number of models to determine if the unit is a Medieval Phalanx). They may be Stubborn (+3). Landsknechts with light crossbows, halberds or handguns are Skirmishers.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="afec-681b-2008-5690" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="09fa-9ac9-f0c1-f06b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fbb-bdbc-d707-9554" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="a032-884a-9c77-9cc5" name="Allies and Mercenaries (Unreliable)" hidden="false" targetId="6e8f-14cf-a018-5d1c" type="rule"/>
+            <infoLink id="aee1-aab0-fa8d-589c" name="Veteran" hidden="false" targetId="4c9b-509e-486d-f0af" type="rule"/>
+            <infoLink id="8b2c-2dd2-392b-5518" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
+            <infoLink id="a421-1f13-7b8d-c50a" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="2d4e-aaa5-fb46-4e67" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+            <infoLink id="ba83-4f4c-a5a9-58c7" name="Heavy Armour" hidden="true" targetId="16c5-d2b2-fa96-9cd2" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="09fa-9ac9-f0c1-f06b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1fbb-bdbc-d707-9554" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="008e-1123-c87c-60cc" name="Halberd" hidden="true" targetId="635a-1d79-5976-954c" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="09fa-9ac9-f0c1-f06b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="671b-e47b-8198-151f" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="6cfb-db43-f246-c2a4" name="Light Crossbow" hidden="true" targetId="019d-351d-ecdc-c800" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="09fa-9ac9-f0c1-f06b" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5bb0-7e55-6e9c-549e" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="829b-4e87-ca86-5134" name="Double-handed Weapon" hidden="false" targetId="bebe-c4da-722c-c475" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="19"/>

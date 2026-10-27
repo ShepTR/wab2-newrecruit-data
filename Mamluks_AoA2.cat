@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9e7a-1754-bc37-77e6" name="Mamluks (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9e7a-1754-bc37-77e6" name="Mamluks (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Mamluks (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="f814-9511-a894-3f09" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1295,30 +1295,11 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="df29-d412-a2ab-1bd2" name="Infantry" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <categoryLinks>
         <categoryLink id="65be-81e5-2164-682f" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="cbd5-e590-5622-da8a" name="Buckler" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b53-c45a-7d69-5a4c" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ecb1-a278-20ef-5c75" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="-2">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="351e-deaa-8016-f053" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="e532-1553-72db-d41e" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
             <selectionEntry id="9295-5c31-6559-e5dd" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="146c-3e14-d6d7-45d3" type="max"/>
@@ -1350,6 +1331,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0cc7-314a-da73-ba52" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="0cc7-314a-da73-ba52" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a98e-0658-8fea-395c" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="7d7d-97b9-cdf4-fa59" name="Infantry" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1384,19 +1373,60 @@
             <infoLink id="fc45-b926-eeca-f834" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
             <infoLink id="4cad-d043-859a-7ab6" name="Thrusting Spear" hidden="false" targetId="5a59-1efb-14ef-017a" type="profile"/>
             <infoLink id="2757-9fa3-1648-4d7b" name="Large Shield" hidden="false" targetId="8367-11b2-7778-977f" type="profile"/>
-            <infoLink id="5ce5-a25a-f336-2f76" name="Buckler" hidden="true" targetId="aa05-2e85-a1d8-8d69" type="profile">
-              <modifiers>
-                <!-- profile-swap -->
-                <modifier type="set" field="hidden" value="false">
-                  <conditions>
-                    <condition field="selections" scope="df29-d412-a2ab-1bd2" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cbd5-e590-5622-da8a" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a98e-0658-8fea-395c" name="Infantry (bow and buckler)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30b8-de46-13bf-ed88" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="30b8-de46-13bf-ed88" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="351e-deaa-8016-f053" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="8c43-59f9-3c37-6bea" name="Infantry (bow and buckler)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b1e3-0a31-82fd-b566" name="Equipment and options (as printed in WAB2 army list)" publicationId="fcb9-17be-94c2-bcfc" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Infantry have a hand weapon, thrusting spear and large shield. May form Combined Formations in which up to half the figures exchange spear and shield for composite bow and buckler (-2) and form the rear ranks. Infantry that convert to bows may alternatively be fielded alone as Skirmishers.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3a99-4c25-eb2e-3692" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">-</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2b8e-7deb-7b6d-1d52" name="Skirmishers (Art of War)" hidden="false" targetId="5c5e-9491-3100-c162" type="rule"/>
+            <infoLink id="5dd2-b045-581b-dbd9" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="924c-a4d7-dfe6-52f0" name="Buckler" hidden="false" targetId="aa05-2e85-a1d8-8d69" type="profile"/>
+            <infoLink id="458c-bbdb-6a52-b2b7" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="8"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7874-ab14-bb42-91bc" name="English (Shieldwall)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7874-ab14-bb42-91bc" name="English (Shieldwall)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>English (Shieldwall): units and points from the Shieldwall army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="e677-61a2-b6a9-7ce1" name="Cyning" hidden="false" collective="false" import="true" type="unit">
@@ -1321,6 +1321,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="ead4-a5d2-a0e9-66a5" name="Geburs" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <modifiers>
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
@@ -1350,26 +1351,6 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="288a-0a41-3bcb-5847" name="Exchange javelins for bow" hidden="false" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e819-54d8-77bd-47f3" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d5d-2b5a-5ca8-8c2b" type="min"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" field="points" value="1">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8c7-42f6-a6ac-ab42" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="d7a4-be1f-c6b8-413b" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="2eff-73d4-881e-b93b" name="Exchange javelins for shield and thrusting spear" hidden="false" collective="false" import="true" type="upgrade">
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c64-c5ec-2501-3486" type="max"/>
@@ -1379,6 +1360,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8c7-42f6-a6ac-ab42" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2280-2c57-23d5-3abc" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1422,6 +1404,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f0ea-4631-07ee-57da" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="f0ea-4631-07ee-57da" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2280-2c57-23d5-3abc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="673b-63ca-d3cf-4624" name="Gebur" publicationId="af20-e256-4a51-93aa" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -1465,19 +1455,60 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="60eb-1650-1b4b-5ffb" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="4"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2280-2c57-23d5-3abc" name="Gebur (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b6c-7438-352e-8466" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="3b6c-7438-352e-8466" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a8c7-42f6-a6ac-ab42" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="b6fd-2f78-16f1-7e44" name="Gebur (bow)" publicationId="af20-e256-4a51-93aa" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c6f6-827e-7a40-fb85" name="Equipment and options (as printed in WAB2 army list)" publicationId="af20-e256-4a51-93aa" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapons and javelin. May exchange javelin for sling (free). May exchange javelin for bow (+1 pt). May exchange javelin for shield and thrusting spear (+1 pt). Geburs armed with javelin, sling or bow count as Skirmishers. Shield-armed Geburs have Shieldwall. No more than half the Gebur models may be bow-armed (not enforced). Anglia and Northumbria may combine spear and shield-armed Gebur with Thegns and Huscarls in the same way as Ceorls. (Shieldwall p.23)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8453-c1ce-be51-5200" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="383d-bcf1-c6ad-6dab" name="Sling" hidden="true" targetId="7ff2-453d-751e-5f78" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="ead4-a5d2-a0e9-66a5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="288a-0a41-3bcb-5847" type="atLeast"/>
+                    <condition field="selections" scope="ead4-a5d2-a0e9-66a5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9f4d-b5d8-a018-fcc1" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink id="6082-6dac-f6f5-692e" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="4"/>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

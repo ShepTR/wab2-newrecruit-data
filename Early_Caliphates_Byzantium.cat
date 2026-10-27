@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9fbc-64f6-d134-a385" name="Early Caliphates (Byzantium)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9fbc-64f6-d134-a385" name="Early Caliphates (Byzantium)" revision="10" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Early Caliphates (Byzantium): units and points from the Byzantium: Beyond the Golden Gate army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="7dad-a7c2-2ceb-de31" name="Khalifa" hidden="false" collective="false" import="true" type="unit">
@@ -13824,6 +13824,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="084e-ae99-3b8e-b0dc" name="Greek Ghulams" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <constraints>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7ad-a3a2-3b5e-8fa0" type="max"/>
       </constraints>
@@ -13889,6 +13890,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="215a-02a4-c44c-eb48" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="215a-02a4-c44c-eb48" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b5fd-ffe0-17bc-41ff" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="a9e5-f28e-37bc-4f55" name="Greek Ghulam" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -13930,9 +13939,63 @@
             <cost name="pts" typeId="points" value="21"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b5fd-ffe0-17bc-41ff" name="Greek Ghulam (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="936b-97b7-3821-db17" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="936b-97b7-3821-db17" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e53e-f5ac-238e-1463" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="19dc-3c5e-9647-b16e" name="Greek Ghulam (bow)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">8</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">5+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9588-695d-0d21-09e9" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Hand weapon, light armour, Kontarion and shield. Superior Byzantine Cavalry. Combined Formation - up to half of any unit of Greek Heavy Cavalry may exchange Kontarion for bow (free) - archers are placed in the rear ranks (not enforced). Aghlabid armies use Greek Heavy Cavalry and Italo-Lombard converts as their Ghulams (the Italo-Lombard troops are documented only). (Byzantium p.82)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9310-1444-55ea-cb88" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">5+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="f8e6-667c-5651-ad37" name="Superior Byzantine Cavalry" hidden="false" targetId="d81e-b4ce-ed5b-0f8a" type="rule"/>
+            <infoLink id="e043-a380-52e5-55c8" name="Combined Formation (Byzantium)" hidden="false" targetId="2280-7c4f-4408-0d5e" type="rule"/>
+            <infoLink id="0235-340b-6e5c-4b36" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="d312-43d7-0801-ddf4" name="Light Armour" hidden="false" targetId="e1d7-1cd3-1431-4862" type="profile"/>
+            <infoLink id="8558-ceb7-a3c1-8dd6" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="6543-023f-47a3-9d05" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="21"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="2a36-7b29-17c3-95f5" name="Daylamites" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <infoLinks>
         <infoLink id="1fca-b1fc-dff7-f7e4" name="Light Troops" hidden="false" targetId="5be5-5832-c8fb-3a19" type="rule"/>
       </infoLinks>
@@ -14037,6 +14100,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b295-2aa9-917a-63cc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="16d6-4fdc-ee3a-7029" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -14094,6 +14158,7 @@
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b295-2aa9-917a-63cc" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="16d6-4fdc-ee3a-7029" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -14138,6 +14203,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36c8-9d7c-c203-32af" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="36c8-9d7c-c203-32af" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="16d6-4fdc-ee3a-7029" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="8b0b-b6dd-2b41-e738" name="Daylamite" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -14208,6 +14281,83 @@
                 </modifier>
               </modifiers>
             </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="8"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="16d6-4fdc-ee3a-7029" name="Daylamite (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="99c1-5edc-bdd6-cce2" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="99c1-5edc-bdd6-cce2" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b295-2aa9-917a-63cc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="2178-2c2b-e9dc-9c2b" name="Daylamite (bow)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">5</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">4</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="2a36-7b29-17c3-95f5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f93-3c63-ab1d-f0b0" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="1ab8-3f78-d04f-6207" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Daylami Spearmen have a hand weapon, throwing or thrusting spear and shield. They may have light armour (+2 pts), and may be Riding Camels (+1 pt). Daylami Spearmen without light armour may be designated as Light Infantry (free). Daylami Archer Option: Daylamites may be fielded as archers and are Light Infantry. Bow-armed Daylamites have a hand weapon, bow and shield, and may have Solenarion (+2 pts). Special Rules: Warband. Stealth. Daylami Spearmen may use shieldwall and may be Stubborn (+3 pts). Combined Formation - up to half of any Daylami Spearman unit may exchange their spears with bow (free) - archers are placed in the rear ranks. Not available to Tulunid &amp; Ikhshidid armies. (Byzantium p.82)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8625-bb6d-a83a-7d57" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="2a36-7b29-17c3-95f5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f93-3c63-ab1d-f0b0" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="fbb5-1ad4-400a-b2bf" name="Warband" hidden="false" targetId="e230-5072-4109-a786" type="rule"/>
+            <infoLink id="ae2b-529f-d7ae-61c8" name="Stealth" hidden="false" targetId="3c5c-8535-997a-4c57" type="rule"/>
+            <infoLink id="433a-9c83-5050-b7cc" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="5680-f8cf-20fd-76b1" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="1fde-2961-b988-4888" name="Light Armour" hidden="true" targetId="e1d7-1cd3-1431-4862" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="2a36-7b29-17c3-95f5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f93-3c63-ab1d-f0b0" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="4d4f-c14b-0dc5-81d0" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
@@ -16326,6 +16476,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="94fa-8afd-606a-1f16" name="Guards (Spearmen &amp; Swordsmen)" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <constraints>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a7a-f72e-0509-76d3" type="max"/>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9be9-922b-189d-8944" type="max"/>
@@ -16470,57 +16621,6 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4663-a4ce-7c47-5a39" name="Bow (up to half the models; Combined Formation)" hidden="true" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dbd1-578d-3b1a-ec36" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7598-85f0-8484-fcb0" type="min"/>
-          </constraints>
-          <modifiers>
-<!-- sw-avail -->
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e717-d341-836f-2587" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe01-c909-2892-dfdb" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8987-b1ad-4139-fbf1" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8555-2a5b-4626-576c" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="168a-0d36-17dc-5a06" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="274d-e7f2-1169-b937" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b761-0cdc-ecd9-115d" type="atLeast"/>
-</conditions>
-</modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="c109-3c25-c5e4-3ef7" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
             <selectionEntry id="6a86-3016-8fa7-6e49" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eda9-e4d3-ef69-a900" type="max"/>
@@ -16552,6 +16652,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="deed-78f3-30c2-2253" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="deed-78f3-30c2-2253" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6844-123d-0516-cb55" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="d8c0-f13d-cf8c-8c59" name="Guard" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -16648,16 +16756,110 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="6c86-5a61-b414-3c2a" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6844-123d-0516-cb55" name="Guard (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9f5d-0c20-2da5-907a" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="9f5d-0c20-2da5-907a" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0d30-8600-8679-7ea8" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="cf12-4f11-66db-20f8" name="Guard (bow)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">3</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">7</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2306-7e57-2f89-9fd3" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="34df-1484-0fb1-d170" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mixed weapons (counts as a hand weapon &amp; javelins) and shield. May have throwing spear instead of javelins (+1 pt). Guards may have large shield instead of shield (+1 pt). Guards may also have thrusting spear instead of javelins (+1 pt). Any unit may be Riding Camels (+1 pt). Combined Formation - in Umayyad, Abbasid, Aghlabid and Fatimid armies, up to half the models may exchange mixed weapons for bow (free) - archers are placed in the rear ranks and may take no further equipment. Guards may not be chosen in Arab Conquest, Umayyad, Later Abbasid or Hamdanid armies; in Early Abbasid armies no Guard units may be taken if Ghulams have been chosen; Tulunid, Ikhshidid and Early Fatimid armies may choose two units (as the best 'Abid infantry). (Byzantium p.83)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="5da5-c2ad-5a64-953f" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2306-7e57-2f89-9fd3" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="880b-aee8-25b8-b493" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="c408-f67f-8e5f-5b83" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile">
               <modifiers>
                 <!-- profile-swap -->
-                <modifier type="set" field="hidden" value="false">
+                <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4663-a4ce-7c47-5a39" type="atLeast"/>
+                    <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2306-7e57-2f89-9fd3" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink id="e00a-67c1-40e7-28d5" name="Throwing Spear" hidden="true" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6e81-6a27-1316-8c26" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="56e8-2d29-cc57-f89f" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2306-7e57-2f89-9fd3" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="f362-c473-59d8-cf83" name="Thrusting Spear" hidden="true" targetId="5a59-1efb-14ef-017a" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="94fa-8afd-606a-1f16" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a4f8-3920-d252-3c46" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="f68d-ac83-8c01-28a9" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
@@ -16666,6 +16868,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="1ba2-7cbf-18a8-97b5" name="City Militia (Spearmen &amp; Swordsmen)" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <modifiers>
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
@@ -16747,57 +16950,6 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="169e-4e04-a711-a265" name="Bow (up to half the models; Combined Formation)" hidden="true" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8613-b928-6cba-5d09" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2214-f9d5-961c-5f14" type="min"/>
-          </constraints>
-          <modifiers>
-<!-- sw-avail -->
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e717-d341-836f-2587" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe01-c909-2892-dfdb" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8987-b1ad-4139-fbf1" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8555-2a5b-4626-576c" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="168a-0d36-17dc-5a06" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="274d-e7f2-1169-b937" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b761-0cdc-ecd9-115d" type="atLeast"/>
-</conditions>
-</modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="9895-bba8-a929-b1b3" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
             <selectionEntry id="98ce-65d3-4985-2d19" name="Leader" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d1f2-4ba7-2e01-c204" type="max"/>
@@ -16829,6 +16981,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75c3-80d9-edc7-8da8" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="75c3-80d9-edc7-8da8" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="87f5-8d61-dc58-ed18" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="266c-a2c5-f90f-f8d2" name="City Militia" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -16915,16 +17075,100 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="8501-db20-a65c-d6d4" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="87f5-8d61-dc58-ed18" name="City Militia (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2bf8-7b3d-83bf-a4df" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="2bf8-7b3d-83bf-a4df" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1f74-5912-8eb4-1bbc" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="fa65-2f3e-5fd9-1bca" name="City Militia (bow)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">3</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">3</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">6</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- sv-stat -->
+              <modifier type="set" field="7349-090e-ca0b-09ce" value="5+">
+                <conditions>
+                <condition field="selections" scope="1ba2-7cbf-18a8-97b5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdee-aa84-3c90-f763" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+            <profile id="edfe-5bc3-e919-ff54" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mixed weapons (counts as a hand weapon &amp; javelins) and shield. May have throwing spear instead of javelins (+1 pt). City Militia may have large shield instead of shield (+1 pt). Any unit may be Riding Camels (+1 pt). Combined Formation - in Umayyad, Abbasid, Aghlabid and Fatimid armies, up to half the models may exchange mixed weapons for bow (free) - archers are placed in the rear ranks and may take no further equipment. In Tulunid, Ikhshidid and Early Fatimid armies the 'Abid infantry use the City Militia profiles. Aghlabid City Militia may not use the Leadership value of the Army General. (Byzantium p.83)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a1cf-2efb-b6c1-a74d" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <modifiers>
+                <!-- armour-save -->
+              <modifier type="set" field="603e-2898-6af9-6cf1" value="5+">
+                <conditions>
+                <condition field="selections" scope="1ba2-7cbf-18a8-97b5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdee-aa84-3c90-f763" type="atLeast"/>
+                </conditions>
+              </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="443d-c407-3867-4f2b" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="1c29-2d42-2366-f1a3" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile">
               <modifiers>
                 <!-- profile-swap -->
-                <modifier type="set" field="hidden" value="false">
+                <modifier type="set" field="hidden" value="true">
                   <conditions>
-                    <condition field="selections" scope="1ba2-7cbf-18a8-97b5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="169e-4e04-a711-a265" type="atLeast"/>
+                    <condition field="selections" scope="1ba2-7cbf-18a8-97b5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdee-aa84-3c90-f763" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink id="6445-01d5-72df-0f16" name="Throwing Spear" hidden="true" targetId="cc82-90f9-0ade-c0e7" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="1ba2-7cbf-18a8-97b5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1c64-2d04-f2da-a99a" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="5cfe-00ce-788e-db2b" name="Large Shield" hidden="true" targetId="8367-11b2-7778-977f" type="profile">
+              <modifiers>
+                <!-- profile-swap -->
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="1ba2-7cbf-18a8-97b5" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bdee-aa84-3c90-f763" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink id="030d-8e54-5fd4-3c7a" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
@@ -16933,6 +17177,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry id="14f0-be61-0c8a-6b5e" name="Levies (Spearmen &amp; Swordsmen)" hidden="false" collective="false" import="true" type="unit">
+      <!-- loadout-split -->
       <constraints>
         <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9370-3aec-a9dd-f7e0" type="max"/>
       </constraints>
@@ -16991,6 +17236,7 @@
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa76-be1a-8aa5-47a2" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="45cc-cc39-e86c-2407" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -17000,57 +17246,6 @@
               <description>Any unit may be Riding Camels (+1 pt).</description>
             </rule>
           </rules>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d36a-10db-611f-ec0f" name="Bow (up to half the models; Combined Formation)" hidden="true" collective="false" import="true" type="upgrade">
-<constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="62f6-574c-9be3-9bf4" type="max"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="77ca-5c98-2fd0-78b8" type="min"/>
-          </constraints>
-          <modifiers>
-<!-- sw-avail -->
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e717-d341-836f-2587" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fe01-c909-2892-dfdb" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8987-b1ad-4139-fbf1" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8555-2a5b-4626-576c" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="168a-0d36-17dc-5a06" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="274d-e7f2-1169-b937" type="atLeast"/>
-</conditions>
-</modifier>
-<modifier type="set" field="hidden" value="false">
-<conditions>
-<condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b761-0cdc-ecd9-115d" type="atLeast"/>
-</conditions>
-</modifier>
-          </modifiers>
-          <!-- def-link -->
-          <infoLinks>
-            <infoLink id="1b43-279b-0c2f-4de8" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -17086,6 +17281,14 @@
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cfb5-b6ff-c67b-62a4" type="min"/>
           </constraints>
+          <!-- loadout-base -->
+          <modifiers>
+            <modifier type="decrement" field="cfb5-b6ff-c67b-62a4" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="45cc-cc39-e86c-2407" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="1b63-384f-f57a-05dc" name="Levy" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
               <characteristics>
@@ -17139,16 +17342,67 @@
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink id="dc63-9e22-c7ff-3881" name="Bow" hidden="true" targetId="5d29-ba1e-8299-8085" type="profile">
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="3"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="45cc-cc39-e86c-2407" name="Levy (bow)" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5846-b2e3-3223-d28b" type="max"/>
+          </constraints>
+          <!-- loadout-cap -->
+          <modifiers>
+            <modifier type="increment" field="5846-b2e3-3223-d28b" value="1">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa76-be1a-8aa5-47a2" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="b74e-e5c8-351f-e8af" name="Levy (bow)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="a802-40b5-d980-cabc" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="35a2-714d-db3e-3738">4</characteristic>
+                <characteristic name="WS" typeId="bb04-2b70-ae79-3559">2</characteristic>
+                <characteristic name="BS" typeId="ffff-54f0-d131-b6a9">2</characteristic>
+                <characteristic name="S" typeId="9e7c-6fc0-c50c-ee53">3</characteristic>
+                <characteristic name="T" typeId="d226-f704-80f9-6e23">3</characteristic>
+                <characteristic name="W" typeId="ce59-af10-7f37-4238">1</characteristic>
+                <characteristic name="I" typeId="8ec4-e9a6-0b8a-08aa">2</characteristic>
+                <characteristic name="A" typeId="ee87-e286-4768-82be">1</characteristic>
+                <characteristic name="Ld" typeId="b6d1-0987-3a4d-d6a9">5</characteristic>
+                <characteristic name="Sv" typeId="7349-090e-ca0b-09ce">6+</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a5da-5063-4183-980a" name="Equipment and options (as printed in WAB2 army list)" publicationId="15ea-5299-d0f5-5dbb" hidden="false" typeId="b19e-ee0c-17d1-6e33" typeName="Equipment and Notes">
+              <characteristics>
+                <characteristic name="Text" typeId="63ac-8f60-d28a-2232">Mixed weapons (counts as a hand weapon &amp; javelins) and shield. May have throwing spear instead of javelins (+1 pt). Any unit may be Riding Camels (+1 pt). Combined Formation - up to half the models may exchange mixed weapons for bow (free). Levies count as Levies. Not available to Arab Conquest... (Levies may not be chosen in Arab Conquest armies). (Byzantium p.83)</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8dc8-ce48-2283-37b8" name="Armour Save" hidden="false" typeId="0dbe-f4ed-ef08-8e86" typeName="Armour Save">
+              <characteristics>
+                <characteristic name="Save" typeId="603e-2898-6af9-6cf1">6+</characteristic>
+                <characteristic name="With conditional bonuses" typeId="5882-dd5a-bc28-4024">-</characteristic>
+                <characteristic name="Notes" typeId="d5e4-804e-6192-0114">Armour save from armour, shield and barding bonus pips (rulebook pp.95-98); maximum 3+ (2+ for barded cavalry). M already includes encumbrance for armour/barding (p.96). Conditional pips are in the next column.</characteristic>
+              </characteristics>
+              <!-- armour-save -->
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3f19-652c-2331-7abb" name="Levies (Byzantium)" hidden="false" targetId="7490-e7d5-847a-a64d" type="rule"/>
+            <infoLink id="b5c7-e340-2352-b674" name="Hand Weapon" hidden="false" targetId="a423-b782-e1ce-43e2" type="profile"/>
+            <infoLink id="c88f-4454-02da-4220" name="Shield" hidden="false" targetId="b513-5c2a-34df-6a1d" type="profile"/>
+            <infoLink id="234d-4b9f-a978-ceea" name="Throwing Spear" hidden="true" targetId="cc82-90f9-0ade-c0e7" type="profile">
               <modifiers>
                 <!-- profile-swap -->
                 <modifier type="set" field="hidden" value="false">
                   <conditions>
-                    <condition field="selections" scope="14f0-be61-0c8a-6b5e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d36a-10db-611f-ec0f" type="atLeast"/>
+                    <condition field="selections" scope="14f0-be61-0c8a-6b5e" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daf2-a617-43af-66c2" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </infoLink>
+            <infoLink id="f40f-bac4-f5c2-0646" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="3"/>

@@ -2,7 +2,7 @@
 
 BattleScribe-format data (`.gst` game system plus one `.cat` catalogue per army) for **Warhammer Ancient Battles 2nd Edition** and its supplements, for use in the [New Recruit](https://www.newrecruit.eu/) army builder.
 
-**Version 0.1.0** (first release). This is an unofficial fan project. See [Disclaimer](#disclaimer).
+**Version 0.1.1** (0.1.0 was the first release). This is an unofficial fan project. See [Disclaimer](#disclaimer).
 
 ## What is in here
 
@@ -14,7 +14,7 @@ BattleScribe-format data (`.gst` game system plus one `.cat` catalogue per army)
 | `tools/` | The scripts that generate and post-process everything (see [How it is built](#how-it-is-built)) |
 | `extraction_review.txt` | Historical: what the first pilot extractor detected for four AoA2 lists (those pilot catalogues were later removed in favour of the full AoA2 set) |
 
-Game system revision: **20** (release v0.1.0). All catalogues reference it.
+Game system revision: **20** (unchanged since v0.1.0). All catalogues reference it.
 
 ### Books and catalogues
 
@@ -73,11 +73,13 @@ Not built: Siege & Conquest, allied contingents (described in each list's *List 
 - **0-1 limits**, one General (alternative generals exclude each other), once-per-army options, per-composition costs and statistics.
 - **Points-based limits** ("one per 500 or 1,000 points" for artillery, war wagons, elephants and scythed chariots), shared across the units that share the allowance. The roster total includes the unit being added, so these are slightly lenient.
 - **Chariot squadrons** need at least three chariots.
+- **Stated limits** from `tools/rules_limits.json`: "no more than N units of X" per composition (Hindu, Muslim Indian and other lists), minimum units, one-per-N-points allowances (elephants, rockets, artillery, wagons), and option limits such as "every second unit may have bows" or "one unit may upgrade to Royal Guard" (the first unit of a pair may take the option).
+- **Fractional loadouts** ("up to half the figures exchange thrusting spear for composite bow", "up to a third ...", "up to a quarter may have light armour"): the unit gets a second model line, for example *Themata (Infantry) (bow)*, priced as the base figure plus the price difference. The line is capped at the stated share of the unit, the base line's minimum drops by the same number so the unit still totals at least its normal minimum, and several loadouts of one unit (bow or crossbow) share the allowance. Where the book says the archers "may take no further equipment" (Late Byzantine guards and Kontaratoi, Late Roman Legionaries) the other options are not charged on the loadout line. Applies to about 60 units (Byzantine, Arab, Korean, Tang and Indian lists, English Gebur, Gallic Warriors and others; the table is `tools/loadout_split.json`).
 
 ### Not enforced (documented in the unit text or List Notes)
 
 - "May not outnumber any other unit of cavalry" and similar comparisons against the largest or smallest of several units.
-- Weapon mixes that cannot be expressed on unit-level checkboxes, such as "bows may not outnumber other weapons in the army".
+- Weapon mixes across units, such as "bows may not outnumber other weapons in the army". Per-unit mixes (half, a third or a quarter of the figures) are enforced, see above; the exceptions are listed in `issues/Composition_review.txt`.
 - Allies from other lists, optional rules, and scenario or campaign content.
 - Some Hannibal & the Punic Wars skirmisher rules (Spanish Balearic/Gallic) and a few deferred Armies of Antiquity v2 list fixes; see the `issues/` files.
 
@@ -112,9 +114,10 @@ Post-processing steps run, in order, by every `<book>_all.sh`:
 | `sv_stat` | Sv in the stat line |
 | `crew_merge`, `elephant_count` | Crew line and elephant unit size |
 | `mix_models` | Spear/bow model split (AoA2) |
+| `loadout_split` | Fractional loadouts as capped model lines (`loadout_split.json`) |
 | `composition_exclusions`, `rules_limits` | Units a composition bans (hidden); count, minimum, per-points, ratio and option limits from `rules_limits.json` |
 
-Hannibal has no `_all.sh`; run `python3 tools/prereq_min.py .`, `python3 tools/excl_hide.py .`, `python3 tools/compose_first.py .`, `python3 tools/req_notes.py .` and `python3 tools/sv_stat.py .` on that folder after `hb_build.py` and `hannibal_limits.py`, then `python3 tools/roman_fixes.py .` (Raw Hastati upgrade, Balearic Slingers unavailable). `python3 tools/rules_limits.py .` (run it last, after `roman_fixes.py`) applies the table in `tools/rules_limits.json` (unit counts, minimums, per-points limits, ratios and option limits such as "every second unit may have bows"; its docstring lists the rule types); the `<book>_all.sh` scripts run it as their last step. `tools/composition_exclusions.py` hides units a composition bans (run by the aow, aoa2, bz and fw scripts); `tools/audit_compositions.py` is a read-only check of what each composition can field, and `issues/Composition_review.txt` lists the open questions.
+Hannibal has no `_all.sh`; run `python3 tools/prereq_min.py .`, `python3 tools/excl_hide.py .`, `python3 tools/compose_first.py .`, `python3 tools/req_notes.py .` and `python3 tools/sv_stat.py .` on that folder after `hb_build.py` and `hannibal_limits.py`, then `python3 tools/roman_fixes.py .` (Raw Hastati upgrade, Balearic Slingers unavailable). Then `python3 tools/rules_limits.py .`, `python3 tools/req_notes.py .` and `python3 tools/loadout_split.py .` (Gallic Warriors' light-armour quarter). `python3 tools/rules_limits.py .` (run it last, after `roman_fixes.py`) applies the table in `tools/rules_limits.json` (unit counts, minimums, per-points limits, ratios and option limits such as "every second unit may have bows"; its docstring lists the rule types); the `<book>_all.sh` scripts run it as their last step. `tools/composition_exclusions.py` hides units a composition bans (run by the aow, aoa2, bz and fw scripts); `tools/audit_compositions.py` is a read-only check of what each composition can field, and `issues/Composition_review.txt` lists the open questions.
 
 The AoA2 lists come from the source PDF: `aoa24_extract.py`, then `aoa2_gen.py` → `aoa2_data.py`, with corrections in `aoa2_fixes.py`. Other one-off fixers are `fix_command_costs.py` and `fix_chariot_sizes.py` (for catalogues built before the fix; the builders now do it themselves).
 
