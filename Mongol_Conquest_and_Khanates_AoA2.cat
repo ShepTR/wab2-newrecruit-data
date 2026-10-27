@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5310-0f15-0083-9bfe" name="Mongol Conquest and Khanates (AoA2)" revision="1" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="5310-0f15-0083-9bfe" name="Mongol Conquest and Khanates (AoA2)" revision="2" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Mongol Conquest and Khanates (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="4cfb-1442-a00a-bcaa" name="Light Ballista" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-8b713119 -->
+        <modifier type="set" field="21be-ceb2-c978-bd31" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9474-2698-c27b-56e1" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="21be-ceb2-c978-bd31" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1400" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9474-2698-c27b-56e1" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="21be-ceb2-c978-bd31" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5477-b582-3930-1334" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9474-2698-c27b-56e1" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -15,6 +38,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21be-ceb2-c978-bd31" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="f403-7e6b-1eb1-ee1a" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 1400 points in the army (shared with Stone Thrower)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="e5d4-9237-ff0d-00be" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>
@@ -83,6 +119,29 @@
     </selectionEntry>
     <selectionEntry id="5477-b582-3930-1334" name="Stone Thrower" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-e240c1d6 -->
+        <modifier type="set" field="eef3-5a4c-05ee-08cd" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9474-2698-c27b-56e1" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="eef3-5a4c-05ee-08cd" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1400" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9474-2698-c27b-56e1" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="eef3-5a4c-05ee-08cd" value="-1">
+          <repeats>
+            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4cfb-1442-a00a-bcaa" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9474-2698-c27b-56e1" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -94,6 +153,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eef3-5a4c-05ee-08cd" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="6042-6749-4f75-6907" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 1400 points in the army (shared with Light Ballista)</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="0978-6148-35f9-837d" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>

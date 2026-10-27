@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="350c-24da-5a4c-c07a" name="Medieval Balkan States (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="350c-24da-5a4c-c07a" name="Medieval Balkan States (AoA2)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Medieval Balkan States (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="28ec-531d-aacf-e9cd" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -3135,6 +3135,13 @@
     </selectionEntry>
     <selectionEntry id="ca55-e6b4-022b-87b7" name="Nobles (B, S, M )" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-b9af6dbb -->
+        <modifier type="set" field="bdb0-7395-494c-f857" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c862-c2b1-5a34-04e8" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3151,6 +3158,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdb0-7395-494c-f857" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="58fc-6aea-c4ee-25bd" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -3875,6 +3885,13 @@
     </selectionEntry>
     <selectionEntry id="da1d-e712-a0d1-df05" name="Horse Archers (B, S, M)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-67b1c61c -->
+        <modifier type="set" field="eadf-99f8-72a5-5346" value="2">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0452-2870-b124-98c7" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -3891,6 +3908,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eadf-99f8-72a5-5346" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="e2e4-82b4-e2a6-6767" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -4191,6 +4211,13 @@
     </selectionEntry>
     <selectionEntry id="cf15-0657-6e78-84cb" name="Archers (A, B, S, M)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-d5bc18d1 -->
+        <modifier type="set" field="8372-fd27-6055-5fdf" value="2">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1842-3b27-2033-9a69" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -4201,6 +4228,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8372-fd27-6055-5fdf" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="f97e-2cb0-c14c-bf4c" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>

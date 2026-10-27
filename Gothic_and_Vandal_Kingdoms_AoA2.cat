@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="78ab-9518-0426-961a" name="Gothic and Vandal Kingdoms (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="78ab-9518-0426-961a" name="Gothic and Vandal Kingdoms (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Gothic and Vandal Kingdoms (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="52ea-39a5-95d6-d935" name="King" hidden="false" collective="false" import="true" type="unit">
@@ -1850,8 +1850,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02e3-4ebf-6773-160c" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="019a-6117-b392-0e08" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40a7-1db1-3902-7eef" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-3c7a31d1 -->
+            <modifier type="increment" field="40a7-1db1-3902-7eef" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d46c-92be-e207-3d1b" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b9e1-1b32-b2d0-1936" repeats="1" roundUp="false"/>
@@ -2175,7 +2182,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b6-bee1-2b85-9258" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="384a-8ecd-4446-6988" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9df6-faf2-a676-cda4" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-370bb9d8 -->
+            <modifier type="increment" field="9df6-faf2-a676-cda4" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3a87-4732-7e78-ed1c" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <rules>
             <rule id="1511-b7fd-6398-27cd" name="Designated Light Infantry" hidden="false">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3d59-ae10-9905-b95a" name="Swiss (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="3d59-ae10-9905-b95a" name="Swiss (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Swiss (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="8e44-eb54-2437-4c85" name="Pikemen" hidden="false" collective="false" import="true" type="unit">
@@ -432,8 +432,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8475-34e1-6fc7-c40a" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1602-28c6-4377-dbb5" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55c9-2496-cf63-3874" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-2e15f046 -->
+            <modifier type="increment" field="55c9-2496-cf63-3874" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8f40-f095-5b74-9520" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0366-5bc6-fdd9-9ed1" repeats="1" roundUp="false"/>

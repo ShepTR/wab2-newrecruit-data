@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0b1a-f9b9-37a6-7802" name="Moldavia &amp; Wallachia (Armies of Chivalry)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0b1a-f9b9-37a6-7802" name="Moldavia &amp; Wallachia (Armies of Chivalry)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Moldavia &amp; Wallachia (Armies of Chivalry): units and points from the Armies of Chivalry army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="441f-05a6-590e-5686" name="Voievod" hidden="false" collective="false" import="true" type="unit">
@@ -1902,8 +1902,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7802-6c48-d8f9-b94f" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ae43-dbec-c4ff-f1f5" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f26-82a1-f081-a479" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-ad332382 -->
+            <modifier type="increment" field="6f26-82a1-f081-a479" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="83b0-89ad-95b7-d80f" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c4d-4594-a9a4-249a" repeats="1" roundUp="false"/>

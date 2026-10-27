@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2311-5ca7-d42a-e3ad" name="Medieval Spanish and Portugese (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2311-5ca7-d42a-e3ad" name="Medieval Spanish and Portugese (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Medieval Spanish and Portugese (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="c7ee-10f6-5020-65c8" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -499,8 +499,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3881-22c7-8d8a-f171" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="61ec-ace2-2b03-e15f" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25f4-bf30-7a3a-78c9" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-91794cd1 -->
+            <modifier type="increment" field="25f4-bf30-7a3a-78c9" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ae1-55ab-cb62-c6e8" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="4">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3790-424d-81e7-b7f8" repeats="1" roundUp="false"/>

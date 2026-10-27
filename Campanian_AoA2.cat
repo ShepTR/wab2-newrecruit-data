@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f854-038c-cc82-9b1c" name="Campanian (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="f854-038c-cc82-9b1c" name="Campanian (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Campanian (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="91f9-6996-75ca-d0f5" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -907,8 +907,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0edd-d600-4a2d-6f6b" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2881-e14b-3881-53d4" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cadf-e85f-abe9-0a9d" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-74462f1c -->
+            <modifier type="increment" field="cadf-e85f-abe9-0a9d" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="415f-2a0e-9abd-7e5c" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ffd0-7c4d-787f-b28b" repeats="1" roundUp="false"/>

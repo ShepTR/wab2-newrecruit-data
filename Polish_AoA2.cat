@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ba4d-8269-903c-100f" name="Polish (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ba4d-8269-903c-100f" name="Polish (AoA2)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Polish (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="4ec1-8e2e-11a4-52e7" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1506,6 +1506,21 @@
     </selectionEntry>
     <selectionEntry id="cd91-186e-e0da-705e" name="Cannon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-ae0712c5 -->
+        <modifier type="set" field="53d7-37ee-db25-b7c5" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc8e-9d94-c4c3-d3cc" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="53d7-37ee-db25-b7c5" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="2400" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dc8e-9d94-c4c3-d3cc" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1527,6 +1542,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53d7-37ee-db25-b7c5" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="641a-b428-8087-993d" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 2400 points in the army</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="c3a0-f63a-a452-d1e7" name="War Wagons and Artillery" hidden="false" targetId="4649-608e-f013-a200" primary="true"/>
       </categoryLinks>

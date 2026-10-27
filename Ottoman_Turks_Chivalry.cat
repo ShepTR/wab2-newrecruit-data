@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0845-3db9-de0b-c8ff" name="Ottoman Turks (Armies of Chivalry)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0845-3db9-de0b-c8ff" name="Ottoman Turks (Armies of Chivalry)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ottoman Turks (Armies of Chivalry): units and points from the Armies of Chivalry army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="95fe-f58b-2d92-48df" name="Amir/Sultan" hidden="false" collective="false" import="true" type="unit">
@@ -4496,8 +4496,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3969-b571-6920-4481" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="08cc-2ccc-d249-1040" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0963-d464-4beb-77cf" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-470be7bc -->
+            <modifier type="increment" field="0963-d464-4beb-77cf" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5ba5-a430-b486-b857" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
 <!-- sw-avail -->
 <modifier type="set" field="hidden" value="false">
 <conditions>

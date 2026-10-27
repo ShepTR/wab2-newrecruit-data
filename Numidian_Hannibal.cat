@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="16" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="563b-400b-59e4-fb06" name="Numidian (Hannibal)" revision="17" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Numidian (Hannibal): units and points from the Warhammer Ancient Battles 2nd Edition rulebook army list.</readme>
   <selectionEntries>
     <selectionEntry id="f601-58b1-fe66-91b3" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -642,8 +642,27 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01dd-b639-c321-d2a9" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c147-f58a-7ee2-3ac0" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4842-a957-8486-4ff9" type="max"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd6e-786d-0d4f-24a4" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-6206964fo -->
+            <modifier type="increment" field="bd6e-786d-0d4f-24a4" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2c-22f8-44a9-d7bc" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+            <!-- rl-6206964f -->
+            <modifier type="increment" field="4842-a957-8486-4ff9" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2c-22f8-44a9-d7bc" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="4842-a957-8486-4ff9" value="-1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="468e-ff7e-e6ea-7d02" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="adb3-643c-0c24-eea5" repeats="1" roundUp="false"/>
@@ -662,7 +681,28 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="41b4-7d6c-41a7-a693" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7369-715c-5d5f-3b89" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="081e-9024-7476-7dc9" type="max"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb0e-151d-63f2-d3b0" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-636d5846o -->
+            <modifier type="increment" field="eb0e-151d-63f2-d3b0" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2c-22f8-44a9-d7bc" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+            <!-- rl-636d5846 -->
+            <modifier type="increment" field="081e-9024-7476-7dc9" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2c-22f8-44a9-d7bc" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" field="081e-9024-7476-7dc9" value="-1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf54-f871-9f9d-b60b" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="0322-2bb2-346f-43df" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>

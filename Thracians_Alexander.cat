@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="acdb-8982-b749-a280" name="Thracians (Alexander the Great)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="acdb-8982-b749-a280" name="Thracians (Alexander the Great)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Thracians (Alexander the Great): units and points from the Alexander the Great army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="7cc5-6b17-c4e5-f78b" name="Thracian King" hidden="false" collective="false" import="true" type="unit">
@@ -3946,8 +3946,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1bb6-daf8-31d9-05bd" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0065-e132-1c6b-7bf9" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a88-7a91-2853-6cdb" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-64461d6b -->
+            <modifier type="increment" field="3a88-7a91-2853-6cdb" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f8fc-d2ea-1ea5-4ad2" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d5d8-85dd-0d58-0a22" repeats="1" roundUp="false"/>

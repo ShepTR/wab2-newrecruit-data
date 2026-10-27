@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2f8b-77f2-2634-4bfc" name="Al-Andalus and Granada (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2f8b-77f2-2634-4bfc" name="Al-Andalus and Granada (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Al-Andalus and Granada (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="13f5-2d3f-5e9f-91b4" name="Caliph" hidden="false" collective="false" import="true" type="unit">
@@ -825,8 +825,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="66cf-ef7b-baee-c93f" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f2c-5df6-460e-30e4" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="279d-480f-5958-4c84" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-5607cc26 -->
+            <modifier type="increment" field="279d-480f-5958-4c84" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db4f-1966-634c-6eef" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="4">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="493d-e651-18fa-928e" repeats="1" roundUp="false"/>
@@ -1690,6 +1697,13 @@
     </selectionEntry>
     <selectionEntry id="617b-3d0f-c47e-edf8" name="Crossbowmen (Infantry)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-c9d40583 -->
+        <modifier type="set" field="a733-d0a6-2ceb-6361" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c1e-b4be-d809-4d5b" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1705,6 +1719,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a733-d0a6-2ceb-6361" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="7051-7633-9dce-a6d2" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>

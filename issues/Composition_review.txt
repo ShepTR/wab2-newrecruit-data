@@ -72,23 +72,42 @@ B. QUESTIONS (need your decision or a source I do not have)
 13. Leader-type restrictions ("no chieftain: led by a mormaer upgraded to army general", Scots-Irish "curadh", El Cid Al-Andalus
     Caliphate "not a Christian captain") are text only. Hide the character for those compositions?
 
-C. NOT ENFORCED (rules the program cannot express, or ones not modelled; spot-check individual units, a few of these may
-   already carry a ratio rule from the book's own limits script)
----------------------------------------------------------------------------
-- Partial limits: "only one unit of crossbowmen" (Al-Andalus Taifa, infantry crossbowmen), "no more than 2 units of Hindu cavalry"
-  (Rajputs), "no more than one unit of Elite Cavalry" (Vijayanagar), "a maximum of one unit each of elite cavalry and horse
-  archers" (Lodi), "only one unit of Hindu cavalry" (Tughluq), "at least half the cavalry must be Jinetes" (Al-Andalus),
-  Ottoman ratios (Imam per Tribal Infantry, Tribal Infantry/Feudal Horse per 1,200 pts, stone thrower per 1,400 pts), "Cumans
-  may not outnumber Lithuanians" (Later Polish), "at least one unit of Varjazi" (Pagan Rus).
-- Option bans: "may not take heavy armour" (Early Christian Spanish), "no unit may take heavy armour" (Pagan Rus), "may not have
-  barding" (Rajput characters and elite cavalry).
-- Conditional rules: Carroccio only if no army standard bearer (Holy Roman Empire, Early City/Clerical); no Tartar nobles or
-  warriors if western Russian states are taken; Sipahis and volunteers limits in the Ottoman Chivalry lists; "no armigeri" in
-  the Italian condotta allies of the Hungarian-Crusader army (Vlad); thegns, gebur, hirdmen/bondir and similar unit-count
-  rules in Shieldwall; Lusitanian/Caetrati ratios in the Spanish Hannibal list (partly enforced as a ratio).
+C. ENFORCED BY tools/rules_limits.py (since the Vijayanagar question) AND WHAT IS STILL NOT ENFORCED
+-------------------------------------------------------------------------------------------------
+Enforced as validation (the roster shows an error when the limit is broken; table in tools/rules_limits.json, 231 rules in 99 catalogues):
+- Unit counts per composition: "0-1 / no more than N units of X" (Hindu cavalry Orissa 1 / Rajput 2, Elite Cavalry Vijayanagar 1, Lodi
+  elite cavalry and horse archers 1 each, Tughluq Hindu cavalry 1, Bahmani handgunners 2, Taifa and Middle Christian Spanish
+  crossbowmen 1, Moldavian Nobles 1, Later Ottoman Tribal Infantry 1).
+- Minimums: elephants (Orissa 2, Standard and Vijayanagar 1, Lodi and Tughluq 1), Albanian 2 Archers, Bulgarian 2 Horse Archers,
+  Pagan Rus Varjasi (both Rus books), Ottoman horse archers / regular cavalry / feudal horse.
+- Per-points limits: elephants (Orissa 1 per 450 + the general's mount; Standard, Vijayanagar 1 per 600; Muslim Indian 1 per 700),
+  rocket launchers 1 per 1,400, Ottoman Tribal Infantry / Feudal Horse 1 per 1,200, stone thrower 1 per 1,400, Later Ottoman artillery
+  1 per 900 (shared), Polish cannon 1 per 2,400, Later Hungarian wagons and cannon 1 per 1,000, Later Italian guns 1 per 1,000 (shared),
+  Mongol Conquest artillery 1 per 1,400 (shared). Limits use whole units of points (floor), as in the rest of the data.
+- Ratio: Ottoman Imam needs a unit of Tribal Infantry.
+- Option limits: about 190 "every second / every third unit may ...", "one / two units may ..." sentences, e.g. bows, slings, light armour,
+  Stubborn, Ld8 upgrades, Royal Guard, Brabancons, Military Order Knights. Options that share one allowance (sling OR bow) are enforced as
+  one allowance for pairs; "every second" is ceil(units/2), so the first unit may always have the option.
+Still NOT enforced (the program cannot express them, or the text is ambiguous):
+- Allowances shared by three or more options (each option is limited on its own; the engine prints a note when it meets one).
+- "Up to half of the figures" rules (per-model counts inside a unit): Gebur bows, Korean Spearmen bows / crossbows, Greek skirmisher
+  "up to half may replace javelins" (the unit-count form is enforced), Maccabean Foot vs Peltast figures, "may not outnumber" rules
+  (Cumans vs Lithuanians, Normans vs Bretons, Tribal Infantry vs Religious Volunteers, Mongol Heavy vs Light cavalry models).
+- Ratios that differ between compositions of one book (Serbia lance vs bow-and-spear units, Spanish Lusitanians vs Caetrati partly).
+- Raised caps: Warring States Zhao 0-2 Light Cavalry Archers and Qin 0-2 Light Cavalry Lancers (the 0-1 cap stays).
+- Unit-level "every second unit" rules (Greek AoA1 Theban / Thessalian cavalry, Alexander Successors Elite Light Cavalry, Comnenian guards).
+- Persians and Medes (Cyrus) thrusting-spear sentence (ambiguous), tarasnices, El Cid mercenary sentences, Early Imperial Roman options,
+  Assyrian Royal Guard (no matching option), Thematic Byzantines skirmisher bows (no option), handguns for Spanish Military Orders.
+- Partial limits: "at least half the cavalry must be Jinetes" (Al-Andalus), Rajput "no barding", Early Christian Spanish "no heavy armour",
+  Pagan Rus "no heavy armour".
+- Conditional rules: Carroccio only if no army standard bearer (Holy Roman Empire); no Tartar nobles or warriors if western Russian
+  states are taken; Sipahis and volunteers limits in the Ottoman Chivalry lists; "no armigeri" in the Italian condotta allies (Vlad);
+  thegns, gebur, hirdmen/bondir and similar unit-count rules in Shieldwall.
 - Allies "from the X list" lines are text only; allies cannot be linked across catalogues.
 - Percentage caps per composition are applied as army-composition limits; they do not hide units, so a unit in a category
   capped at 0% stays visible (only the bans listed in section A hide units).
+Rounding note: "every second unit may ..." allows the first unit to have it (ceil). If you read the books as "needs two units first" it is a
+one-word change in tools/rules_limits.py.
 
 D. WHAT TO DO WITH THIS
 -----------------------

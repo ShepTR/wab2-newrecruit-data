@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6e15-d81e-9e7c-dca8" name="Alexandrian Imperial (Alexander the Great)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="6e15-d81e-9e7c-dca8" name="Alexandrian Imperial (Alexander the Great)" revision="10" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Alexandrian Imperial (Alexander the Great): units and points from the Alexander the Great army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="05f4-9093-2f79-3f2c" name="Alexander the Great" hidden="false" collective="false" import="true" type="unit">
@@ -4864,7 +4864,9 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a14-4ebe-6aaa-a42e" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf68-fc74-6bfe-06bf" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13d8-e43e-615d-0b4b" type="max"/>
           </constraints>
+          <!-- rl-e6a57014 -->
           <modifiers>
             <modifier type="increment" field="points" value="1">
               <repeats>
@@ -5009,8 +5011,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a7b-bf2e-c6c6-6cba" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0108-e597-3096-3dfd" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70bd-ba68-35e9-fa65" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-18a92d4f -->
+            <modifier type="increment" field="70bd-ba68-35e9-fa65" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b0c7-bbee-134d-eb49" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb3d-ff76-c583-0d5c" repeats="1" roundUp="false"/>

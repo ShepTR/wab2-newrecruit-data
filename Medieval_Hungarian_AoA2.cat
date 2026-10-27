@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="be18-7cb5-4c2a-82be" name="Medieval Hungarian (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="be18-7cb5-4c2a-82be" name="Medieval Hungarian (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Medieval Hungarian (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="6b7d-a697-f2b1-2b29" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1834,6 +1834,21 @@
     </selectionEntry>
     <selectionEntry id="b770-8fff-86cb-be73" name="Cannon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-b3403d5d -->
+        <modifier type="set" field="6df9-298d-4e6d-6502" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad8-fb6c-b66a-5115" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="6df9-298d-4e6d-6502" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1000" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad8-fb6c-b66a-5115" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1848,6 +1863,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df9-298d-4e6d-6502" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="777f-dd1d-ca3a-ef2c" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 1000 points in the army</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="7496-0304-5d83-87ba" name="Artillery and War Wagons" hidden="false" targetId="f264-36b6-c296-c6a8" primary="true"/>
       </categoryLinks>
@@ -1914,6 +1942,21 @@
     </selectionEntry>
     <selectionEntry id="8b01-90a0-8db5-8328" name="Wagon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-aa68b458 -->
+        <modifier type="set" field="1686-0ca2-e491-6789" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad8-fb6c-b66a-5115" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="1686-0ca2-e491-6789" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1000" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cad8-fb6c-b66a-5115" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1928,6 +1971,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1686-0ca2-e491-6789" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="9a83-6e38-851c-df9b" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 1000 points in the army</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="38bf-cba1-77f3-c8be" name="Artillery and War Wagons" hidden="false" targetId="f264-36b6-c296-c6a8" primary="true"/>
       </categoryLinks>

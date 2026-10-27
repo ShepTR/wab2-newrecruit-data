@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2d8b-2ea3-e395-d38b" name="Macedonian Empire (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2d8b-2ea3-e395-d38b" name="Macedonian Empire (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Macedonian Empire (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="a3ef-441b-aa90-8bfd" name="Alexander" hidden="false" collective="false" import="true" type="unit">
@@ -758,7 +758,9 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4370-55ac-e4a8-4ec9" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="483d-8a18-f89b-5d16" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1927-22cf-42d0-ebe5" type="max"/>
           </constraints>
+          <!-- rl-ac8120a3 -->
           <modifiers>
             <modifier type="increment" field="points" value="3">
               <repeats>
@@ -2263,8 +2265,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb28-1a49-6ad4-023f" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb05-113b-2cd6-f114" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0133-4414-9808-7aa2" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-a7574eab -->
+            <modifier type="increment" field="0133-4414-9808-7aa2" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1e49-cc52-ad78-8476" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4295-23d3-cb5d-761f" repeats="1" roundUp="false"/>

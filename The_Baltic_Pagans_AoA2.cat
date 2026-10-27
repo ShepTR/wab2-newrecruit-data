@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="372e-9e26-2472-8e83" name="Baltic Pagans (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="372e-9e26-2472-8e83" name="Baltic Pagans (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Baltic Pagans (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="144f-7da2-fab7-320d" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1196,7 +1196,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55e7-b2f2-2af3-4354" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a092-bd8d-26c2-bc60" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1629-a508-9389-dd16" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-234b0783 -->
+            <modifier type="increment" field="1629-a508-9389-dd16" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1736-0bb0-8ed3-2316" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="9c85-bf6f-03a7-4759" name="Throwing Spear" hidden="false" targetId="cc82-90f9-0ade-c0e7" type="profile"/>
@@ -1209,8 +1218,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ab3a-9aa4-8280-f1c2" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1871-6c64-bf82-2eb6" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1997-ba91-4203-9eb7" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-6a567769 -->
+            <modifier type="increment" field="1997-ba91-4203-9eb7" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1736-0bb0-8ed3-2316" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e42-2849-c556-7bf2" repeats="1" roundUp="false"/>

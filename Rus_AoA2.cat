@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="32f3-a68b-a764-5208" name="Rus (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="32f3-a68b-a764-5208" name="Rus (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Rus (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="c24f-44a0-2e48-6532" name="Warlord" hidden="false" collective="false" import="true" type="unit">
@@ -797,6 +797,13 @@
     </selectionEntry>
     <selectionEntry id="9160-27d8-dfaa-b2dd" name="Varjazi" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-a35e37ed -->
+        <modifier type="set" field="601a-fddb-8159-ed58" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ede4-c8ed-da96-1949" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -805,6 +812,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="601a-fddb-8159-ed58" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="9273-a8c6-39c1-b56c" name="Infantry" hidden="false" targetId="f3a3-2277-7808-2250" primary="true"/>
       </categoryLinks>

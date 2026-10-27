@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b854-9a67-fa30-a582" name="Kingdom of Poland (Armies of Chivalry)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b854-9a67-fa30-a582" name="Kingdom of Poland (Armies of Chivalry)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Kingdom of Poland (Armies of Chivalry): units and points from the Armies of Chivalry army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="6d9e-079a-94d2-d2d8" name="King" hidden="false" collective="false" import="true" type="unit">
@@ -2063,7 +2063,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c56d-3531-831a-b6ea" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e312-76e7-6427-e621" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d3-b444-ccba-6da8" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-1f9121f2 -->
+            <modifier type="increment" field="b7d3-b444-ccba-6da8" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8d52-b636-7053-450e" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="cdbf-7f35-7d7c-225c" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>
@@ -2076,7 +2085,9 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f37-6944-70f3-5979" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="71c6-04ee-7e1b-f2cc" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2043-6717-c5b6-c0f7" type="max"/>
           </constraints>
+          <!-- rl-e8482e4f -->
           <modifiers>
             <modifier type="increment" field="points" value="2">
               <repeats>

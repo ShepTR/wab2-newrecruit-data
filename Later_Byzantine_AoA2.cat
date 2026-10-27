@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e995-d55d-a98a-9ab0" name="Later Byzantine (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="e995-d55d-a98a-9ab0" name="Later Byzantine (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Later Byzantine (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="3ed0-f226-92d3-7b9f" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -2817,8 +2817,20 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fa32-e139-b808-de02" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="784e-c88c-83d3-3d52" type="min"/>
+          <constraint field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d406-c048-804d-caaf" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-c7e2bec3 -->
+            <modifier type="set" field="d406-c048-804d-caaf" value="1">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ae-e419-a3aa-d8f4" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d406-c048-804d-caaf" value="0">
+              <conditions>
+                <condition field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f7ae-e419-a3aa-d8f4" type="atLeast"/>
+              </conditions>
+            </modifier>
             <modifier type="increment" field="points" value="-1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb2c-324e-4f09-2323" repeats="1" roundUp="false"/>
@@ -2837,8 +2849,20 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1825-47d6-0092-7d51" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b1c5-9ad6-27ed-cc97" type="min"/>
+          <constraint field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d34-3d65-f5a9-2cbc" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-083a2350 -->
+            <modifier type="set" field="9d34-3d65-f5a9-2cbc" value="1">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efec-15d6-34f8-fdc8" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="9d34-3d65-f5a9-2cbc" value="0">
+              <conditions>
+                <condition field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efec-15d6-34f8-fdc8" type="atLeast"/>
+              </conditions>
+            </modifier>
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fb2c-324e-4f09-2323" repeats="1" roundUp="false"/>

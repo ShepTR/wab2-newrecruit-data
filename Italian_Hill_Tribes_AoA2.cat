@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c20e-86d3-f1ca-454d" name="Italian Hill Tribes (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="c20e-86d3-f1ca-454d" name="Italian Hill Tribes (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Italian Hill Tribes (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="6840-31dd-fddd-cf1c" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -327,8 +327,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2985-708d-9f97-9bb2" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51b3-1e3e-edfd-1ab3" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3e2-f070-3521-a192" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-4d3262d4 -->
+            <modifier type="increment" field="b3e2-f070-3521-a192" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="510e-2577-2e54-a0c7" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b13d-827b-d904-1683" repeats="1" roundUp="false"/>
@@ -543,7 +550,9 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2e53-6498-b31f-3a5a" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3836-46a8-d8aa-fd8d" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f742-b411-293b-69e5" type="max"/>
           </constraints>
+          <!-- rl-6648ab53 -->
           <modifiers>
             <modifier type="increment" field="points" value="4">
               <repeats>

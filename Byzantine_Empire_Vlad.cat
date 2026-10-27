@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2e9c-b098-416d-b148" name="Byzantine Empire (Vlad the Impaler)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2e9c-b098-416d-b148" name="Byzantine Empire (Vlad the Impaler)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Byzantine Empire (Vlad the Impaler): units and points from the Vlad the Impaler army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="9369-213a-bd53-7860" name="Basileus" hidden="false" collective="false" import="true" type="unit">
@@ -8436,8 +8436,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b380-66f1-55c0-695c" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="19bb-80b8-06a8-1689" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78a0-83c7-ed66-c11e" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-19387c7a -->
+            <modifier type="set" field="78a0-83c7-ed66-c11e" value="0">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2a6-abcc-af64-aa86" type="atLeast"/>
+              </conditions>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="398c-9ef4-7f2f-f8b7" repeats="1" roundUp="false"/>
@@ -8458,8 +8465,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2dc5-69b0-36c3-87ed" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df33-1d18-b512-5a85" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3df1-82d1-c15f-286e" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-99a8e86e -->
+            <modifier type="set" field="3df1-82d1-c15f-286e" value="0">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ac2-d721-92ae-ad24" type="atLeast"/>
+              </conditions>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="398c-9ef4-7f2f-f8b7" repeats="1" roundUp="false"/>

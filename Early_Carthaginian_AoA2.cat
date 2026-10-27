@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9365-f281-8226-2470" name="Early Carthaginian (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9365-f281-8226-2470" name="Early Carthaginian (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Early Carthaginian (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="6cbc-8c96-385f-83d4" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1077,7 +1077,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="780e-72b0-225c-996f" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7a14-f043-e322-afe9" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8216-9791-bda6-390b" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-754eb696 -->
+            <modifier type="increment" field="8216-9791-bda6-390b" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca76-31d9-cfba-f51f" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="bd4b-cbf6-03f6-9df9" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>
@@ -1211,8 +1220,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8c43-ebdc-fa99-ea2b" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7a6-ad48-1fbc-0ded" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55e5-8c03-68a3-0a15" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-feb21dab -->
+            <modifier type="increment" field="55e5-8c03-68a3-0a15" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="19d6-a69d-561d-0df3" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="3">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e25-c4f6-10ca-043a" repeats="1" roundUp="false"/>

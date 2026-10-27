@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8338-4f4f-c4e4-f416" name="Hindu India (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="8338-4f4f-c4e4-f416" name="Hindu India (AoA2)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Hindu India (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="f62c-506f-90dc-0da3" name="General" hidden="false" collective="false" import="true" type="unit">
@@ -1333,6 +1333,13 @@
     </selectionEntry>
     <selectionEntry id="2531-c88a-7251-cbf9" name="Elite Cavalry" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-b91586c4 -->
+        <modifier type="set" field="4322-149e-27ce-1975" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09b1-8f59-3f9c-8e7b" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1355,6 +1362,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4322-149e-27ce-1975" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="b370-d984-914d-6ddc" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -1546,6 +1556,20 @@
     </selectionEntry>
     <selectionEntry id="9889-f7eb-9dda-d9b0" name="Hindu Cavalry" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-de0ae5fa -->
+        <modifier type="set" field="47ff-64bf-4f84-7757" value="2">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4f6-9289-230a-9000" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+        <!-- rl-c1f5999b -->
+        <modifier type="set" field="7b67-e999-6190-8e62" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7109-6728-0320-e7de" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -1556,6 +1580,10 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47ff-64bf-4f84-7757" type="max"/>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b67-e999-6190-8e62" type="max"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="8f06-d96e-d4a4-8df8" name="Cavalry" hidden="false" targetId="4d00-21b7-b56e-3a42" primary="true"/>
       </categoryLinks>
@@ -2173,6 +2201,75 @@
     </selectionEntry>
     <selectionEntry id="960d-f760-440a-acd9" name="Elephant" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-3205635e -->
+        <modifier type="set" field="2cf1-3116-2031-ab7e" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088f-0cc8-156d-b106" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="2cf1-3116-2031-ab7e" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09b1-8f59-3f9c-8e7b" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+        <!-- rl-67cc46e8 -->
+        <modifier type="set" field="0fcb-595e-9da2-c0bb" value="2">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7109-6728-0320-e7de" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+        <!-- rl-ae1f8ec3 -->
+        <modifier type="set" field="8a85-a049-f889-7222" value="2">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4f6-9289-230a-9000" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+        <!-- rl-19b0e7e5 -->
+        <modifier type="set" field="f0a0-d90e-0a29-7727" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088f-0cc8-156d-b106" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f0a0-d90e-0a29-7727" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="600" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088f-0cc8-156d-b106" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="f0a0-d90e-0a29-7727" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09b1-8f59-3f9c-8e7b" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f0a0-d90e-0a29-7727" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="600" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09b1-8f59-3f9c-8e7b" type="atLeast"/>
+          </conditions>
+        </modifier>
+
+        <!-- rl-424093c9 -->
+        <modifier type="set" field="d10a-5b76-8ad8-f716" value="1">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7109-6728-0320-e7de" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="d10a-5b76-8ad8-f716" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="450" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7109-6728-0320-e7de" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2183,6 +2280,23 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cf1-3116-2031-ab7e" type="min"/>
+        <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fcb-595e-9da2-c0bb" type="min"/>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a85-a049-f889-7222" type="max"/>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0a0-d90e-0a29-7727" type="max"/>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d10a-5b76-8ad8-f716" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="72ec-b2e7-89c3-0eeb" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 600 points in the army</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="16e7-9984-4024-b20f" name="Elephants" hidden="false" targetId="bb2d-5030-2e22-377f" primary="true"/>
       </categoryLinks>
@@ -2313,6 +2427,47 @@
     </selectionEntry>
     <selectionEntry id="01f2-9211-8ea5-c67a" name="Rocket launcher" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
+        <!-- rl-7ea6fdb9 -->
+        <modifier type="set" field="9542-ff68-af3a-4a6b" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7109-6728-0320-e7de" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="9542-ff68-af3a-4a6b" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1400" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7109-6728-0320-e7de" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9542-ff68-af3a-4a6b" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088f-0cc8-156d-b106" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="9542-ff68-af3a-4a6b" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1400" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="088f-0cc8-156d-b106" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="9542-ff68-af3a-4a6b" value="0">
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09b1-8f59-3f9c-8e7b" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="9542-ff68-af3a-4a6b" value="1">
+          <repeats>
+            <repeat field="points" scope="roster" value="1400" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09b1-8f59-3f9c-8e7b" type="atLeast"/>
+          </conditions>
+        </modifier>
+
         <!-- hide-until-composition -->
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -2329,6 +2484,19 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="1000" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9542-ff68-af3a-4a6b" type="max"/>
+      </constraints>
+<!-- req-notes -->
+      <profiles>
+        <profile id="cbec-066c-067e-12c0" name="Requirements" hidden="false" typeId="7f90-59b2-9f32-6fba" typeName="Requirements">
+          <characteristics>
+              <characteristic name="Take first" typeId="e67c-3fd6-bc18-aa6f">-</characteristic>
+              <characteristic name="Limit" typeId="b1d7-0310-5fa2-9279">1 per 1400 points in the army</characteristic>
+              <characteristic name="Not with" typeId="0dd5-ef89-9ca5-35ed">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="594c-601a-7bd5-3f66" name="Artillery" hidden="false" targetId="3a7c-df52-a77b-1017" primary="true"/>
       </categoryLinks>

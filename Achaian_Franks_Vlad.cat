@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e163-21b3-0b81-8919" name="Achaian Franks (Vlad the Impaler)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="e163-21b3-0b81-8919" name="Achaian Franks (Vlad the Impaler)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Achaian Franks (Vlad the Impaler): units and points from the Vlad the Impaler army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="d6ad-c1aa-801c-066f" name="Duke/General" hidden="false" collective="false" import="true" type="unit">
@@ -925,7 +925,16 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d40-a809-31d8-d69d" type="max"/>
                 <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5342-4284-d1d7-2a54" type="min"/>
+              <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09be-0ff5-6c2a-5778" type="max"/>
               </constraints>
+              <modifiers>
+                <!-- rl-c1077ec1 -->
+                <modifier type="increment" field="09be-0ff5-6c2a-5778" value="1">
+                  <repeats>
+                    <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5176-44dd-356e-24d9" repeats="1" roundUp="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
               <!-- def-link -->
           <rules>
             <rule id="c832-346f-be30-0134" name="Additional attack (+20 pts; every other Baron)" hidden="false">
@@ -1227,8 +1236,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="702d-f012-2109-d2d3" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b391-2e4d-15e0-8615" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76c7-27a7-cf2e-09b5" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-dbe6cdfe -->
+            <modifier type="increment" field="76c7-27a7-cf2e-09b5" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bab8-e807-959b-ef8d" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="4">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9cbb-af8b-0ed5-b0ca" repeats="1" roundUp="false"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0e07-8fbe-c40f-d63b" name="Early Rome (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0e07-8fbe-c40f-d63b" name="Early Rome (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Early Rome (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="6411-ea91-6dde-caf0" name="King/Praetor" hidden="false" collective="false" import="true" type="unit">
@@ -708,7 +708,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2ba-ce4f-663b-725d" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2c8-ecea-59cd-0a0c" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cce-2214-433b-c8f0" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-c44fb563 -->
+            <modifier type="increment" field="0cce-2214-433b-c8f0" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8516-216f-5f5e-e85f" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="7fac-4adb-2a93-1fc3" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>

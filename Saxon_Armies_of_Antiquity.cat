@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7a69-583d-d406-fbfc" name="zz_old_Saxon" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7a69-583d-d406-fbfc" name="zz_old_Saxon" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Saxon (Armies of Antiquity): units and points from the Armies of Antiquity army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="5e2c-825a-9eae-9a52" name="Army General" hidden="false" collective="false" import="true" type="unit">
@@ -548,8 +548,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="350e-8344-fd06-ef59" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ed2-62d3-e237-a443" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3eb-487a-8e22-fc51" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-57848bcc -->
+            <modifier type="increment" field="b3eb-487a-8e22-fc51" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="28c7-91e2-030f-fc17" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="1">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="63e7-78d0-4d3d-8821" repeats="1" roundUp="false"/>

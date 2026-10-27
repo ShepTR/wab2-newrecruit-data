@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b904-05df-7dcd-cae7" name="Welsh (Shieldwall)" revision="7" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="b904-05df-7dcd-cae7" name="Welsh (Shieldwall)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Welsh (Shieldwall): units and points from the Shieldwall army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="d88e-5b10-818b-7830" name="Teyrn" hidden="false" collective="false" import="true" type="unit">
@@ -798,8 +798,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="837f-c034-c5f1-4511" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55c2-b9da-263e-fe26" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f8f-a3d7-112c-e4d3" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-454782e5 -->
+            <modifier type="increment" field="3f8f-a3d7-112c-e4d3" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e79-c483-51b3-daf2" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
 <!-- sw-avail -->
 <modifier type="set" field="hidden" value="false">
 <conditions>
@@ -995,7 +1002,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46b0-30a1-2104-18d0" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="725d-6654-dfb2-2798" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7598-538a-a917-0cbb" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-d639526b -->
+            <modifier type="increment" field="7598-538a-a917-0cbb" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2571-bbb8-1a12-8672" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="d796-9ec8-ba52-f7f1" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>

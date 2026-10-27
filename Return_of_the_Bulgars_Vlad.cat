@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2d82-3523-009f-3f19" name="Return of the Bulgars (Vlad the Impaler)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2d82-3523-009f-3f19" name="Return of the Bulgars (Vlad the Impaler)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Return of the Bulgars (Vlad the Impaler): units and points from the Vlad the Impaler army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="8140-ba8b-8437-3352" name="Despot/Tsar" hidden="false" collective="false" import="true" type="unit">
@@ -2071,8 +2071,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f296-e37f-dc8a-5fcf" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb63-5c34-8c01-07a8" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e842-8266-f49f-b8cb" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-22a5e841 -->
+            <modifier type="increment" field="e842-8266-f49f-b8cb" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8e76-4d9b-c962-d0b3" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fa99-3b4f-405d-e9b1" repeats="1" roundUp="false"/>

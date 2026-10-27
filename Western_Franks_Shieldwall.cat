@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="09db-2845-0f7d-ed78" name="Western Franks (Shieldwall)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="09db-2845-0f7d-ed78" name="Western Franks (Shieldwall)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Western Franks (Shieldwall): units and points from the Shieldwall army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="034c-90ec-ea6e-a2ee" name="Rex/Dux" hidden="false" collective="false" import="true" type="unit">
@@ -1326,8 +1326,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96a0-9861-9f57-c758" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="14b6-75cb-8a93-cc2a" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88d1-7155-0df8-d0bd" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-6a6317d5 -->
+            <modifier type="increment" field="88d1-7155-0df8-d0bd" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5099-a837-0d74-d665" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
 <!-- sw-avail -->
 <modifier type="set" field="hidden" value="false">
 <conditions>
@@ -1521,7 +1528,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="06bf-3a03-2a38-7f09" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dda8-b0c3-a290-5c53" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f84e-1183-cca5-ca37" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-2bb4688a -->
+            <modifier type="increment" field="f84e-1183-cca5-ca37" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bfb2-dd35-1a89-23b4" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="1fa6-084f-55b0-ce3c" name="Bow" hidden="false" targetId="5d29-ba1e-8299-8085" type="profile"/>

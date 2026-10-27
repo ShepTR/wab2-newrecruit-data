@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="09e2-538c-5cfd-ca98" name="Later Hoplite Greek (AoA2)" revision="5" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="09e2-538c-5cfd-ca98" name="Later Hoplite Greek (AoA2)" revision="6" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Later Hoplite Greek (AoA2): units and points from the unofficial Armies of Antiquity v2 army lists (Martin Gibbins).</readme>
   <selectionEntries>
     <selectionEntry id="f7eb-5787-b07c-b9f7" name="Polemarch" hidden="false" collective="false" import="true" type="unit">
@@ -1137,7 +1137,16 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f0a1-2e16-13f1-a016" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7cb3-e688-fcb4-66a5" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b18-f520-cb60-f8b4" type="max"/>
           </constraints>
+          <modifiers>
+            <!-- rl-dea010c7 -->
+            <modifier type="increment" field="9b18-f520-cb60-f8b4" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4e19-b650-f562-64f2" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <!-- def-link -->
           <infoLinks>
             <infoLink id="81a6-cddf-0433-15e7" name="Sling" hidden="false" targetId="7ff2-453d-751e-5f78" type="profile"/>
@@ -1150,7 +1159,9 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8f5b-0cba-c75b-a1c0" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b423-72ec-e7de-437d" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e49e-4239-daed-ceef" type="max"/>
           </constraints>
+          <!-- rl-d35c15ff -->
           <modifiers>
             <modifier type="increment" field="points" value="8">
               <repeats>

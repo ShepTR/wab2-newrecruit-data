@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1452-e1d2-0ea1-56d3" name="Catalan Company (Vlad the Impaler)" revision="8" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1452-e1d2-0ea1-56d3" name="Catalan Company (Vlad the Impaler)" revision="9" battleScribeVersion="2.03" authorName="WAB2" library="false" gameSystemId="6f1f-5f84-d7e5-4889" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Catalan Company (Vlad the Impaler): units and points from the Vlad the Impaler army list book (Warhammer Historical).</readme>
   <selectionEntries>
     <selectionEntry id="874b-09b8-f41f-4eeb" name="Company Commander" hidden="false" collective="false" import="true" type="unit">
@@ -1600,8 +1600,15 @@
 <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3c7-44fa-81f6-8c7e" type="max"/>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01fe-2a7d-cd00-310a" type="min"/>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54b9-e9e5-2a70-94b0" type="max"/>
           </constraints>
           <modifiers>
+            <!-- rl-329417ed -->
+            <modifier type="increment" field="54b9-e9e5-2a70-94b0" value="1">
+              <repeats>
+                <repeat field="selections" scope="force" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="59ae-998c-f4c2-513c" repeats="1" roundUp="true"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" field="points" value="2">
               <repeats>
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3cd4-7ad5-56da-ec9a" repeats="1" roundUp="false"/>
